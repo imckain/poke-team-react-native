@@ -4,7 +4,7 @@ import { Text, View, StyleSheet, Image, FlatList, TouchableOpacity, Pressable } 
 const HomeScreen = (props) => {
 
   return (
-    <View>
+    <View style={styles.container}>
       <Text> hello </Text>
       <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Teams')} >
         <Text>Teams</Text>
@@ -17,6 +17,10 @@ const HomeScreen = (props) => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#353340',
+    flex: 1
+  },
   buttonStyle: {
     fontSize: 32,
     fontWeight: '600',

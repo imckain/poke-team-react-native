@@ -4,7 +4,7 @@ import { Text, View, StyleSheet, Image, FlatList, TouchableOpacity, Pressable } 
 const TeamsScreen = (props) => {
 
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Teams</Text>
       <Pressable onPress={() => props.navigation.navigate('Home')} >
         <Text>Home</Text>
@@ -14,7 +14,10 @@ const TeamsScreen = (props) => {
 };
 
 const styles = StyleSheet.create({
-
+  container: {
+    backgroundColor: '#353340',
+    flex: 1
+  },
 });
 
 export default React.memo(TeamsScreen);
