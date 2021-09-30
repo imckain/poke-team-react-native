@@ -10,6 +10,7 @@ import { FontAwesome, FontAwesome5, Ionicons, MaterialCommunityIcons } from '@ex
 import HomeScreen from './src/screens/HomeScreen';
 import TeamsScreen from './src/screens/TeamsScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
+import Logo from './src/header/Logo';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -17,30 +18,13 @@ const Tab = createBottomTabNavigator();
 function BottomTabNavigator() {
   return (
     <Tab.Navigator
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused, color, size }) => {
-          let ioniconName;
-          let materialIconName;
-          let fontAwesomeName;
-
-          if (route.name === 'Home') {
-            ioniconName = focused ? 'ios-home' : 'home-outline'
-            return <Ionicons name={ioniconName} size={24} color="black" />
-          } else if (route.name === 'Teams') {
-            materialIconName = focused ? 'pokeball' : 'pokemon-go'
-            return <MaterialCommunityIcons name={materialIconName} size={24} color="black" />
-          } else if (route.name === 'Profile') {
-            fontAwesomeName = focused ? 'user-circle' : 'user-circle-o'
-            return <FontAwesome name={fontAwesomeName} size={24} color="black" />
-          }
-        }
-      })}
+      screenOptions={{
+        tabBarActiveTintColor: '#ff0000',
+        tabBarInactiveTintColor: '#353340',
+      }}
     >
       <Tab.Group
         screenOptions={{
-          headerStyle: {
-            backgroundColor: '#272537',
-          },
           headerTitleStyle: {
             color: '#ffffff',
             fontWeight: '600',
@@ -51,19 +35,57 @@ function BottomTabNavigator() {
           name='Home' 
           component={HomeScreen} 
           options={{
-            title: 'Home'
+            title: 'Home',
+            tabBarIcon: ({ focused, color }) => {
+              let ioniconName;
+              ioniconName = focused ? 'ios-home' : 'home-outline'
+              return <Ionicons name={ioniconName} size={30} color={color} />
+            },
+            headerStyle: {
+              backgroundColor: '#ffc554',
+              height: 50
+            },
+            headerTitleStyle: {
+              color: '#000000'
+            },
           }}
           />
         <Tab.Screen 
           name='Teams' 
           component={TeamsScreen} 
           options={{
-            title: 'Your Teams'
+            title: 'Your Teams',
+            tabBarIcon: ({ focused, color }) => {
+              let materialIconName;
+              materialIconName = focused ? 'pokeball' : 'pokemon-go'
+              return <MaterialCommunityIcons name={materialIconName} size={30} color={color} />
+            },
+            headerStyle: {
+              backgroundColor: '#ff0000',
+              height: 50
+            },
+            headerTitleStyle: {
+              color: '#000000'
+            },
           }}
           />
         <Tab.Screen 
           name='Profile' 
           component={ProfileScreen} 
+          options={{
+            tabBarIcon: ({ focused, color }) => {
+              let fontAwesomeName;
+              fontAwesomeName = focused ? 'user-circle' : 'user-circle-o'
+              return <FontAwesome name={fontAwesomeName} size={30} color={color} />
+            },
+            headerStyle: {
+              backgroundColor: '#CFCFCF',
+              height: 50
+            },
+            headerTitleStyle: {
+              color: '#000000'
+            },
+          }}
         />
       </Tab.Group>
     </Tab.Navigator>
@@ -72,24 +94,23 @@ function BottomTabNavigator() {
 
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator 
+    <NavigationContainer screenOptions={{ headerStyle: { height: 250 }}}>
+      <Stack.Navigator
         initialRouteName='Tab Navigator' 
         screenOptions={{
           headerStyle: {
             backgroundColor: '#272537',
           },
-          headerTitleStyle: {
-            color: '#ffffff',
-            fontWeight: '600',
-          },
+          headerTitle: props => <Logo {...props} />
         }}
         options={{
-          title: 'Poke-Team'
         }}
       >
         <Stack.Group>
-          <Stack.Screen options={{ title: 'Poke-Team' }} name='Tab Navigator' component={BottomTabNavigator} />
+          <Stack.Screen 
+            name='Tab Navigator' 
+            component={BottomTabNavigator} 
+          />
         </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>
