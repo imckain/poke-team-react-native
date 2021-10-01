@@ -10,6 +10,7 @@ import { FontAwesome, FontAwesome5, Ionicons, MaterialCommunityIcons } from '@ex
 import HomeScreen from './src/screens/HomeScreen';
 import TeamsScreen from './src/screens/TeamsScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
+import DetailModal from './src/screens/DetailModal';
 import Logo from './src/components/header/Logo';
 
 const Stack = createNativeStackNavigator();
@@ -113,6 +114,15 @@ function App() {
           <Stack.Screen 
             name='Tab Navigator' 
             component={BottomTabNavigator} 
+          />
+        </Stack.Group>
+        <Stack.Group>
+          <Stack.Screen 
+            name='Detail Modal'
+            component={DetailModal}
+            options={{
+              presentation: 'modal'
+            }}
           />
         </Stack.Group>
       </Stack.Navigator>
