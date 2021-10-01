@@ -9,16 +9,21 @@ export default () => {
     try {
       const response = await pokeApi.get(`/pokemon/${defaultTerm}`);
       console.log(response.data.name);
-      setResults(response.data)
+      setResults([response.data])
     } catch (error) {
       setApiErrorMessage('Something Went Wrong')
     }
-  }, [results]);
+  }, []);
+
+  const randomInt = (max) => {
+    return Math.floor(Math.random() * max)
+  }
+
+  const randomMon = randomInt(898);
 
   useEffect(() => {
-    searchAPI();
-  }, [results]);
-
+    searchAPI(randomMon);
+  }, []);
 
   return [searchAPI, results]
 };
