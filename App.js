@@ -10,7 +10,7 @@ import { FontAwesome, FontAwesome5, Ionicons, MaterialCommunityIcons } from '@ex
 import HomeScreen from './src/screens/HomeScreen';
 import TeamsScreen from './src/screens/TeamsScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
-import Logo from './src/header/Logo';
+import Logo from './src/components/header/Logo';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -20,7 +20,7 @@ function BottomTabNavigator() {
     <Tab.Navigator
       screenOptions={{
         tabBarActiveTintColor: '#ff0000',
-        tabBarInactiveTintColor: '#353340',
+        tabBarInactiveTintColor: '#CFCFCF',
       }}
     >
       <Tab.Group
@@ -29,6 +29,9 @@ function BottomTabNavigator() {
             color: '#ffffff',
             fontWeight: '600',
           },
+          tabBarStyle: {
+            backgroundColor: '#353340'
+          }
         }}
         >
         <Tab.Screen 
