@@ -12,7 +12,7 @@ const SearchBar = ({ searchTerm, onSearchTermChange, onSearchTermSubmit }) => {
         autoCapitalize='none'
         autoCorrect={false}
         style={styles.inputStyle} 
-        placeholder='Search' 
+        placeholder='Search by ID# or Name' 
         placeholderTextColor='rgb(175, 175, 175)'
         value={searchTerm}
         onChangeText={onSearchTermChange}
