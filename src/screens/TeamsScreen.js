@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, FlatList, TouchableOpacity, Pressable } from 'react-native';
+import { Text, View, StyleSheet, Pressable } from 'react-native';
 
 const TeamsScreen = (props) => {
 

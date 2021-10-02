@@ -1,11 +1,11 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Image, FlatList, TouchableOpacity } from 'react-native';
 
-const ProfileScreen = () => {
+const BuildTeamsScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text>Profile</Text>
+      <Text>Build a team</Text>
     </View>
   );
 };
@@ -17,4 +17,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default React.memo(ProfileScreen);
+export default BuildTeamsScreen;
