@@ -1,25 +1,25 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
-const BuildTeamsNavigator = () => {
+const ProfileNavigator = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>Build a Team</Text>
+      <Text style={styles.label}>profile</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    height: 140,
-    width: 140,
-    backgroundColor: '#ff0000',
+    height: 70,
+    width: '100%',
+    backgroundColor: '#CFCFCF',
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5,
-    marginVertical: 15
+    marginTop: 5
   },
   label: {
     padding: 15,
@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BuildTeamsNavigator;
+export default ProfileNavigator;

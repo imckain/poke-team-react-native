@@ -7,8 +7,9 @@ const SearchBar = ({ searchTerm, onSearchTermChange, onSearchTermSubmit }) => {
     
   return (
     <View style={styles.searchWrapperStyle}>
-      <Ionicons name="ios-search" size={28} color="black" />
+      <Ionicons name="ios-search" size={18} color="rgb(175, 175, 175)" />
       <TextInput 
+        showSoftInputOnFocus={false}
         autoCapitalize='none'
         autoCorrect={false}
         style={styles.inputStyle} 
@@ -18,6 +19,7 @@ const SearchBar = ({ searchTerm, onSearchTermChange, onSearchTermSubmit }) => {
         onChangeText={onSearchTermChange}
         onEndEditing={onSearchTermSubmit}
         clearButtonMode='always'
+        keyboardAppearance='dark'
       />
     </View>
   )
@@ -25,22 +27,19 @@ const SearchBar = ({ searchTerm, onSearchTermChange, onSearchTermSubmit }) => {
 
 const styles = StyleSheet.create({
   searchWrapperStyle: {
-    height: 50,
-    marginHorizontal: 10,
+    height: 44,
+    width: '90%',
     marginVertical: 20,
     flexDirection: 'row',
+    alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingHorizontal: 15,
+    backgroundColor: '#464450',
+    borderRadius: 10,
   },
   inputStyle: {
-    backgroundColor: 'rgba(247, 247, 247, 1)',
-    borderRadius: 15,
-    borderWidth: 1,
-    borderColor: 'rgb(242, 162, 44)',
-    paddingHorizontal: 10,
-    paddingLeft: 16,
-    marginHorizontal: 10,
+    paddingLeft: 4,
     height: '100%',
     flex: 1,
     fontSize: 20,
