@@ -5,7 +5,11 @@ export default () => {
   const [results, setResults] = useState([]);
   const [apiErrorMessage, setApiErrorMessage] = useState('');
 
+  const [advancedResults, setAdvancedResults] = useState([]);
+  const [advancedApiErrorMessage, setAdvancedApiErrorMessage] = useState('');
+
   const searchAPI = useCallback(async (defaultTerm) => {
+    if (defaultTerm === '') { return null }
     try {
       const response = await pokeApi.get(`/pokemon/${defaultTerm}`);
       console.log(response.data.name);
@@ -14,16 +18,31 @@ export default () => {
       setApiErrorMessage('Something Went Wrong')
     }
   }, []);
-
+  
   const randomInt = (max) => {
     return Math.floor(Math.random() * max)
   }
-
+  
   const randomMon = randomInt(898);
-
+  
   useEffect(() => {
     searchAPI(randomMon);
   }, []);
+  
+  const advancedSearchAPI = useCallback(async (defaultTerm) => {
+    if (defaultTerm === '') { return null }
+    try {
+      const response = await pokeApi.get(`/pokemon/${defaultTerm}`);
+      console.log(response.data.name);
+      setAdvancedResults([response.data])
+    } catch (error) {
+      setAdvancedApiErrorMessage('Something Went Wrong')
+    }
+  }, []);
 
-  return [searchAPI, results]
+  useEffect(() => {
+    advancedSearchAPI('');
+  }, []);
+  
+  return [searchAPI, results, advancedSearchAPI, advancedResults]
 };
