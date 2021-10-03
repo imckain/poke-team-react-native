@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Dimensions } from 'react-native';
 
 import BaseStats from '../pokemonDetailComponents/BaseStats';
 import TypeDetail from '../pokemonDetailComponents/TypeDetail';
@@ -7,11 +7,7 @@ import PokemonNameAndId from '../pokemonDetailComponents/PokemonNameAndId';
 import FrontSprite from '../pokemonDetailComponents/FrontSprite';
 
 const ShowAdvancedSearchResult = (props) => {
-  if (!props.results.length) {
-    return null;
-  }
-
-  const results = props.results[0]
+  const results = props.results
 
   return (
     <View>
@@ -38,6 +34,7 @@ const styles = StyleSheet.create({
     height: 'auto',
     alignSelf: 'center',
     backgroundColor: '#464450',
+    marginBottom: 190
   },
   mainInfo: {
     justifyContent: 'flex-start',
