@@ -35,6 +35,7 @@ function BottomTabNavigator() {
           tabBarStyle: {
             backgroundColor: '#272537',
             height: 96,
+            alignItems: 'baseline'
           }
         }}
         >
@@ -45,7 +46,7 @@ function BottomTabNavigator() {
             title: 'Build A Team',
             tabBarIcon: ({ focused, color }) => {
               let materialIconName;
-              materialIconName = focused ? 'plus-circle' : 'plus'
+              materialIconName = focused ? 'plus-square' : 'plus-square-o'
               return <FontAwesome name={materialIconName} size={34} color={color} />
             },
             headerStyle: {
@@ -55,7 +56,10 @@ function BottomTabNavigator() {
             headerTitleStyle: {
               color: '#000000'
             },
-            headerShown: false
+            headerShown: false,
+            tabBarIconStyle: {
+              marginTop: 5
+            }
           }}
         />
         <Tab.Screen 
