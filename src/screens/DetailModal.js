@@ -23,8 +23,8 @@ const DetailModal = (props) => {
         <View style={styles.mainInfo}>
           <PokemonNameAndId fontSize={42} results={results} />
           <View style={styles.spriteContainer}>
-            <FrontSprite width={(Dimensions.get('window').width)*.4} height={(Dimensions.get('window').height)*(Dimensions.get('window').width*.00044)} results={results} />
-            <BackSprite width={(Dimensions.get('window').width)*.4} height={(Dimensions.get('window').height)*(Dimensions.get('window').width*.00044)} results={results} />
+            <FrontSprite width={160} height={160} results={results} />
+            <BackSprite width={160} height={160} results={results} />
           </View>
         </View>
         <View style={styles.detailInfo}>
