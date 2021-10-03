@@ -6,12 +6,15 @@ import SearchBarByName from '../components/navigatorCards/searchBars/SearchBarBy
 import SearchBarByType from '../components/navigatorCards/searchBars/SearchBarByType';
 import SearchBarByMove from '../components/navigatorCards/searchBars/SearchBarByMove';
 import SearchBarByAbility from '../components/navigatorCards/searchBars/SearchBarByAbility';
-import SearchBarByBerry from '../components/navigatorCards/searchBars/SearchBarByBerry';
 import ShowAdvancedSearchResult from '../components/teamBuilder/ShowAdvancedSearchResult';
 
 import useAdvancedResults from '../hooks/useAdvancedResults';
-import pokemonData from '../data/pokemon.json';
 import PokedexCard from '../pokedex/PokedexCard';
+
+import pokemonData from '../data/pokemon.json';
+import typeData from '../data/type.json';
+import moveData from '../data/moves.json';
+import abilityData from '../data/abilities.json';
 
 const HideKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -57,14 +60,6 @@ const AdvancedSearchScreen = (props) => {
         style={styles.searchBar}
       />
     }
-    if (param === 'berry') {
-      return <SearchBarByBerry 
-        searchTerm={searchTerm} 
-        onSearchTermChange={setSearchTerm} 
-        onSearchTermSubmit={() => advancedSearchAPI(searchParam, searchTerm)}
-        style={styles.searchBar}
-      />
-    }
   }
 
   const showPokeDex = (param) => {
@@ -76,7 +71,49 @@ const AdvancedSearchScreen = (props) => {
         renderItem={({ item }) => {
           return(
             <Pressable>
-              <PokedexCard results={item} />
+              <PokedexCard results={item} searchParam={searchParam} />
+            </Pressable>
+          )
+        }}
+      />
+    }
+    if (param === 'type') {
+      return <FlatList 
+        horizontal={false}
+        data={typeData}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => {
+          return(
+            <Pressable>
+              <PokedexCard results={item} searchParam={searchParam} />
+            </Pressable>
+          )
+        }}
+      />
+    }
+    if (param === 'move') {
+      return <FlatList 
+        horizontal={false}
+        data={moveData}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => {
+          return(
+            <Pressable>
+              <PokedexCard results={item} searchParam={searchParam} />
+            </Pressable>
+          )
+        }}
+      />
+    }
+    if (param === 'ability') {
+      return <FlatList 
+        horizontal={false}
+        data={abilityData}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => {
+          return(
+            <Pressable>
+              <PokedexCard results={item} searchParam={searchParam} />
             </Pressable>
           )
         }}
@@ -127,11 +164,6 @@ const AdvancedSearchScreen = (props) => {
             <Pressable onPress={() => setSearchParam('ability')}>
               <View style={[searchParam === 'ability' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>
                 <Text style={[searchParam === 'ability' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>Ability</Text>
-              </View>
-            </Pressable>
-            <Pressable onPress={() => setSearchParam('berry')}>
-              <View style={[searchParam === 'berry' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>
-                <Text style={[searchParam === 'berry' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>Berry</Text>
               </View>
             </Pressable>
           </View>
