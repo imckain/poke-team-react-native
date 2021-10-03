@@ -5,9 +5,6 @@ export default () => {
   const [results, setResults] = useState([]);
   const [apiErrorMessage, setApiErrorMessage] = useState('');
 
-  const [advancedResults, setAdvancedResults] = useState([]);
-  const [advancedApiErrorMessage, setAdvancedApiErrorMessage] = useState('');
-
   const searchAPI = useCallback(async (defaultTerm) => {
     if (defaultTerm === '') { return null }
     try {
