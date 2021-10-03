@@ -1,32 +1,39 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 
 import PokemonNameAndId from '../components/pokemonDetailComponents/PokemonNameAndId';
 import FrontSprite from '../components/pokemonDetailComponents/FrontSprite';
 import BackSprite from '../components/pokemonDetailComponents/BackSprite';
-import BaseStats from '../components/pokemonDetailComponents/BaseStats';
 import TypeDetail from '../components/pokemonDetailComponents/TypeDetail';
+import AbilityDetail from '../components/pokemonDetailComponents/AbilityDetail';
+import ModalBaseStats from '../components/pokemonDetailComponents/ModalBaseStats';
+import MovesDetail from '../components/pokemonDetailComponents/MovesDetail';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const DetailModal = (props) => {
-  const results = props.route.params.results[0]
+  let results;
 
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
+  if (props.route.params.results[0] === undefined) {
+    results = props.route.params.results
+  } else results = props.route.params.results[0]
 
   return (
     <View style={styles.container}>
-      <View style={styles.mainInfo}>
-        <PokemonNameAndId fontSize={42} results={results} />
-        <View style={styles.spriteContainer}>
-          <FrontSprite width={200} height={200} results={results} />
-          <BackSprite width={200} height={200} results={results} />
+      <ScrollView style={styles.scrollViewContainer}>
+        <View style={styles.mainInfo}>
+          <PokemonNameAndId fontSize={42} results={results} />
+          <View style={styles.spriteContainer}>
+            <FrontSprite width={(Dimensions.get('window').width)*.4} height={(Dimensions.get('window').height)*(Dimensions.get('window').width*.00044)} results={results} />
+            <BackSprite width={(Dimensions.get('window').width)*.4} height={(Dimensions.get('window').height)*(Dimensions.get('window').width*.00044)} results={results} />
+          </View>
         </View>
-      </View>
-      <View style={styles.detailInfo}>
-        <TypeDetail margin={13} headerFontSize={32} detailFontSize={32} results={results} />
-        <BaseStats headerFontSize={32} detailFontSize={18} results={results} />
-      </View>
+        <View style={styles.detailInfo}>
+          <TypeDetail margin={13} headerFontSize={28} detailFontSize={22} results={results} />
+          <AbilityDetail margin={13} headerFontSize={28} detailFontSize={22} results={results} />
+          <ModalBaseStats headerFontSize={28} detailFontSize={18} results={results} />
+          <MovesDetail results={results} />
+        </View>
+      </ScrollView>
     </View>
   );
 };
@@ -37,9 +44,8 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     alignSelf: 'center',
-    backgroundColor: '#464450',
+    backgroundColor: '#353340',
     paddingHorizontal: 10,
-
   },
   spriteContainer: {
     flexDirection: 'row'
