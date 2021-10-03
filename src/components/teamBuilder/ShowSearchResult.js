@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Dimensions } from 'react-native';
 
 import BaseStats from '../pokemonDetailComponents/BaseStats';
 import TypeDetail from '../pokemonDetailComponents/TypeDetail';
@@ -37,12 +37,13 @@ const styles = StyleSheet.create({
     width: '90%',
     height: 'auto',
     alignSelf: 'center',
+    justifyContent: 'space-between',
     backgroundColor: '#464450',
   },
   mainInfo: {
     justifyContent: 'flex-start',
     alignItems: 'center',
-    maxWidth: '60%'
+    width: '50%'
   },
   detailInfo: {
     flex: 1,
