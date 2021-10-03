@@ -46,7 +46,7 @@ function BottomTabNavigator() {
             tabBarIcon: ({ focused, color }) => {
               let materialIconName;
               materialIconName = focused ? 'plus-circle' : 'plus'
-              return <FontAwesome name={materialIconName} size={28} color={color} />
+              return <FontAwesome name={materialIconName} size={34} color={color} />
             },
             headerStyle: {
               backgroundColor: '#ff0000',
@@ -65,8 +65,8 @@ function BottomTabNavigator() {
             title: 'Your Teams',
             tabBarIcon: ({ focused, color }) => {
               let materialIconName;
-              materialIconName = focused ? 'pokeball' : 'pokemon-go'
-              return <MaterialCommunityIcons name={materialIconName} size={28} color={color} />
+              materialIconName = focused ? 'pokeball' : 'pokeball'
+              return <MaterialCommunityIcons name={materialIconName} size={34} color={color} />
             },
             headerStyle: {
               backgroundColor: '#ff0000',
@@ -106,7 +106,7 @@ function BottomTabNavigator() {
             tabBarIcon: ({ focused, color }) => {
               let ioniconName;
               ioniconName = focused ? 'search-circle' : 'search-circle-outline'
-              return <Ionicons name={ioniconName} size={28} color={color} />
+              return <Ionicons name={ioniconName} size={40} color={color} />
             },
             headerStyle: {
               backgroundColor: '#ffc554',
@@ -115,7 +115,10 @@ function BottomTabNavigator() {
             headerTitleStyle: {
               color: '#000000'
             },
-            headerShown: false
+            headerShown: false,
+            tabBarIconStyle: {
+              marginTop: 1
+            }
           }}
         />
         <Tab.Screen 
@@ -134,7 +137,7 @@ function BottomTabNavigator() {
             headerTitleStyle: {
               color: '#000000'
             },
-            headerShown: false
+            headerShown: false,
           }}
         />
       </Tab.Group>
