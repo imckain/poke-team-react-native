@@ -4,7 +4,7 @@ import AdvancedSearchNavigator from '../components/navigatorCards/AdvancedSearch
 
 import BuildTeamsNavigator from '../components/navigatorCards/BuildTeamsNavigator';
 import ProfileNavigator from '../components/navigatorCards/ProfileNavigator';
-import SearchBar from '../components/navigatorCards/SearchBar';
+import SearchBarByName from '../components/navigatorCards/searchBars/SearchBarByName';
 import TeamsNavigator from '../components/navigatorCards/ViewTeamsNavigator';
 import ShowSearchResult from '../components/teamBuilder/ShowSearchResult';
 
@@ -24,7 +24,7 @@ const HomeScreen = (props) => {
   return (
     <HideKeyboard>
       <ScrollView style={styles.container}>
-        <SearchBar 
+        <SearchBarByName 
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
           onSearchTermSubmit={() => searchAPI(searchTerm)}
