@@ -10,8 +10,8 @@ const ShowAdvancedSearchResult = (props) => {
   const results = props.results
 
   return (
-    <View>
-      <View style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.mainCardContainer}>
         <View style={styles.mainInfo}>
           <PokemonNameAndId fontSize={32} results={results} />
           <FrontSprite width={150} height={150} results={results} />
@@ -28,13 +28,15 @@ const ShowAdvancedSearchResult = (props) => {
 
 const styles = StyleSheet.create({
   container: {
+    marginBottom: 260
+  },
+  mainCardContainer: {
     flexDirection: 'row',
     borderRadius: 10,
     width: '90%',
     height: 'auto',
     alignSelf: 'center',
     backgroundColor: '#464450',
-    marginBottom: 190
   },
   mainInfo: {
     justifyContent: 'flex-start',
