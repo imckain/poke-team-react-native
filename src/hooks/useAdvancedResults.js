@@ -5,10 +5,10 @@ export default () => {
   const [advancedResults, setAdvancedResults] = useState([]);
   const [advancedApiErrorMessage, setAdvancedApiErrorMessage] = useState('');
   
-  const advancedSearchAPI = useCallback(async (searchParam, defaultTerm) => {
+  const advancedSearchAPI = useCallback(async (defaultTerm) => {
     if (defaultTerm === '') { return null }
     try {
-      const response = await pokeApi.get(`/${searchParam}/${defaultTerm}`);
+      const response = await pokeApi.get(`https://pokeapi.co/api/v2/pokemon/${defaultTerm}`);
       console.log(response.data.name);
       setAdvancedResults([response.data])
     } catch (error) {
@@ -17,7 +17,7 @@ export default () => {
   }, []);
 
   useEffect(() => {
-    advancedSearchAPI('', '');
+    advancedSearchAPI('');
   }, []);
   
   return [advancedSearchAPI, advancedResults]
