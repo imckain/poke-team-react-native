@@ -3,7 +3,7 @@ import { Text, StyleSheet, View } from 'react-native';
 
 import { Ionicons } from '@expo/vector-icons';
 
-const PokedexNameAndId = ({ results, fontSize }) => {
+const PokedexMove = ({ results, fontSize }) => {
   function Capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default React.memo(PokedexNameAndId);
+export default React.memo(PokedexMove);

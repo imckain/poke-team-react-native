@@ -6,7 +6,7 @@ import PokedexType from './PokedexType';
 import PokedexMove from './PokedexMove';
 import PokedexAbility from './PokedexAbility';
 
-const ShowSearchResult = (props) => {
+const PokedexCard = (props) => {
   const results = props.results
   const param = props.searchParam
 
@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     height: 'auto',
     alignSelf: 'center',
     marginBottom: 12,
+    marginTop: 2,
     backgroundColor: '#464450',
   },
   mainInfo: {
@@ -56,4 +57,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default React.memo(ShowSearchResult);
+export default React.memo(PokedexCard);
