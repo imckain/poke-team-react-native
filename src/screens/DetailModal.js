@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingLeft: 5,
     paddingVertical: 8,
+    paddingBottom: 300
   },
 });
 
