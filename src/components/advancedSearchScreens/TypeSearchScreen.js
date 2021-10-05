@@ -57,7 +57,7 @@ const TypeSearchScreen = (props) => {
         renderItem={({ item }) => {
           return(
             <Pressable onPress={() => props.navigation.navigate('Type Detail Modal', { results: item })}>
-              <ShowTypeSearchResult results={item} />
+              <ShowTypeSearchResult navigation={props.navigation} results={item} />
             </Pressable>
           )
         }}
