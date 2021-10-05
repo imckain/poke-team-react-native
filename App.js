@@ -14,6 +14,8 @@ import Logo from './src/components/header/Logo';
 import AdvancedSearchScreen from './src/screens/AdvancedSearchScreen';
 import BuildTeamsScreen from './src/screens/BuildTeamsScreen';
 import TypeDetailModal from './src/screens/TypeDetailModal';
+import MoveDetailModal from './src/screens/MoveDetailModal';
+import AbilityDetailModal from './src/screens/AbilityDetailModal';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -184,6 +186,26 @@ function App() {
           <Stack.Screen 
             name='Type Detail Modal'
             component={TypeDetailModal}
+            options={{
+              presentation: 'modal',
+              headerStyle: {
+                backgroundColor: '#ff0000',
+              }
+            }}
+          />
+          <Stack.Screen 
+            name='Move Detail Modal'
+            component={MoveDetailModal}
+            options={{
+              presentation: 'modal',
+              headerStyle: {
+                backgroundColor: '#ff0000',
+              }
+            }}
+          />
+          <Stack.Screen 
+            name='Ability Detail Modal'
+            component={AbilityDetailModal}
             options={{
               presentation: 'modal',
               headerStyle: {
