@@ -3,12 +3,12 @@ import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard }
 import { FlatList } from 'react-native-gesture-handler';
 
 import SearchBarByAbility from '../navigatorCards/searchBars/SearchBarByAbility';
-import ShowAdvancedSearchResult from '../teamBuilder/ShowAdvancedSearchResult';
 
-import useAdvancedResults from '../../hooks/useAdvancedResults';
+import useAbilityResults from '../../hooks/useAbilityResults';
 import PokedexCard from '../../pokedex/PokedexCard';
 
 import abilityData from '../../data/abilities.json';
+import ShowAbilitySearchResult from '../teamBuilder/ShowAbilitySearchResult';
 
 const HideKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -18,7 +18,7 @@ const HideKeyboard = ({ children }) => (
 
 const AbilitySearchScreen = (props) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [advancedSearchAPI, advancedResults] = useAdvancedResults([]);
+  const [abilitySearchApi, abilityResults] = useAbilityResults([]);
   const [searchParam, setSearchParam] = useState('ability');
 
   const showPokeDex = (param) => {
@@ -29,7 +29,10 @@ const AbilitySearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable>
+            <Pressable onPress={async() => {
+              await setSearchTerm(item.identifier);
+              return abilitySearchApi(item.identifier);
+              }}>
               <PokedexCard results={item} searchParam={searchParam} />
             </Pressable>
           )
@@ -38,16 +41,17 @@ const AbilitySearchScreen = (props) => {
     }
   }
 
-  const showPokemonCard = (param) => {
+  const showAbilityCard = (param) => {
     if (param !== '') {
       return <FlatList 
         horizontal={false}
-        data={advancedResults}
+        scrollEnabled={false}
+        data={abilityResults}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable onPress={() => props.navigation.navigate('Detail Modal', { results: item })}>
-              <ShowAdvancedSearchResult results={item} />
+            <Pressable onPress={() => props.navigation.navigate('Ability Detail Modal', { results: item })}>
+              <ShowAbilitySearchResult results={item} />
             </Pressable>
           )
         }}
@@ -64,11 +68,12 @@ const AbilitySearchScreen = (props) => {
           <SearchBarByAbility 
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
-          onSearchTermSubmit={() => advancedSearchAPI(searchParam, searchTerm)}
+          onSearchTermSubmit={() => abilitySearchApi(searchTerm)}
           style={styles.searchBar}
           />
         </View>
-        {showPokemonCard(searchTerm)}
+        {showAbilityCard(searchTerm)}
+        <View style={{height: 5 }} />
         {showPokeDex(searchParam)}
       </View>
     </HideKeyboard>
@@ -85,7 +90,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     height: 80,
-    marginBottom: 5
   },
   searchBar:{
     paddingHorizontal: 6
