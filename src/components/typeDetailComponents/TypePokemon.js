@@ -28,7 +28,12 @@ const TypePokemon = ({ results }) => {
   }
 
   const createPokemonBox = (el) => {
-    const pokemonBox = el.pokemon.map(item => <View key={item.pokemon.name} style={styles.textBox}><Text style={[styles.text]}>{Capitalize(item.pokemon.name)}</Text></View>)
+    const pokemonBox = el.pokemon.map(item => {
+      return (
+        <View key={item.pokemon.name} style={styles.textBox}>
+          <Text style={[styles.text]}>{Capitalize(item.pokemon.name)}</Text>
+        </View>
+      )})
     return pokemonBox
   }
 
