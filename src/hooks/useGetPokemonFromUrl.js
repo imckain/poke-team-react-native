@@ -9,7 +9,6 @@ export default () => {
     if (defaultTerm === '') { return null }
     try {
       const response = await pokeApi.get(`${defaultTerm}`);
-      console.log('Hook: ' + response);
       setPokemonResults([response.data])
     } catch (error) {
       setAdvancedApiErrorMessage('Something Went Wrong')
