@@ -73,6 +73,7 @@ const PokemonSearchScreen = (props) => {
           />
         </View>
         {showPokemonCard(searchTerm)}
+        <View style={{height: 5 }} />
         {showPokeDex(searchParam)}
       </View>
     </HideKeyboard>

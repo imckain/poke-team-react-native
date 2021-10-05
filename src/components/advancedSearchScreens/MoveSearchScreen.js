@@ -9,6 +9,8 @@ import useAdvancedResults from '../../hooks/useAdvancedResults';
 import PokedexCard from '../../pokedex/PokedexCard';
 
 import moveData from '../../data/moves.json';
+import useMoveResults from '../../hooks/useMoveResults';
+import ShowMoveSearchResult from '../teamBuilder/ShowMoveSearchResult';
 
 const HideKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -16,9 +18,9 @@ const HideKeyboard = ({ children }) => (
   </TouchableWithoutFeedback>
 );
 
-const TypeSearchScreen = (props) => {
+const MoveSearchScreen = (props) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [advancedSearchAPI, advancedResults] = useAdvancedResults([]);
+  const [moveSearchApi, moveResults] = useMoveResults([]);
   const [searchParam, setSearchParam] = useState('move');
 
   const showPokeDex = (param) => {
@@ -29,7 +31,10 @@ const TypeSearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable>
+            <Pressable onPress={async() => {
+              await setSearchTerm(item.identifier);
+              return moveSearchApi(item.identifier)
+              }}>
               <PokedexCard results={item} searchParam={searchParam} />
             </Pressable>
           )
@@ -38,16 +43,17 @@ const TypeSearchScreen = (props) => {
     }
   }
 
-  const showPokemonCard = (param) => {
+  const showMoveCard = (param) => {
     if (param !== '') {
       return <FlatList 
         horizontal={false}
-        data={advancedResults}
+        scrollEnabled={false}
+        data={moveResults}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable onPress={() => props.navigation.navigate('Detail Modal', { results: item })}>
-              <ShowAdvancedSearchResult results={item} />
+            <Pressable onPress={() => props.navigation.navigate('Move Detail Modal', { results: item })}>
+              <ShowMoveSearchResult results={item} />
             </Pressable>
           )
         }}
@@ -64,11 +70,12 @@ const TypeSearchScreen = (props) => {
           <SearchBarByMove 
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
-          onSearchTermSubmit={() => advancedSearchAPI(searchParam, searchTerm)}
+          onSearchTermSubmit={() => moveSearchApi(searchTerm)}
           style={styles.searchBar}
           />
         </View>
-        {showPokemonCard(searchTerm)}
+        {showMoveCard(searchTerm)}
+        <View style={{height: 5 }} />
         {showPokeDex(searchParam)}
       </View>
     </HideKeyboard>
@@ -85,7 +92,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     height: 80,
-    marginBottom: 5
   },
   searchBar:{
     paddingHorizontal: 6
@@ -113,4 +119,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default React.memo(TypeSearchScreen);
+export default React.memo(MoveSearchScreen);
