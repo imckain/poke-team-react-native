@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
   },
   scrollViewStyle: {
-    marginBottom: 60,
+    marginBottom: 180,
     flexDirection: 'row',
     flexWrap: 'wrap',
     width: '100%',
