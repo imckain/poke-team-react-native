@@ -192,7 +192,12 @@ function App() {
             component={BuildTeamsScreen} 
             options={{
             }}
-            
+          />
+          <Stack.Screen 
+            name="Profile" 
+            component={ProfileScreen} 
+            options={{
+            }}
           />
         </Stack.Group>
         <Stack.Group>
