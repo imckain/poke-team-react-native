@@ -6,7 +6,7 @@ import BuildTeamsNavigator from '../components/navigatorCards/BuildTeamsNavigato
 import ProfileNavigator from '../components/navigatorCards/ProfileNavigator';
 import SearchBarByName from '../components/navigatorCards/searchBars/SearchBarByName';
 import TeamsNavigator from '../components/navigatorCards/ViewTeamsNavigator';
-import ShowSearchResult from '../components/teamBuilder/ShowSearchResult';
+import ShowSearchResult from '../components/resultsCards/ShowSearchResult';
 
 import useResults from '../hooks/useResults';
 
@@ -33,10 +33,10 @@ const HomeScreen = (props) => {
           <ShowSearchResult results={results} />
         </Pressable>
         <View style={styles.teamsNavContainer}>
-          <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Teams')} >
+          <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Teams Tab Nav')} >
             <TeamsNavigator />
           </Pressable>
-          <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build Teams')}>
+          <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build a Team')}>
             <BuildTeamsNavigator />
           </Pressable>
         </View>
