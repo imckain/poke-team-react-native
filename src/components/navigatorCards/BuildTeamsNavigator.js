@@ -1,10 +1,10 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
-const BuildTeamsNavigator = () => {
+const BuildTeamsNavigator = (props) => {
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { height: props.height, width: props.width }]}>
       <Text style={styles.label}>Build a Team</Text>
     </View>
   );
@@ -12,8 +12,6 @@ const BuildTeamsNavigator = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 140,
-    width: 140,
     backgroundColor: '#ff0000',
     borderRadius: 10,
     justifyContent: 'center',
