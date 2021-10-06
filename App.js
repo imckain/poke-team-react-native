@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -19,6 +19,12 @@ import AbilityDetailModal from './src/screens/AbilityDetailModal';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
+
+const backButton = () => {
+  return (
+    <Ionicons name="chevron-back" size={24} color="#fff" />
+  )
+}
 
 function BottomTabNavigator() {
   return (
@@ -42,7 +48,7 @@ function BottomTabNavigator() {
           }
         }}
         >
-        <Tab.Screen 
+        {/* <Tab.Screen 
           name='Build Teams' 
           component={BuildTeamsScreen} 
           options={{
@@ -64,12 +70,12 @@ function BottomTabNavigator() {
               marginTop: 5
             }
           }}
-        />
+        /> */}
         <Tab.Screen 
-          name='Teams' 
+          name='Teams Tab Nav' 
           component={TeamsScreen} 
           options={{
-            title: 'Your Teams',
+            title: 'Teams',
             tabBarIcon: ({ focused, color }) => {
               let materialIconName;
               materialIconName = focused ? 'pokeball' : 'pokeball'
@@ -82,7 +88,7 @@ function BottomTabNavigator() {
             headerTitleStyle: {
               color: '#000000'
             },
-            headerShown: false
+            headerShown: false,
           }}
         />
         <Tab.Screen 
@@ -128,7 +134,7 @@ function BottomTabNavigator() {
             }
           }}
         />
-        <Tab.Screen 
+        {/* <Tab.Screen 
           name='Profile' 
           component={ProfileScreen} 
           options={{
@@ -146,7 +152,7 @@ function BottomTabNavigator() {
             },
             headerShown: false,
           }}
-        />
+        /> */}
       </Tab.Group>
     </Tab.Navigator>
   )
@@ -161,15 +167,32 @@ function App() {
           headerStyle: {
             backgroundColor: '#272537',
           },
-          headerTitle: props => <Logo {...props} />
-        }}
-        options={{
+          headerTitle: props => <Logo {...props} />,
+          headerBackImage: () => {
+            return (
+              <Ionicons name="chevron-back" size={24} color="#fff" />
+            )
+          },
+          headerBackTitle: ' ',
         }}
       >
         <Stack.Group>
           <Stack.Screen 
             name='Tab Navigator' 
             component={BottomTabNavigator} 
+            options={{
+            }}
+          />
+          <Stack.Screen 
+            name="Teams" 
+            component={TeamsScreen} 
+            />
+          <Stack.Screen 
+            name="Build a Team" 
+            component={BuildTeamsScreen} 
+            options={{
+            }}
+            
           />
         </Stack.Group>
         <Stack.Group>
