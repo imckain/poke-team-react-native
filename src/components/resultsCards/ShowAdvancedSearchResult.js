@@ -28,7 +28,7 @@ const ShowAdvancedSearchResult = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 260
+    height: 'auto'
   },
   mainCardContainer: {
     flexDirection: 'row',

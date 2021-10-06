@@ -16,30 +16,26 @@ const ShowAbilitySearchResult = (props) => {
   const results = props.results
 
   return (
-    <View>
-      <View style={styles.container}>
+    <View style={styles.container} >
+      <View style={styles.mainCardContainer}>
         <View style={styles.mainInfo}>
           <AbilityName results={results} />
           <AbilityShortEffect results={results} />
-          {/* <FrontSprite width={150} height={150} results={results} /> */}
         </View>
-        <View style={styles.detailInfo}>
-          {/* <BaseStats headerFontSize={22} detailFontSize={16} results={results} />
-          <TypeDetail margin={7} headerFontSize={22} detailFontSize={16} results={results} /> */}
-        </View>
-        <Text style={styles.infoNotice}>Tap for more info</Text>
       </View>
+      <Text style={styles.infoNotice}>Tap for more info</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
+  },
+  mainCardContainer: {
+    flexDirection: 'row',
     borderRadius: 10,
     width: '90%',
-    height: 134,
-    marginBottom: 90,
+    height: 'auto',
     alignSelf: 'center',
     backgroundColor: '#464450',
   },
@@ -47,16 +43,12 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     maxWidth: '100%'
   },
-  detailInfo: {
-    // flex: 1,
-    paddingHorizontal: 5,
-    paddingVertical: 8,
-  },
   infoNotice: {
     textAlign: 'center',
     color: '#ffffffa7',
     fontStyle: 'italic',
     paddingTop: 2,
+    paddingBottom: 8,
   }
 });
 
