@@ -72,7 +72,9 @@ const AbilitySearchScreen = (props) => {
           style={styles.searchBar}
           />
         </View>
-        {showAbilityCard(searchTerm)}
+        <View style={{height: 'auto'}}>
+          {showAbilityCard(searchTerm)}
+        </View>
         <View style={{height: 5 }} />
         {showPokeDex(searchParam)}
       </View>

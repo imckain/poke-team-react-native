@@ -6,7 +6,6 @@ import SearchBarByType from '../navigatorCards/searchBars/SearchBarByType';
 import ShowTypeSearchResult from '../resultsCards/ShowTypeSearchResult';
 
 import useTypeResults from '../../hooks/useTypeResults';
-// import useGetPokemonFromUrl from '../../hooks/useGetPokemonFromUrl';
 import PokedexCard from '../../pokedex/PokedexCard';
 
 import typeData from '../../data/type.json';
@@ -21,10 +20,6 @@ const TypeSearchScreen = (props) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [typeSearchApi, typeResults] = useTypeResults([]);
   const [searchParam, setSearchParam] = useState('type');
-  // const [getPokemonFromUrl, pokemonResults] = useGetPokemonFromUrl([]);
-  // const [pokemonUrl, setPokemonUrl] = useState([]);
-
-  // console.log(typeResults);
 
   const showPokeDex = (param) => {
     if (param === 'type') {
@@ -33,7 +28,6 @@ const TypeSearchScreen = (props) => {
         data={typeData}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
-          // console.log(item);
           return(
             <Pressable onPress={async() => {
                 await setSearchTerm(item.identifier); 

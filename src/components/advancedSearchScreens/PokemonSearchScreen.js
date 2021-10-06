@@ -47,10 +47,11 @@ const PokemonSearchScreen = (props) => {
         horizontal={false}
         scrollEnabled={false}
         data={advancedResults}
+        style={{height: 'auto'}}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable onPress={() => props.navigation.navigate('Detail Modal', { results: item })}>
+            <Pressable style={{}} onPress={() => props.navigation.navigate('Detail Modal', { results: item })}>
               <ShowAdvancedSearchResult results={item} />
             </Pressable>
           )
@@ -72,7 +73,9 @@ const PokemonSearchScreen = (props) => {
           style={styles.searchBar}
           />
         </View>
-        {showPokemonCard(searchTerm)}
+        <View style={{height: 'auto'}}>
+          {showPokemonCard(searchTerm)}
+        </View>
         <View style={{height: 5 }} />
         {showPokeDex(searchParam)}
       </View>
