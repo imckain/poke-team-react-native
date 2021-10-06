@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard }
 import { FlatList } from 'react-native-gesture-handler';
 
 import SearchBarByName from '../navigatorCards/searchBars/SearchBarByName';
-import ShowAdvancedSearchResult from '../teamBuilder/ShowAdvancedSearchResult';
+import ShowAdvancedSearchResult from '../resultsCards/ShowAdvancedSearchResult';
 
 import useAdvancedResults from '../../hooks/useAdvancedResults';
 import PokedexCard from '../../pokedex/PokedexCard';

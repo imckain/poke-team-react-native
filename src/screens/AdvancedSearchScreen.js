@@ -6,7 +6,7 @@ import { FlatList } from 'react-native-gesture-handler';
 import SearchBarByType from '../components/navigatorCards/searchBars/SearchBarByType';
 import SearchBarByMove from '../components/navigatorCards/searchBars/SearchBarByMove';
 import SearchBarByAbility from '../components/navigatorCards/searchBars/SearchBarByAbility';
-import ShowAdvancedSearchResult from '../components/teamBuilder/ShowAdvancedSearchResult';
+import ShowAdvancedSearchResult from '../components/resultsCards/ShowAdvancedSearchResult';
 
 import useAdvancedResults from '../hooks/useAdvancedResults';
 import useTypeResults from '../hooks/useTypeResults';

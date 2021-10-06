@@ -8,7 +8,7 @@ import useAbilityResults from '../../hooks/useAbilityResults';
 import PokedexCard from '../../pokedex/PokedexCard';
 
 import abilityData from '../../data/abilities.json';
-import ShowAbilitySearchResult from '../teamBuilder/ShowAbilitySearchResult';
+import ShowAbilitySearchResult from '../resultsCards/ShowAbilitySearchResult';
 
 const HideKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>

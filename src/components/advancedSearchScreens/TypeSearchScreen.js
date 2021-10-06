@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard }
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 
 import SearchBarByType from '../navigatorCards/searchBars/SearchBarByType';
-import ShowTypeSearchResult from '../teamBuilder/ShowTypeSearchResult';
+import ShowTypeSearchResult from '../resultsCards/ShowTypeSearchResult';
 
 import useTypeResults from '../../hooks/useTypeResults';
 // import useGetPokemonFromUrl from '../../hooks/useGetPokemonFromUrl';
