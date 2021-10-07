@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useCallback } from 'react';
 import { Text, View, StyleSheet, Image, FlatList, ScrollView, TouchableWithoutFeedback, Pressable, Keyboard } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { TextInput } from 'react-native-gesture-handler';
+import TeamContext from '../context/TeamContext';
+
+import * as SQLite from 'expo-sqlite';
 
 import BuildTeamSearchBar from '../components/buildTeamComponents/BuildTeamSearchBar';
 import useBuildResults from '../hooks/useBuildResults';
@@ -8,7 +11,7 @@ import ShowAdvancedSearchResult from '../components/resultsCards/ShowAdvancedSea
 import BuildTeamsButton from '../components/buildTeamComponents/BuildTeamsButton';
 import AddPokemonButton from '../components/buildTeamComponents/AddPokemon';
 import PokemonSlotCard from '../components/buildTeamComponents/PokemonSlotCard';
-import { TextInput } from 'react-native-gesture-handler';
+import SaveTeamButton from '../components/buildTeamComponents/SaveTeamButton';
 
 const HideKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -20,6 +23,8 @@ const BuildTeamsScreen = (props) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [teamName, setTeamName] = useState('');
   const [buildSearchApi, buildResults] = useBuildResults([]);
+
+  const { data, addTeam } = useContext(TeamContext);
 
   const showPokemonCard = (param) => {
     if (param !== '') {
@@ -47,14 +52,12 @@ const BuildTeamsScreen = (props) => {
     }
   }
 
-  const storePokemon = async (value) => {
-    try {
-      const jsonValue = JSON.stringify(value)
-      await AsyncStorage.setItem('@pokemon', jsonValue)
-    } catch (error) {
-      
-    }
-  }
+  const addTeamAndGoBack = useCallback(async () => {
+    await addTeam()
+    return (props.navigation.navigate('Teams Tab Nav'))
+  }, [])
+
+
 
   return (
     <HideKeyboard>
@@ -88,6 +91,7 @@ const BuildTeamsScreen = (props) => {
         </View>
         <View style={{height: 5 }} />
         <View style={styles.teamSlotContainer}>
+          
           <PokemonSlotCard results={buildResults} />
           <PokemonSlotCard results={buildResults} />
           <PokemonSlotCard results={buildResults} />
@@ -95,6 +99,9 @@ const BuildTeamsScreen = (props) => {
           <PokemonSlotCard results={buildResults} />
           <PokemonSlotCard results={buildResults} />
         </View>
+        <Pressable onPress={() => addTeamAndGoBack()} >
+          <SaveTeamButton height={80} width={'100%'} />
+        </Pressable>
       </ScrollView>
     </HideKeyboard>
   );
