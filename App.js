@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { StyleSheet, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator, } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { TeamProvider } from './src/context/TeamContext';
 
 import { FontAwesome, FontAwesome5, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -168,13 +169,12 @@ function App() {
             backgroundColor: '#272537',
           },
           headerTitle: props => <Logo {...props} />,
-          headerBackImage: () => {
-            return (
-              <Ionicons name="chevron-back" size={24} color="#fff" />
-            )
-          },
+          headerBackImage: () => <Ionicons name="chevron-back" size={24} color="#fff" />,
           headerBackTitle: ' ',
         }}
+        // defaultScreenOptions={{
+        //   headerBackImage: () => <Ionicons name="chevron-back" size={24} color="#fff" />
+        // }}
       >
         <Stack.Group>
           <Stack.Screen 
@@ -256,4 +256,6 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default () => {
+  return <TeamProvider><App /></TeamProvider>
+};
