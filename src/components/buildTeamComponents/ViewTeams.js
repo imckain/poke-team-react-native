@@ -4,10 +4,12 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 
 const ViewTeams = (props) => {
+  
+  const results = props.results
 
   return (
     <View style={[styles.container, { height: props.height, width: props.width }]}>
-      <Text style={styles.label}>Team</Text>
+      <Text style={styles.label}>{results.name}</Text>
       <View style={styles.spriteContainer}>
         <Image resizeMode={'contain'} style={styles.sprite} source={require('../../../assets/pokeball.png')} />
         <Image resizeMode={'contain'} style={styles.sprite} source={require('../../../assets/pokeball.png')} />
@@ -26,7 +28,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'flex-start',
+    width: '90%',
     height: 'auto',
+    alignSelf: 'center',
     margin: 6,
     marginBottom: 22,
     paddingLeft: 6,
@@ -52,4 +56,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ViewTeams;
+export default React.memo(ViewTeams);
