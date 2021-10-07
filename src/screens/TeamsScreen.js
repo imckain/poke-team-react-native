@@ -1,22 +1,40 @@
-import React from 'react';
-import { Text, View, StyleSheet, Pressable } from 'react-native';
+import React, { useContext } from 'react';
+import { Text, View, StyleSheet, Pressable, FlatList } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import TeamContext from '../context/TeamContext';
+import * as SQLite from 'expo-sqlite';
+
 import BuildTeamsButton from '../components/buildTeamComponents/BuildTeamsButton';
 import ViewTeams from '../components/buildTeamComponents/ViewTeams';
 
 const TeamsScreen = (props) => {
 
+  const { data, addTeam } = useContext(TeamContext);
+
+  const showTeams = (el) => {
+    if (el !== undefined) {
+      return <FlatList 
+        horizontal={false}
+        data={el}
+        keyExtractor={(item) => item.name}
+        renderItem={({ item }) => {
+          return (<ViewTeams results={item} height={'auto'} width={'100%'} />)
+        }}
+      />
+    } else {
+      return (
+        null
+      )
+    }
+  }
+
   return (
     <View style={styles.container}>
-      <ScrollView contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}} style={styles.teamsScrollView}>
+      <View contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}} style={styles.teamsScrollView}>
         <View style={styles.teamsView}>
-          <ViewTeams height={'auto'} width={'100%'} />
-          <ViewTeams height={'auto'} width={'100%'} />
-          <ViewTeams height={'auto'} width={'100%'} />
-          <ViewTeams height={'auto'} width={'100%'} />
-          <ViewTeams height={'auto'} width={'100%'} />
+          {showTeams(data)}
         </View>
-      </ScrollView>
+      </View>
       <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build a Team')}>
         <BuildTeamsButton height={80} width={'100%'} />
       </Pressable>
@@ -42,11 +60,11 @@ const styles = StyleSheet.create({
   },
   teamsScrollView: {
     width: '100%',
+    flex: 1,
     alignSelf: 'center',
   },
   teamsView: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexDirection: 'column',
     width: '90%',
     alignSelf: 'center',
     justifyContent: 'center',
