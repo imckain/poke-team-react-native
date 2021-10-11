@@ -37,7 +37,7 @@ const HomeScreen = (props) => {
             <TeamsNavigator />
           </Pressable>
           <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build a Team')}>
-            <BuildTeamsNavigator height={140} width={140} />
+            <BuildTeamsNavigator height={140} width={'100%'} />
           </Pressable>
         </View>
         <View style={styles.largeNavContainer}>
@@ -80,7 +80,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     backgroundColor: '#464450',
     borderRadius: 10,
-    width: '90%'
+    width: '90%',
+    height: 'auto'
   },
   largeNavContainer: {
     width: '90%',

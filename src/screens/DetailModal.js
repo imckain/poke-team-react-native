@@ -27,12 +27,12 @@ const DetailModal = (props) => {
     if (el === true) {
       return (
         <View style={styles.spriteContainer}>
-          <View style={ styles.changeButton} >
-            <Pressable style={{zIndex: 1}} onPress={() => setIsShiny(false)}>
+          <Pressable style={{zIndex: 1}} onPress={() => setIsShiny(false)}>
+            <View style={ styles.changeButton} >
               <MaterialIcons name="360" size={24} color="rgb(223, 223, 223)" />
-            </Pressable>
-            <Text style={styles.changeLabel}>Shiny</Text>
-          </View>
+              <Text style={styles.changeLabel}>Shiny</Text>
+            </View>
+          </Pressable>
           <ShinyFrontSprite width={160} height={160} results={results} />
           <ShinyBackSprite width={160} height={160} results={results} />
         </View>
@@ -41,12 +41,12 @@ const DetailModal = (props) => {
     if (el === false) {
       return (
         <View style={styles.spriteContainer}>
-          <View style={ styles.changeButton} >
-            <Pressable onPress={() => setIsShiny(true)}>
+          <Pressable style={{zIndex: 1}} onPress={() => setIsShiny(true)}>
+            <View style={ styles.changeButton} >
               <MaterialIcons name="360" size={24} color="rgb(223, 223, 223)" />
-            </Pressable>
-            <Text style={styles.changeLabel}>Normal</Text>
-          </View>
+              <Text style={styles.changeLabel}>Normal</Text>
+            </View>
+          </Pressable>
           <FrontSprite width={160} height={160} results={results} />
           <BackSprite width={160} height={160} results={results} />
         </View>
