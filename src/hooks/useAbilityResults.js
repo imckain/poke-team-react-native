@@ -9,7 +9,6 @@ export default () => {
     if (defaultTerm === '') { return null }
     try {
       const response = await pokeApi.get(`https://pokeapi.co/api/v2/ability/${defaultTerm}`);
-      console.log(response.data.name);
       setAbilityResults([response.data])
     } catch (error) {
       setAdvancedApiErrorMessage('Something Went Wrong')
