@@ -17,10 +17,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#ff0000',
     borderRadius: 10,
     justifyContent: 'center',
-    alignItems: 'baseline',
+    alignItems: 'center',
     alignContent: 'center',
     flexDirection: 'row',
-    paddingTop: 20,
+    // paddingTop: 20,
     marginBottom: 20,
   },
   label: {

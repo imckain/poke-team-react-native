@@ -7,7 +7,6 @@ const TypeName = ({ results }) => {
   }
 
   const isValid = (el) => {
-    console.log(el.move_damage_class);
     if (el.move_damage_class === null) {
       return 'N/A'
     } else return Capitalize(el.move_damage_class.name)

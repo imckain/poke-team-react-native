@@ -71,7 +71,9 @@ const MoveSearchScreen = (props) => {
           style={styles.searchBar}
           />
         </View>
-        {showMoveCard(searchTerm)}
+        <View style={{height: 'auto'}}>
+          {showMoveCard(searchTerm)}
+        </View>
         <View style={{height: 5 }} />
         {showPokeDex(searchParam)}
       </View>

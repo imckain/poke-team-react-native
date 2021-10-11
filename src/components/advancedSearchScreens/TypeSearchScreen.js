@@ -72,7 +72,9 @@ const TypeSearchScreen = (props) => {
           style={styles.searchBar}
           />
         </View>
-        {showTypeCard(searchTerm)}
+        <View style={{height: 'auto'}}>
+          {showTypeCard(searchTerm)}
+        </View>
         <View style={{height: 5 }} />
         {showPokeDex(searchParam)}
       </View>

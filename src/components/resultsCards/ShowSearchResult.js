@@ -16,28 +16,38 @@ const ShowSearchResult = (props) => {
   return (
     <View>
       <View style={styles.container}>
-        <View style={styles.mainInfo}>
-          <PokemonNameAndId fontSize={32} results={results} />
-          <FrontSprite width={150} height={150} results={results} />
+        <View style={styles.mainCardContainer}>
+          <View style={styles.mainInfo}>
+            <PokemonNameAndId fontSize={32} results={results} />
+            <FrontSprite width={150} height={150} results={results} />
+          </View>
+          <View style={styles.detailInfo}>
+            <BaseStats headerFontSize={22} detailFontSize={16} results={results} />
+            <TypeDetail margin={7} headerFontSize={22} detailFontSize={16} results={results} />
+          </View>
         </View>
-        <View style={styles.detailInfo}>
-          <BaseStats headerFontSize={22} detailFontSize={16} results={results} />
-          <TypeDetail margin={7} headerFontSize={22} detailFontSize={16} results={results} />
-        </View>
+        <Text style={styles.infoNotice}>Tap for more info</Text>
       </View>
-      <Text style={styles.infoNotice}>Tap for more info</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    // flexDirection: 'row',
+    // borderRadius: 10,
+    // width: '90%',
+    // height: 'auto',
+    // alignSelf: 'center',
+    // justifyContent: 'space-between',
+    // backgroundColor: '#464450',
+  },
+  mainCardContainer: {
     flexDirection: 'row',
     borderRadius: 10,
     width: '90%',
     height: 'auto',
     alignSelf: 'center',
-    justifyContent: 'space-between',
     backgroundColor: '#464450',
   },
   mainInfo: {

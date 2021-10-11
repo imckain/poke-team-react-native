@@ -8,7 +8,6 @@ const AbilityShortEffect = ({ results }) => {
 
   const checkLanguage = (el) => {
     const filter = el.effect_entries.filter((item) => item.language.name === 'en')
-    console.log(filter);
     return filter[0].short_effect
   }
 

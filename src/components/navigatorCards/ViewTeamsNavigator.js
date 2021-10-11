@@ -13,7 +13,7 @@ const TeamsNavigator = () => {
 const styles = StyleSheet.create({
   container: {
     height: 140,
-    width: 140,
+    width: '100%',
     backgroundColor: '#ffc654',
     borderRadius: 10,
     justifyContent: 'center',

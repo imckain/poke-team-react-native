@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
   container: {
     marginHorizontal: 10,
     alignItems: 'baseline',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    marginBottom: 15
   },
   attributes: {
     color: 'rgb(175, 175, 175)',
