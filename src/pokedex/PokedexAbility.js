@@ -9,7 +9,7 @@ const PokedexAbility = ({ results, fontSize }) => {
   }
 
   return (
-    <Text style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.identifier)}</Text>
+    <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.identifier)}</Text>
   );
 };
 

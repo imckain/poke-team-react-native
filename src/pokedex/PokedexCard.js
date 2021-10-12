@@ -12,16 +12,16 @@ const PokedexCard = (props) => {
 
   const checkDex = (el) => {
     if (el === 'pokemon') {
-      return <PokedexNameAndId fontSize={32} results={results} />
+      return <PokedexNameAndId fontSize={24} results={results} />
     }
     if (el === 'type') {
-      return <PokedexType fontSize={32} results={results} />
+      return <PokedexType fontSize={24} results={results} />
     }
     if (el === 'move') {
-      return <PokedexMove fontSize={32} results={results} />
+      return <PokedexMove fontSize={24} results={results} />
     }
     if (el === 'ability') {
-      return <PokedexAbility fontSize={32} results={results} />
+      return <PokedexAbility fontSize={24} results={results} />
     }
   }
 

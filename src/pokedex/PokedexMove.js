@@ -10,8 +10,8 @@ const PokedexMove = ({ results, fontSize }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={[styles.name]}>{Capitalize(results.identifier)}  </Text>
-      <Text style={styles.attributes}> Power: {results.power} | PP: {results.pp} | Acc: {results.accuracy}</Text>
+      <Text allowFontScaling={false} style={[styles.name]}>{Capitalize(results.identifier)}  </Text>
+      <Text allowFontScaling={false} style={styles.attributes}> Power: {results.power} | PP: {results.pp} | Acc: {results.accuracy}</Text>
     </View>
   );
 };
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   attributes: {
     paddingVertical: 2,
     color: 'rgb(175, 175, 175)',
-    fontSize: 16,
+    fontSize: 14,
   },
 });
 
