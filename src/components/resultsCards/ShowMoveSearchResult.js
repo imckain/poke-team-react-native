@@ -22,7 +22,7 @@ const ShowAdvancedMoveResult = (props) => {
             <MoveAttributes results={results} />
           </View>
         </View>
-        <Text style={styles.infoNotice}>Tap for more info</Text>
+        <Text allowFontScaling={false} style={styles.infoNotice}>Tap for more info</Text>
       </View>
     </View>
   );
@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     color: '#ffffffa7',
     fontStyle: 'italic',
     paddingTop: 2,
+    fontSize: 12
   }
 });
 

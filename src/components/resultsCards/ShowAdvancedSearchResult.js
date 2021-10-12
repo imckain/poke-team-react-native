@@ -13,15 +13,15 @@ const ShowAdvancedSearchResult = (props) => {
     <View style={styles.container}>
       <View style={styles.mainCardContainer}>
         <View style={styles.mainInfo}>
-          <PokemonNameAndId fontSize={32} results={results} />
-          <FrontSprite width={150} height={150} results={results} />
+          <PokemonNameAndId fontSize={26} results={results} />
+          <FrontSprite width={120} height={120} results={results} />
         </View>
         <View style={styles.detailInfo}>
-          <BaseStats headerFontSize={22} detailFontSize={16} results={results} />
-          <TypeDetail margin={7} headerFontSize={22} detailFontSize={16} results={results} />
+          <BaseStats headerFontSize={22} detailFontSize={14} results={results} />
+          <TypeDetail margin={7} headerFontSize={16} detailFontSize={12} results={results} />
         </View>
       </View>
-      <Text style={styles.infoNotice}>Tap for more info</Text>
+      <Text allowFontScaling={false} style={styles.infoNotice}>Tap for more info</Text>
     </View>
   );
 };
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
     color: '#ffffffa7',
     fontStyle: 'italic',
     paddingTop: 2,
+    fontSize: 12
   }
 });
 

@@ -23,7 +23,7 @@ const ShowAbilitySearchResult = (props) => {
           <AbilityShortEffect results={results} />
         </View>
       </View>
-      <Text style={styles.infoNotice}>Tap for more info</Text>
+      <Text allowFontScaling={false} style={styles.infoNotice}>Tap for more info</Text>
     </View>
   );
 };
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     paddingTop: 2,
     paddingBottom: 8,
+    fontSize: 12
   }
 });
 
