@@ -14,8 +14,8 @@ const TypeName = ({ results }) => {
 
   return (
     <View style={styles.dmgClassView}>
-      <Text style={[styles.name]}>{Capitalize(results.name)}</Text>
-      <Text style={[styles.damageClass]}>Damage Class:  <Text style={styles.damageClassSub}>{isValid(results)}</Text></Text>
+      <Text allowFontScaling={false} style={[styles.name]}>{Capitalize(results.name)}</Text>
+      <Text allowFontScaling={false} style={[styles.damageClass]}>Damage Class:  <Text style={styles.damageClassSub}>{isValid(results)}</Text></Text>
     </View>
   );
 };
@@ -23,7 +23,7 @@ const TypeName = ({ results }) => {
 const styles = StyleSheet.create({
   name: {
     color: '#fff',
-    fontSize: 32,
+    fontSize: 26,
     fontWeight: '600',
     marginVertical: 8,
     marginHorizontal: 12
@@ -33,13 +33,13 @@ const styles = StyleSheet.create({
   },
   damageClass: {
     color: '#fff',
-    fontSize: 28,
+    fontSize: 22,
     fontWeight: '600',
     marginHorizontal: 12
   },
   damageClassSub: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 26,
+    fontSize: 20,
     fontWeight: '400',
     marginHorizontal: 12
   },

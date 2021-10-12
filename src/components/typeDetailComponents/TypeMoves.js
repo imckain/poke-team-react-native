@@ -13,13 +13,13 @@ const TypeMoves = ({ results }) => {
     if (el === true) {
       return (
         <Pressable onPressIn={() => setCollapsed(false)}>
-          <Text style={[styles.headerText]}>Moves  <Entypo name="triangle-right" size={28} color="rgb(175, 175, 175)" /></Text>
+          <Text allowFontScaling={false} style={[styles.headerText]}>Moves  <Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     } if (el === false) {
       return(
         <Pressable onPressIn={() => setCollapsed(true)}>
-          <Text style={[styles.headerText]}>Moves  <Entypo name="triangle-down" size={28} color="rgb(175, 175, 175)" /></Text>
+          <Text allowFontScaling={false} style={[styles.headerText]}>Moves  <Entypo name="triangle-down" size={22} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     }
@@ -30,7 +30,7 @@ const TypeMoves = ({ results }) => {
   }
   
   const createMoveTextBox = (el) => {
-    const moveBox = el.moves.map(item => <View key={item.name} style={styles.moveTextBox}><Text style={[styles.moveText]}>{Capitalize(item.name)}</Text></View>)
+    const moveBox = el.moves.map(item => <View key={item.name} style={styles.moveTextBox}><Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.name)}</Text></View>)
     return moveBox
   }
 
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     marginTop: 7,
     fontWeight: '600',
-    fontSize: 28,
+    fontSize: 22,
   },
   scrollViewStyle: {
     flexDirection: 'row',
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
   moveText: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 22,
+    fontSize: 16,
     fontWeight: '600',
     textAlign: 'center',
     paddingHorizontal: 12,

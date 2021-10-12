@@ -17,13 +17,13 @@ const TypeDamage = ({ results }) => {
     if (el === true) {
       return (
         <Pressable onPressIn={() => setCollapsed(false)}>
-          <Text style={[styles.headerText]}>Damage Mulitpliers  <Entypo name="triangle-right" size={28} color="rgb(175, 175, 175)" /></Text>
+          <Text allowFontScaling={false} style={[styles.headerText]}>Damage Mulitpliers  <Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     } if (el === false) {
       return(
         <Pressable onPressIn={() => setCollapsed(true)}>
-          <Text style={[styles.headerText]}>Damage Mulitpliers  <Entypo name="triangle-down" size={28} color="rgb(175, 175, 175)" /></Text>
+          <Text allowFontScaling={false} style={[styles.headerText]}>Damage Mulitpliers  <Entypo name="triangle-down" size={22} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     }
@@ -33,13 +33,13 @@ const TypeDamage = ({ results }) => {
     if (el === true) {
       return (
         <Pressable onPressIn={() => fn(false)}>
-          <Text style={[styles.dmgCaseHeader]}><Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" /></Text>
+          <Entypo name="triangle-right" size={16} color="rgb(175, 175, 175)" />
         </Pressable>
       )
     } if (el === false) {
       return(
         <Pressable onPressIn={() => fn(true)}>
-          <Text style={[styles.headerText]}><Entypo name="triangle-down" size={22} color="rgb(175, 175, 175)" /></Text>
+          <Entypo name="triangle-down" size={16} color="rgb(175, 175, 175)" />
         </Pressable>
       )
     }
@@ -50,7 +50,7 @@ const TypeDamage = ({ results }) => {
   }
   
   const createDamageTextBox = (el) => {
-    const damageBox = el.map(item => <View key={item.name} style={styles.damageTextBox}><Text style={[styles.damageText]}>{Capitalize(item.name)}</Text></View>)
+    const damageBox = el.map(item => <View key={item.name} style={styles.damageTextBox}><Text allowFontScaling={false} style={[styles.damageText]}>{Capitalize(item.name)}</Text></View>)
     return damageBox
   }
 
@@ -85,7 +85,7 @@ const TypeDamage = ({ results }) => {
         <View horizontal style={styles.scrollViewStyle}>
           <View style={styles.damageContainer}>
             <View style={styles.dmgCaseView}>
-              <Text style={styles.dmgCaseHeader}>2x Damage To: {checkForCollapseOnMultipliers(dblDmgToCollapsed, setDblDmgToCollapsed)}</Text>
+              <Text allowFontScaling={false} style={styles.dmgCaseHeader}>2x Damage To: {checkForCollapseOnMultipliers(dblDmgToCollapsed, setDblDmgToCollapsed)}</Text>
             </View>
             <Collapsible collapsed={dblDmgToCollapsed}>
               <View style={styles.dmgResultsContainer}>
@@ -93,7 +93,7 @@ const TypeDamage = ({ results }) => {
               </View>
             </Collapsible>
             <View style={styles.dmgCaseView}>
-              <Text style={styles.dmgCaseHeader}>0.5x Damage To: {checkForCollapseOnMultipliers(halfDmgToCollapsed, setHalfDmgToCollapsed)}</Text>
+              <Text allowFontScaling={false} style={styles.dmgCaseHeader}>0.5x Damage To: {checkForCollapseOnMultipliers(halfDmgToCollapsed, setHalfDmgToCollapsed)}</Text>
             </View>
             <Collapsible collapsed={halfDmgToCollapsed}>
               <View style={styles.dmgResultsContainer}>
@@ -101,7 +101,7 @@ const TypeDamage = ({ results }) => {
               </View>
             </Collapsible>
             <View style={styles.dmgCaseView}>
-              <Text style={styles.dmgCaseHeader}>0x Damage To: {checkForCollapseOnMultipliers(noDmgToCollapsed, setNoDmgToCollapsed)}</Text>
+              <Text allowFontScaling={false} style={styles.dmgCaseHeader}>0x Damage To: {checkForCollapseOnMultipliers(noDmgToCollapsed, setNoDmgToCollapsed)}</Text>
             </View>
             <Collapsible collapsed={noDmgToCollapsed}>
               <View style={styles.dmgResultsContainer}>
@@ -109,7 +109,7 @@ const TypeDamage = ({ results }) => {
               </View>
             </Collapsible>
             <View style={styles.dmgCaseView}>
-              <Text style={styles.dmgCaseHeader}>2x Damage From: {checkForCollapseOnMultipliers(dblDmgFrmCollapsed, setDblDmgFrmCollapsed)}</Text>
+              <Text allowFontScaling={false} style={styles.dmgCaseHeader}>2x Damage From: {checkForCollapseOnMultipliers(dblDmgFrmCollapsed, setDblDmgFrmCollapsed)}</Text>
             </View>
             <Collapsible collapsed={dblDmgFrmCollapsed}>
               <View style={styles.dmgResultsContainer}>
@@ -117,7 +117,7 @@ const TypeDamage = ({ results }) => {
               </View>
             </Collapsible>
             <View style={styles.dmgCaseView}>
-              <Text style={styles.dmgCaseHeader}>0.5x Damage From: {checkForCollapseOnMultipliers(halfDmgFrmCollapsed, setHalfDmgFrmCollapsed)}</Text>
+              <Text allowFontScaling={false} style={styles.dmgCaseHeader}>0.5x Damage From: {checkForCollapseOnMultipliers(halfDmgFrmCollapsed, setHalfDmgFrmCollapsed)}</Text>
             </View>
             <Collapsible collapsed={halfDmgFrmCollapsed}>
               <View style={styles.dmgResultsContainer}>
@@ -125,7 +125,7 @@ const TypeDamage = ({ results }) => {
               </View>
             </Collapsible>
             <View style={styles.dmgCaseView}>
-              <Text style={styles.dmgCaseHeader}>0x Damage From: {checkForCollapseOnMultipliers(noDmgFrmCollapsed, setNoDmgFrmCollapsed)}</Text>
+              <Text allowFontScaling={false} style={styles.dmgCaseHeader}>0x Damage From: {checkForCollapseOnMultipliers(noDmgFrmCollapsed, setNoDmgFrmCollapsed)}</Text>
             </View>
             <Collapsible collapsed={noDmgFrmCollapsed}>
               <View style={styles.dmgResultsContainer}>
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     marginTop: 7,
     fontWeight: '600',
-    fontSize: 28,
+    fontSize: 22,
   },
   scrollViewStyle: {
     flexDirection: 'row',
@@ -166,15 +166,16 @@ const styles = StyleSheet.create({
     // paddingBottom: 10,
   },
   dmgCaseView: {
-    alignItems: 'baseline',
+    alignItems: 'flex-start',
   },
   dmgCaseHeader: {
     color: '#fff',
     marginTop: 9,
     marginBottom: 3,
     fontWeight: '600',
-    fontSize: 18,
-    alignItems: 'flex-end'
+    fontSize: 16,
+    // lineHeight: 38,
+    alignItems: 'baseline'
   },
   dmgResultsContainer: {
     width: '100%',
@@ -194,7 +195,7 @@ const styles = StyleSheet.create({
   },
   damageText: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 22,
+    fontSize: 14,
     fontWeight: '600',
     textAlign: 'center',
     paddingHorizontal: 12,
