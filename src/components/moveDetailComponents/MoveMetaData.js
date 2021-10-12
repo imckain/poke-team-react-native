@@ -11,13 +11,13 @@ const MoveMetaData = ({ results }) => {
     if (el === true) {
       return (
         <Pressable onPressIn={() => setCollapsed(false)}>
-          <Text style={[styles.metaDataHeaderText]}>Meta Data:  <Entypo name="triangle-right" size={18} color="rgb(175, 175, 175)" /></Text>
+          <Text allowFontScaling={false} style={[styles.metaDataHeaderText]}>Meta Data:  <Entypo name="triangle-right" size={16} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     } if (el === false) {
       return(
         <Pressable onPressIn={() => setCollapsed(true)}>
-          <Text style={[styles.metaDataHeaderText]}>Meta Data:  <Entypo name="triangle-down" size={18} color="rgb(175, 175, 175)" /></Text>
+          <Text allowFontScaling={false} style={[styles.metaDataHeaderText]}>Meta Data:  <Entypo name="triangle-down" size={16} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     }
@@ -34,22 +34,22 @@ const MoveMetaData = ({ results }) => {
 
   return (
     <View style={[styles.container]}>
-      <Text style={styles.subHeaderText}>Ailment: {results.meta.ailment.name}</Text>
+      <Text allowFontScaling={false} style={styles.subHeaderText}>Ailment: {results.meta.ailment.name}</Text>
       {checkForCollapse(collapsed)}
       <Collapsible collapsed={collapsed}>
         <View style={styles.scrollViewStyle}>
-          <Text style={styles.descriptionText}>{results.effect_entries[0].effect}</Text>
-          <Text style={styles.metaDataText}>Category: {results.meta.category.name}</Text>
-          <Text style={styles.metaDataText}>Inflict Chance: {results.meta.ailment_chance}</Text>
-          <Text style={styles.metaDataText}>Crit Rate: {results.meta.crit_rate}</Text>
-          <Text style={styles.metaDataText}>Drain: {results.meta.drain}</Text>
-          <Text style={styles.metaDataText}>Flinch Chance: {results.meta.flinch_chance}</Text>
-          <Text style={styles.metaDataText}>Stat Chance: {results.meta.stat_chance}</Text>
-          <Text style={styles.metaDataText}>Healing: {results.meta.healing}</Text>
-          <Text style={styles.metaDataText}>Max Hit: {checkForNull(results.meta.max_hits)}</Text>
-          <Text style={styles.metaDataText}>Max Turns: {checkForNull(results.meta.max_turns)}</Text>
-          <Text style={styles.metaDataText}>Min Hit: {checkForNull(results.meta.min_hits)}</Text>
-          <Text style={styles.metaDataText}>Min Turns: {checkForNull(results.meta.min_turns)}</Text>
+          <Text allowFontScaling={false} style={styles.descriptionText}>{results.effect_entries[0].effect}</Text>
+          <Text allowFontScaling={false} style={styles.metaDataText}>Category: {results.meta.category.name}</Text>
+          <Text allowFontScaling={false} style={styles.metaDataText}>Inflict Chance: {results.meta.ailment_chance}</Text>
+          <Text allowFontScaling={false} style={styles.metaDataText}>Crit Rate: {results.meta.crit_rate}</Text>
+          <Text allowFontScaling={false} style={styles.metaDataText}>Drain: {results.meta.drain}</Text>
+          <Text allowFontScaling={false} style={styles.metaDataText}>Flinch Chance: {results.meta.flinch_chance}</Text>
+          <Text allowFontScaling={false} style={styles.metaDataText}>Stat Chance: {results.meta.stat_chance}</Text>
+          <Text allowFontScaling={false} style={styles.metaDataText}>Healing: {results.meta.healing}</Text>
+          <Text allowFontScaling={false} style={styles.metaDataText}>Max Hit: {checkForNull(results.meta.max_hits)}</Text>
+          <Text allowFontScaling={false} style={styles.metaDataText}>Max Turns: {checkForNull(results.meta.max_turns)}</Text>
+          <Text allowFontScaling={false} style={styles.metaDataText}>Min Hit: {checkForNull(results.meta.min_hits)}</Text>
+          <Text allowFontScaling={false} style={styles.metaDataText}>Min Turns: {checkForNull(results.meta.min_turns)}</Text>
         </View>
       </Collapsible>
     </View>
@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
   },
   subHeaderText: {
     color: '#fff',
-    marginTop: 20,
     fontWeight: '600',
     fontSize: 22,
   },
@@ -75,11 +74,12 @@ const styles = StyleSheet.create({
     marginTop: 6,
     marginLeft: 22,
     fontWeight: '600',
-    fontSize: 18,
+    fontSize: 16,
   },
   descriptionText: {
-    color: 'rgb(223, 223, 223)',
-    fontSize: 18,
+    color: '#fff',
+    // color: 'rgb(223, 223, 223)',
+    fontSize: 16,
     fontWeight: '500',
     textAlign: 'center',
     paddingHorizontal: 22,

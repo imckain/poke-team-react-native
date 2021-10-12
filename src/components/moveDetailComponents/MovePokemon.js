@@ -11,13 +11,13 @@ const MovePokemon = ({ results }) => {
     if (el === true) {
       return (
         <Pressable onPressIn={() => setPokemonCollapsed(false)}>
-          <Text style={[styles.headerText]}>Learned By:  <Entypo name="triangle-right" size={28} color="rgb(175, 175, 175)" /></Text>
+          <Text allowFontScaling={false} style={[styles.headerText]}>Learned By:  <Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     } if (el === false) {
       return(
         <Pressable onPressIn={() => setPokemonCollapsed(true)}>
-          <Text style={[styles.headerText]}>Learned By:  <Entypo name="triangle-down" size={28} color="rgb(175, 175, 175)" /></Text>
+          <Text allowFontScaling={false} style={[styles.headerText]}>Learned By:  <Entypo name="triangle-down" size={22} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     }
@@ -28,7 +28,7 @@ const MovePokemon = ({ results }) => {
   }
 
   const createPokemonBox = (el) => {
-    const pokemonBox = el.learned_by_pokemon.map(item => <View key={item.name} style={styles.textBox}><Text style={[styles.text]}>{Capitalize(item.name)}</Text></View>)
+    const pokemonBox = el.learned_by_pokemon.map(item => <View key={item.name} style={styles.textBox}><Text allowFontScaling={false} style={[styles.text]}>{Capitalize(item.name)}</Text></View>)
     return pokemonBox
   }
 
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     marginTop: 7,
     fontWeight: '600',
-    fontSize: 28,
+    fontSize: 22,
   },
   scrollViewStyle: {
     flexDirection: 'row',
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 18,
+    fontSize: 14,
     fontWeight: '600',
     textAlign: 'center',
     paddingHorizontal: 12,

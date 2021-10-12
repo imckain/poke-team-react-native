@@ -14,7 +14,7 @@ const MoveType = ({ results }) => {
 
   return (
     <View style={styles.typeView}>
-      <Text style={[styles.type]}>Type:  <Text style={styles.typeSub}>{isValid(results)}</Text></Text>
+      <Text allowFontScaling={false} style={[styles.type]}>Type:  <Text style={styles.typeSub}>{isValid(results)}</Text></Text>
     </View>
   );
 };
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   },
   typeSub: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '400',
     marginHorizontal: 12
   },

@@ -10,7 +10,7 @@ const MoveAttributes = ({ results, fontSize }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.attributes}> Power: {results.power} | PP: {results.pp} | Acc: {results.accuracy}</Text>
+      <Text allowFontScaling={false} style={[styles.attributes, { fontSize: fontSize }]}> Power: {results.power} | PP: {results.pp} | Acc: {results.accuracy}</Text>
     </View>
   );
 };
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   },
   attributes: {
     color: 'rgb(175, 175, 175)',
-    fontSize: 18,
+    fontSize: 14,
   },
 });
 
