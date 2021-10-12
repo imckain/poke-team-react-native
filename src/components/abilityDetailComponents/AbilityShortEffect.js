@@ -13,7 +13,7 @@ const AbilityShortEffect = ({ results }) => {
 
   return (
     <View style={styles.nameView}>
-      <Text style={[styles.name]}>{checkLanguage(results)}</Text>
+      <Text allowFontScaling={false} style={[styles.name]}>{checkLanguage(results)}</Text>
     </View>
   );
 };
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   },
   name: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '400',
     marginHorizontal: 12,
   },
