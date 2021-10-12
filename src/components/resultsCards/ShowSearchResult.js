@@ -51,9 +51,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#464450',
   },
   mainInfo: {
-    justifyContent: 'flex-start',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    width: '50%'
+    width: '50%',
+    paddingBottom: 20,
   },
   detailInfo: {
     flex: 1,
