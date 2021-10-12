@@ -7,7 +7,7 @@ const PokemonNameAndId = ({ results, fontSize }) => {
   }
 
   return (
-    <Text style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.name)} #{results.id}</Text>
+    <Text adjustsFontSizeToFit={true} allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.name)} #{results.id}</Text>
   );
 };
 
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   name: {
     textAlign: 'center',
     color: '#fff',
-    fontSize: 32,
+    fontSize: 22,
     fontWeight: '600',
     marginVertical: 8,
     marginHorizontal: 12

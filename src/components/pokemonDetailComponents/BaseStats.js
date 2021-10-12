@@ -8,31 +8,31 @@ const BaseStats = ({ results, headerFontSize, detailFontSize }) => {
 
   return (
     <View>
-      <Text style={[styles.baseStatHeaderText, {fontSize: headerFontSize}]}>Base Stats:</Text>
+      <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatHeaderText, {fontSize: headerFontSize}]}>Base Stats:</Text>
       <View style={styles.infoContainer}>
         <View style={styles.baseStatContainer}>
-          <Text style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[0].stat.name)}:</Text>
-          <Text style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[0].base_stat}</Text>
+          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[0].stat.name)}:</Text>
+          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[0].base_stat}</Text>
         </View>
         <View style={styles.baseStatContainer}>
-          <Text style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[1].stat.name)}:</Text>
-          <Text style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[1].base_stat}</Text>
+          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[1].stat.name)}:</Text>
+          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[1].base_stat}</Text>
         </View>
         <View style={styles.baseStatContainer}>
-          <Text style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[2].stat.name)}:</Text>
-          <Text style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[2].base_stat}</Text>
+          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[2].stat.name)}:</Text>
+          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[2].base_stat}</Text>
         </View>
         <View style={styles.baseStatContainer}>
-          <Text style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[3].stat.name)}:</Text>
-          <Text style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[3].base_stat}</Text>
+          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[3].stat.name)}:</Text>
+          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[3].base_stat}</Text>
         </View>
         <View style={styles.baseStatContainer}>
-          <Text style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[4].stat.name)}:</Text>
-          <Text style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[4].base_stat}</Text>
+          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[4].stat.name)}:</Text>
+          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[4].base_stat}</Text>
         </View>
         <View style={styles.baseStatContainer}>
-          <Text style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[5].stat.name)}:</Text>
-          <Text style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[5].base_stat}</Text>
+          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[5].stat.name)}:</Text>
+          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[5].base_stat}</Text>
         </View>
       </View>
     </View>

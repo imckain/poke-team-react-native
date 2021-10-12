@@ -8,8 +8,8 @@ const TypeDetail = ({ results, margin, headerFontSize, detailFontSize }) => {
 
   return (
     <View style={[styles.typeContainer, { marginBottom: margin }]}>
-      <Text style={[styles.typeLabelText, { fontSize: headerFontSize }]}>Type:</Text>
-      <Text style={[styles.typeText, { fontSize: detailFontSize }]}>{results.types.map(el => Capitalize(el.type.name) + ' ')}</Text>
+      <Text allowFontScaling={false} style={[styles.typeLabelText, { fontSize: headerFontSize }]}>Type:</Text>
+      <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize }]}>{results.types.map(el => Capitalize(el.type.name) + ' ')}</Text>
     </View>
   );
 };
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
   typeText: {
     color: '#fff',
-    marginTop: 6,
+    // marginTop: 6,
     marginLeft: 7,
   },
 });

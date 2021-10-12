@@ -11,13 +11,13 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize }) => {
     if (el === true) {
       return (
         <Pressable onPressIn={() => setCollapsed(false)}>
-          <Text style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities  <Entypo name="triangle-right" size={28} color="rgb(175, 175, 175)" /></Text>
+          <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities  <Entypo name="triangle-right" size={28} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     } if (el === false) {
       return(
         <Pressable onPressIn={() => setCollapsed(true)}>
-          <Text style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities  <Entypo name="triangle-down" size={28} color="rgb(175, 175, 175)" /></Text>
+          <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities  <Entypo name="triangle-down" size={28} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     }
@@ -31,7 +31,7 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize }) => {
     <View style={[styles.container, { marginBottom: margin }]}>
       {checkForCollapse(collapsed)}
       <Collapsible collapsed={collapsed}>
-        <Text style={[styles.abilityText, { fontSize: detailFontSize }]}>{results.abilities.map(el => Capitalize(el.ability.name) + ' ')}</Text>
+        <Text allowFontScaling={false} style={[styles.abilityText, { fontSize: detailFontSize }]}>{results.abilities.map(el => Capitalize(el.ability.name) + ' ')}</Text>
       </Collapsible>
     </View>
   );
@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
   },
   headerText: {
     color: '#fff',
-    marginTop: 7,
     fontWeight: '600',
   },
   abilityText: {

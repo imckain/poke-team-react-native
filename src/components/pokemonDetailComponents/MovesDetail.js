@@ -15,13 +15,13 @@ const MovesDetail = ({ results }) => {
     if (el === true) {
       return (
         <Pressable onPressIn={() => setCollapsed(false)}>
-          <Text style={[styles.headerText]}>Moves  <Entypo name="triangle-right" size={28} color="rgb(175, 175, 175)" /></Text>
+          <Text allowFontScaling={false} style={[styles.headerText]}>Moves  <Entypo name="triangle-right" size={28} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     } if (el === false) {
       return(
         <Pressable onPressIn={() => setCollapsed(true)}>
-          <Text style={[styles.headerText]}>Moves  <Entypo name="triangle-down" size={28} color="rgb(175, 175, 175)" /></Text>
+          <Text allowFontScaling={false} style={[styles.headerText]}>Moves  <Entypo name="triangle-down" size={28} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     }
@@ -32,14 +32,14 @@ const MovesDetail = ({ results }) => {
   }
   
   const createMoveTextBox = (el) => {
-    const moveBox = el.moves.map(item => <View key={item.move.name} style={styles.moveTextBox}><Text style={[styles.moveText]}>{Capitalize(item.move.name)}</Text><Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text><Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text></View>)
+    const moveBox = el.moves.map(item => <View key={item.move.name} style={styles.moveTextBox}><Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.move.name)}</Text><Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text><Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text></View>)
     return moveBox
   }
 
   const displayFilteredResults = (el) => {
     if (searchTerm !== '') {
       try {
-        return el.map(filteredRes => (<View key={filteredRes.move.name} style={styles.moveTextBox}><Text style={[styles.moveText]}>{Capitalize(filteredRes.move.name)}</Text><Text style={styles.moveDetailText}>Level Learned: {filteredRes.version_group_details[0].level_learned_at}</Text><Text style={styles.moveDetailText}>Method: {filteredRes.version_group_details[0].move_learn_method.name}</Text></View>))
+        return el.map(filteredRes => (<View key={filteredRes.move.name} style={styles.moveTextBox}><Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(filteredRes.move.name)}</Text><Text style={styles.moveDetailText}>Level Learned: {filteredRes.version_group_details[0].level_learned_at}</Text><Text style={styles.moveDetailText}>Method: {filteredRes.version_group_details[0].move_learn_method.name}</Text></View>))
       } catch (error) {
         console.log(error);
       }
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     marginTop: 7,
     fontWeight: '600',
-    fontSize: 28,
+    fontSize: 22,
   },
   scrollViewStyle: {
     marginBottom: 180,
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   },
   moveText: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: '600',
     textAlign: 'center',
     paddingHorizontal: 12,
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
   },
   moveDetailText: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 16,
+    fontSize: 14,
     textAlign: 'center',
     paddingHorizontal: 12,
     paddingTop: 1
