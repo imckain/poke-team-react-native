@@ -44,9 +44,10 @@ function BottomTabNavigator() {
           },
           tabBarStyle: {
             backgroundColor: '#272537',
-            height: 96,
+            height: 82,
             alignItems: 'baseline'
-          }
+          },
+          tabBarShowLabel: false
         }}
         >
         {/* <Tab.Screen 
