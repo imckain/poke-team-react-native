@@ -76,7 +76,7 @@ const AbilitySearchScreen = (props) => {
           {showAbilityCard(searchTerm)}
         </View>
         <View style={{height: 5 }} />
-        {showPokeDex(searchParam)}
+          {showPokeDex(searchParam)}
       </View>
     </HideKeyboard>
   );
