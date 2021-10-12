@@ -21,6 +21,7 @@ const SearchBar = ({ searchTerm, onSearchTermChange, onSearchTermSubmit }) => {
         clearButtonMode='always'
         keyboardAppearance='dark'
         returnKeyType={'search'}
+        allowFontScaling={false}
       />
     </View>
   )
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
     paddingLeft: 12,
     height: '100%',
     flex: 1,
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: '500',
     color: '#fff'
   }

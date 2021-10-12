@@ -5,7 +5,7 @@ const AdvancedSearchNavigator = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>Advanced Search</Text>
+      <Text allowFontScaling={false} style={styles.label}>Advanced Search</Text>
     </View>
   );
 };

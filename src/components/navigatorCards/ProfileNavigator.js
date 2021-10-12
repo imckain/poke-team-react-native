@@ -5,7 +5,7 @@ const ProfileNavigator = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>profile</Text>
+      <Text allowFontScaling={false} style={styles.label}>Profile</Text>
     </View>
   );
 };

@@ -5,7 +5,7 @@ const BuildTeamsNavigator = (props) => {
 
   return (
     <View style={[styles.container, { height: props.height, width: props.width }]}>
-      <Text style={styles.label}>Build a Team</Text>
+      <Text allowFontScaling={false} style={styles.label}>Build a Team</Text>
     </View>
   );
 };

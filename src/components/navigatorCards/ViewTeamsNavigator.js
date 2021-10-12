@@ -5,7 +5,7 @@ const TeamsNavigator = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>View Teams</Text>
+      <Text allowFontScaling={false} style={styles.label}>View Teams</Text>
     </View>
   );
 };
