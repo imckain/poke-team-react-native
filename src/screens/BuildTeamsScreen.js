@@ -76,6 +76,7 @@ const BuildTeamsScreen = (props) => {
             // clearButtonMode='always'
             keyboardAppearance='dark'
             returnKeyType={'done'}
+            allowFontScaling={false}
           />
         </View>
         <View style={styles.searchBarContainer}>
@@ -90,18 +91,19 @@ const BuildTeamsScreen = (props) => {
           {showPokemonCard(searchTerm)}
         </View>
         <View style={{height: 5 }} />
-        <View style={styles.teamSlotContainer}>
-          
-          <PokemonSlotCard results={buildResults} />
-          <PokemonSlotCard results={buildResults} />
-          <PokemonSlotCard results={buildResults} />
-          <PokemonSlotCard results={buildResults} />
-          <PokemonSlotCard results={buildResults} />
-          <PokemonSlotCard results={buildResults} />
+        <View style={styles.teamInfoContainer}>
+          <View style={styles.teamSlotContainer}>
+            <PokemonSlotCard results={buildResults} />
+            <PokemonSlotCard results={buildResults} />
+            <PokemonSlotCard results={buildResults} />
+            <PokemonSlotCard results={buildResults} />
+            <PokemonSlotCard results={buildResults} />
+            <PokemonSlotCard results={buildResults} />
+          </View>
+          <Pressable onPress={() => addTeamAndGoBack()} >
+            <SaveTeamButton height={54} width={'90%'} />
+          </Pressable>
         </View>
-        <Pressable onPress={() => addTeamAndGoBack()} >
-          <SaveTeamButton height={80} width={'100%'} />
-        </Pressable>
       </ScrollView>
     </HideKeyboard>
   );
@@ -111,12 +113,12 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#353340',
     flexDirection: 'column',
-    flex: 1,
+    // flex: 1,
     paddingTop: 20,
     width: '100%',
   },
   teamSlotContainer: {
-    marginBottom: 90
+    marginBottom: 44,
   },
   addMonCard: {
     flexDirection: 'column',
@@ -143,12 +145,17 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     height: '100%',
-    flex: 1,
+    // flex: 1,
     fontSize: 60,
     textAlign: 'center',
     fontWeight: '500',
     color: '#fff',
-  }
+  },
+  teamInfoContainer: {
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    paddingBottom: 30,
+  },
 });
 
 export default React.memo(BuildTeamsScreen);

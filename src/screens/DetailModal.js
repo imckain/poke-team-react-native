@@ -26,29 +26,33 @@ const DetailModal = (props) => {
   const changeSprites = useCallback((el) => {
     if (el === true) {
       return (
-        <View style={styles.spriteContainer}>
+        <View style={{width: '100%'}}>
           <Pressable style={{zIndex: 1}} onPress={() => setIsShiny(false)}>
             <View style={ styles.changeButton} >
               <MaterialIcons name="360" size={24} color="rgb(223, 223, 223)" />
-              <Text style={styles.changeLabel}>Shiny</Text>
+              <Text allowFontScaling={false} style={styles.changeLabel}>Shiny</Text>
             </View>
           </Pressable>
-          <ShinyFrontSprite width={160} height={160} results={results} />
-          <ShinyBackSprite width={160} height={160} results={results} />
+          <View style={styles.spriteContainer}>
+            <ShinyFrontSprite width={160} height={160} results={results} />
+            <ShinyBackSprite width={160} height={160} results={results} />
+          </View>
         </View>
       )
     }
     if (el === false) {
       return (
-        <View style={styles.spriteContainer}>
+        <View style={{width: '100%'}}>
           <Pressable style={{zIndex: 1}} onPress={() => setIsShiny(true)}>
             <View style={ styles.changeButton} >
               <MaterialIcons name="360" size={24} color="rgb(223, 223, 223)" />
-              <Text style={styles.changeLabel}>Normal</Text>
+              <Text allowFontScaling={false} style={styles.changeLabel}>Normal</Text>
             </View>
           </Pressable>
-          <FrontSprite width={160} height={160} results={results} />
-          <BackSprite width={160} height={160} results={results} />
+          <View style={styles.spriteContainer}>
+            <FrontSprite width={160} height={160} results={results} />
+            <BackSprite width={160} height={160} results={results} />
+          </View>
         </View>
       )
     }
@@ -58,13 +62,14 @@ const DetailModal = (props) => {
     <View style={styles.container}>
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
-          <PokemonNameAndId fontSize={42} results={results} />
+          <PokemonNameAndId fontSize={34} results={results} />
+          <View style={{height: 20}} />
           {changeSprites(isShiny)}
         </View>
         <View style={styles.detailInfo}>
-          <TypeDetail margin={13} headerFontSize={28} detailFontSize={22} results={results} />
-          <AbilityDetail margin={13} headerFontSize={28} detailFontSize={22} results={results} />
-          <ModalBaseStats headerFontSize={28} detailFontSize={18} results={results} />
+          <TypeDetail margin={13} headerFontSize={22} detailFontSize={18} results={results} />
+          <AbilityDetail margin={13} headerFontSize={22} detailFontSize={18} results={results} />
+          <ModalBaseStats headerFontSize={22} detailFontSize={16} results={results} />
           <MovesDetail results={results} />
         </View>
       </ScrollView>
@@ -81,32 +86,37 @@ const styles = StyleSheet.create({
     backgroundColor: '#353340',
     paddingHorizontal: 10,
   },
+  scrollViewContainer: {
+    width: '100%'
+  },
   spriteContainer: {
     flexDirection: 'row',
+    width: '100%',
+    justifyContent: 'space-evenly'
   },
   mainInfo: {
     justifyContent: 'center',
     alignItems: 'center',
-    maxWidth: '100%',
+    width: '100%',
     paddingTop: 20
   },
   detailInfo: {
     flex: 1,
     paddingLeft: 5,
-    paddingVertical: 8,
+    paddingTop: 25,
     paddingBottom: 300
   },
   changeButton: {
     flexDirection: 'row',
     position: 'absolute',
-    left: -30,
-    bottom: 0
+    top: 0,
+    left: 0,
   },
   changeLabel: {
     paddingVertical: 2,
     paddingLeft: 6,
     color: 'rgb(175, 175, 175)',
-    fontSize: 16,
+    fontSize: 12,
   },
 });
 

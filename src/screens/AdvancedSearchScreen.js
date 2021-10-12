@@ -56,22 +56,22 @@ const AdvancedSearchScreen = (props) => {
         <View style={styles.searchParamsContainter}>
           <Pressable onPress={() => setSearchParam('pokemon')}>
             <View style={[searchParam === 'pokemon' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>
-              <Text style={[searchParam === 'pokemon' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>Pokemon</Text>
+              <Text allowFontScaling={false} style={[searchParam === 'pokemon' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>Pokemon</Text>
             </View>
           </Pressable>
           <Pressable onPress={() => setSearchParam('type')}>
             <View style={[searchParam === 'type' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>
-              <Text style={[searchParam === 'type' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>Type</Text>
+              <Text allowFontScaling={false} style={[searchParam === 'type' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>Type</Text>
             </View>
           </Pressable>
           <Pressable onPress={() => setSearchParam('move')}>
             <View style={[searchParam === 'move' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>
-              <Text style={[searchParam === 'move' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>Move</Text>
+              <Text allowFontScaling={false} style={[searchParam === 'move' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>Move</Text>
             </View>
           </Pressable>
           <Pressable onPress={() => setSearchParam('ability')}>
             <View style={[searchParam === 'ability' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>
-              <Text style={[searchParam === 'ability' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>Ability</Text>
+              <Text allowFontScaling={false} style={[searchParam === 'ability' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>Ability</Text>
             </View>
           </Pressable>
         </View>
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   },
   activeSearchParamText: {
     color: '#fff',
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: '600',
     borderBottomWidth: 2,
     borderColor: '#fff',
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   },
   inactiveSearchParamText: {
     color: 'rgb(175, 175, 175)',
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: '400',
   }
 });

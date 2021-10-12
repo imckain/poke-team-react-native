@@ -25,7 +25,7 @@ const MoveDetailModal = (props) => {
         <View style={styles.mainInfo}>
           <MoveNameAndClass results={results} />
           <MoveType results={results} />
-          <MoveAttributes results={results} />
+          <MoveAttributes fontSize={18} results={results} />
           <MoveMetaData results={results} />
           <MovePokemon results={results} />
         </View>
