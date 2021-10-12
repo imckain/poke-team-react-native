@@ -7,7 +7,7 @@ const SaveTeamButton = (props) => {
 
   return (
     <View style={[styles.container, { height: props.height, width: props.width }]}>
-      <Text style={styles.label}>Save</Text>
+      <Text allowFontScaling={false} style={styles.label}>Save</Text>
     </View>
   );
 };
@@ -22,9 +22,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     // paddingTop: 20,
     marginBottom: 20,
+    alignSelf: 'center',
   },
   label: {
-    fontSize: 44,
+    fontSize: 30,
     fontWeight: '600',
     color: '#fff',
     textShadowColor: '#53535383',

@@ -10,7 +10,7 @@ const PokemonSlotCard = (props) => {
     <View>
       <View style={styles.container}>
         <View style={styles.mainInfo}>
-          <PokemonSlots fontSize={22} results={results} />
+          <PokemonSlots fontSize={16} results={results} />
         </View>
       </View>
     </View>

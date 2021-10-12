@@ -11,8 +11,8 @@ const PokemonSlots = ({ results, fontSize }) => {
 
   const isValid = (el) => {
     if (el.name !== undefined) {
-      <Text style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.name)} <Ionicons name="ios-chevron-forward-sharp" size={24} color="rgb(175, 175, 175)" /> #{results.id}</Text>
-    } else return <Text style={[styles.emptyName, {fontSize: fontSize}]}> Empty Slot</Text>
+      <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.name)} <Ionicons name="ios-chevron-forward-sharp" size={24} color="rgb(175, 175, 175)" /> #{results.id}</Text>
+    } else return <Text allowFontScaling={false} style={[styles.emptyName, {fontSize: fontSize}]}> Empty Slot</Text>
   }
   
   return (
@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     marginRight: 12,
     marginLeft: 7,
     marginBottom: 3,
-    width: 40,
-    height: 40,
+    width: 38,
+    height: 38,
   }
 });
 

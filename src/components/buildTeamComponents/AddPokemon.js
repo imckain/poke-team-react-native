@@ -11,7 +11,7 @@ const AddPokemonButton = (props) => {
 
   return (
     <View style={[styles.container, { height: props.height, width: props.width }]}>
-      <Text style={styles.label}>Add {Capitalize(props.name)}</Text>
+      <Text allowFontScaling={false} style={styles.label}>Add {Capitalize(props.name)}</Text>
     </View>
   );
 };
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   },
   label: {
     // marginBottom: 6,
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: '600',
     color: '#fff',
     textAlign: 'center',

@@ -9,7 +9,7 @@ const ViewTeams = (props) => {
 
   return (
     <View style={[styles.container, { height: props.height, width: props.width }]}>
-      <Text style={styles.label}>{results.name}</Text>
+      <Text allowFontScaling={false} style={styles.label}>{results.name}</Text>
       <View style={styles.spriteContainer}>
         <Image resizeMode={'contain'} style={styles.sprite} source={require('../../../assets/pokeball.png')} />
         <Image resizeMode={'contain'} style={styles.sprite} source={require('../../../assets/pokeball.png')} />
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     paddingLeft: 6,
   },
   label: {
-    fontSize: 34,
+    fontSize: 26,
     fontWeight: '600',
     color: '#fff',
     textAlign: 'center',
@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   sprite: {
-    width: 40,
-    height: 40,
+    width: 30,
+    height: 30,
     marginLeft: 12,
   },
 });
