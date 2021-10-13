@@ -1,7 +1,7 @@
 import React, { useState, useContext, useCallback } from 'react';
 import { Text, View, StyleSheet, Image, FlatList, ScrollView, TouchableWithoutFeedback, Pressable, Keyboard } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
-import TeamContext from '../context/TeamContext';
+import { Context as TeamsContext } from '../context/TeamContext';
 
 import * as SQLite from 'expo-sqlite';
 
@@ -24,7 +24,7 @@ const BuildTeamsScreen = (props) => {
   const [teamName, setTeamName] = useState('');
   const [buildSearchApi, buildResults] = useBuildResults([]);
 
-  const { data, addTeam } = useContext(TeamContext);
+  const { state, addTeam } = useContext(TeamsContext);
 
   const showPokemonCard = (param) => {
     if (param !== '') {
