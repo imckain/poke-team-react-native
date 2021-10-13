@@ -36,7 +36,7 @@ const TeamsScreen = (props) => {
         </View>
       </View>
       <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build a Team')}>
-        <BuildTeamsButton height={80} width={'100%'} />
+        <BuildTeamsButton height={60} width={'100%'} />
       </Pressable>
     </View>
   );
