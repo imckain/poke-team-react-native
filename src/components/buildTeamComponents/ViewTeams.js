@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 
-import { Entypo } from '@expo/vector-icons';
+import { Entypo, Feather } from '@expo/vector-icons';
 
 const ViewTeams = (props) => {
   
@@ -18,6 +18,7 @@ const ViewTeams = (props) => {
         <Image resizeMode={'contain'} style={styles.sprite} source={require('../../../assets/pokeball.png')} />
         <Image resizeMode={'contain'} style={styles.sprite} source={require('../../../assets/pokeball.png')} />
       </View>
+      <Feather style={{position: 'absolute', top: 0, right: 0, padding: 5}} name="x-circle" size={16} color="#ff0000" />
     </View>
   );
 };
