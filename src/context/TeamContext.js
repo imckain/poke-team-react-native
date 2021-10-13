@@ -1,6 +1,4 @@
-import React, { useState, useReducer } from 'react';
-
-const TeamContext = React.createContext();
+import createDataContext from './createDataContext';
 
 const teamsReducer = (state, action) => {
   switch (action.type) {
@@ -11,14 +9,14 @@ const teamsReducer = (state, action) => {
   }
 };
 
-export const TeamProvider = ({ children }) => {
-  const [teams, dispatch] = useReducer(teamsReducer, []);
-
-  const addTeam = () => {
+const addTeam = dispatch => {
+  return () => {
     dispatch({ type: 'add_team' });
   };
-
-  return (<TeamContext.Provider value={{ data: teams, addTeam }}>{children}</TeamContext.Provider>)
 };
 
-export default TeamContext;
+export const { Context, Provider } = createDataContext(
+  teamsReducer, 
+  { addTeam }, 
+  []
+);
