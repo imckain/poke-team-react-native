@@ -1,11 +1,26 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, Pressable, Alert } from 'react-native';
 
-import { Entypo, Feather } from '@expo/vector-icons';
+import { Entypo, Feather, Ionicons } from '@expo/vector-icons';
 
 const ViewTeams = (props) => {
   
   const results = props.results
+
+  const createTwoButtonAlert = () =>
+    Alert.alert(
+      "Delete Team",
+      "Are you sure you want to delete this team?",
+      [
+        {
+          text: "Cancel",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel"
+        },
+        { text: "OK", onPress: () => console.log("OK Pressed") }
+      ],
+      { cancelable: false }
+    );
 
   return (
     <View style={[styles.container, { height: props.height, width: props.width }]}>
@@ -18,7 +33,9 @@ const ViewTeams = (props) => {
         <Image resizeMode={'contain'} style={styles.sprite} source={require('../../../assets/pokeball.png')} />
         <Image resizeMode={'contain'} style={styles.sprite} source={require('../../../assets/pokeball.png')} />
       </View>
-      <Feather style={{position: 'absolute', top: 0, right: 0, padding: 5}} name="x-circle" size={16} color="#ff0000" />
+      <Pressable style={{position: 'absolute', top: 0, right: 0, padding: 5}} onPress={createTwoButtonAlert}>
+        <Ionicons name="ios-remove-circle-outline" size={16} color="#ff0000" />
+      </Pressable>
     </View>
   );
 };
