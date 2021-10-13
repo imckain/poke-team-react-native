@@ -3,7 +3,7 @@ import { StyleSheet, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { TeamProvider } from './src/context/TeamContext';
+import { Provider } from './src/context/TeamContext';
 
 import { FontAwesome, FontAwesome5, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -258,5 +258,5 @@ const styles = StyleSheet.create({
 });
 
 export default () => {
-  return <TeamProvider><App /></TeamProvider>
+  return <Provider><App /></Provider>
 };
