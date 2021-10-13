@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Text, View, StyleSheet, Pressable, FlatList } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import TeamContext from '../context/TeamContext';
+import { Context as TeamsContext} from '../context/TeamContext';
 import * as SQLite from 'expo-sqlite';
 
 import BuildTeamsButton from '../components/buildTeamComponents/BuildTeamsButton';
@@ -9,7 +9,7 @@ import ViewTeams from '../components/buildTeamComponents/ViewTeams';
 
 const TeamsScreen = (props) => {
 
-  const { data, addTeam } = useContext(TeamContext);
+  const { state, addTeam } = useContext(TeamsContext);
 
   const showTeams = (el) => {
     if (el !== undefined) {
@@ -32,7 +32,7 @@ const TeamsScreen = (props) => {
     <View style={styles.container}>
       <View contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}} style={styles.teamsScrollView}>
         <View style={styles.teamsView}>
-          {showTeams(data)}
+          {showTeams(state)}
         </View>
       </View>
       <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build a Team')}>
