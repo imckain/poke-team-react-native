@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     marginTop: 24,
+    flex: 1
   },
 });
 
