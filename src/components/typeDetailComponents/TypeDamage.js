@@ -29,17 +29,17 @@ const TypeDamage = ({ results }) => {
     }
   }, []);
 
-  const checkForCollapseOnMultipliers = useCallback((el, fn) => {
+  const checkForCollapseOnMultipliers = useCallback((el, fn, dmg) => {
     if (el === true) {
       return (
         <Pressable onPressIn={() => fn(false)}>
-          <Entypo name="triangle-right" size={16} color="rgb(175, 175, 175)" />
+          <Text allowFontScaling={false} style={styles.dmgCaseHeader}>{dmg} <Entypo name="triangle-right" size={16} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     } if (el === false) {
       return(
         <Pressable onPressIn={() => fn(true)}>
-          <Entypo name="triangle-down" size={16} color="rgb(175, 175, 175)" />
+          <Text allowFontScaling={false} style={styles.dmgCaseHeader}>{dmg} <Entypo name="triangle-down" size={16} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     }
@@ -85,7 +85,7 @@ const TypeDamage = ({ results }) => {
         <View horizontal style={styles.scrollViewStyle}>
           <View style={styles.damageContainer}>
             <View style={styles.dmgCaseView}>
-              <Text allowFontScaling={false} style={styles.dmgCaseHeader}>2x Damage To: {checkForCollapseOnMultipliers(dblDmgToCollapsed, setDblDmgToCollapsed)}</Text>
+              {checkForCollapseOnMultipliers(dblDmgToCollapsed, setDblDmgToCollapsed, '2x Damage To:')}
             </View>
             <Collapsible collapsed={dblDmgToCollapsed}>
               <View style={styles.dmgResultsContainer}>
@@ -93,7 +93,7 @@ const TypeDamage = ({ results }) => {
               </View>
             </Collapsible>
             <View style={styles.dmgCaseView}>
-              <Text allowFontScaling={false} style={styles.dmgCaseHeader}>0.5x Damage To: {checkForCollapseOnMultipliers(halfDmgToCollapsed, setHalfDmgToCollapsed)}</Text>
+              {checkForCollapseOnMultipliers(halfDmgToCollapsed, setHalfDmgToCollapsed, '0.5x Damage To:')}
             </View>
             <Collapsible collapsed={halfDmgToCollapsed}>
               <View style={styles.dmgResultsContainer}>
@@ -101,7 +101,7 @@ const TypeDamage = ({ results }) => {
               </View>
             </Collapsible>
             <View style={styles.dmgCaseView}>
-              <Text allowFontScaling={false} style={styles.dmgCaseHeader}>0x Damage To: {checkForCollapseOnMultipliers(noDmgToCollapsed, setNoDmgToCollapsed)}</Text>
+              {checkForCollapseOnMultipliers(noDmgToCollapsed, setNoDmgToCollapsed, '0x Damage To:')}
             </View>
             <Collapsible collapsed={noDmgToCollapsed}>
               <View style={styles.dmgResultsContainer}>
@@ -109,7 +109,7 @@ const TypeDamage = ({ results }) => {
               </View>
             </Collapsible>
             <View style={styles.dmgCaseView}>
-              <Text allowFontScaling={false} style={styles.dmgCaseHeader}>2x Damage From: {checkForCollapseOnMultipliers(dblDmgFrmCollapsed, setDblDmgFrmCollapsed)}</Text>
+              {checkForCollapseOnMultipliers(dblDmgFrmCollapsed, setDblDmgFrmCollapsed, '2x Damage From:')}
             </View>
             <Collapsible collapsed={dblDmgFrmCollapsed}>
               <View style={styles.dmgResultsContainer}>
@@ -117,7 +117,7 @@ const TypeDamage = ({ results }) => {
               </View>
             </Collapsible>
             <View style={styles.dmgCaseView}>
-              <Text allowFontScaling={false} style={styles.dmgCaseHeader}>0.5x Damage From: {checkForCollapseOnMultipliers(halfDmgFrmCollapsed, setHalfDmgFrmCollapsed)}</Text>
+              {checkForCollapseOnMultipliers(halfDmgFrmCollapsed, setHalfDmgFrmCollapsed, '0.5x Damage From:')}
             </View>
             <Collapsible collapsed={halfDmgFrmCollapsed}>
               <View style={styles.dmgResultsContainer}>
@@ -125,7 +125,7 @@ const TypeDamage = ({ results }) => {
               </View>
             </Collapsible>
             <View style={styles.dmgCaseView}>
-              <Text allowFontScaling={false} style={styles.dmgCaseHeader}>0x Damage From: {checkForCollapseOnMultipliers(noDmgFrmCollapsed, setNoDmgFrmCollapsed)}</Text>
+              {checkForCollapseOnMultipliers(noDmgFrmCollapsed, setNoDmgFrmCollapsed, '0x Damage From:')}
             </View>
             <Collapsible collapsed={noDmgFrmCollapsed}>
               <View style={styles.dmgResultsContainer}>
