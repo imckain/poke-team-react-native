@@ -29,9 +29,8 @@ const BuildTeamsScreen = (props) => {
   const showPokemonCard = (param) => {
     if (param !== '') {
       return <FlatList 
-        horizontal={false}
         scrollEnabled={false}
-        data={state}
+        data={buildResults}
         style={{height: 'auto'}}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
@@ -57,56 +56,54 @@ const BuildTeamsScreen = (props) => {
     return (props.navigation.navigate('Teams Tab Nav'))
   }, [])
 
+
+
   return (
     <HideKeyboard>
-      <View style={styles.container}>
-        <View style={styles.searchContainer}>
-          <View style={styles.teamNameContainer}>
-            <TextInput 
-              placeholder={'Team 1'} 
-              showSoftInputOnFocus={false}
-              autoCapitalize='none'
-              autoCorrect={false}
-              style={styles.inputStyle} 
-              placeholderTextColor='rgb(175, 175, 175)'
-              value={teamName}
-              onChangeText={setTeamName}
-              // onEndEditing={onSearchTermSubmit}
-              // clearButtonMode='always'
-              keyboardAppearance='dark'
-              returnKeyType={'done'}
-              allowFontScaling={false}
-            />
-          </View>
-          <View style={styles.searchBarContainer}>
-            <BuildTeamSearchBar 
-            searchTerm={searchTerm} 
-            onSearchTermChange={setSearchTerm} 
-            onSearchTermSubmit={() => buildSearchApi(searchTerm)}
-            style={styles.searchBar}
-            />
-          </View>
-          <View style={{height: 'auto'}}>
-            {showPokemonCard(searchTerm)}
-          </View>
-          <View style={{height: 5 }} />
+      <ScrollView style={styles.container}>
+        <View style={styles.teamNameContainer}>
+          <TextInput 
+            placeholder={'Team 1'} 
+            showSoftInputOnFocus={false}
+            autoCapitalize='none'
+            autoCorrect={false}
+            style={styles.inputStyle} 
+            placeholderTextColor='rgb(175, 175, 175)'
+            value={teamName}
+            onChangeText={setTeamName}
+            // onEndEditing={onSearchTermSubmit}
+            // clearButtonMode='always'
+            keyboardAppearance='dark'
+            returnKeyType={'done'}
+            allowFontScaling={false}
+          />
         </View>
-        <ScrollView style={styles.scrollContainer}>
-          <View style={styles.teamInfoContainer}>
-            <View style={styles.teamSlotContainer}>
-              <PokemonSlotCard results={buildResults} />
-              <PokemonSlotCard results={buildResults} />
-              <PokemonSlotCard results={buildResults} />
-              <PokemonSlotCard results={buildResults} />
-              <PokemonSlotCard results={buildResults} />
-              <PokemonSlotCard results={buildResults} />
-            </View>
-            <Pressable onPress={() => addTeamAndGoBack()} >
-              <SaveTeamButton height={54} width={'90%'} />
-            </Pressable>
+        <View style={styles.searchBarContainer}>
+          <BuildTeamSearchBar 
+          searchTerm={searchTerm} 
+          onSearchTermChange={setSearchTerm} 
+          onSearchTermSubmit={() => buildSearchApi(searchTerm)}
+          style={styles.searchBar}
+          />
+        </View>
+        <View style={{height: 'auto'}}>
+          {showPokemonCard(searchTerm)}
+        </View>
+        <View style={{height: 5 }} />
+        <View style={styles.teamInfoContainer}>
+          <View style={styles.teamSlotContainer}>
+            <PokemonSlotCard results={buildResults} />
+            <PokemonSlotCard results={buildResults} />
+            <PokemonSlotCard results={buildResults} />
+            <PokemonSlotCard results={buildResults} />
+            <PokemonSlotCard results={buildResults} />
+            <PokemonSlotCard results={buildResults} />
           </View>
-        </ScrollView>
-      </View>
+          <Pressable onPress={() => addTeamAndGoBack()} >
+            <SaveTeamButton height={54} width={'90%'} />
+          </Pressable>
+        </View>
+      </ScrollView>
     </HideKeyboard>
   );
 };
@@ -115,22 +112,9 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#353340',
     flexDirection: 'column',
-    flex: 1,
+    // flex: 1,
     paddingTop: 20,
     width: '100%',
-  },
-  searchContainer: {
-    backgroundColor: '#353340',
-    flexDirection: 'column',
-    width: '100%',
-    height: 'auto',
-  },
-  scrollContainer: {
-    backgroundColor: '#353340',
-    flexDirection: 'column',
-    width: '100%',
-    // height: '100%',
-    flex: 1,
   },
   teamSlotContainer: {
     marginBottom: 44,
@@ -170,7 +154,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-between',
     paddingBottom: 30,
-    // flex: 1,
   },
 });
 
