@@ -13,11 +13,11 @@ const ShowAdvancedSearchResult = (props) => {
     <View style={styles.container}>
       <View style={styles.mainCardContainer}>
         <View style={styles.mainInfo}>
-          <PokemonNameAndId fontSize={26} results={results} />
+          <PokemonNameAndId fontSize={22} results={results} />
           <FrontSprite width={120} height={120} results={results} />
         </View>
         <View style={styles.detailInfo}>
-          <BaseStats headerFontSize={22} detailFontSize={14} results={results} />
+          <BaseStats headerFontSize={20} detailFontSize={14} results={results} />
           <TypeDetail margin={7} headerFontSize={16} detailFontSize={12} results={results} />
         </View>
       </View>
@@ -28,7 +28,7 @@ const ShowAdvancedSearchResult = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 'auto'
+    height: 'auto',
   },
   mainCardContainer: {
     flexDirection: 'row',
