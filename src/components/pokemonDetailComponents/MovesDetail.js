@@ -34,7 +34,6 @@ const MovesDetail = ({ results, navigation }) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
   
-  
   const createMoveTextBox = (el) => {
     const moveBox = el.moves.map(item => {
       return (
