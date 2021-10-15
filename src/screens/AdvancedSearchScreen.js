@@ -10,7 +10,7 @@ import ShowAdvancedSearchResult from '../components/resultsCards/ShowAdvancedSea
 
 import useAdvancedResults from '../hooks/useAdvancedResults';
 import useTypeResults from '../hooks/useTypeResults';
-import useGetPokemonFromUrl from '../hooks/useGetPokemonFromUrl';
+import useGetPokemonFromUrl from '../hooks/useGetResultsFromUrl';
 import PokedexCard from '../pokedex/PokedexCard';
 
 import pokemonData from '../data/pokemon.json';
