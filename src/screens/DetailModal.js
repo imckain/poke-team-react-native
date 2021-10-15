@@ -70,7 +70,7 @@ const DetailModal = (props) => {
           <TypeDetail margin={13} headerFontSize={22} detailFontSize={18} results={results} />
           <AbilityDetail margin={13} headerFontSize={22} detailFontSize={18} results={results} />
           <ModalBaseStats headerFontSize={22} detailFontSize={16} results={results} />
-          <MovesDetail results={results} />
+          <MovesDetail navigation={props.navigation} results={results} />
         </View>
       </ScrollView>
     </View>
