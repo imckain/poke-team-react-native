@@ -33,25 +33,20 @@ const MovesDetail = ({ results, navigation }) => {
   function Capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
+
+  const searchApiByUrl = async(term) => {
+    await getResultsFromUrl(term);
+    return urlResults
+  }
   
   const createMoveTextBox = (el) => {
     const moveBox = el.moves.map(item => {
       return (
         <View key={item.move.name} style={styles.moveTextBox}>
           <Pressable 
-            onPress={async() => {
-              // console.log(item.move.url);
-              await setUrlSearchTerm(item.move.url)
-              console.log(urlSearchTerm);
-              while (urlResults.id === undefined) {
-                try {
-                  getResultsFromUrl(urlSearchTerm);
-                  console.log(urlResults);
-                  return urlResults
-                } catch (error) {
-                  console.log(error);
-                }
-              }
+            onPressIn={async() => {
+              await searchApiByUrl(item.move.url)
+              console.log(urlResults);
             }}
             onPressOut={() => navigation.navigate('Move Detail Modal', { results: urlResults })}
           >
