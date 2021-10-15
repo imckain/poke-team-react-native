@@ -51,7 +51,7 @@ const PokemonSearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable style={{}} onPress={() => props.navigation.navigate('Detail Modal', { results: item })}>
+            <Pressable style={{}} onPress={() => props.navigation.navigate('Detail Modal', { results: item, navigation: props.navigation })}>
               <ShowAdvancedSearchResult results={item} />
             </Pressable>
           )
