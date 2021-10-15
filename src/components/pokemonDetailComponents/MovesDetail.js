@@ -2,14 +2,17 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
+import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
 import FilterMoveSearchBar from '../pokemonDetailComponents/FilterMoveSearchBar';
 
 import { Entypo } from '@expo/vector-icons';
 
-const MovesDetail = ({ results }) => {
+const MovesDetail = ({ results, navigation }) => {
   const [collapsed, setCollapsed] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredResults, setFilteredResults] = useState([]);
+  const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
+  const [urlSearchTerm, setUrlSearchTerm] = useState('');
 
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
@@ -31,8 +34,35 @@ const MovesDetail = ({ results }) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
   
+  
   const createMoveTextBox = (el) => {
-    const moveBox = el.moves.map(item => <View key={item.move.name} style={styles.moveTextBox}><Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.move.name)}</Text><Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text><Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text></View>)
+    const moveBox = el.moves.map(item => {
+      return (
+        <View key={item.move.name} style={styles.moveTextBox}>
+          <Pressable 
+            onPress={async() => {
+              // console.log(item.move.url);
+              await setUrlSearchTerm(item.move.url)
+              console.log(urlSearchTerm);
+              while (urlResults.id === undefined) {
+                try {
+                  getResultsFromUrl(urlSearchTerm);
+                  console.log(urlResults);
+                  return urlResults
+                } catch (error) {
+                  console.log(error);
+                }
+              }
+            }}
+            onPressOut={() => navigation.navigate('Move Detail Modal', { results: urlResults })}
+          >
+            <Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.move.name)}</Text>
+            <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
+            <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>
+          </Pressable>
+        </View>
+      )
+    })
     return moveBox
   }
 
