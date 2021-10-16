@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 
 import SearchBarByAbility from '../navigatorCards/searchBars/SearchBarByAbility';
-
 import useAbilityResults from '../../hooks/useAbilityResults';
 import PokedexCard from '../../pokedex/PokedexCard';
-
 import abilityData from '../../data/abilities.json';
 import ShowAbilitySearchResult from '../resultsCards/ShowAbilitySearchResult';
 

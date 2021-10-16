@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 
 import SearchBarByMove from '../navigatorCards/searchBars/SearchBarByMove';
 import PokedexCard from '../../pokedex/PokedexCard';
-
 import moveData from '../../data/moves.json';
 import useMoveResults from '../../hooks/useMoveResults';
 import ShowMoveSearchResult from '../resultsCards/ShowMoveSearchResult';
