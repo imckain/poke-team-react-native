@@ -23,7 +23,7 @@ const SecondaryDetailModal = (props) => {
     results = props.route.params.results
   } else results = props.route.params.results[0]
 
-  const changeSprites = useCallback((el) => {
+  const changeSprites = (el) => {
     if (el === true) {
       return (
         <View style={{width: '100%'}}>
@@ -56,7 +56,7 @@ const SecondaryDetailModal = (props) => {
         </View>
       )
     }
-  }, [])
+  }
 
   return (
     <View style={styles.container}>
@@ -120,4 +120,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default React.memo(SecondaryDetailModal);
+export default SecondaryDetailModal;
