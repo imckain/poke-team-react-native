@@ -1,22 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
 
-
-import SearchBarByType from '../components/navigatorCards/searchBars/SearchBarByType';
-import SearchBarByMove from '../components/navigatorCards/searchBars/SearchBarByMove';
-import SearchBarByAbility from '../components/navigatorCards/searchBars/SearchBarByAbility';
-import ShowAdvancedSearchResult from '../components/resultsCards/ShowAdvancedSearchResult';
-
-import useAdvancedResults from '../hooks/useAdvancedResults';
 import useTypeResults from '../hooks/useTypeResults';
-import useGetPokemonFromUrl from '../hooks/useGetResultsFromUrl';
-import PokedexCard from '../pokedex/PokedexCard';
-
-import pokemonData from '../data/pokemon.json';
-import typeData from '../data/type.json';
-import moveData from '../data/moves.json';
-import abilityData from '../data/abilities.json';
 import PokemonSearchScreen from '../components/advancedSearchScreens/PokemonSearchScreen';
 import TypeSearchScreen from '../components/advancedSearchScreens/TypeSearchScreen';
 import MoveSearchScreen from '../components/advancedSearchScreens/MoveSearchScreen';
@@ -29,10 +14,6 @@ const HideKeyboard = ({ children }) => (
 );
 
 const AdvancedSearchScreen = (props) => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [advancedSearchAPI, advancedResults] = useAdvancedResults([]);
-  const [typeSearchApi, typeResults] = useTypeResults([]);
-  // const [getPokemonFromUrl, pokemonResults] = useGetPokemonFromUrl([]);
   const [searchParam, setSearchParam] = useState('pokemon');
 
   const searchSelection = (param) => {

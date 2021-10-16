@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
-import { Text, View, StyleSheet, Pressable, FlatList } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { View, StyleSheet, Pressable, FlatList } from 'react-native';
 import { Context as TeamsContext} from '../context/TeamContext';
 import * as SQLite from 'expo-sqlite';
 

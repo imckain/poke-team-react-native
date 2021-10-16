@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 import TypeNameAndClass from '../components/typeDetailComponents/TypeNameAndClass';
 import TypeMoves from '../components/typeDetailComponents/TypeMoves';
@@ -43,8 +43,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   mainInfo: {
-    // justifyContent: 'center',
-    // alignItems: 'center',
     maxWidth: '100%',
     paddingTop: 20
   },

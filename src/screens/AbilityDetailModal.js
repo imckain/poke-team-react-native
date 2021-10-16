@@ -41,8 +41,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   mainInfo: {
-    // justifyContent: 'center',
-    // alignItems: 'center',
     maxWidth: '100%',
     paddingTop: 20
   },

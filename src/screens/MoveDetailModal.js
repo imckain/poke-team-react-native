@@ -1,11 +1,7 @@
 import React from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
-import TypeNameAndClass from '../components/typeDetailComponents/TypeNameAndClass';
-import TypeMoves from '../components/typeDetailComponents/TypeMoves';
 import { ScrollView } from 'react-native-gesture-handler';
-import TypeDamage from '../components/typeDetailComponents/TypeDamage';
-import TypePokemon from '../components/typeDetailComponents/TypePokemon';
 import MoveNameAndClass from '../components/moveDetailComponents/MoveNameAndClass';
 import MoveAttributes from '../components/moveDetailComponents/MoveAttributes';
 import MoveType from '../components/moveDetailComponents/MoveType';
@@ -49,8 +45,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   mainInfo: {
-    // justifyContent: 'center',
-    // alignItems: 'center',
     maxWidth: '100%',
     paddingTop: 20
   },

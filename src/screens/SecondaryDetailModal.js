@@ -1,5 +1,5 @@
-import React, { useCallback, useState } from 'react';
-import { Text, View, StyleSheet, Dimensions, Pressable } from 'react-native';
+import React, { useState } from 'react';
+import { Text, View, StyleSheet, Pressable } from 'react-native';
 
 import PokemonNameAndId from '../components/pokemonDetailComponents/PokemonNameAndId';
 import FrontSprite from '../components/pokemonDetailComponents/FrontSprite';
