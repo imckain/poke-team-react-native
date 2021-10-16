@@ -19,7 +19,7 @@ const MoveDetailModal = (props) => {
         <View style={styles.mainInfo}>
           <AbilityName results={results} />
           <AbilityEffect results={results} />
-          <AbilityPokemon results={results} />
+          <AbilityPokemon navigation={props.navigation} results={results} />
         </View>
         <View style={styles.detailInfo}>
         </View>
