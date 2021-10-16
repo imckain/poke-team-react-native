@@ -93,7 +93,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   textBox: {
-    paddingVertical: 5,
+    paddingVertical: 15,
+    paddingHorizontal: 12,
     marginLeft: 6,
     borderRadius: 10,
     backgroundColor: '#464450',
@@ -108,8 +109,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     textAlign: 'center',
-    paddingHorizontal: 12,
-    paddingVertical: 3
   },
 });
 
