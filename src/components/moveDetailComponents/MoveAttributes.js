@@ -1,12 +1,7 @@
 import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 
-import { Ionicons } from '@expo/vector-icons';
-
 const MoveAttributes = ({ results, fontSize }) => {
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
 
   return (
     <View style={styles.container}>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
-import MoveType from './MoveType';
 
 const MoveNameAndClass = ({ results }) => {
   function Capitalize(str) {

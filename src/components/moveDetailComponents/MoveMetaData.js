@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
   },
   descriptionText: {
     color: '#fff',
-    // color: 'rgb(223, 223, 223)',
     fontSize: 16,
     fontWeight: '500',
     textAlign: 'center',
@@ -90,7 +89,6 @@ const styles = StyleSheet.create({
   },
   scrollViewStyle: {
     flexDirection: 'column',
-    // flexWrap: 'wrap',
     alignItems: 'flex-start',
     width: '100%',
     marginLeft: 22,
