@@ -20,7 +20,7 @@ const TypeDetailModal = (props) => {
         <View style={styles.mainInfo}>
           <TypeNameAndClass results={results} />
           <TypeDamage results={results} />
-          <TypeMoves results={results} />
+          <TypeMoves navigation={props.navigation} results={results} />
           <TypePokemon navigation={props.navigation} results={results} />
         </View>
         <View style={styles.detailInfo}>
