@@ -2,14 +2,18 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
+import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
+
 import { Entypo } from '@expo/vector-icons';
 
-const TypeMoves = ({ results }) => {
+const TypeMoves = ({ results, navigation }) => {
   const [collapsed, setCollapsed] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredResults, setFilteredResults] = useState([]);
+  const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
 
   const checkForCollapse = useCallback((el) => {
+
     if (el === true) {
       return (
         <Pressable onPressIn={() => setCollapsed(false)}>
@@ -30,23 +34,33 @@ const TypeMoves = ({ results }) => {
   }
   
   const createMoveTextBox = (el) => {
-    const moveBox = el.moves.map(item => <View key={item.name} style={styles.moveTextBox}><Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.name)}</Text></View>)
+    const searchApiByUrl = useCallback(async(term) => {
+      await getResultsFromUrl(term);
+      return urlResults
+    }, [])
+
+    const navigate = async(url) => {
+      if (urlResults.id !== undefined) {
+        return navigation.navigate('Move Detail Modal', { results: urlResults })
+      } else searchApiByUrl(url)
+    }
+
+    const moveBox = el.moves.map(item => {
+      return (
+        <View key={item.name} style={styles.moveTextBox}>
+          <Pressable 
+            onPressIn={async() => {
+              await searchApiByUrl(item.url)
+            }}
+            onPressOut={() => navigate(item.url)}
+          >
+            <Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.name)}</Text>
+          </Pressable>
+        </View>
+      )
+    })
     return moveBox
   }
-
-  // const displayFilteredResults = (el) => {
-  //   if (searchTerm !== '') {
-  //     try {
-  //       return el.map(filteredRes => (<View key={filteredRes.name} style={styles.moveTextBox}><Text style={[styles.moveText]}>{Capitalize(filteredRes.name)}</Text></View>))
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   } else return createMoveTextBox(results)
-  // }
-
-  // useEffect(() => {
-  //   searchMoves(results, searchTerm)
-  // }, [searchTerm])
 
   return (
     <View style={[styles.container]}>
