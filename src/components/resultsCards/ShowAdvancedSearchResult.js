@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Dimensions } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 import BaseStats from '../pokemonDetailComponents/BaseStats';
 import TypeDetail from '../pokemonDetailComponents/TypeDetail';

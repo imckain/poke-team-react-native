@@ -1,14 +1,6 @@
 import React from 'react';
-import { Text, View, StyleSheet, Dimensions } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
-import BaseStats from '../pokemonDetailComponents/BaseStats';
-import TypeDetail from '../pokemonDetailComponents/TypeDetail';
-import PokemonNameAndId from '../pokemonDetailComponents/PokemonNameAndId';
-import FrontSprite from '../pokemonDetailComponents/FrontSprite';
-import TypeNameAndClass from '../typeDetailComponents/TypeNameAndClass';
-import TypeMoves from '../typeDetailComponents/TypeMoves';
-import MoveNameAndClass from '../moveDetailComponents/MoveNameAndClass';
-import MoveAttributes from '../moveDetailComponents/MoveAttributes';
 import AbilityName from '../abilityDetailComponents/AbilityName';
 import AbilityShortEffect from '../abilityDetailComponents/AbilityShortEffect';
 

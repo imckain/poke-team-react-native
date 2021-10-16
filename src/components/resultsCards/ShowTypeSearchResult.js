@@ -1,12 +1,7 @@
 import React from 'react';
-import { Text, View, StyleSheet, Dimensions } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
-import BaseStats from '../pokemonDetailComponents/BaseStats';
-import TypeDetail from '../pokemonDetailComponents/TypeDetail';
-import PokemonNameAndId from '../pokemonDetailComponents/PokemonNameAndId';
-import FrontSprite from '../pokemonDetailComponents/FrontSprite';
 import TypeNameAndClass from '../typeDetailComponents/TypeNameAndClass';
-import TypeMoves from '../typeDetailComponents/TypeMoves';
 
 const ShowAdvancedTypeResult = (props) => {
   const results = props.results
@@ -42,7 +37,6 @@ const styles = StyleSheet.create({
     maxWidth: '100%'
   },
   detailInfo: {
-    // flex: 1,
     paddingHorizontal: 5,
     paddingVertical: 8,
   },
