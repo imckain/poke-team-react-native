@@ -11,7 +11,7 @@ const PokedexNameAndId = ({ results, fontSize }) => {
   return (
     <View style={styles.container}>
       <Image resizeMode='contain' style={styles.image} source={require('../../assets/pokeball.png')} />
-      <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.identifier)} <Ionicons name="ios-chevron-forward-sharp" size={24} color="rgb(175, 175, 175)" /> #{results.id}</Text>
+      <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.identifier)} <Ionicons name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  #{results.id}</Text>
     </View>
   );
 };

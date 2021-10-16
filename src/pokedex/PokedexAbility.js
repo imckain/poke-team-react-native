@@ -1,8 +1,6 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 
-import { Ionicons } from '@expo/vector-icons';
-
 const PokedexAbility = ({ results, fontSize }) => {
   function Capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
