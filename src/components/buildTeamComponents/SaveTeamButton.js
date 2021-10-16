@@ -1,8 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
-import { Entypo } from '@expo/vector-icons';
-
 const SaveTeamButton = (props) => {
 
   return (
@@ -20,7 +18,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignContent: 'center',
     flexDirection: 'row',
-    // paddingTop: 20,
     marginBottom: 20,
     alignSelf: 'center',
   },

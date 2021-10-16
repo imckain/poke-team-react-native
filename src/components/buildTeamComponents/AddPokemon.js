@@ -1,8 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
-import { Entypo } from '@expo/vector-icons';
-
 const AddPokemonButton = (props) => {
 
   function Capitalize(str) {
@@ -28,7 +26,6 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   label: {
-    // marginBottom: 6,
     fontSize: 22,
     fontWeight: '600',
     color: '#fff',
