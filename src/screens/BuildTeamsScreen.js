@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
   teamInfoContainer: {
     flexDirection: 'column',
     justifyContent: 'space-between',
-    paddingBottom: 30,
+    paddingBottom: 60,
   },
 });
 
