@@ -2,10 +2,13 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
+import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
+
 import { Entypo } from '@expo/vector-icons';
 
-const MovePokemon = ({ results }) => {
+const MovePokemon = ({ results, navigation }) => {
   const [pokemonCollapsed, setPokemonCollapsed] = useState(true);
+  const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
 
   const checkForPokemonCollapse = useCallback((el) => {
     if (el === true) {
@@ -28,7 +31,32 @@ const MovePokemon = ({ results }) => {
   }
 
   const createPokemonBox = (el) => {
-    const pokemonBox = el.learned_by_pokemon.map(item => <View key={item.name} style={styles.textBox}><Text allowFontScaling={false} style={[styles.text]}>{Capitalize(item.name)}</Text></View>)
+    const searchApiByUrl = useCallback(async(term) => {
+      await getResultsFromUrl(term);
+      return urlResults
+    }, [])
+
+    const navigate = async(url) => {
+      if (urlResults.id !== undefined) {
+        return navigation.navigate('Secondary Detail Modal', { results: urlResults })
+      } else searchApiByUrl(url)
+    }
+
+    const pokemonBox = el.learned_by_pokemon.map(item => {
+      return(
+        <View key={item.name} style={styles.textBox}>
+          <Pressable
+            onPressIn={async() => {
+              await searchApiByUrl(item.url)
+            }}
+            onPressOut={() => navigate(item.url)}
+          >
+            <Text allowFontScaling={false} style={[styles.text]}>{Capitalize(item.name)}</Text>
+          </Pressable>
+        </View>
+      )
+    })
+
     return pokemonBox
   }
 
