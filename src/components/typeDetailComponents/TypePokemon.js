@@ -38,7 +38,7 @@ const TypePokemon = ({ results, navigation }) => {
 
     const navigate = async(url) => {
       if (urlResults.id !== undefined) {
-        return navigation.navigate('Detail Modal', { results: urlResults })
+        return navigation.navigate('Secondary Detail Modal', { results: urlResults })
       } else searchApiByUrl(url)
     }
 
