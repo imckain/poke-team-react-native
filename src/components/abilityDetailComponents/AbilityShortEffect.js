@@ -2,9 +2,6 @@ import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 
 const AbilityShortEffect = ({ results }) => {
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
 
   const checkLanguage = (el) => {
     const filter = el.effect_entries.filter((item) => item.language.name === 'en')
