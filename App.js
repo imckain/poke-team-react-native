@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { StyleSheet, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Provider } from './src/context/TeamContext';
 
-import { FontAwesome, FontAwesome5, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import HomeScreen from './src/screens/HomeScreen';
 import TeamsScreen from './src/screens/TeamsScreen';
@@ -21,12 +20,6 @@ import SecondaryDetailModal from './src/screens/SecondaryDetailModal';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
-
-const backButton = () => {
-  return (
-    <Ionicons name="chevron-back" size={24} color="#fff" />
-  )
-}
 
 function BottomTabNavigator() {
   return (
@@ -51,29 +44,6 @@ function BottomTabNavigator() {
           tabBarShowLabel: false
         }}
         >
-        {/* <Tab.Screen 
-          name='Build Teams' 
-          component={BuildTeamsScreen} 
-          options={{
-            title: 'Build A Team',
-            tabBarIcon: ({ focused, color }) => {
-              let materialIconName;
-              materialIconName = focused ? 'plus-square' : 'plus-square-o'
-              return <FontAwesome name={materialIconName} size={34} color={color} />
-            },
-            headerStyle: {
-              backgroundColor: '#ff0000',
-              height: 50
-            },
-            headerTitleStyle: {
-              color: '#000000'
-            },
-            headerShown: false,
-            tabBarIconStyle: {
-              marginTop: 5
-            }
-          }}
-        /> */}
         <Tab.Screen 
           name='Teams Tab Nav' 
           component={TeamsScreen} 
@@ -137,25 +107,6 @@ function BottomTabNavigator() {
             }
           }}
         />
-        {/* <Tab.Screen 
-          name='Profile' 
-          component={ProfileScreen} 
-          options={{
-            tabBarIcon: ({ focused, color }) => {
-              let fontAwesomeName;
-              fontAwesomeName = focused ? 'user-circle' : 'user-circle-o'
-              return <FontAwesome name={fontAwesomeName} size={28} color={color} />
-            },
-            headerStyle: {
-              backgroundColor: '#CFCFCF',
-              height: 50
-            },
-            headerTitleStyle: {
-              color: '#000000'
-            },
-            headerShown: false,
-          }}
-        /> */}
       </Tab.Group>
     </Tab.Navigator>
   )
@@ -171,19 +122,13 @@ function App() {
             backgroundColor: '#272537',
           },
           headerTitle: props => <Logo {...props} />,
-          headerBackImage: () => <Ionicons name="chevron-back" size={24} color="#fff" />,
           headerBackTitle: ' ',
         }}
-        // defaultScreenOptions={{
-        //   headerBackImage: () => <Ionicons name="chevron-back" size={24} color="#fff" />
-        // }}
       >
         <Stack.Group>
           <Stack.Screen 
             name='Tab Navigator' 
             component={BottomTabNavigator} 
-            options={{
-            }}
           />
           <Stack.Screen 
             name="Teams" 
@@ -192,14 +137,10 @@ function App() {
           <Stack.Screen 
             name="Build a Team" 
             component={BuildTeamsScreen} 
-            options={{
-            }}
           />
           <Stack.Screen 
             name="Profile" 
             component={ProfileScreen} 
-            options={{
-            }}
           />
         </Stack.Group>
         <Stack.Group>
@@ -258,15 +199,6 @@ function App() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default () => {
   return <Provider><App /></Provider>
