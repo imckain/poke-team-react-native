@@ -2,10 +2,12 @@ import React, { useCallback, useState } from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
+import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
 import { Entypo } from '@expo/vector-icons';
 
-const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize }) => {
+const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, navigation }) => {
   const [collapsed, setCollapsed] = useState(true);
+  const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
 
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
@@ -26,13 +28,41 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize }) => {
   function Capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
+  
+  const showAbilities = (el) => {
+    const searchApiByUrl = useCallback(async(term) => {
+      await getResultsFromUrl(term);
+      return urlResults
+    }, [])
+
+    const navigate = async(url) => {
+      if (urlResults.id !== undefined) {
+        return navigation.navigate('Ability Detail Modal', { results: urlResults })
+      } else searchApiByUrl(url)
+    }
+
+    const abilityBox = el.abilities.map(item => {      
+      return (
+        <View key={item.ability.name} style={styles.abilityBox}>
+          <Pressable 
+            onPressIn={async() => {
+              await searchApiByUrl(item.ability.url)
+            }}
+            onPressOut={() => navigate(item.ability.url)}
+          >
+            <Text allowFontScaling={false} style={[styles.abilityText, { fontSize: detailFontSize }]}>{Capitalize(item.ability.name) + ' '}</Text>
+          </Pressable>
+        </View>
+      )
+    })
+
+    return abilityBox
+  }
 
   return (
     <View style={[styles.container, { marginBottom: margin }]}>
       {checkForCollapse(collapsed)}
-      <Collapsible collapsed={collapsed}>
-        <Text allowFontScaling={false} style={[styles.abilityText, { fontSize: detailFontSize }]}>{results.abilities.map(el => Capitalize(el.ability.name) + ' ')}</Text>
-      </Collapsible>
+      <Collapsible style={{flexDirection: 'row'}} collapsed={collapsed}>{showAbilities(results)}</Collapsible>
     </View>
   );
 };
@@ -40,18 +70,31 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize }) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
-    alignItems: 'baseline'
+    alignItems: 'baseline',
+    width: '100%'
   },
   headerText: {
     color: '#fff',
     fontWeight: '600',
   },
+  abilityBox: {
+    paddingVertical: 5,
+    borderRadius: 10,
+    backgroundColor: '#464450',
+    margin: 7,
+    alignContent: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    width: 'auto'
+  },
   abilityText: {
-    color: '#fff',
-    marginTop: 6,
-    marginLeft: 7,
-    flexWrap: 'wrap',
+    color: 'rgb(223, 223, 223)',
+    fontSize: 18,
+    fontWeight: '600',
+    textAlign: 'center',
+    paddingHorizontal: 12,
+    paddingVertical: 3
   },
 });
 
-export default AbilityDetail;
+export default React.memo(AbilityDetail);
