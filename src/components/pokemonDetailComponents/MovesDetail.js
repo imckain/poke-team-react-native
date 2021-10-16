@@ -12,7 +12,6 @@ const MovesDetail = ({ results, navigation }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredResults, setFilteredResults] = useState([]);
   const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
-  const [urlSearchTerm, setUrlSearchTerm] = useState('');
 
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
@@ -34,26 +33,32 @@ const MovesDetail = ({ results, navigation }) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
-  const searchApiByUrl = async(term) => {
-    await getResultsFromUrl(term);
-    return urlResults
-  }
   
   const createMoveTextBox = (el) => {
+    const searchApiByUrl = useCallback(async(term) => {
+      await getResultsFromUrl(term);
+      return urlResults
+    }, [])
+
+    const navigate = async(url) => {
+      if (urlResults.id !== undefined) {
+        return navigation.navigate('Move Detail Modal', { results: urlResults })
+      } else searchApiByUrl(url)
+    }
+
     const moveBox = el.moves.map(item => {
       return (
         <View key={item.move.name} style={styles.moveTextBox}>
           <Pressable 
             onPressIn={async() => {
               await searchApiByUrl(item.move.url)
-              console.log(urlResults);
             }}
-            onPressOut={() => navigation.navigate('Move Detail Modal', { results: urlResults })}
+            onPressOut={() => navigate(item.move.url)}
           >
             <Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.move.name)}</Text>
-            <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
-            <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>
           </Pressable>
+          <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
+          <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>
         </View>
       )
     })
@@ -157,4 +162,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MovesDetail;
+export default React.memo(MovesDetail);
