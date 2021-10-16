@@ -12,16 +12,13 @@ const FrontSprite = ({ results, width, height }) => {
 
   return (
     <Image 
-      style={[styles.imageStyle, { width: width, height: height, overflow: 'hidden' }]} 
+      style={{ width: width, height: height, overflow: 'hidden' }} 
       resizeMode='contain' 
       source={{ uri: sprite(results) }} 
     />
   );
 };
 
-const styles = StyleSheet.create({
-  imageStyle: {
-  }
-});
+const styles = StyleSheet.create({});
 
 export default FrontSprite;

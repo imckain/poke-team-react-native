@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 
 const BackSprite = ({ results, width, height }) => {
   const sprite = (el) => {
@@ -12,16 +12,13 @@ const BackSprite = ({ results, width, height }) => {
 
   return (
     <Image 
-      style={[styles.imageStyle, { width: width, height: height }]} 
+      style={{ width: width, height: height }} 
       resizeMode='contain' 
       source={{ uri: sprite(results) }} 
     />
   );
 };
 
-const styles = StyleSheet.create({
-  imageStyle: {
-  }
-});
+const styles = StyleSheet.create({});
 
 export default BackSprite;

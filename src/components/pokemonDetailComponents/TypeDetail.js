@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
   },
   typeText: {
     color: '#fff',
-    // marginTop: 6,
     marginLeft: 7,
   },
 });

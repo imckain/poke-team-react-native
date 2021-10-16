@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 
 const ShinyBackSprite = ({ results, width, height }) => {
   const sprite = (el) => {
@@ -19,9 +19,6 @@ const ShinyBackSprite = ({ results, width, height }) => {
   );
 };
 
-const styles = StyleSheet.create({
-  imageStyle: {
-  }
-});
+const styles = StyleSheet.create({});
 
 export default ShinyBackSprite;

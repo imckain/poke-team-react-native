@@ -19,9 +19,6 @@ const ShinyFrontSprite = ({ results, width, height }) => {
   );
 };
 
-const styles = StyleSheet.create({
-  imageStyle: {
-  }
-});
+const styles = StyleSheet.create({});
 
 export default ShinyFrontSprite;

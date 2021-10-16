@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, Pressable } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
+
 import { Entypo } from '@expo/vector-icons';
 
 const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, navigation }) => {

@@ -32,7 +32,6 @@ const MovesDetail = ({ results, navigation }) => {
   function Capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
-
   
   const createMoveTextBox = (el) => {
     const searchApiByUrl = useCallback(async(term) => {
