@@ -20,6 +20,6 @@ export default () => {
     getResultsFromUrl('');
   }, []);
   
-  // console.log(urlResults.name);
+  console.log(urlResults.name);
   return [getResultsFromUrl, urlResults]
 };
