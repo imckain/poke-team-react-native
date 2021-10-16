@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
@@ -8,8 +8,6 @@ import { Entypo } from '@expo/vector-icons';
 
 const TypeMoves = ({ results, navigation }) => {
   const [collapsed, setCollapsed] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredResults, setFilteredResults] = useState([]);
   const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
 
   const checkForCollapse = useCallback((el) => {

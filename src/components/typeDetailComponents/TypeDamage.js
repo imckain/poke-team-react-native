@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
@@ -163,7 +163,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 'auto',
     paddingHorizontal: 10,
-    // paddingBottom: 10,
   },
   dmgCaseView: {
     alignItems: 'flex-start',
@@ -174,7 +173,6 @@ const styles = StyleSheet.create({
     marginBottom: 3,
     fontWeight: '600',
     fontSize: 16,
-    // lineHeight: 38,
     alignItems: 'baseline'
   },
   dmgResultsContainer: {
