@@ -10,7 +10,6 @@ export default () => {
     try {
       const response = await pokeApi.get(`https://pokeapi.co/api/v2/move/${defaultTerm}`);
       setMoveResults([response.data])
-      console.log(response.data.id);
     } catch (error) {
       setAdvancedApiErrorMessage('Something Went Wrong')
     }
