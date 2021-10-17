@@ -63,7 +63,7 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
   return (
     <View style={[styles.container, { marginBottom: margin }]}>
       {checkForCollapse(collapsed)}
-      <Collapsible style={{flexDirection: 'row'}} collapsed={collapsed}>{showAbilities(results)}</Collapsible>
+      <Collapsible style={{flexDirection: 'row', flexWrap: 'wrap'}} collapsed={collapsed}>{showAbilities(results)}</Collapsible>
     </View>
   );
 };
