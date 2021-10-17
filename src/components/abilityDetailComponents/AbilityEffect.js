@@ -4,7 +4,6 @@ import { Text, StyleSheet, View } from 'react-native';
 const AbilityEffect = ({ results }) => {
 
   const checkLanguage = (el) => {
-    console.log(el.effect_entries[0]);
     if (el.effect_entries[0] !== undefined) {
       const filter = el.effect_entries.filter((item) => item.language.name === 'en')
       return filter[0].effect
