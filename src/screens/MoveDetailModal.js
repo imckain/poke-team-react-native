@@ -7,6 +7,7 @@ import MoveAttributes from '../components/moveDetailComponents/MoveAttributes';
 import MoveType from '../components/moveDetailComponents/MoveType';
 import MoveMetaData from '../components/moveDetailComponents/MoveMetaData';
 import MovePokemon from '../components/moveDetailComponents/MovePokemon';
+import MoveEffect from '../components/moveDetailComponents/MoveEffect';
 
 const MoveDetailModal = (props) => {
   let results;
@@ -22,6 +23,7 @@ const MoveDetailModal = (props) => {
           <MoveNameAndClass results={results} />
           <MoveType results={results} />
           <MoveAttributes fontSize={18} results={results} />
+          <MoveEffect results={results} />
           <MoveMetaData results={results} />
           <MovePokemon navigation={props.navigation} results={results} />
         </View>
