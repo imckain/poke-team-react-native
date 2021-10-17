@@ -36,7 +36,7 @@ const MoveMetaData = ({ results }) => {
         {checkForCollapse(collapsed)}
         <Collapsible collapsed={collapsed}>
           <View style={styles.scrollViewStyle}>
-            <Text allowFontScaling={false} style={styles.descriptionText}>{el.effect_entries[0].effect}</Text>
+            <Text allowFontScaling={false} style={styles.descriptionText}>{el.effect_entries[0].effect.replace('$effect_chance', el.effect_chance)}</Text>
             <Text allowFontScaling={false} style={styles.metaDataText}>Category: {el.meta.category.name}</Text>
             <Text allowFontScaling={false} style={styles.metaDataText}>Inflict Chance: {el.meta.ailment_chance}</Text>
             <Text allowFontScaling={false} style={styles.metaDataText}>Crit Rate: {el.meta.crit_rate}</Text>
@@ -61,24 +61,6 @@ const MoveMetaData = ({ results }) => {
   return (
     <View style={[styles.container]}>
       {checkForNull(results)}
-      {/* <Text allowFontScaling={false} style={styles.subHeaderText}>Ailment: {checkForNull(results, results.meta.ailment.name)}</Text>
-      {checkForCollapse(collapsed)}
-      <Collapsible collapsed={collapsed}>
-        <View style={styles.scrollViewStyle}>
-          <Text allowFontScaling={false} style={styles.descriptionText}>{checkForNull(results, results.effect_entries[0].effect)}</Text>
-          <Text allowFontScaling={false} style={styles.metaDataText}>Category: {checkForNull(results, results.meta.category.name)}</Text>
-          <Text allowFontScaling={false} style={styles.metaDataText}>Inflict Chance: {checkForNull(results, results.meta.ailment_chance)}</Text>
-          <Text allowFontScaling={false} style={styles.metaDataText}>Crit Rate: {checkForNull(results, results.meta.crit_rate)}</Text>
-          <Text allowFontScaling={false} style={styles.metaDataText}>Drain: {checkForNull(results, results.meta.drain)}</Text>
-          <Text allowFontScaling={false} style={styles.metaDataText}>Flinch Chance: {checkForNull(results, results.meta.flinch_chance)}</Text>
-          <Text allowFontScaling={false} style={styles.metaDataText}>Stat Chance: {checkForNull(results, results.meta.stat_chance)}</Text>
-          <Text allowFontScaling={false} style={styles.metaDataText}>Healing: {checkForNull(results, results.meta.healing)}</Text>
-          <Text allowFontScaling={false} style={styles.metaDataText}>Max Hit: {checkForNull(results, results.meta.max_hits)}</Text>
-          <Text allowFontScaling={false} style={styles.metaDataText}>Max Turns: {checkForNull(results, results.meta.max_turns)}</Text>
-          <Text allowFontScaling={false} style={styles.metaDataText}>Min Hit: {checkForNull(results, results.meta.min_hits)}</Text>
-          <Text allowFontScaling={false} style={styles.metaDataText}>Min Turns: {checkForNull(results, results.meta.min_turns)}</Text>
-        </View>
-      </Collapsible> */}
     </View>
   );
 };
