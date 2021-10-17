@@ -19,6 +19,5 @@ export default () => {
     getResultsFromUrl('');
   }, []);
   
-  console.log(urlResults.name);
   return [getResultsFromUrl, urlResults]
 };
