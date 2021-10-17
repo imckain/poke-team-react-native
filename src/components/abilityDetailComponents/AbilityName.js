@@ -8,7 +8,7 @@ const AbilityName = ({ results }) => {
 
   return (
     <View style={styles.nameView}>
-      <Text allowFontScaling={false} style={[styles.name]}>{Capitalize(results.name)}</Text>
+      <Text allowFontScaling={false} style={[styles.name]}>{Capitalize(results.name.replace('-', ' '))}</Text>
     </View>
   );
 };
