@@ -7,7 +7,7 @@ const PokedexAbility = ({ results, fontSize }) => {
   }
 
   return (
-    <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.identifier)}</Text>
+    <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.identifier.replace('-', ' '))}</Text>
   );
 };
 

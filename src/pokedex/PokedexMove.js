@@ -13,7 +13,7 @@ const PokedexMove = ({ results, fontSize }) => {
 
   return (
     <View style={styles.container}>
-      <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.identifier)}  </Text>
+      <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.identifier.replace('-', ' '))}  </Text>
       <Text allowFontScaling={false} style={styles.attributes}> Power: {checkForNull(results.power)} | PP: {checkForNull(results.pp)} | Acc: {checkForNull(results.accuracy)}</Text>
     </View>
   );
