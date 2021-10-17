@@ -4,8 +4,15 @@ import { Text, StyleSheet, View } from 'react-native';
 const AbilityShortEffect = ({ results }) => {
 
   const checkLanguage = (el) => {
-    const filter = el.effect_entries.filter((item) => item.language.name === 'en')
-    return filter[0].short_effect
+    console.log(el.effect_entries[0]);
+    if (el.effect_entries[0] !== undefined) {
+      const filter = el.effect_entries.filter((item) => item.language.name === 'en')
+      return filter[0].short_effect
+    } 
+    if (el.effect_entries[0] === undefined) {
+      const filter = el.flavor_text_entries.filter((item) => item.language.name === 'en')
+      return filter[0].flavor_text
+    } 
   }
 
   return (
