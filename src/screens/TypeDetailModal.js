@@ -54,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default React.memo(TypeDetailModal);
+export default TypeDetailModal;

@@ -1,5 +1,5 @@
 import React, { useState, useContext, useCallback } from 'react';
-import { Text, View, StyleSheet, Image, FlatList, ScrollView, TouchableWithoutFeedback, Pressable, Keyboard } from 'react-native';
+import { View, StyleSheet, FlatList, ScrollView, TouchableWithoutFeedback, Pressable, Keyboard } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import { Context as TeamsContext } from '../context/TeamContext';
 
@@ -8,7 +8,6 @@ import * as SQLite from 'expo-sqlite';
 import BuildTeamSearchBar from '../components/buildTeamComponents/BuildTeamSearchBar';
 import useBuildResults from '../hooks/useBuildResults';
 import ShowAdvancedSearchResult from '../components/resultsCards/ShowAdvancedSearchResult';
-import BuildTeamsButton from '../components/buildTeamComponents/BuildTeamsButton';
 import AddPokemonButton from '../components/buildTeamComponents/AddPokemon';
 import PokemonSlotCard from '../components/buildTeamComponents/PokemonSlotCard';
 import SaveTeamButton from '../components/buildTeamComponents/SaveTeamButton';
@@ -55,8 +54,6 @@ const BuildTeamsScreen = (props) => {
     await addTeam()
     return (props.navigation.navigate('Teams Tab Nav'))
   }, [])
-
-
 
   return (
     <HideKeyboard>
@@ -112,7 +109,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#353340',
     flexDirection: 'column',
-    // flex: 1,
     paddingTop: 20,
     width: '100%',
   },
@@ -144,7 +140,6 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     height: '100%',
-    // flex: 1,
     fontSize: 60,
     textAlign: 'center',
     fontWeight: '500',

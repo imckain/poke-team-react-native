@@ -6,7 +6,7 @@ import AbilityEffect from '../components/abilityDetailComponents/AbilityEffect';
 import AbilityName from '../components/abilityDetailComponents/AbilityName';
 import AbilityPokemon from '../components/abilityDetailComponents/AbilityPokemon';
 
-const MoveDetailModal = (props) => {
+const AbilityDetailModal = (props) => {
   let results;
 
   if (props.route.params.results[0] === undefined) {
@@ -52,4 +52,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default React.memo(MoveDetailModal);
+export default AbilityDetailModal;
