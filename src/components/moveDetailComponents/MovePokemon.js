@@ -42,22 +42,24 @@ const MovePokemon = ({ results, navigation }) => {
       } else searchApiByUrl(url)
     }
 
-    const pokemonBox = el.learned_by_pokemon.map(item => {
-      return(
-        <View key={item.name} style={styles.textBox}>
-          <Pressable
-            onPressIn={async() => {
-              await searchApiByUrl(item.url)
-            }}
-            onPressOut={() => navigate(item.url)}
-          >
-            <Text allowFontScaling={false} style={[styles.text]}>{Capitalize(item.name)}</Text>
-          </Pressable>
-        </View>
-      )
-    })
+    if (el.learned_by_pokemon[0] !== null) {
+      const pokemonBox = el.learned_by_pokemon.map(item => {
+        return(
+          <View key={item.name} style={styles.textBox}>
+            <Pressable
+              onPressIn={async() => {
+                await searchApiByUrl(item.url)
+              }}
+              onPressOut={() => navigate(item.url)}
+            >
+              <Text allowFontScaling={false} style={[styles.text]}>{Capitalize(item.name)}</Text>
+            </Pressable>
+          </View>
+        )
+      }) 
+      return pokemonBox
+    } else return null
 
-    return pokemonBox
   }
 
   return (
