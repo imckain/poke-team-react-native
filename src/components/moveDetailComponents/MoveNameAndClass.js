@@ -14,7 +14,7 @@ const MoveNameAndClass = ({ results }) => {
 
   return (
     <View style={styles.dmgClassView}>
-      <Text allowFontScaling={false} style={[styles.name]}>{Capitalize(results.name)}</Text>
+      <Text allowFontScaling={false} style={[styles.name]}>{Capitalize(results.name.replace('-', ' '))}</Text>
       <Text allowFontScaling={false} style={[styles.damageClass]}>Damage Class:  <Text style={styles.damageClassSub}>{isValid(results)}</Text></Text>
     </View>
   );
