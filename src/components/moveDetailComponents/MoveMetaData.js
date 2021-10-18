@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import Collapsible from 'react-native-collapsible';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import { Entypo } from '@expo/vector-icons';
 
@@ -34,6 +35,12 @@ const MoveMetaData = ({ results }) => {
         <Collapsible collapsed={collapsed}>
           <View style={styles.scrollViewStyle}>
             <Text allowFontScaling={false} style={styles.descriptionText}>{el.effect_entries[0].effect.replace('$effect_chance', el.effect_chance)}</Text>
+            <LinearGradient 
+              style={styles.break} 
+              colors={['rgb(223, 223, 223)', 'transparent']} 
+              start={{ x: 0.5, y: 0.5 }}
+              end={{ x: 1, y: 0.5 }}
+            />
             <Text allowFontScaling={false} style={styles.metaDataText}>Category: {el.meta.category.name}</Text>
             <Text allowFontScaling={false} style={styles.metaDataText}>Inflict Chance: {el.meta.ailment_chance}</Text>
             <Text allowFontScaling={false} style={styles.metaDataText}>Crit Rate: {el.meta.crit_rate}</Text>
@@ -68,7 +75,7 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     width: '100%',
     marginHorizontal: 12,
-    marginBottom: 16
+    marginBottom: 6,
   },
   subHeaderText: {
     color: '#fff',
@@ -78,7 +85,7 @@ const styles = StyleSheet.create({
   metaDataHeaderText: {
     color: '#fff',
     marginTop: 6,
-    marginLeft: 22,
+    marginLeft: 12,
     fontWeight: '600',
     fontSize: 18,
   },
@@ -86,25 +93,31 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: '500',
-    paddingHorizontal: 22,
+    paddingHorizontal: 12,
     paddingTop: 8,
     paddingBottom: 6,
-    marginRight: 40,
-    fontStyle: 'italic'
+    marginRight: 50,
+    fontStyle: 'italic',
+  },
+  break: {
+    height: 1,
+    width: '80%',
+    marginLeft: 12,
+    marginBottom: 8,
+    marginTop: 6,
   },
   scrollViewStyle: {
     flexDirection: 'column',
     alignItems: 'flex-start',
     width: '100%',
-    marginLeft: 22,
-    marginBottom: 20,
+    marginLeft: 12,
   },
   metaDataText: {
     color: 'rgb(223, 223, 223)',
     fontSize: 14,
     fontWeight: '600',
     textAlign: 'center',
-    paddingHorizontal: 22,
+    paddingHorizontal: 12,
     paddingVertical: 3
   },
 });
