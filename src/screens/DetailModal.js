@@ -67,7 +67,7 @@ const DetailModal = (props) => {
           {changeSprites(isShiny)}
         </View>
         <View style={styles.detailInfo}>
-          <TypeDetail margin={13} headerFontSize={22} detailFontSize={18} results={results} />
+          <TypeDetail navigation={props.navigation} margin={13} headerFontSize={22} detailFontSize={18} results={results} />
           <AbilityDetail navigation={props.navigation} margin={13} headerFontSize={22} detailFontSize={18} results={results} />
           <ModalBaseStats headerFontSize={22} detailFontSize={16} results={results} />
           <MovesDetail navigation={props.navigation} results={results} />
