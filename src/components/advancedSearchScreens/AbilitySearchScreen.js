@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 
@@ -18,6 +18,7 @@ const AbilitySearchScreen = (props) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [abilitySearchApi, abilityResults] = useAbilityResults([]);
   const [searchParam, setSearchParam] = useState('ability');
+  const [filteredResults, setFilteredResults] = useState([]);
 
   const showPokeDex = (param) => {
     if (param === 'ability') {
@@ -38,6 +39,44 @@ const AbilitySearchScreen = (props) => {
       />
     }
   }
+
+  const displayFilteredResults = (el, param) => {
+    if (searchTerm !== '') {
+      try {      
+        return <FlatList 
+          horizontal={false}
+          data={el}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => {
+            return(
+              <Pressable key={item.id} onPress={async() => {
+                await setSearchTerm(item.identifier); 
+                return abilitySearchApi(item.identifier)
+                }}>
+                <PokedexCard results={item} searchParam={param} />
+              </Pressable>
+            )
+          }}
+        />
+      } catch (error) {
+        console.log(error);
+      }
+    } else return showPokeDex(param)
+  }
+  
+  const searchAbilities = (el, param) => {
+    if (param === '') return setFilteredResults(el)
+    try {
+      const res = el.filter(item => item.identifier.includes(param.replace(' ', '-')))
+      return setFilteredResults(res)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    searchAbilities(abilityData, searchTerm)
+  }, [searchTerm])
 
   const showAbilityCard = (param) => {
     if (param !== '') {
@@ -66,7 +105,10 @@ const AbilitySearchScreen = (props) => {
           <SearchBarByAbility 
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
-          onSearchTermSubmit={() => abilitySearchApi(searchTerm.replace(' ', '-'))}
+          onSearchTermSubmit={() => {
+            searchAbilities(abilityData, searchTerm.replace(' ', '-'))
+            return abilitySearchApi(searchTerm.replace(' ', '-'))
+          }}
           style={styles.searchBar}
           />
         </View>
@@ -74,7 +116,7 @@ const AbilitySearchScreen = (props) => {
           {showAbilityCard(searchTerm)}
         </View>
         <View style={{height: 5 }} />
-          {showPokeDex(searchParam)}
+          {displayFilteredResults(filteredResults, searchParam)}
       </View>
     </HideKeyboard>
   );
