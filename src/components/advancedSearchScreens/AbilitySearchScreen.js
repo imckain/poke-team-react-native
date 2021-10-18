@@ -66,7 +66,7 @@ const AbilitySearchScreen = (props) => {
           <SearchBarByAbility 
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
-          onSearchTermSubmit={() => abilitySearchApi(searchTerm)}
+          onSearchTermSubmit={() => abilitySearchApi(searchTerm.replace(' ', '-'))}
           style={styles.searchBar}
           />
         </View>
