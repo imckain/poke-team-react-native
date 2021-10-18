@@ -27,9 +27,6 @@ const MoveMetaData = ({ results }) => {
     if (el.meta === null) {
       return <Text allowFontScaling={false} style={styles.subHeaderText}>Meta Data Not Available</Text>
     }
-    if (el === null) {
-      return <Text allowFontScaling={false} style={styles.subHeaderText}>N/A</Text>
-    }
     else return (
       <View>
         <Text allowFontScaling={false} style={styles.subHeaderText}>Ailment: {el.meta.ailment.name}</Text>
@@ -44,10 +41,10 @@ const MoveMetaData = ({ results }) => {
             <Text allowFontScaling={false} style={styles.metaDataText}>Flinch Chance: {el.meta.flinch_chance}</Text>
             <Text allowFontScaling={false} style={styles.metaDataText}>Stat Chance: {el.meta.stat_chance}</Text>
             <Text allowFontScaling={false} style={styles.metaDataText}>Healing: {el.meta.healing}</Text>
-            <Text allowFontScaling={false} style={styles.metaDataText}>Max Hit: {el.meta.max_hits}</Text>
-            <Text allowFontScaling={false} style={styles.metaDataText}>Max Turns: {el.meta.max_turns}</Text>
-            <Text allowFontScaling={false} style={styles.metaDataText}>Min Hit: {el.meta.min_hits}</Text>
-            <Text allowFontScaling={false} style={styles.metaDataText}>Min Turns: {el.meta.min_turns}</Text>
+            <Text allowFontScaling={false} style={styles.metaDataText}>Max Hit: {el.meta.max_hits !== null ? el.meta.max_hits : ' N/A' }</Text>
+            <Text allowFontScaling={false} style={styles.metaDataText}>Max Turns: {el.meta.max_turns !== null ? el.meta.max_turns : ' N/A' }</Text>
+            <Text allowFontScaling={false} style={styles.metaDataText}>Min Hit: {el.meta.min_hits !== null ? el.meta.min_hits : ' N/A' }</Text>
+            <Text allowFontScaling={false} style={styles.metaDataText}>Min Turns: {el.meta.min_turns !== null ? el.meta.min_turns : ' N/A' }</Text>
           </View>
         </Collapsible>
       </View>
