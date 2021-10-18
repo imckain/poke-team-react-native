@@ -9,7 +9,7 @@ import ShinyBackSprite from '../components/pokemonDetailComponents/ShinyBackSpri
 import TypeDetail from '../components/pokemonDetailComponents/TypeDetail';
 import AbilityDetail from '../components/pokemonDetailComponents/AbilityDetail';
 import ModalBaseStats from '../components/pokemonDetailComponents/ModalBaseStats';
-import MovesDetail from '../components/pokemonDetailComponents/MovesDetail';
+import SecondaryMovesDetail from '../components/pokemonDetailComponents/SecondaryMovesDetail';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import { MaterialIcons } from '@expo/vector-icons';
@@ -70,7 +70,7 @@ const SecondaryDetailModal = (props) => {
           <TypeDetail navigation={props.navigation} margin={13} headerFontSize={22} detailFontSize={18} results={results} />
           <AbilityDetail navigation={props.navigation} margin={13} headerFontSize={22} detailFontSize={18} results={results} />
           <ModalBaseStats headerFontSize={22} detailFontSize={16} results={results} />
-          <MovesDetail navigation={props.navigation} results={results} />
+          <SecondaryMovesDetail navigation={props.navigation} results={results} />
         </View>
       </ScrollView>
     </View>
