@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet, Dimensions } from 'react-native';
 
 import BaseStats from '../pokemonDetailComponents/BaseStats';
-import TypeDetail from '../pokemonDetailComponents/TypeDetail';
+import TypeShowOnCard from '../pokemonDetailComponents/TypeShowOnCard';
 import PokemonNameAndId from '../pokemonDetailComponents/PokemonNameAndId';
 import FrontSprite from '../pokemonDetailComponents/FrontSprite';
 
@@ -22,7 +22,7 @@ const ShowSearchResult = (props) => {
         </View>
         <View style={styles.detailInfo}>
           <BaseStats headerFontSize={22} detailFontSize={14} results={results} />
-          <TypeDetail margin={7} headerFontSize={16} detailFontSize={12} results={results} />
+          <TypeShowOnCard flexDirection={'row'} margin={7} headerFontSize={16} detailFontSize={14} results={results} />
         </View>
       </View>
       <Text style={styles.infoNotice}>Tap for more info</Text>
