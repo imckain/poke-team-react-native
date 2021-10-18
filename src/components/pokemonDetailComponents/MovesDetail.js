@@ -17,13 +17,13 @@ const MovesDetail = ({ results, navigation }) => {
     if (el === true) {
       return (
         <Pressable onPressIn={() => setCollapsed(false)}>
-          <Text allowFontScaling={false} style={[styles.headerText]}>Moves  <Entypo name="triangle-right" size={28} color="rgb(175, 175, 175)" /></Text>
+          <Text allowFontScaling={false} style={[styles.headerText]}>Moves  <Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     } if (el === false) {
       return(
         <Pressable onPressIn={() => setCollapsed(true)}>
-          <Text allowFontScaling={false} style={[styles.headerText]}>Moves  <Entypo name="triangle-down" size={28} color="rgb(175, 175, 175)" /></Text>
+          <Text allowFontScaling={false} style={[styles.headerText]}>Moves  <Entypo name="triangle-down" size={22} color="rgb(175, 175, 175)" /></Text>
         </Pressable>
       )
     }
