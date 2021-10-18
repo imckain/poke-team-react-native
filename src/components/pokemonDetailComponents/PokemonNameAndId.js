@@ -7,7 +7,7 @@ const PokemonNameAndId = ({ results, fontSize }) => {
   }
 
   return (
-    <Text adjustsFontSizeToFit={true} allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.name)} #{results.id}</Text>
+    <Text adjustsFontSizeToFit={true} allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.name.replace('-', ' '))} #{results.id}</Text>
   );
 };
 
