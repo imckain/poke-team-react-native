@@ -66,7 +66,7 @@ const MoveSearchScreen = (props) => {
           <SearchBarByMove 
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
-          onSearchTermSubmit={() => moveSearchApi(searchTerm)}
+          onSearchTermSubmit={() => moveSearchApi(searchTerm.replace(' ', '-'))}
           style={styles.searchBar}
           />
         </View>
