@@ -69,7 +69,7 @@ const PokemonSearchScreen = (props) => {
           <SearchBarByName 
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
-          onSearchTermSubmit={() => advancedSearchAPI(searchTerm)}
+          onSearchTermSubmit={() => advancedSearchAPI(searchTerm.replace(' ', '-'))}
           style={styles.searchBar}
           />
         </View>
