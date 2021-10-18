@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     alignItems: 'baseline',
     flexDirection: 'column',
-    marginBottom: 15
+    marginBottom: 12
   },
   attributes: {
     color: 'rgb(175, 175, 175)',
