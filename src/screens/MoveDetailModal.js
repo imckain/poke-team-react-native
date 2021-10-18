@@ -21,8 +21,8 @@ const MoveDetailModal = (props) => {
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
           <MoveNameAndClass results={results} />
-          <MoveType results={results} />
           <MoveAttributes fontSize={18} results={results} />
+          <MoveType navigation={props.navigation} margin={7} flexDirection={'row'} headerFontSize={22} detailFontSize={14} results={results} />
           <MoveEffect results={results} />
           <MoveMetaData results={results} />
           <MovePokemon navigation={props.navigation} results={results} />
