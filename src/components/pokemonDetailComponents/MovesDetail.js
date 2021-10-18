@@ -63,11 +63,38 @@ const MovesDetail = ({ results, navigation }) => {
     })
     return moveBox
   }
-
+  
   const displayFilteredResults = (el) => {
     if (searchTerm !== '') {
       try {
-        return el.map(filteredRes => (<View key={filteredRes.move.name} style={styles.moveTextBox}><Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(filteredRes.move.name)}</Text><Text style={styles.moveDetailText}>Level Learned: {filteredRes.version_group_details[0].level_learned_at}</Text><Text style={styles.moveDetailText}>Method: {filteredRes.version_group_details[0].move_learn_method.name}</Text></View>))
+        const searchApiByUrl = useCallback(async(term) => {
+          await getResultsFromUrl(term);
+          return urlResults
+        }, [])
+      
+        const navigate = async(url) => {
+          if (urlResults.id !== undefined) {
+            return navigation.navigate('Move Detail Modal', { results: urlResults })
+          } else searchApiByUrl(url)
+        }
+      
+        const moveBox = el.map(item => {
+          return (
+            <View key={item.move.name} style={styles.moveTextBox}>
+              <Pressable 
+                onPressIn={async() => {
+                  await searchApiByUrl(item.move.url)
+                }}
+                onPressOut={() => navigate(item.move.url)}
+              >
+                <Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.move.name)}</Text>
+              </Pressable>
+              <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
+              <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>
+            </View>
+          )
+        })
+        return moveBox
       } catch (error) {
         console.log(error);
       }
@@ -75,9 +102,9 @@ const MovesDetail = ({ results, navigation }) => {
   }
   
   const searchMoves = (el, param) => {
-    if (param === '') { return setFilteredResults(el) }
+    if (param === '') return setFilteredResults(el)
     try {
-      const res = el.moves.filter(item => item.move.name === param)
+      const res = el.moves.filter(item => item.move.name.includes(param.replace(' ', '-')))
       return setFilteredResults(res)
     } catch (error) {
       console.log(error);
@@ -96,7 +123,7 @@ const MovesDetail = ({ results, navigation }) => {
           <FilterMoveSearchBar 
             searchTerm={searchTerm} 
             onSearchTermChange={setSearchTerm} 
-            onSearchTermSubmit={() => searchMoves(results, searchTerm)}
+            onSearchTermSubmit={() => searchMoves(results, searchTerm.replace(' ', '-'))}
             style={styles.searchBar}
           />
         </View>
