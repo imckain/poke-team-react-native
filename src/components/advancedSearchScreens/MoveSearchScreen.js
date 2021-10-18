@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 
@@ -18,6 +18,7 @@ const MoveSearchScreen = (props) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [moveSearchApi, moveResults] = useMoveResults([]);
   const [searchParam, setSearchParam] = useState('move');
+  const [filteredResults, setFilteredResults] = useState([]);
 
   const showPokeDex = (param) => {
     if (param === 'move') {
@@ -38,6 +39,44 @@ const MoveSearchScreen = (props) => {
       />
     }
   }
+
+  const displayFilteredResults = (el, param) => {
+    if (searchTerm !== '') {
+      try {      
+        return <FlatList 
+          horizontal={false}
+          data={el}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => {
+            return(
+              <Pressable key={item.id} onPress={async() => {
+                await setSearchTerm(item.identifier); 
+                return moveSearchApi(item.identifier)
+                }}>
+                <PokedexCard results={item} searchParam={param} />
+              </Pressable>
+            )
+          }}
+        />
+      } catch (error) {
+        console.log(error);
+      }
+    } else return showPokeDex(param)
+  }
+  
+  const searchMoves = (el, param) => {
+    if (param === '') return setFilteredResults(el)
+    try {
+      const res = el.filter(item => item.identifier.includes(param.replace(' ', '-')))
+      return setFilteredResults(res)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    searchMoves(moveData, searchTerm)
+  }, [searchTerm])
 
   const showMoveCard = (param) => {
     if (param !== '') {
@@ -66,7 +105,10 @@ const MoveSearchScreen = (props) => {
           <SearchBarByMove 
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
-          onSearchTermSubmit={() => moveSearchApi(searchTerm.replace(' ', '-'))}
+          onSearchTermSubmit={() => {
+            searchMoves(moveData, searchTerm.replace(' ', '-'))
+            return moveSearchApi(searchTerm.replace(' ', '-'))
+          }}
           style={styles.searchBar}
           />
         </View>
@@ -74,7 +116,7 @@ const MoveSearchScreen = (props) => {
           {showMoveCard(searchTerm)}
         </View>
         <View style={{height: 5 }} />
-        {showPokeDex(searchParam)}
+        {displayFilteredResults(filteredResults, searchParam)}
       </View>
     </HideKeyboard>
   );
