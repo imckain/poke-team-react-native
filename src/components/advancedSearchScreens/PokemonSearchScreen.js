@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 
@@ -20,7 +20,8 @@ const PokemonSearchScreen = (props) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [advancedSearchAPI, advancedResults] = useAdvancedResults([]);
   const [searchParam, setSearchParam] = useState('pokemon');
-
+  const [filteredResults, setFilteredResults] = useState([]);
+  
   const showPokeDex = (param) => {
     if (param === 'pokemon') {
       return <FlatList 
@@ -29,17 +30,55 @@ const PokemonSearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable onPress={async() => {
+            <Pressable key={item.id} onPress={async() => {
               await setSearchTerm(item.identifier); 
               return advancedSearchAPI(item.identifier)
               }}>
-              <PokedexCard results={item} searchParam={searchParam} />
+              <PokedexCard results={item} searchParam={param} />
             </Pressable>
           )
         }}
       />
     }
   }
+  
+  const displayFilteredResults = (el, param) => {
+    if (searchTerm !== '') {
+      try {      
+        return <FlatList 
+          horizontal={false}
+          data={el}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => {
+            return(
+              <Pressable key={item.id} onPress={async() => {
+                await setSearchTerm(item.identifier); 
+                return advancedSearchAPI(item.identifier)
+                }}>
+                <PokedexCard results={item} searchParam={param} />
+              </Pressable>
+            )
+          }}
+        />
+      } catch (error) {
+        console.log(error);
+      }
+    } else return showPokeDex(param)
+  }
+  
+  const searchPokemon = (el, param) => {
+    if (param === '') return setFilteredResults(el)
+    try {
+      const res = el.filter(item => item.identifier.includes(param.replace(' ', '-')))
+      return setFilteredResults(res)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    searchPokemon(pokemonData, searchTerm)
+  }, [searchTerm])
 
   const showPokemonCard = (param) => {
     if (param !== '') {
@@ -69,7 +108,10 @@ const PokemonSearchScreen = (props) => {
           <SearchBarByName 
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
-          onSearchTermSubmit={() => advancedSearchAPI(searchTerm.replace(' ', '-'))}
+          onSearchTermSubmit={() => {
+            searchPokemon(pokemonData, searchTerm.replace(' ', '-'))
+            return advancedSearchAPI(searchTerm.replace(' ', '-'))
+          }}
           style={styles.searchBar}
           />
         </View>
@@ -77,7 +119,7 @@ const PokemonSearchScreen = (props) => {
           {showPokemonCard(searchTerm)}
         </View>
         <View style={{height: 5 }} />
-        {showPokeDex(searchParam)}
+        {displayFilteredResults(filteredResults, searchParam)}
       </View>
     </HideKeyboard>
   );
