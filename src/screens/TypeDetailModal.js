@@ -19,7 +19,7 @@ const TypeDetailModal = (props) => {
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
           <TypeNameAndClass results={results} />
-          <TypeDamage results={results} />
+          <TypeDamage navigation={props.navigation} results={results} />
           <TypeMoves navigation={props.navigation} results={results} />
           <TypePokemon navigation={props.navigation} results={results} />
         </View>
