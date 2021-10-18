@@ -2,9 +2,12 @@ import React, { useCallback, useState } from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
+import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
+
 import { Entypo } from '@expo/vector-icons';
 
-const TypeDamage = ({ results }) => {
+const TypeDamage = ({ results, navigation }) => {
+  const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
   const [collapsed, setCollapsed] = useState(true);
   const [dblDmgToCollapsed, setDblDmgToCollapsed] = useState(true);
   const [halfDmgToCollapsed, setHalfDmgToCollapsed] = useState(true);
@@ -48,34 +51,59 @@ const TypeDamage = ({ results }) => {
   function Capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
-  
-  const createDamageTextBox = (el) => {
-    const damageBox = el.map(item => <View key={item.name} style={styles.damageTextBox}><Text allowFontScaling={false} style={[styles.damageText]}>{Capitalize(item.name)}</Text></View>)
-    return damageBox
+
+  const showType = (el) => {
+    const searchApiByUrl = useCallback(async(term) => {
+      await getResultsFromUrl(term);
+      return urlResults
+    }, [])
+
+    const navigate = async(url) => {
+      if (urlResults.id !== undefined) {
+        return navigation.navigate('Type Detail Modal', { results: urlResults })
+      } else searchApiByUrl(url)
+    }
+
+    const typeBox = el.map(item => {      
+      return (
+        <View key={item.name} style={styles.typeBox}>
+          <Pressable 
+            onPressIn={async() => {
+              await searchApiByUrl(item.url)
+            }}
+            onPressOut={() => navigate(item.url)}
+          >
+            <Text allowFontScaling={false} style={[styles.typeText]}>{Capitalize(item.name) + ' '}</Text>
+          </Pressable>
+        </View>
+      )
+    })
+
+    return typeBox
   }
 
   const doubleDmgTo = (el) => {
-    return createDamageTextBox(el.damage_relations.double_damage_to)
+    return showType(el.damage_relations.double_damage_to)
   }
 
   const halfDmgTo = (el) => {
-    return createDamageTextBox(el.damage_relations.half_damage_to)
+    return showType(el.damage_relations.half_damage_to)
   }
 
   const noDmgTo = (el) => {
-    return createDamageTextBox(el.damage_relations.half_damage_to)
+    return showType(el.damage_relations.half_damage_to)
   }
 
   const doubleDmgFrom = (el) => {
-    return createDamageTextBox(el.damage_relations.double_damage_from)
+    return showType(el.damage_relations.double_damage_from)
   }
 
   const halfDmgFrom = (el) => {
-    return createDamageTextBox(el.damage_relations.half_damage_from)
+    return showType(el.damage_relations.half_damage_from)
   }
 
   const noDmgFrom = (el) => {
-    return createDamageTextBox(el.damage_relations.half_damage_from)
+    return showType(el.damage_relations.half_damage_from)
   }
 
   return (
@@ -180,7 +208,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap'
   },
-  damageTextBox: {
+  typeBox: {
     paddingVertical: 5,
     marginLeft: 10,
     borderRadius: 10,
@@ -191,7 +219,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     width: '28%'
   },
-  damageText: {
+  typeText: {
     color: 'rgb(223, 223, 223)',
     fontSize: 14,
     fontWeight: '600',
