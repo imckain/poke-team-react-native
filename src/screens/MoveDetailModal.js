@@ -22,7 +22,7 @@ const MoveDetailModal = (props) => {
         <View style={styles.mainInfo}>
           <MoveNameAndClass results={results} />
           <MoveAttributes fontSize={18} results={results} />
-          <MoveType navigation={props.navigation} margin={7} flexDirection={'column'} headerFontSize={22} detailFontSize={14} results={results} />
+          <MoveType navigation={props.navigation} margin={7} flexDirection={'column'} headerFontSize={22} detailFontSize={18} results={results} />
           <MoveEffect results={results} />
           <MoveMetaData results={results} />
           <MovePokemon navigation={props.navigation} results={results} />
