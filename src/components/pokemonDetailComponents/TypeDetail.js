@@ -11,15 +11,12 @@ const TypeDetail = ({ results, margin, headerFontSize, detailFontSize, navigatio
   }
 
   const showType = (el) => {
-    const searchApiByUrl = useCallback(async(term) => {
-      await getResultsFromUrl(term);
-      return urlResults
-    }, [])
 
-    const navigate = async(url) => {
-      if (urlResults.id !== undefined) {
+    const navigate = async(url, param) => {
+      if (urlResults.name === param) {
+        await getResultsFromUrl(url)
         return navigation.navigate('Type Detail Modal', { results: urlResults })
-      } else searchApiByUrl(url)
+      } else await getResultsFromUrl(url)
     }
 
     const typeBox = el.types.map(item => {      
@@ -27,9 +24,11 @@ const TypeDetail = ({ results, margin, headerFontSize, detailFontSize, navigatio
         <View key={item.type.name} style={styles.typeBox}>
           <Pressable 
             onPressIn={async() => {
-              await searchApiByUrl(item.type.url)
+              await getResultsFromUrl(item.type.url)
             }}
-            onPressOut={() => navigate(item.type.url)}
+            onPressOut={async() => {
+              return navigate(item.type.url, item.type.name)
+            }}
           >
             <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize }]}>{Capitalize(item.type.name) + ' '}</Text>
           </Pressable>

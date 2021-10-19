@@ -31,15 +31,12 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
   }
   
   const showAbilities = (el) => {
-    const searchApiByUrl = useCallback(async(term) => {
-      await getResultsFromUrl(term);
-      return urlResults
-    }, [])
 
-    const navigate = async(url) => {
-      if (urlResults.id !== undefined) {
+    const navigate = async(url, param) => {
+      if (urlResults.name === param) {
+        await getResultsFromUrl(url)
         return navigation.navigate('Ability Detail Modal', { results: urlResults })
-      } else searchApiByUrl(url)
+      } else await getResultsFromUrl(url)
     }
 
     const abilityBox = el.abilities.map(item => {      
@@ -47,9 +44,11 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
         <View key={item.ability.name} style={styles.abilityBox}>
           <Pressable 
             onPressIn={async() => {
-              await searchApiByUrl(item.ability.url)
+              await getResultsFromUrl(item.ability.url)
             }}
-            onPressOut={() => navigate(item.ability.url)}
+            onPressOut={async() => {
+              return navigate(item.ability.url, item.ability.name)
+            }}
           >
             <Text allowFontScaling={false} style={[styles.abilityText, { fontSize: detailFontSize }]}>{Capitalize(item.ability.name) + ' '}</Text>
           </Pressable>

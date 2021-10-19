@@ -34,15 +34,12 @@ const SecondaryMovesDetail = ({ results, navigation }) => {
   }
   
   const createMoveTextBox = (el) => {
-    const searchApiByUrl = useCallback(async(term) => {
-      await getResultsFromUrl(term);
-      return urlResults
-    }, [])
 
-    const navigate = async(url) => {
-      if (urlResults.id !== undefined) {
+    const navigate = async(url, param) => {
+      if (urlResults.name === param) {
+        await getResultsFromUrl(url)
         return navigation.navigate('Move Detail Modal', { results: urlResults })
-      } else searchApiByUrl(url)
+      } else await getResultsFromUrl(url)
     }
 
     const moveBox = el.moves.map(item => {
@@ -50,9 +47,9 @@ const SecondaryMovesDetail = ({ results, navigation }) => {
         <View key={item.move.name} style={styles.moveTextBox}>
           <Pressable 
             onPressIn={async() => {
-              await searchApiByUrl(item.move.url)
+              await getResultsFromUrl(item.move.url)
             }}
-            onPressOut={() => navigate(item.move.url)}
+            onPressOut={() => navigate(item.move.url, item.move.name)}
           >
             <Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.move.name)}</Text>
           </Pressable>
@@ -67,15 +64,12 @@ const SecondaryMovesDetail = ({ results, navigation }) => {
   const displayFilteredResults = (el) => {
     if (searchTerm !== '') {
       try {
-        const searchApiByUrl = useCallback(async(term) => {
-          await getResultsFromUrl(term);
-          return urlResults
-        }, [])
       
         const navigate = async(url) => {
           if (urlResults.id !== undefined) {
+            await getResultsFromUrl(url)
             return navigation.navigate('Move Detail Modal', { results: urlResults })
-          } else searchApiByUrl(url)
+          } else await getResultsFromUrl(url)
         }
       
         const moveBox = el.map(item => {
@@ -83,9 +77,9 @@ const SecondaryMovesDetail = ({ results, navigation }) => {
             <View key={item.move.name} style={styles.moveTextBox}>
               <Pressable 
                 onPressIn={async() => {
-                  await searchApiByUrl(item.move.url)
+                  await getResultsFromUrl(item.move.url)
                 }}
-                onPressOut={() => navigate(item.move.url)}
+                onPressOut={() => navigate(item.move.url, item.move.name)}
               >
                 <Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.move.name)}</Text>
               </Pressable>
