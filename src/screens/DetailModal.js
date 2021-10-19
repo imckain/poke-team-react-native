@@ -1,6 +1,8 @@
-import React, { useCallback, useState } from 'react';
-import { Text, View, StyleSheet, Dimensions, Pressable } from 'react-native';
+import React, { useCallback, useState, useEffect } from 'react';
+import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
+import useGetReultsFromUrl from '../hooks/useGetResultsFromUrl';
 import PokemonNameAndId from '../components/pokemonDetailComponents/PokemonNameAndId';
 import FrontSprite from '../components/pokemonDetailComponents/FrontSprite';
 import ShinyFrontSprite from '../components/pokemonDetailComponents/ShinyFrontSprite';
@@ -10,12 +12,12 @@ import TypeDetail from '../components/pokemonDetailComponents/TypeDetail';
 import AbilityDetail from '../components/pokemonDetailComponents/AbilityDetail';
 import ModalBaseStats from '../components/pokemonDetailComponents/ModalBaseStats';
 import MovesDetail from '../components/pokemonDetailComponents/MovesDetail';
-import { ScrollView } from 'react-native-gesture-handler';
 
-import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialIcons, Entypo } from '@expo/vector-icons';
 
 const DetailModal = (props) => {
   const [isShiny, setIsShiny] = useState(false);
+  const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
 
   let results;
 
@@ -58,18 +60,54 @@ const DetailModal = (props) => {
     }
   }, [])
 
+  const showLocationData = async(el) => {
+    try {
+      const navigate = async(url) => {
+        if (urlResults[0].location_area.url !== url) {
+          await getResultsFromUrl(url)
+          return props.navigation.navigate('Location Detail Modal', { results: urlResults })
+        } else await getResultsFromUrl(url)
+      }
+
+      if (urlResults[0] === undefined) return null
+      return navigate(el.location_area_encounters)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
+  const isLocationAvailable = () => {
+    if (urlResults[0] === undefined) return 'Location Data Not Available'
+    else return <Text>Location Details  <Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" /></Text>
+  }
+
+  useEffect(() => {
+    getResultsFromUrl(results.location_area_encounters)
+  }, [])
+
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
           <PokemonNameAndId fontSize={34} results={results} />
           <View style={{height: 20}} />
-          {changeSprites(isShiny)}
-        </View>
+            {changeSprites(isShiny)}
+          </View>
         <View style={styles.detailInfo}>
           <TypeDetail navigation={props.navigation} margin={13} headerFontSize={22} detailFontSize={18} results={results} />
           <AbilityDetail navigation={props.navigation} margin={13} headerFontSize={22} detailFontSize={18} results={results} />
           <ModalBaseStats headerFontSize={22} detailFontSize={16} results={results} />
+          <Pressable 
+            onPressIn={async() => {
+              await getResultsFromUrl(results.location_area_encounters)
+              return urlResults
+            }}
+            onPressOut={async() => {
+              return showLocationData(results)
+            }}
+          >
+            <Text style={styles.locationNavigation}>{isLocationAvailable()}</Text>
+          </Pressable>
           <MovesDetail navigation={props.navigation} results={results} />
         </View>
       </ScrollView>
@@ -117,6 +155,12 @@ const styles = StyleSheet.create({
     paddingLeft: 6,
     color: 'rgb(175, 175, 175)',
     fontSize: 12,
+  },
+  locationNavigation: {
+    color: '#fff',
+    marginTop: 12,
+    fontWeight: '600',
+    fontSize: 22
   },
 });
 
