@@ -17,7 +17,8 @@ const TeamsScreen = (props) => {
         data={el}
         keyExtractor={(item) => item.name}
         renderItem={({ item }) => {
-          return (<ViewTeams results={item} height={'auto'} width={'100%'} />)
+          console.log(item.id);
+          return <ViewTeams results={item} height={'auto'} width={'100%'} />
         }}
       />
     } else {
