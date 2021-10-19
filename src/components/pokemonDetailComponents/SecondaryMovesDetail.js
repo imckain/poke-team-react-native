@@ -68,7 +68,6 @@ const SecondaryMovesDetail = ({ results, navigation }) => {
   const displayFilteredResults = (el) => {
     if (searchTerm !== '') {
       try {
-      
         const navigate = async(url) => {
           if (urlResults.id !== undefined) {
             await getResultsFromUrl(url)
@@ -76,11 +75,9 @@ const SecondaryMovesDetail = ({ results, navigation }) => {
           } else await getResultsFromUrl(url)
         }
       
-        const moveBox = [].concat(el.moves)
-          .sort((a, b) => a.version_group_details[0].level_learned_at < b.version_group_details[0].level_learned_at ? 1: -1)
-          .map((item, i) => {
+        const moveBox = el.map(item => {
           return (
-            <View key={i} style={styles.moveTextBox}>
+            <View key={item.move.name} style={styles.moveTextBox}>
               <Pressable 
                 onPressIn={async() => {
                   await getResultsFromUrl(item.move.url)
@@ -107,7 +104,9 @@ const SecondaryMovesDetail = ({ results, navigation }) => {
     if (param === '') return setFilteredResults(el)
     try {
       const res = el.moves.filter(item => item.move.name.includes(param))
-      return setFilteredResults(res)
+      const sorted = [].concat(res)
+        .sort((a, b) => a.version_group_details[0].level_learned_at < b.version_group_details[0].level_learned_at ? 1 : -1)
+      return setFilteredResults(sorted)
     } catch (error) {
       console.log(error);
     }
