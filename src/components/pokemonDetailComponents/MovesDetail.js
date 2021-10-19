@@ -76,23 +76,23 @@ const MovesDetail = ({ results, navigation }) => {
         }
       
         const moveBox = el.map(item => {
-            return (
-              <View key={item.move.name} style={styles.moveTextBox}>
-                <Pressable 
-                  onPressIn={async() => {
-                    await getResultsFromUrl(item.move.url)
-                  }}
-                  onPressOut={async() => {
-                    return navigate(item.move.url, item.move.name)
-                  }}
-                >
-                  <Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.move.name)}</Text>
-                </Pressable>
-                <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
-                <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>
-              </View>
-            )
-          })
+          return (
+            <View key={item.move.name} style={styles.moveTextBox}>
+              <Pressable 
+                onPressIn={async() => {
+                  await getResultsFromUrl(item.move.url)
+                }}
+                onPressOut={async() => {
+                  return navigate(item.move.url, item.move.name)
+                }}
+              >
+                <Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.move.name)}</Text>
+              </Pressable>
+              <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
+              <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>
+            </View>
+          )
+        })
         return moveBox
       } catch (error) {
         console.log(error);
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
   },
   headerText: {
     color: '#fff',
-    marginTop: 7,
+    marginTop: 12,
     fontWeight: '600',
     fontSize: 22,
   },
