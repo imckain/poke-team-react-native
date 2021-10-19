@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 
+import useGetReultsFromUrl from '../hooks/useGetResultsFromUrl';
 import PokemonNameAndId from '../components/pokemonDetailComponents/PokemonNameAndId';
 import FrontSprite from '../components/pokemonDetailComponents/FrontSprite';
 import ShinyFrontSprite from '../components/pokemonDetailComponents/ShinyFrontSprite';
@@ -12,10 +13,11 @@ import ModalBaseStats from '../components/pokemonDetailComponents/ModalBaseStats
 import SecondaryMovesDetail from '../components/pokemonDetailComponents/SecondaryMovesDetail';
 import { ScrollView } from 'react-native-gesture-handler';
 
-import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialIcons, Entypo } from '@expo/vector-icons';
 
 const SecondaryDetailModal = (props) => {
   const [isShiny, setIsShiny] = useState(false);
+  const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
 
   let results;
 
@@ -58,6 +60,31 @@ const SecondaryDetailModal = (props) => {
     }
   }
 
+  const showLocationData = async(el) => {
+    try {
+      const navigate = async(url) => {
+        if (urlResults[0].location_area.url !== url) {
+          await getResultsFromUrl(url)
+          return props.navigation.navigate('Location Detail Modal', { results: urlResults })
+        } else await getResultsFromUrl(url)
+      }
+
+      if (urlResults[0] === undefined) return null
+      return navigate(el.location_area_encounters)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
+  const isLocationAvailable = () => {
+    if (urlResults[0] === undefined) return 'Location Data Not Available'
+    else return <Text>Location Details  <Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" /></Text>
+  }
+
+  useEffect(() => {
+    getResultsFromUrl(results.location_area_encounters)
+  }, [])
+
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scrollViewContainer}>
@@ -70,6 +97,17 @@ const SecondaryDetailModal = (props) => {
           <TypeDetail navigation={props.navigation} margin={13} headerFontSize={22} detailFontSize={18} results={results} />
           <AbilityDetail navigation={props.navigation} margin={13} headerFontSize={22} detailFontSize={18} results={results} />
           <ModalBaseStats headerFontSize={22} detailFontSize={16} results={results} />
+          <Pressable 
+            onPressIn={async() => {
+              await getResultsFromUrl(results.location_area_encounters)
+              return urlResults
+            }}
+            onPressOut={async() => {
+              return showLocationData(results)
+            }}
+          >
+            <Text style={styles.locationNavigation}>{isLocationAvailable()}</Text>
+          </Pressable>
           <SecondaryMovesDetail navigation={props.navigation} results={results} />
         </View>
       </ScrollView>
@@ -117,6 +155,12 @@ const styles = StyleSheet.create({
     paddingLeft: 6,
     color: 'rgb(175, 175, 175)',
     fontSize: 12,
+  },
+  locationNavigation: {
+    color: '#fff',
+    marginTop: 12,
+    fontWeight: '600',
+    fontSize: 22
   },
 });
 
