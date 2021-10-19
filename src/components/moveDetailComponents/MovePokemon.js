@@ -31,15 +31,12 @@ const MovePokemon = ({ results, navigation }) => {
   }
 
   const createPokemonBox = (el) => {
-    const searchApiByUrl = useCallback(async(term) => {
-      await getResultsFromUrl(term);
-      return urlResults
-    }, [])
 
-    const navigate = async(url) => {
-      if (urlResults.id !== undefined) {
+    const navigate = async(url, param) => {
+      if (urlResults.name === param) {
+        await getResultsFromUrl(url)
         return navigation.navigate('Secondary Detail Modal', { results: urlResults })
-      } else searchApiByUrl(url)
+      } else await getResultsFromUrl(url)
     }
 
     if (el.learned_by_pokemon[0] !== null) {
@@ -48,9 +45,9 @@ const MovePokemon = ({ results, navigation }) => {
           <View key={item.name} style={styles.textBox}>
             <Pressable
               onPressIn={async() => {
-                await searchApiByUrl(item.url)
+                await getResultsFromUrl(item.url)
               }}
-              onPressOut={() => navigate(item.url)}
+              onPressOut={() => navigate(item.url, item.name)}
             >
               <Text allowFontScaling={false} style={[styles.text]}>{Capitalize(item.name)}</Text>
             </Pressable>

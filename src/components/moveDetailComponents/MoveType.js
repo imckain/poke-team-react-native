@@ -17,24 +17,21 @@ const MoveType = ({ results, navigation, detailFontSize, headerFontSize, margin,
   }
 
   const showType = (el) => {
-    const searchApiByUrl = useCallback(async(term) => {
-      await getResultsFromUrl(term);
-      return urlResults
-    }, [])
 
-    const navigate = async(url) => {
-      if (urlResults.id !== undefined) {
+    const navigate = async(url, param) => {
+      if (urlResults.name === param) {
+        await getResultsFromUrl(url)
         return navigation.navigate('Type Detail Modal', { results: urlResults })
-      } else searchApiByUrl(url)
+      } else await getResultsFromUrl(url)
     }
 
     return (
       <View key={el.type.name} style={styles.typeBox}>
         <Pressable 
           onPressIn={async() => {
-            await searchApiByUrl(el.type.url)
+            await getResultsFromUrl(el.type.url)
           }}
-          onPressOut={() => navigate(el.type.url)}
+          onPressOut={() => navigate(el.type.url, el.type.name)}
         >
           <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize }]}>{isValid(el) + ' '}</Text>
         </Pressable>
