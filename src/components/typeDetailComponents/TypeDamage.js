@@ -53,15 +53,12 @@ const TypeDamage = ({ results, navigation }) => {
   }
 
   const showType = (el) => {
-    const searchApiByUrl = useCallback(async(term) => {
-      await getResultsFromUrl(term);
-      return urlResults
-    }, [])
 
-    const navigate = async(url) => {
-      if (urlResults.id !== undefined) {
+    const navigate = async(url, param) => {
+      if (urlResults.name === param) {
+        await getResultsFromUrl(url)
         return navigation.navigate('Type Detail Modal', { results: urlResults })
-      } else searchApiByUrl(url)
+      } else await getResultsFromUrl(url)
     }
 
     const typeBox = el.map(item => {      
@@ -69,9 +66,9 @@ const TypeDamage = ({ results, navigation }) => {
         <View key={item.name} style={styles.typeBox}>
           <Pressable 
             onPressIn={async() => {
-              await searchApiByUrl(item.url)
+              await getResultsFromUrl(item.url)
             }}
-            onPressOut={() => navigate(item.url)}
+            onPressOut={() => navigate(item.url, item.name)}
           >
             <Text allowFontScaling={false} style={[styles.typeText]}>{Capitalize(item.name) + ' '}</Text>
           </Pressable>
