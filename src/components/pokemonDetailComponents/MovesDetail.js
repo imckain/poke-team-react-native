@@ -66,13 +66,8 @@ const MovesDetail = ({ results, navigation }) => {
   const displayFilteredResults = (el) => {
     if (searchTerm !== '') {
       try {
-        const searchApiByUrl = useCallback(async(term) => {
-          await getResultsFromUrl(term);
-          return urlResults
-        }, [])
-      
         const navigate = async(url) => {
-          await searchApiByUrl(url)
+          await getResultsFromUrl(url)
           if (urlResults.id !== undefined) {
             return navigation.navigate('Move Detail Modal', { results: urlResults })
           } else return
@@ -83,11 +78,10 @@ const MovesDetail = ({ results, navigation }) => {
             <View key={item.move.name} style={styles.moveTextBox}>
               <Pressable 
                 onPressIn={async() => {
-                  await searchApiByUrl(item.move.url)
+                  await getResultsFromUrl(item.move.url)
                 }}
                 onPressOut={async() => {
-                  await searchApiByUrl(item.move.url)
-                  return navigate(item.move.url)
+                  return navigate(item.move.url, item.move.name)
                 }}
               >
                 <Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.move.name)}</Text>
