@@ -17,6 +17,7 @@ import TypeDetailModal from './src/screens/TypeDetailModal';
 import MoveDetailModal from './src/screens/MoveDetailModal';
 import AbilityDetailModal from './src/screens/AbilityDetailModal';
 import SecondaryDetailModal from './src/screens/SecondaryDetailModal';
+import LocationDetailModal from './src/screens/LocationDetailModal';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -157,6 +158,16 @@ function App() {
           <Stack.Screen 
             name='Secondary Detail Modal'
             component={SecondaryDetailModal}
+            options={{
+              presentation: 'modal',
+              headerStyle: {
+                backgroundColor: '#ff0000',
+              }
+            }}
+          />
+          <Stack.Screen 
+            name='Location Detail Modal'
+            component={LocationDetailModal}
             options={{
               presentation: 'modal',
               headerStyle: {
