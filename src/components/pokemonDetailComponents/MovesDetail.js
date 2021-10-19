@@ -42,9 +42,11 @@ const MovesDetail = ({ results, navigation }) => {
       } else await getResultsFromUrl(url)
     }
     
-    const moveBox = el.moves.map(item => {
+    const moveBox = [].concat(el.moves)
+      .sort((a, b) => a.version_group_details[0].level_learned_at < b.version_group_details[0].level_learned_at ? 1: -1)
+      .map((item, i) => {
       return (
-        <View key={item.move.name} style={styles.moveTextBox}>
+        <View key={i} style={styles.moveTextBox}>
           <Pressable 
             onPressIn={async() => {
               await getResultsFromUrl(item.move.url)
@@ -73,9 +75,11 @@ const MovesDetail = ({ results, navigation }) => {
           } else return
         }
       
-        const moveBox = el.map(item => {
+        const moveBox = [].concat(el.moves)
+          .sort((a, b) => a.version_group_details[0].level_learned_at < b.version_group_details[0].level_learned_at ? 1 : -1)
+          .map((item, i) => {
           return (
-            <View key={item.move.name} style={styles.moveTextBox}>
+            <View key={i} style={styles.moveTextBox}>
               <Pressable 
                 onPressIn={async() => {
                   await getResultsFromUrl(item.move.url)
