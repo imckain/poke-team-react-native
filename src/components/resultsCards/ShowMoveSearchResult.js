@@ -12,8 +12,8 @@ const ShowAdvancedMoveResult = (props) => {
       <View style={styles.container}>
         <View style={styles.mainCardContainer}>
           <View style={styles.mainInfo}>
-            <MoveNameAndClass results={results} />
-            <MoveAttributes results={results} />
+            <MoveNameAndClass fontSize={22} alignSelf={'flex-start'} results={results} />
+            <MoveAttributes alignSelf={'flex-start'} results={results} />
           </View>
         </View>
         <Text allowFontScaling={false} style={styles.infoNotice}>Tap for more info</Text>
@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
   mainInfo: {
     justifyContent: 'flex-start',
     maxWidth: '100%',
-    flex: 1
+    flex: 1,
+    paddingHorizontal:12,
   },
   detailInfo: {
     paddingHorizontal: 5,
