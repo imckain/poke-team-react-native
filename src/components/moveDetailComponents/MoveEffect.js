@@ -27,21 +27,22 @@ const MoveEffect = ({ results }) => {
 
 const styles = StyleSheet.create({
   nameView: {
-    marginBottom: 10,
-    marginHorizontal: 12,
+    borderRadius: 10,
+    backgroundColor: '#464450',
+    paddingVertical: 5,
+    marginBottom: 13,
   },
   subHeaderText: {
     color: '#fff',
     fontWeight: '600',
     fontSize: 22,
+    paddingHorizontal: 12
   },
   effect: {
     color: 'rgb(223, 223, 223)',
     fontSize: 16,
     fontWeight: '400',
-    marginHorizontal: 12,
-    marginBottom: 8,
-    marginTop: 10,
+    paddingHorizontal: 24,
   },
 });
 
