@@ -19,15 +19,21 @@ const TypeDamage = ({ results, navigation }) => {
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <Pressable onPressIn={() => setCollapsed(false)}>
-          <Text allowFontScaling={false} style={[styles.headerText]}>Damage Mulitpliers  <Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" /></Text>
-        </Pressable>
+        <View style={styles.headerWrapper}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => setCollapsed(false)}>
+            <Text allowFontScaling={false} style={[styles.headerText]}>Damage Mulitpliers</Text>  
+            <Entypo name="plus" size={22} color="rgb(175, 175, 175)" />
+          </Pressable>
+        </View>
       )
     } if (el === false) {
       return(
-        <Pressable onPressIn={() => setCollapsed(true)}>
-          <Text allowFontScaling={false} style={[styles.headerText]}>Damage Mulitpliers  <Entypo name="triangle-down" size={22} color="rgb(175, 175, 175)" /></Text>
-        </Pressable>
+        <View style={styles.headerWrapper}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => setCollapsed(true)}>
+            <Text allowFontScaling={false} style={[styles.headerText]}>Damage Mulitpliers</Text>  
+            <Entypo name="minus" size={22} color="rgb(175, 175, 175)" />
+          </Pressable>
+        </View>
       )
     }
   }, []);
@@ -35,15 +41,21 @@ const TypeDamage = ({ results, navigation }) => {
   const checkForCollapseOnMultipliers = useCallback((el, fn, dmg) => {
     if (el === true) {
       return (
-        <Pressable onPressIn={() => fn(false)}>
-          <Text allowFontScaling={false} style={styles.dmgCaseHeader}>{dmg} <Entypo name="triangle-right" size={16} color="rgb(175, 175, 175)" /></Text>
-        </Pressable>
+        <View style={styles.headerWrapper}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => fn(false)}>
+            <Text allowFontScaling={false} style={styles.dmgCaseHeader}>{dmg}</Text> 
+            <Entypo name="plus" size={16} color="rgb(175, 175, 175)" />
+          </Pressable>
+        </View>
       )
     } if (el === false) {
       return(
-        <Pressable onPressIn={() => fn(true)}>
-          <Text allowFontScaling={false} style={styles.dmgCaseHeader}>{dmg} <Entypo name="triangle-down" size={16} color="rgb(175, 175, 175)" /></Text>
-        </Pressable>
+        <View style={styles.headerWrapper}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => fn(true)}>
+            <Text allowFontScaling={false} style={styles.dmgCaseHeader}>{dmg}</Text> 
+            <Entypo name="minus" size={16} color="rgb(175, 175, 175)" />
+          </Pressable>
+        </View>
       )
     }
   }, []);
@@ -61,6 +73,7 @@ const TypeDamage = ({ results, navigation }) => {
       } else await getResultsFromUrl(url)
     }
 
+    
     const typeBox = el.map(item => {      
       return (
         <View key={item.name} style={styles.typeBox}>
@@ -111,52 +124,52 @@ const TypeDamage = ({ results, navigation }) => {
           <View style={styles.damageContainer}>
             <View style={styles.dmgCaseView}>
               {checkForCollapseOnMultipliers(dblDmgToCollapsed, setDblDmgToCollapsed, '2x Damage To:')}
+              <Collapsible collapsed={dblDmgToCollapsed}>
+                <View style={styles.dmgResultsContainer}>
+                  {doubleDmgTo(results)}
+                </View>
+              </Collapsible>
             </View>
-            <Collapsible collapsed={dblDmgToCollapsed}>
-              <View style={styles.dmgResultsContainer}>
-                {doubleDmgTo(results)}
-              </View>
-            </Collapsible>
             <View style={styles.dmgCaseView}>
               {checkForCollapseOnMultipliers(halfDmgToCollapsed, setHalfDmgToCollapsed, '0.5x Damage To:')}
+              <Collapsible collapsed={halfDmgToCollapsed}>
+                <View style={styles.dmgResultsContainer}>
+                  {halfDmgTo(results)}
+                </View>
+              </Collapsible>
             </View>
-            <Collapsible collapsed={halfDmgToCollapsed}>
-              <View style={styles.dmgResultsContainer}>
-                {halfDmgTo(results)}
-              </View>
-            </Collapsible>
             <View style={styles.dmgCaseView}>
               {checkForCollapseOnMultipliers(noDmgToCollapsed, setNoDmgToCollapsed, '0x Damage To:')}
+              <Collapsible collapsed={noDmgToCollapsed}>
+                <View style={styles.dmgResultsContainer}>
+                  {noDmgTo(results)}
+                </View>
+              </Collapsible>
             </View>
-            <Collapsible collapsed={noDmgToCollapsed}>
-              <View style={styles.dmgResultsContainer}>
-                {noDmgTo(results)}
-              </View>
-            </Collapsible>
             <View style={styles.dmgCaseView}>
               {checkForCollapseOnMultipliers(dblDmgFrmCollapsed, setDblDmgFrmCollapsed, '2x Damage From:')}
+              <Collapsible collapsed={dblDmgFrmCollapsed}>
+                <View style={styles.dmgResultsContainer}>
+                  {doubleDmgFrom(results)}
+                </View>
+              </Collapsible>
             </View>
-            <Collapsible collapsed={dblDmgFrmCollapsed}>
-              <View style={styles.dmgResultsContainer}>
-                {doubleDmgFrom(results)}
-              </View>
-            </Collapsible>
             <View style={styles.dmgCaseView}>
               {checkForCollapseOnMultipliers(halfDmgFrmCollapsed, setHalfDmgFrmCollapsed, '0.5x Damage From:')}
+              <Collapsible collapsed={halfDmgFrmCollapsed}>
+                <View style={styles.dmgResultsContainer}>
+                  {halfDmgFrom(results)}
+                </View>
+              </Collapsible>
             </View>
-            <Collapsible collapsed={halfDmgFrmCollapsed}>
-              <View style={styles.dmgResultsContainer}>
-                {halfDmgFrom(results)}
-              </View>
-            </Collapsible>
             <View style={styles.dmgCaseView}>
               {checkForCollapseOnMultipliers(noDmgFrmCollapsed, setNoDmgFrmCollapsed, '0x Damage From:')}
+              <Collapsible collapsed={noDmgFrmCollapsed}>
+                <View style={styles.dmgResultsContainer}>
+                  {noDmgFrom(results)}
+                </View>
+              </Collapsible>
             </View>
-            <Collapsible collapsed={noDmgFrmCollapsed}>
-              <View style={styles.dmgResultsContainer}>
-                {noDmgFrom(results)}
-              </View>
-            </Collapsible>
           </View>
         </View>
       </Collapsible>
@@ -169,36 +182,41 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'stretch',
     width: '100%',
-    marginHorizontal: 12,
-    marginBottom: 10
+    marginBottom: 10,
+    borderRadius: 10,
+    backgroundColor: '#464450',
+    paddingVertical: 5,
   },
   headerText: {
     color: '#fff',
-    marginTop: 7,
     fontWeight: '600',
     fontSize: 22,
+  },
+  headerWrapper: {
+    width: '100%',
+    paddingHorizontal: 12
   },
   scrollViewStyle: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     width: '100%',
-    marginBottom: 20,
   },
   damageContainer: {
     width: '100%',
     height: 'auto',
-    paddingHorizontal: 10,
+    paddingHorizontal: 24,
   },
   dmgCaseView: {
     alignItems: 'flex-start',
+    borderRadius: 10,
+    backgroundColor: '#353340',
+    marginVertical: 4,
+    paddingVertical: 4,
   },
   dmgCaseHeader: {
     color: '#fff',
-    marginTop: 9,
-    marginBottom: 3,
     fontWeight: '600',
     fontSize: 16,
-    alignItems: 'baseline'
   },
   dmgResultsContainer: {
     width: '100%',

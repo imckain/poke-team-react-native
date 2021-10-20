@@ -13,15 +13,21 @@ const TypePokemon = ({ results, navigation }) => {
   const checkForPokemonCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <Pressable onPressIn={() => setPokemonCollapsed(false)}>
-          <Text allowFontScaling={false} style={[styles.headerText]}>Pokemon  <Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" /></Text>
-        </Pressable>
+        <View style={styles.headerWrapper}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => setPokemonCollapsed(false)}>
+            <Text allowFontScaling={false} style={[styles.headerText]}>Pokemon</Text>  
+            <Entypo name="plus" size={22} color="rgb(175, 175, 175)" />
+          </Pressable>
+        </View>
       )
     } if (el === false) {
       return(
-        <Pressable onPressIn={() => setPokemonCollapsed(true)}>
-          <Text allowFontScaling={false} style={[styles.headerText]}>Pokemon  <Entypo name="triangle-down" size={22} color="rgb(175, 175, 175)" /></Text>
-        </Pressable>
+        <View style={styles.headerWrapper}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => setPokemonCollapsed(true)}>
+            <Text allowFontScaling={false} style={[styles.headerText]}>Pokemon</Text>  
+            <Entypo name="minus" size={22} color="rgb(175, 175, 175)" />
+          </Pressable>
+        </View>
       )
     }
   }, []);
@@ -69,33 +75,38 @@ const TypePokemon = ({ results, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
-    alignItems: 'stretch',
+    alignItems: 'baseline',
     width: '100%',
-    marginHorizontal: 12,
-    marginBottom: 10
+    borderRadius: 10,
+    backgroundColor: '#464450',
+    paddingVertical: 5,
   },
   headerText: {
     color: '#fff',
-    marginTop: 7,
     fontWeight: '600',
     fontSize: 22,
+  },
+  headerWrapper: {
+    width: '100%',
+    paddingHorizontal: 12
   },
   scrollViewStyle: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     width: '100%',
-    marginBottom: 20,
+    paddingHorizontal: 24,
+    marginTop: 12
   },
   textBox: {
     paddingVertical: 5,
-    marginLeft: 6,
     borderRadius: 10,
-    backgroundColor: '#464450',
-    margin: 7,
+    backgroundColor: '#353340',
+    marginBottom: 12,
+    marginRight: 12,
     alignContent: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    width: '29%'
+    // width: '29%'
   },
   text: {
     color: 'rgb(223, 223, 223)',
