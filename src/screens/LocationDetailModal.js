@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View, StyleSheet, FlatList } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
 
 const LocationDetailModal = (props) => {
   let results = [];
@@ -23,7 +22,6 @@ const LocationDetailModal = (props) => {
           const version = item.version_details.map(i => {
             return <Text key={i.version.name} style={styles.versionText}>{Capitalize(i.version.name)}</Text>
           })
-          console.log();
           return (
             <View style={{paddingBottom: 12}}>
               <View style={styles.versionHeader}>
