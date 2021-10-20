@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Pressable } from 'react-native';
 
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
 
-const TypeDetail = ({ results, margin, headerFontSize, detailFontSize, navigation, flexDirection }) => {
+const TypeDetail = ({ results, margin, detailFontSize, navigation, flexDirection }) => {
   const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
 
   function Capitalize(str) {
@@ -41,7 +41,6 @@ const TypeDetail = ({ results, margin, headerFontSize, detailFontSize, navigatio
 
   return (
     <View style={[styles.typeContainer, { marginBottom: margin, flexDirection: flexDirection }]}>
-      <Text allowFontScaling={false} style={[styles.typeLabelText, { fontSize: headerFontSize }]}>Type:</Text>
       <View style={{flexDirection: 'row'}}>
         {showType(results)}
       </View>
@@ -52,7 +51,7 @@ const TypeDetail = ({ results, margin, headerFontSize, detailFontSize, navigatio
 const styles = StyleSheet.create({
   typeContainer: {
     flexDirection: 'column',
-    alignItems: 'baseline'
+    alignItems: 'center'
   },
   typeLabelText: {
     color: '#fff',
