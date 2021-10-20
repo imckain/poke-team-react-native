@@ -20,7 +20,7 @@ const TypeDamage = ({ results, navigation }) => {
     if (el === true) {
       return (
         <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => setCollapsed(false)}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(false)}>
             <Text allowFontScaling={false} style={[styles.headerText]}>Damage Mulitpliers</Text>  
             <Entypo name="plus" size={22} color="rgb(175, 175, 175)" />
           </Pressable>
@@ -29,7 +29,7 @@ const TypeDamage = ({ results, navigation }) => {
     } if (el === false) {
       return(
         <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => setCollapsed(true)}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(true)}>
             <Text allowFontScaling={false} style={[styles.headerText]}>Damage Mulitpliers</Text>  
             <Entypo name="minus" size={22} color="rgb(175, 175, 175)" />
           </Pressable>
@@ -42,7 +42,7 @@ const TypeDamage = ({ results, navigation }) => {
     if (el === true) {
       return (
         <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => fn(false)}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => fn(false)}>
             <Text allowFontScaling={false} style={styles.dmgCaseHeader}>{dmg}</Text> 
             <Entypo name="plus" size={16} color="rgb(175, 175, 175)" />
           </Pressable>
@@ -51,7 +51,7 @@ const TypeDamage = ({ results, navigation }) => {
     } if (el === false) {
       return(
         <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => fn(true)}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => fn(true)}>
             <Text allowFontScaling={false} style={styles.dmgCaseHeader}>{dmg}</Text> 
             <Entypo name="minus" size={16} color="rgb(175, 175, 175)" />
           </Pressable>
@@ -221,18 +221,18 @@ const styles = StyleSheet.create({
   dmgResultsContainer: {
     width: '100%',
     flexDirection: 'row',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    paddingHorizontal: 12
   },
   typeBox: {
     paddingVertical: 5,
-    marginLeft: 10,
     borderRadius: 10,
     backgroundColor: '#464450',
-    margin: 7,
+    margin: 5,
     alignContent: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    width: '28%'
+    width: 'auto'
   },
   typeText: {
     color: 'rgb(223, 223, 223)',
