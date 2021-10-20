@@ -14,7 +14,7 @@ const MovePokemon = ({ results, navigation }) => {
     if (el === true) {
       return (
         <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => setPokemonCollapsed(false)}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setPokemonCollapsed(false)}>
             <Text allowFontScaling={false} style={[styles.headerText]}>Learned By:</Text>  
             <Entypo name="plus" size={22} color="rgb(175, 175, 175)" />
           </Pressable>
@@ -23,7 +23,7 @@ const MovePokemon = ({ results, navigation }) => {
     } if (el === false) {
       return(
         <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => setPokemonCollapsed(true)}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setPokemonCollapsed(true)}>
             <Text allowFontScaling={false} style={[styles.headerText]}>Learned By:</Text>  
             <Entypo name="minus" size={22} color="rgb(175, 175, 175)" />
           </Pressable>
