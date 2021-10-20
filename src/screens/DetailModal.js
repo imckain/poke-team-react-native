@@ -77,8 +77,13 @@ const DetailModal = (props) => {
   };
   
   const isLocationAvailable = () => {
-    if (urlResults[0] === undefined) return 'Location Data Not Available'
-    else return <Text>Location Details  <Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" /></Text>
+    if (urlResults[0] === undefined) return <View style={styles.headerWrapper}><Text style={[styles.locationNavigation, {fontStyle: 'italic', color: 'rgb(175, 175, 175)'}]}>Encounter Details Not Available</Text></View>
+    else return (
+      <View style={[styles.headerWrapper, {flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignItems: 'baseline'}]}>
+        <Text style={styles.locationNavigation}>Encounter Details</Text>  
+        <Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" />
+      </View>
+    )
   }
 
   useEffect(() => {
@@ -89,14 +94,15 @@ const DetailModal = (props) => {
     <View style={styles.container}>
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
-          <PokemonNameAndId fontSize={34} results={results} />
+          <PokemonNameAndId fontSize={38} results={results} />
           <View style={{height: 20}} />
-            {changeSprites(isShiny)}
-          </View>
+          {changeSprites(isShiny)}
+        </View>
         <View style={styles.detailInfo}>
-          <TypeDetail navigation={props.navigation} margin={13} headerFontSize={22} detailFontSize={18} results={results} />
+          <TypeDetail navigation={props.navigation} margin={13} detailFontSize={24} results={results} />
           <AbilityDetail navigation={props.navigation} margin={13} headerFontSize={22} detailFontSize={18} results={results} />
-          <ModalBaseStats headerFontSize={22} detailFontSize={16} results={results} />
+          <ModalBaseStats headerFontSize={22} detailFontSize={16} margin={13} results={results} />
+          <MovesDetail navigation={props.navigation} margin={13} results={results} />
           <Pressable 
             onPressIn={async() => {
               await getResultsFromUrl(results.location_area_encounters)
@@ -105,10 +111,10 @@ const DetailModal = (props) => {
             onPressOut={async() => {
               return showLocationData(results)
             }}
+            style={styles.encounterContainer}
           >
-            <Text style={styles.locationNavigation}>{isLocationAvailable()}</Text>
+            {isLocationAvailable()}
           </Pressable>
-          <MovesDetail navigation={props.navigation} results={results} />
         </View>
       </ScrollView>
     </View>
@@ -136,13 +142,28 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    paddingTop: 20
+    paddingTop: 12
+  },
+  headerWrapper: {
+    width: '100%',
+    paddingHorizontal: 12,
+    height: 'auto',
+  },
+  encounterContainer: {
+    flexDirection: 'column',
+    alignItems: 'baseline',
+    width: '100%',
+    borderRadius: 10,
+    backgroundColor: '#464450',
+    paddingVertical: 5,
+    height: 'auto',
+    marginBottom: 13
   },
   detailInfo: {
     flex: 1,
     paddingLeft: 5,
     paddingTop: 25,
-    paddingBottom: 300
+    paddingBottom: 300,
   },
   changeButton: {
     flexDirection: 'row',
@@ -158,7 +179,6 @@ const styles = StyleSheet.create({
   },
   locationNavigation: {
     color: '#fff',
-    marginTop: 12,
     fontWeight: '600',
     fontSize: 22
   },
