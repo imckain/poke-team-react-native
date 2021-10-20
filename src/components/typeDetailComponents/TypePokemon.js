@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
     width: '100%',
     borderRadius: 10,
-    backgroundColor: '#464450',
+    backgroundColor: '#464450a6',
     paddingVertical: 5,
   },
   headerText: {
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: '600',
     textAlign: 'center',
     paddingHorizontal: 12,
