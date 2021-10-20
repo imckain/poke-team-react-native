@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, Pressable } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
+import checkType from '../functions/checkType';
 
 import { Entypo } from '@expo/vector-icons';
 
@@ -21,7 +22,7 @@ const TypeDamage = ({ results, navigation }) => {
       return (
         <View style={styles.headerWrapper}>
           <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(false)}>
-            <Text allowFontScaling={false} style={[styles.headerText]}>Damage Mulitpliers</Text>  
+            <Text allowFontScaling={false} style={[styles.headerText]}>Damage Multipliers</Text>  
             <Entypo name="plus" size={22} color="rgb(175, 175, 175)" />
           </Pressable>
         </View>
@@ -30,7 +31,7 @@ const TypeDamage = ({ results, navigation }) => {
       return(
         <View style={styles.headerWrapper}>
           <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(true)}>
-            <Text allowFontScaling={false} style={[styles.headerText]}>Damage Mulitpliers</Text>  
+            <Text allowFontScaling={false} style={[styles.headerText]}>Damage Multipliers</Text>  
             <Entypo name="minus" size={22} color="rgb(175, 175, 175)" />
           </Pressable>
         </View>
@@ -73,10 +74,9 @@ const TypeDamage = ({ results, navigation }) => {
       } else await getResultsFromUrl(url)
     }
 
-    
-    const typeBox = el.map(item => {      
+    const typeBox = el.map(item => {  
       return (
-        <View key={item.name} style={styles.typeBox}>
+        <View key={item.name} style={[styles.typeBox, { backgroundColor: checkType(item.name) }]}>
           <Pressable 
             onPressIn={async() => {
               await getResultsFromUrl(item.url)
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     width: '100%',
     marginBottom: 10,
     borderRadius: 10,
-    backgroundColor: '#464450',
+    backgroundColor: '#464450a6',
     paddingVertical: 5,
   },
   headerText: {
@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
   dmgCaseView: {
     alignItems: 'flex-start',
     borderRadius: 10,
-    backgroundColor: '#353340',
+    backgroundColor: '#353340a6',
     marginVertical: 4,
     paddingVertical: 4,
   },
@@ -227,7 +227,6 @@ const styles = StyleSheet.create({
   typeBox: {
     paddingVertical: 5,
     borderRadius: 10,
-    backgroundColor: '#464450',
     margin: 5,
     alignContent: 'center',
     justifyContent: 'center',
@@ -236,11 +235,14 @@ const styles = StyleSheet.create({
   },
   typeText: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: '600',
     textAlign: 'center',
     paddingHorizontal: 12,
-    paddingVertical: 3
+    paddingVertical: 3,
+    textShadowColor: 'rgb(0, 0, 0)',
+    textShadowOffset: { width: 0, height: 0},
+    textShadowRadius: 3,
   },
 });
 
