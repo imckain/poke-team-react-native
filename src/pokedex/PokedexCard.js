@@ -26,11 +26,9 @@ const PokedexCard = (props) => {
   }
 
   return (
-    <View>
-      <View style={styles.container}>
-        <View style={styles.mainInfo}>
-          {checkDex(param)}
-        </View>
+    <View style={styles.container}>
+      <View style={styles.mainInfo}>
+        {checkDex(param)}
       </View>
     </View>
   );
@@ -38,22 +36,22 @@ const PokedexCard = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    borderTopLeftRadius: 0,
-    borderBottomLeftRadius: 10,
-    borderBottomRightRadius: 0,
-    borderBottomWidth: 2,
-    borderLeftWidth: 2,
+    // borderTopLeftRadius: 0,
+    // borderBottomLeftRadius: 10,
+    // borderBottomRightRadius: 0,
+    borderBottomWidth: 1,
+    // borderLeftWidth: 2,
     borderColor: '#fff', 
     width: '90%',
     height: 'auto',
     alignSelf: 'center',
-    marginBottom: 12,
-    marginTop: 2,
+    // marginBottom: 12,
     backgroundColor: '#464450',
   },
   mainInfo: {
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
+    width: '100%'
   },
 });
 
