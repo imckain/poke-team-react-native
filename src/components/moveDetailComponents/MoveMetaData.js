@@ -12,7 +12,7 @@ const MoveMetaData = ({ results }) => {
     if (el === true) {
       return (
         <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', width: '100%'}} onPressIn={() => setCollapsed(false)}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignItems: 'baseline'}} onPressIn={() => setCollapsed(false)}>
             <Text allowFontScaling={false} style={[styles.metaDataHeaderText]}>Meta Data:</Text>  
             <Entypo name="plus" size={16} color="rgb(175, 175, 175)" />
           </Pressable>
@@ -21,7 +21,7 @@ const MoveMetaData = ({ results }) => {
     } if (el === false) {
       return(
         <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', width: '100%'}} onPressIn={() => setCollapsed(true)}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignItems: 'baseline'}} onPressIn={() => setCollapsed(true)}>
             <Text allowFontScaling={false} style={[styles.metaDataHeaderText]}>Meta Data:</Text>  
             <Entypo name="minus" size={16} color="rgb(175, 175, 175)" />
           </Pressable>
