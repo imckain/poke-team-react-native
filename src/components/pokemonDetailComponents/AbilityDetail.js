@@ -13,15 +13,21 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <Pressable onPressIn={() => setCollapsed(false)}>
-          <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities  <Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" /></Text>
-        </Pressable>
+        <View style={styles.headerWrapper}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => setCollapsed(false)}>
+            <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities</Text>  
+            <Entypo name="plus" size={22} color="rgb(175, 175, 175)" />
+          </Pressable>
+        </View>
       )
     } if (el === false) {
       return(
-        <Pressable onPressIn={() => setCollapsed(true)}>
-          <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities  <Entypo name="triangle-down" size={22} color="rgb(175, 175, 175)" /></Text>
-        </Pressable>
+        <View style={styles.headerWrapper}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => setCollapsed(true)}>
+            <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities</Text>  
+            <Entypo name="minus" size={22} color="rgb(175, 175, 175)" />
+          </Pressable>
+        </View>
       )
     }
   }, []);
@@ -62,7 +68,7 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
   return (
     <View style={[styles.container, { marginBottom: margin }]}>
       {checkForCollapse(collapsed)}
-      <Collapsible style={{flexDirection: 'row', flexWrap: 'wrap'}} collapsed={collapsed}>{showAbilities(results)}</Collapsible>
+      <Collapsible style={{flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 12}} collapsed={collapsed}>{showAbilities(results)}</Collapsible>
     </View>
   );
 };
@@ -71,21 +77,28 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     alignItems: 'baseline',
-    width: '100%'
+    width: '100%',
+    borderRadius: 10,
+    backgroundColor: '#464450',
+    paddingVertical: 5,
   },
   headerText: {
     color: '#fff',
     fontWeight: '600',
   },
+  headerWrapper: {
+    width: '100%',
+    paddingHorizontal: 12
+  },
   abilityBox: {
     paddingVertical: 5,
     borderRadius: 10,
-    backgroundColor: '#464450',
+    backgroundColor: '#353340',
     margin: 7,
     alignContent: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    width: 'auto'
+    width: 'auto',
   },
   abilityText: {
     color: 'rgb(223, 223, 223)',
