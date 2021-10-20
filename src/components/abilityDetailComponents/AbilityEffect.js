@@ -26,7 +26,7 @@ const AbilityEffect = ({ results }) => {
 
 const styles = StyleSheet.create({
   nameView: {
-    marginBottom: 10,
+    marginBottom: 12,
   },
   name: {
     color: 'rgb(223, 223, 223)',
