@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 
-const MoveNameAndClass = ({ results }) => {
+const MoveNameAndClass = ({ results, fontSize, alignSelf }) => {
   function Capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
@@ -13,8 +13,8 @@ const MoveNameAndClass = ({ results }) => {
   }
 
   return (
-    <View style={styles.dmgClassView}>
-      <Text allowFontScaling={false} style={[styles.name]}>{Capitalize(results.name.replace('-', ' '))}</Text>
+    <View style={[styles.dmgClassView, { alignSelf: alignSelf }]}>
+      <Text allowFontScaling={false} style={[styles.name, { fontSize: fontSize, alignSelf: alignSelf }]}>{Capitalize(results.name.replace('-', ' '))}</Text>
       <Text allowFontScaling={false} style={[styles.damageClass]}>Damage Class:  <Text style={styles.damageClassSub}>{isValid(results)}</Text></Text>
     </View>
   );
@@ -23,23 +23,23 @@ const MoveNameAndClass = ({ results }) => {
 const styles = StyleSheet.create({
   name: {
     color: '#fff',
-    fontSize: 26,
     fontWeight: '600',
     marginVertical: 8,
-    marginHorizontal: 12,
+    alignSelf: 'center'
   },
   dmgClassView: {
     marginBottom: 10,
+    alignSelf: 'center',
+    marginBottom: 12,
   },
   damageClass: {
     color: '#fff',
-    fontSize: 22,
+    fontSize: 16,
     fontWeight: '600',
-    marginHorizontal: 12
   },
   damageClassSub: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: '400',
     marginHorizontal: 12
   },
