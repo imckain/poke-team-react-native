@@ -106,17 +106,5 @@
    "identifier": "fairy",
    "generation_id": 6,
    "damage_class_id": null
- },
- {
-   "id": 10001,
-   "identifier": "unknown",
-   "generation_id": 2,
-   "damage_class_id": null
- },
- {
-   "id": 10002,
-   "identifier": "shadow",
-   "generation_id": 3,
-   "damage_class_id": null
  }
 ]
