@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 
-const MoveAttributes = ({ results, fontSize }) => {
+const MoveAttributes = ({ results, fontSize, alignSelf }) => {
 
   const checkForNull = (el) => {
     if (el === null) return 'N/A'
@@ -9,15 +9,14 @@ const MoveAttributes = ({ results, fontSize }) => {
   }
 
   return (
-    <View style={styles.container}>
-      <Text allowFontScaling={false} style={[styles.attributes, { fontSize: fontSize }]}> Power: {checkForNull(results.power)} | PP: {checkForNull(results.pp)} | Acc: {checkForNull(results.accuracy)}</Text>
+    <View style={[styles.container, { alignSelf: alignSelf }]}>
+      <Text allowFontScaling={false} style={[styles.attributes, { fontSize: fontSize }]}>Power: {checkForNull(results.power)} | PP: {checkForNull(results.pp)} | Acc: {checkForNull(results.accuracy)}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 10,
     alignItems: 'baseline',
     flexDirection: 'column',
     marginBottom: 12
