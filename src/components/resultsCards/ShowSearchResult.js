@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#ffffffa7',
     fontStyle: 'italic',
-    paddingTop: 2,
+    paddingTop: 6,
   }
 });
 
