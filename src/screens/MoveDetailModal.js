@@ -8,6 +8,7 @@ import MoveType from '../components/moveDetailComponents/MoveType';
 import MoveMetaData from '../components/moveDetailComponents/MoveMetaData';
 import MovePokemon from '../components/moveDetailComponents/MovePokemon';
 import MoveEffect from '../components/moveDetailComponents/MoveEffect';
+import checkType from '../components/functions/checkType';
 
 const MoveDetailModal = (props) => {
   let results;
@@ -17,7 +18,7 @@ const MoveDetailModal = (props) => {
   } else results = props.route.params.results[0]
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { }]}>
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
           <MoveNameAndClass alignSelf={'center'} fontSize={38} results={results} />
