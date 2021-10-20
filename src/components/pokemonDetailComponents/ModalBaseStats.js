@@ -4,21 +4,27 @@ import Collapsible from 'react-native-collapsible';
 
 import { Entypo } from '@expo/vector-icons';
 
-const ModalBaseStats = ({ results, headerFontSize, detailFontSize }) => {
+const ModalBaseStats = ({ results, headerFontSize, detailFontSize, margin }) => {
   const [collapsed, setCollapsed] = useState(true);
 
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <Pressable onPressIn={() => setCollapsed(false)}>
-          <Text allowFontScaling={false} style={[styles.baseStatHeaderText, { fontSize: headerFontSize }]}>Base Stats  <Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" /></Text>
-        </Pressable>
+        <View style={styles.headerWrapper}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => setCollapsed(false)}>
+            <Text allowFontScaling={false} style={[styles.baseStatHeaderText, { fontSize: headerFontSize }]}>Base Stats</Text>  
+            <Entypo name="plus" size={22} color="rgb(175, 175, 175)" />
+          </Pressable>
+        </View>
       )
     } if (el === false) {
       return(
-        <Pressable onPressIn={() => setCollapsed(true)}>
-          <Text allowFontScaling={false} style={[styles.baseStatHeaderText, { fontSize: headerFontSize }]}>Base Stats  <Entypo name="triangle-down" size={22} color="rgb(175, 175, 175)" /></Text>
-        </Pressable>
+        <View style={styles.headerWrapper}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => setCollapsed(true)}>
+            <Text allowFontScaling={false} style={[styles.baseStatHeaderText, { fontSize: headerFontSize }]}>Base Stats</Text>  
+            <Entypo name="minus" size={22} color="rgb(175, 175, 175)" />
+          </Pressable>
+        </View>
       )
     }
   }, []);
@@ -28,10 +34,10 @@ const ModalBaseStats = ({ results, headerFontSize, detailFontSize }) => {
   }
 
   return (
-    <View>
+    <View style={[styles.container, {marginBottom: margin}]}>
       {checkForCollapse(collapsed)}
       <View style={styles.infoContainer}>
-        <Collapsible collapsed={collapsed}>
+        <Collapsible style={{paddingBottom: 12}} collapsed={collapsed}>
           <View style={styles.baseStatContainer}>
             <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[0].stat.name)}:</Text>
             <Text allowFontScaling={false} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[0].base_stat}</Text>
@@ -63,9 +69,14 @@ const ModalBaseStats = ({ results, headerFontSize, detailFontSize }) => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    borderRadius: 10,
+    backgroundColor: '#464450',
+    paddingVertical: 5,
+  },
   infoContainer: {
     width: '100%',
-    paddingHorizontal: 7
+    paddingHorizontal: 24,
   },
   baseStatContainer: {
     flexDirection: 'row',
@@ -74,6 +85,10 @@ const styles = StyleSheet.create({
     paddingVertical: 3,
     borderBottomColor: '#ffffff81',
     borderBottomWidth: 1,
+  },
+  headerWrapper: {
+    width: '100%',
+    paddingHorizontal: 12
   },
   baseStatHeaderText: {
     color: '#fff',
