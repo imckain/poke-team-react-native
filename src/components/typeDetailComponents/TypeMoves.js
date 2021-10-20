@@ -5,6 +5,7 @@ import Collapsible from 'react-native-collapsible';
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
 
 import { Entypo } from '@expo/vector-icons';
+import checkType from '../functions/checkType';
 
 const TypeMoves = ({ results, navigation }) => {
   const [collapsed, setCollapsed] = useState(true);
@@ -48,7 +49,7 @@ const TypeMoves = ({ results, navigation }) => {
 
     const moveBox = el.moves.map(item => {
       return (
-        <View key={item.name} style={styles.moveTextBox}>
+        <View key={item.name} style={[styles.moveTextBox, { backgroundColor: checkType(results.name) }]}>
           <Pressable 
             onPressIn={async() => {
               await getResultsFromUrl(item.url)
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
     width: '100%',
     borderRadius: 10,
-    backgroundColor: '#464450',
+    backgroundColor: '#464450a6',
     paddingVertical: 5,
     marginBottom: 10,
   },
@@ -113,11 +114,14 @@ const styles = StyleSheet.create({
   },
   moveText: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: '600',
     textAlign: 'center',
     paddingHorizontal: 12,
     paddingVertical: 6,
+    textShadowColor: 'rgb(0, 0, 0)',
+    textShadowOffset: { width: 0, height: 0},
+    textShadowRadius: 3,
   },
 });
 
