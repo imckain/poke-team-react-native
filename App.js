@@ -152,7 +152,8 @@ function App() {
               presentation: 'modal',
               headerStyle: {
                 backgroundColor: '#ff0000',
-              }
+              },
+              headerShown: 'false'
             }}
           />
           <Stack.Screen 
@@ -162,7 +163,8 @@ function App() {
               presentation: 'modal',
               headerStyle: {
                 backgroundColor: '#ff0000',
-              }
+              },
+              headerShown: 'false'
             }}
           />
           <Stack.Screen 
@@ -172,7 +174,8 @@ function App() {
               presentation: 'modal',
               headerStyle: {
                 backgroundColor: '#ff0000',
-              }
+              },
+              headerShown: 'false'
             }}
           />
           <Stack.Screen 
@@ -182,7 +185,8 @@ function App() {
               presentation: 'modal',
               headerStyle: {
                 backgroundColor: '#ff0000',
-              }
+              },
+              headerShown: 'false'
             }}
           />
           <Stack.Screen 
@@ -192,7 +196,8 @@ function App() {
               presentation: 'modal',
               headerStyle: {
                 backgroundColor: '#ff0000',
-              }
+              },
+              headerShown: 'false'
             }}
           />
           <Stack.Screen 
@@ -202,7 +207,8 @@ function App() {
               presentation: 'modal',
               headerStyle: {
                 backgroundColor: '#ff0000',
-              }
+              },
+              headerShown: 'false'
             }}
           />
         </Stack.Group>
