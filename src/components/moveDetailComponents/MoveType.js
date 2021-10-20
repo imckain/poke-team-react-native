@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import { Text, StyleSheet, View, Pressable } from 'react-native';
 
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
+import checkType from '../functions/checkType';
 
 const MoveType = ({ results, navigation, detailFontSize, headerFontSize, margin, flexDirection }) => {
   const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
@@ -26,7 +27,7 @@ const MoveType = ({ results, navigation, detailFontSize, headerFontSize, margin,
     }
 
     return (
-      <View key={el.type.name} style={styles.typeBox}>
+      <View key={el.type.name} style={[styles.typeBox, { backgroundColor: checkType(el.type.name)}]}>
         <Pressable 
           onPressIn={async() => {
             await getResultsFromUrl(el.type.url)
@@ -61,20 +62,23 @@ const styles = StyleSheet.create({
   typeBox: {
     paddingVertical: 5,
     borderRadius: 10,
-    backgroundColor: '#464450',
+    backgroundColor: '#464450a6',
     margin: 7,
     alignContent: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    width: 'auto'
+    width: 'auto',
   },
   typeText: {
-    color: 'rgb(223, 223, 223)',
+    color: '#fff',
     fontSize: 18,
     fontWeight: '600',
     textAlign: 'center',
     paddingHorizontal: 12,
-    paddingVertical: 3
+    paddingVertical: 3,
+    textShadowColor: 'rgba(0, 0, 0, 0.712)',
+    textShadowOffset: { width: 0, height: 0},
+    textShadowRadius: 5,
   },
 });
 
