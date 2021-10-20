@@ -16,10 +16,11 @@ const AbilityName = ({ results }) => {
 const styles = StyleSheet.create({
   name: {
     color: '#fff',
-    fontSize: 26,
+    fontSize: 38,
     fontWeight: '600',
     marginVertical: 8,
-    marginHorizontal: 12,
+    alignSelf: 'center',
+    marginBottom: 12,
   },
 });
 
