@@ -3,15 +3,18 @@ import { Text, StyleSheet, Image, View } from 'react-native';
 
 import { Ionicons } from '@expo/vector-icons';
 
-const PokedexNameAndId = ({ results, fontSize }) => {
+const PokedexNameAndId = ({ results, fontSize, numFontSize }) => {
   function Capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
   return (
     <View style={styles.container}>
-      <Image resizeMode='contain' style={styles.image} source={require('../../assets/pokeball.png')} />
-      <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.identifier.replace('-', ' '))} <Ionicons name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  #{results.id}</Text>
+      <View style={{flexDirection: 'row', alignItems: 'baseline'}}>
+        <Text style={[styles.name, {fontSize: numFontSize, color: 'rgba(255, 255, 255, 0.5)'}]}>{results.id}</Text>
+        <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize }]}>{Capitalize(results.identifier.replace('-', ' '))}</Text> 
+      </View>
+      <Ionicons style={{ paddingHorizontal: 12 }} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
     </View>
   );
 };
@@ -19,23 +22,17 @@ const PokedexNameAndId = ({ results, fontSize }) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    alignItems: 'flex-end'
+    justifyContent: 'space-between',
+    alignItems: 'baseline',
+    width: '100%'
   },
   name: {
-    textAlign: 'center',
     color: '#fff',
     fontSize: 26,
     fontWeight: '600',
-    marginVertical: 8,
-    marginHorizontal: 12
+    paddingHorizontal: 12,
+    marginVertical: 6
   },
-  image: {
-    marginRight: 12,
-    marginLeft: 7,
-    marginBottom: 3,
-    width: 40,
-    height: 40,
-  }
 });
 
 export default React.memo(PokedexNameAndId);
