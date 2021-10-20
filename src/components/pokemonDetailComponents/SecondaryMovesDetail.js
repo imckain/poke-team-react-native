@@ -7,7 +7,7 @@ import FilterMoveSearchBar from './FilterMoveSearchBar';
 
 import { Entypo } from '@expo/vector-icons';
 
-const SecondaryMovesDetail = ({ results, navigation }) => {
+const SecondaryMovesDetail = ({ results, navigation, margin }) => {
   const [collapsed, setCollapsed] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredResults, setFilteredResults] = useState([]);
@@ -16,15 +16,21 @@ const SecondaryMovesDetail = ({ results, navigation }) => {
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <Pressable onPressIn={() => setCollapsed(false)}>
-          <Text allowFontScaling={false} style={[styles.headerText]}>Moves  <Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" /></Text>
-        </Pressable>
+        <View style={styles.headerWrapper}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => setCollapsed(false)}>
+            <Text allowFontScaling={false} style={[styles.headerText]}>Moves</Text>  
+            <Entypo name="plus" size={22} color="rgb(175, 175, 175)" />
+          </Pressable>
+        </View>
       )
     } if (el === false) {
       return(
-        <Pressable onPressIn={() => setCollapsed(true)}>
-          <Text allowFontScaling={false} style={[styles.headerText]}>Moves  <Entypo name="triangle-down" size={22} color="rgb(175, 175, 175)" /></Text>
-        </Pressable>
+        <View style={styles.headerWrapper}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between'}} onPressIn={() => setCollapsed(true)}>
+            <Text allowFontScaling={false} style={[styles.headerText]}>Moves</Text>  
+            <Entypo name="minus" size={22} color="rgb(175, 175, 175)" />
+          </Pressable>
+        </View>
       )
     }
   }, []);
@@ -117,7 +123,7 @@ const SecondaryMovesDetail = ({ results, navigation }) => {
   }, [searchTerm])
 
   return (
-    <View style={[styles.container]}>
+    <View style={[styles.container, { marginBottom: margin }]}>
       {checkForCollapse(collapsed)}
       <Collapsible collapsed={collapsed}>
         <View style={styles.searchBarContainer}>
@@ -140,7 +146,10 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     alignItems: 'stretch',
-    width: '100%'
+    width: '100%',
+    borderRadius: 10,
+    backgroundColor: '#464450',
+    paddingVertical: 5,
   },
   searchBarContainer: {
     flexDirection: 'column',
@@ -152,21 +161,23 @@ const styles = StyleSheet.create({
   },
   headerText: {
     color: '#fff',
-    marginTop: 7,
     fontWeight: '600',
     fontSize: 22,
   },
   scrollViewStyle: {
-    marginTop: 12,
     marginBottom: 180,
     flexDirection: 'row',
     flexWrap: 'wrap',
     width: '100%',
   },
+  headerWrapper: {
+    width: '100%',
+    paddingHorizontal: 12,
+  },
   moveTextBox: {
     paddingVertical: 5,
     borderRadius: 10,
-    backgroundColor: '#464450',
+    backgroundColor: '#353340',
     margin: 7,
     alignContent: 'center',
     justifyContent: 'center',
