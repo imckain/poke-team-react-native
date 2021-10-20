@@ -20,8 +20,8 @@ const MoveDetailModal = (props) => {
     <View style={styles.container}>
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
-          <MoveNameAndClass results={results} />
-          <MoveAttributes fontSize={18} results={results} />
+          <MoveNameAndClass alignSelf={'center'} fontSize={38} results={results} />
+          <MoveAttributes alignSelf={'center'} fontSize={38} fontSize={18} results={results} />
           <MoveType navigation={props.navigation} margin={7} flexDirection={'column'} headerFontSize={22} detailFontSize={18} results={results} />
           <MoveEffect results={results} />
           <MoveMetaData results={results} />
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   mainInfo: {
     maxWidth: '100%',
-    paddingTop: 20
+    paddingTop: 12
   },
   detailInfo: {
     flex: 1,
