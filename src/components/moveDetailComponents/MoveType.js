@@ -41,19 +41,17 @@ const MoveType = ({ results, navigation, detailFontSize, headerFontSize, margin,
 
   return (
     <View style={[styles.typeContainer, { marginBottom: margin, flexDirection: flexDirection }]}>
-    <Text allowFontScaling={false} style={[styles.typeLabelText, { fontSize: headerFontSize }]}>Type:</Text>
-    <View style={{flexDirection: 'row'}}>
-      {showType(results)}
+      <View style={{flexDirection: 'row'}}>
+        {showType(results)}
+      </View>
     </View>
-  </View>
   );
 };
 
 const styles = StyleSheet.create({
   typeContainer: {
     flexDirection: 'column',
-    alignItems: 'baseline',
-    marginHorizontal: 12,
+    alignItems: 'center',
   },
   typeLabelText: {
     color: '#fff',
