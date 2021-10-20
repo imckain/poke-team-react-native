@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
+import checkType from '../functions/checkType';
 
 const TypeDetail = ({ results, margin, detailFontSize, navigation, flexDirection }) => {
   const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
@@ -21,7 +22,7 @@ const TypeDetail = ({ results, margin, detailFontSize, navigation, flexDirection
 
     const typeBox = el.types.map(item => {      
       return (
-        <View key={item.type.name} style={styles.typeBox}>
+        <View key={item.type.name} style={[styles.typeBox, { backgroundColor: checkType(item.type.name) }]}>
           <Pressable 
             onPressIn={async() => {
               await getResultsFromUrl(item.type.url)
@@ -74,7 +75,10 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center',
     paddingHorizontal: 12,
-    paddingVertical: 3
+    paddingVertical: 3,
+    textShadowColor: 'rgb(0, 0, 0)',
+    textShadowOffset: { width: 0, height: 0},
+    textShadowRadius: 3,
   },
 });
 
