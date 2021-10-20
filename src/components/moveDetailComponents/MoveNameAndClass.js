@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
+import checkType from '../functions/checkType';
 
 const MoveNameAndClass = ({ results, fontSize, alignSelf }) => {
   function Capitalize(str) {
@@ -14,34 +15,43 @@ const MoveNameAndClass = ({ results, fontSize, alignSelf }) => {
 
   return (
     <View style={[styles.dmgClassView, { alignSelf: alignSelf }]}>
-      <Text allowFontScaling={false} style={[styles.name, { fontSize: fontSize, alignSelf: alignSelf }]}>{Capitalize(results.name.replace('-', ' '))}</Text>
-      <Text allowFontScaling={false} style={[styles.damageClass]}>Damage Class:  <Text style={styles.damageClassSub}>{isValid(results)}</Text></Text>
+      <Text allowFontScaling={false} style={[styles.name, { fontSize: fontSize, alignSelf: alignSelf, color: checkType(results.type.name) }]}>{Capitalize(results.name.replace('-', ' '))}</Text>
+      <Text allowFontScaling={false} style={[styles.damageClass, { alignSelf: alignSelf }]}>Damage Class:  <Text style={styles.damageClassSub}>{isValid(results)}</Text></Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  dmgClassView: {
+    paddingTop: 8,
+    paddingBottom: 6,
+    width: '100%',
+    height: 'auto',
+  },
   name: {
     color: '#fff',
     fontWeight: '600',
-    marginVertical: 8,
-    alignSelf: 'center'
-  },
-  dmgClassView: {
-    marginBottom: 10,
+    textShadowColor: 'rgba(0, 0, 0, 0.712)',
+    textShadowOffset: { width: 0, height: 0},
+    textShadowRadius: 3,
     alignSelf: 'center',
-    marginBottom: 12,
   },
   damageClass: {
     color: '#fff',
     fontSize: 16,
     fontWeight: '600',
+    textShadowColor: 'rgba(0, 0, 0, 0.712)',
+    textShadowOffset: { width: 0, height: 0},
+    textShadowRadius: 3,
+    paddingBottom: 6,
   },
   damageClassSub: {
     color: 'rgb(223, 223, 223)',
     fontSize: 16,
     fontWeight: '400',
-    marginHorizontal: 12
+    textShadowColor: 'rgba(0, 0, 0, 0.712)',
+    textShadowOffset: { width: 0, height: 0},
+    textShadowRadius: 3,
   },
 });
 
