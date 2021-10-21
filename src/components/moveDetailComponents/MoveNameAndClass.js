@@ -3,19 +3,15 @@ import { Text, StyleSheet, View } from 'react-native';
 import checkType from '../functions/checkType';
 
 const MoveNameAndClass = ({ results, fontSize, alignSelf }) => {
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
   const isValid = (el) => {
     if (el.damage_class === null) {
       return 'N/A'
-    } else return Capitalize(el.damage_class.name)
+    } else return el.damage_class.name
   }
 
   return (
     <View style={[styles.dmgClassView, { alignSelf: alignSelf }]}>
-      <Text allowFontScaling={false} style={[styles.name, { fontSize: fontSize, alignSelf: alignSelf, color: checkType(results.type.name) }]}>{Capitalize(results.name.replace('-', ' '))}</Text>
+      <Text allowFontScaling={false} style={[styles.name, { fontSize: fontSize, alignSelf: alignSelf, color: checkType(results.type.name) }]}>{results.name.replace('-', ' ')}</Text>
       <Text allowFontScaling={false} style={[styles.damageClass, { alignSelf: alignSelf }]}>Damage Class:  <Text style={styles.damageClassSub}>{isValid(results)}</Text></Text>
     </View>
   );
@@ -35,6 +31,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 0, height: 0},
     textShadowRadius: 3,
     alignSelf: 'center',
+    textTransform: 'capitalize',
   },
   damageClass: {
     color: '#fff',
@@ -52,6 +49,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.712)',
     textShadowOffset: { width: 0, height: 0},
     textShadowRadius: 3,
+    textTransform: 'capitalize',
   },
 });
 

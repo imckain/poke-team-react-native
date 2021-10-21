@@ -2,38 +2,31 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 const BaseStats = ({ results, headerFontSize, detailFontSize }) => {
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
   return (
-    <View>
-      <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatHeaderText, {fontSize: headerFontSize}]}>Base Stats:</Text>
-      <View style={styles.infoContainer}>
-        <View style={styles.baseStatContainer}>
-          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[0].stat.name)}:</Text>
-          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[0].base_stat}</Text>
-        </View>
-        <View style={styles.baseStatContainer}>
-          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[1].stat.name)}:</Text>
-          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[1].base_stat}</Text>
-        </View>
-        <View style={styles.baseStatContainer}>
-          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[2].stat.name)}:</Text>
-          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[2].base_stat}</Text>
-        </View>
-        <View style={styles.baseStatContainer}>
-          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[3].stat.name)}:</Text>
-          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[3].base_stat}</Text>
-        </View>
-        <View style={styles.baseStatContainer}>
-          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[4].stat.name)}:</Text>
-          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[4].base_stat}</Text>
-        </View>
-        <View style={styles.baseStatContainer}>
-          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[5].stat.name)}:</Text>
-          <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[5].base_stat}</Text>
-        </View>
+    <View style={styles.infoContainer}>
+      <View style={styles.baseStatContainer}>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[0].stat.name.replace('-', ' ')}:</Text>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[0].base_stat}</Text>
+      </View>
+      <View style={styles.baseStatContainer}>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[1].stat.name.replace('-', ' ')}:</Text>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[1].base_stat}</Text>
+      </View>
+      <View style={styles.baseStatContainer}>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[2].stat.name.replace('-', ' ')}:</Text>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[2].base_stat}</Text>
+      </View>
+      <View style={styles.baseStatContainer}>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[3].stat.name.replace('-', ' ')}:</Text>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[3].base_stat}</Text>
+      </View>
+      <View style={styles.baseStatContainer}>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[4].stat.name.replace('-', ' ')}:</Text>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[4].base_stat}</Text>
+      </View>
+      <View style={styles.baseStatContainer}>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[5].stat.name.replace('-', ' ')}:</Text>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[5].base_stat}</Text>
       </View>
     </View>
   );
@@ -58,6 +51,7 @@ const styles = StyleSheet.create({
   },
   baseStatNameText: {
     color: '#fff',
+    textTransform: 'capitalize',
   },
   baseStatText: {
     color: '#fff',

@@ -34,11 +34,7 @@ const SecondaryMovesDetail = ({ results, navigation, margin }) => {
       )
     }
   }, []);
-  
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-  
+
   const createMoveTextBox = (el) => {
 
     const navigate = async(url, param) => {
@@ -61,7 +57,7 @@ const SecondaryMovesDetail = ({ results, navigation, margin }) => {
               return navigate(item.move.url, item.move.name)
             }}
           >
-            <Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.move.name)}</Text>
+            <Text allowFontScaling={false} style={[styles.moveText]}>{item.move.name.replace('-', ' ')}</Text>
           </Pressable>
           <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
           <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>
@@ -92,7 +88,7 @@ const SecondaryMovesDetail = ({ results, navigation, margin }) => {
                   return navigate(item.move.url, item.move.name)
                 }}
               >
-                <Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.move.name)}</Text>
+                <Text allowFontScaling={false} style={[styles.moveText]}>{item.move.name.replace('-', ' ')}</Text>
               </Pressable>
               <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
               <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>
@@ -190,7 +186,8 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center',
     paddingHorizontal: 12,
-    paddingVertical: 3
+    paddingVertical: 3,
+    textTransform: 'capitalize',
   },
   moveDetailText: {
     color: 'rgb(223, 223, 223)',

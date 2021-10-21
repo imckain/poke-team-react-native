@@ -65,10 +65,6 @@ const MoveMetaData = ({ results }) => {
       </View>
     )
   }
-  
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
 
   return (
     <View style={[styles.container]}>

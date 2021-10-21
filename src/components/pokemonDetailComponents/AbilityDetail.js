@@ -32,10 +32,6 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
     }
   }, []);
   
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-  
   const showAbilities = (el) => {
 
     const navigate = async(url, param) => {
@@ -56,7 +52,7 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
               return navigate(item.ability.url, item.ability.name)
             }}
           >
-            <Text allowFontScaling={false} style={[styles.abilityText, { fontSize: detailFontSize }]}>{Capitalize(item.ability.name) + ' '}</Text>
+            <Text allowFontScaling={false} style={[styles.abilityText, { fontSize: detailFontSize }]}>{item.ability.name.replace('-', ' ')}</Text>
           </Pressable>
         </View>
       )
@@ -106,7 +102,8 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center',
     paddingHorizontal: 12,
-    paddingVertical: 3
+    paddingVertical: 3,
+    textTransform: 'capitalize',
   },
 });
 

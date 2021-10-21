@@ -32,10 +32,6 @@ const AbilityPokemon = ({ results, navigation }) => {
     }
   }, []);
   
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
   const createPokemonBox = (el) => {
 
     const navigate = async(url, param) => {
@@ -54,7 +50,7 @@ const AbilityPokemon = ({ results, navigation }) => {
             }}
             onPressOut={() => navigate(item.pokemon.url, item.pokemon.name)}
           >
-            <Text allowFontScaling={false} style={[styles.text]}>{Capitalize(item.pokemon.name)}</Text>
+            <Text allowFontScaling={false} style={[styles.text]}>{item.pokemon.name.replace('-', ' ')}</Text>
           </Pressable>
         </View>
       )
@@ -109,7 +105,6 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    // width: '29%'
   },
   text: {
     color: 'rgb(223, 223, 223)',
@@ -117,7 +112,8 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center',
     paddingHorizontal: 12,
-    paddingVertical: 3
+    paddingVertical: 3,
+    textTransform: 'capitalize',
   },
 });
 

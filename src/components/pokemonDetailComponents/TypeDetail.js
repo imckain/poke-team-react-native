@@ -7,10 +7,6 @@ import checkType from '../functions/checkType';
 const TypeDetail = ({ results, margin, detailFontSize, navigation, flexDirection }) => {
   const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
 
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
   const showType = (el) => {
 
     const navigate = async(url, param) => {
@@ -31,7 +27,7 @@ const TypeDetail = ({ results, margin, detailFontSize, navigation, flexDirection
               return navigate(item.type.url, item.type.name)
             }}
           >
-            <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize }]}>{Capitalize(item.type.name) + ' '}</Text>
+            <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize }]}>{item.type.name}</Text>
           </Pressable>
         </View>
       )
@@ -79,6 +75,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgb(0, 0, 0)',
     textShadowOffset: { width: 0, height: 0},
     textShadowRadius: 3,
+    textTransform: 'capitalize',
   },
 });
 

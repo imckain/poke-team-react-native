@@ -8,10 +8,6 @@ const LocationDetailModal = (props) => {
     results = props.route.params.results
   } else results = props.route.params.results
 
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
   const locationBox = (el) => {
     return (
       <FlatList 
@@ -20,7 +16,7 @@ const LocationDetailModal = (props) => {
         keyExtractor={(item) => item.location_area.url}
         renderItem={({ item }) => {
           const version = item.version_details.map(i => {
-            return <Text key={i.version.name} style={styles.versionText}>{Capitalize(i.version.name)}</Text>
+            return <Text key={i.version.name} style={styles.versionText}>{i.version.name}</Text>
           })
           return (
             <View style={{paddingBottom: 12}}>
@@ -28,7 +24,7 @@ const LocationDetailModal = (props) => {
                 {version}
               </View>
               <View style={styles.locationBox}>
-                <Text style={styles.locationName}>{Capitalize(item.location_area.name.replace('-', ' '))}</Text>
+                <Text style={styles.locationName}>{item.location_area.name.replace('-', ' ')}</Text>
               </View>
             </View>
           )
@@ -66,6 +62,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     paddingRight: 10,
     fontSize: 22,
+    textTransform: 'capitalize',
   },
   locationBox: {
     paddingVertical: 5,
@@ -81,9 +78,9 @@ const styles = StyleSheet.create({
     color: 'rgb(223, 223, 223)',
     fontSize: 18,
     fontWeight: '600',
-    // textAlign: 'center',
     paddingHorizontal: 12,
-    paddingVertical: 3
+    paddingVertical: 3,
+    textTransform: 'capitalize',
   },
 });
 

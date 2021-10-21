@@ -28,38 +28,33 @@ const ModalBaseStats = ({ results, headerFontSize, detailFontSize, margin }) => 
       )
     }
   }, []);
-
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
   return (
     <View style={[styles.container, {marginBottom: margin}]}>
       {checkForCollapse(collapsed)}
       <View style={styles.infoContainer}>
         <Collapsible style={{paddingBottom: 12}} collapsed={collapsed}>
           <View style={styles.baseStatContainer}>
-            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[0].stat.name)}:</Text>
+            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[0].stat.name.replace('-', ' ')}:</Text>
             <Text allowFontScaling={false} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[0].base_stat}</Text>
           </View>
           <View style={styles.baseStatContainer}>
-            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[1].stat.name)}:</Text>
+            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[1].stat.name.replace('-', ' ')}:</Text>
             <Text allowFontScaling={false} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[1].base_stat}</Text>
           </View>
           <View style={styles.baseStatContainer}>
-            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[2].stat.name)}:</Text>
+            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[2].stat.name.replace('-', ' ')}:</Text>
             <Text allowFontScaling={false} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[2].base_stat}</Text>
           </View>
           <View style={styles.baseStatContainer}>
-            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[3].stat.name)}:</Text>
+            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[3].stat.name.replace('-', ' ')}:</Text>
             <Text allowFontScaling={false} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[3].base_stat}</Text>
           </View>
           <View style={styles.baseStatContainer}>
-            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[4].stat.name)}:</Text>
+            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[4].stat.name.replace('-', ' ')}:</Text>
             <Text allowFontScaling={false} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[4].base_stat}</Text>
           </View>
           <View style={styles.baseStatContainer}>
-            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{Capitalize(results.stats[5].stat.name)}:</Text>
+            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[5].stat.name.replace('-', ' ')}:</Text>
             <Text allowFontScaling={false} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[5].base_stat}</Text>
           </View>
         </Collapsible>
@@ -96,6 +91,7 @@ const styles = StyleSheet.create({
   },
   baseStatNameText: {
     color: '#fff',
+    textTransform: 'capitalize',
   },
   baseStatText: {
     color: '#fff',

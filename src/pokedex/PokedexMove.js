@@ -5,10 +5,6 @@ import { Ionicons } from '@expo/vector-icons';
 import checkType from '../components/functions/checkType';
 
 const PokedexMove = ({ results, fontSize }) => {
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
   const checkForNull = (el) => {
     if (el === null) return 'N/A'
     else return el
@@ -17,7 +13,7 @@ const PokedexMove = ({ results, fontSize }) => {
   return (
     <View style={styles.container}>
       <View style={{flexDirection: 'column', paddingHorizontal: 12, paddingVertical: 4}}>
-        <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize, color: checkType(results.type_id)}]}>{Capitalize(results.identifier.replace('-', ' '))}</Text>
+        <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize, color: checkType(results.type_id)}]}>{results.identifier.replace('-', ' ')}</Text>
         <Text allowFontScaling={false} style={styles.attributes}>Power: {checkForNull(results.power)} | PP: {checkForNull(results.pp)} | Acc: {checkForNull(results.accuracy)}</Text>
       </View>
       <Ionicons style={{ paddingHorizontal: 12 }} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
@@ -38,6 +34,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgb(34, 34, 34)',
     textShadowOffset: { width: 0, height: 0},
     textShadowRadius: 3,
+    textTransform: 'capitalize',
   },
   attributes: {
     color: 'rgb(175, 175, 175)',

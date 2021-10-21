@@ -7,14 +7,10 @@ import checkType from '../functions/checkType';
 const MoveType = ({ results, navigation, detailFontSize, headerFontSize, margin, flexDirection }) => {
   const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
 
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
   const isValid = (el) => {
     if (el.type === null) {
       return 'N/A'
-    } else return Capitalize(el.type.name)
+    } else return el.type.name
   }
 
   const showType = (el) => {
@@ -79,6 +75,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.712)',
     textShadowOffset: { width: 0, height: 0},
     textShadowRadius: 5,
+    textTransform: 'capitalize',
   },
 });
 

@@ -2,13 +2,9 @@ import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 
 const AbilityName = ({ results }) => {
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
   return (
     <View style={styles.nameView}>
-      <Text allowFontScaling={false} style={[styles.name]}>{Capitalize(results.name.replace('-', ' '))}</Text>
+      <Text allowFontScaling={false} style={[styles.name]}>{results.name.replace('-', ' ')}</Text>
     </View>
   );
 };
@@ -21,6 +17,7 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     alignSelf: 'center',
     marginBottom: 12,
+    textTransform: 'capitalize',
   },
 });
 

@@ -33,11 +33,7 @@ const TypeMoves = ({ results, navigation }) => {
       )
     }
   }, []);
-  
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-  
+
   const createMoveTextBox = (el) => {
 
     const navigate = async(url, param) => {
@@ -56,7 +52,7 @@ const TypeMoves = ({ results, navigation }) => {
             }}
             onPressOut={() => navigate(item.url, item.name)}
           >
-            <Text allowFontScaling={false} style={[styles.moveText]}>{Capitalize(item.name)}</Text>
+            <Text allowFontScaling={false} style={[styles.moveText]}>{item.name.replace('-', ' ')}</Text>
           </Pressable>
         </View>
       )
@@ -122,6 +118,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgb(0, 0, 0)',
     textShadowOffset: { width: 0, height: 0},
     textShadowRadius: 3,
+    textTransform: 'capitalize',
   },
 });
 
