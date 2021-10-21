@@ -105,7 +105,7 @@ const SecondaryMovesDetail = ({ results, navigation, margin }) => {
   const searchMoves = (el, param) => {
     if (param === '') return setFilteredResults(el)
     try {
-      const res = el.moves.filter(item => item.move.name.includes(param))
+      const res = el.moves.filter(item => item.move.name.includes(param.replace(' ', '-').toLowerCase()))
       const sorted = [].concat(res)
         .sort((a, b) => a.version_group_details[0].level_learned_at < b.version_group_details[0].level_learned_at ? 1 : -1)
       return setFilteredResults(sorted)
