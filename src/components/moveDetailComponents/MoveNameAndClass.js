@@ -21,7 +21,7 @@ const MoveNameAndClass = ({ results, fontSize, alignSelf, param }) => {
 
   return (
     <View style={[styles.dmgClassView, { alignSelf: alignSelf }]}>
-      <View style={{ flexDirection: 'row', marginBottom: 6 }}>
+      <View style={{ flexDirection: 'row', marginBottom: 6, alignSelf: alignSelf }}>
         <Text allowFontScaling={false} style={[styles.name, { fontSize: fontSize, alignSelf: alignSelf }]}>{results.name.replace('-', ' ')}</Text>
         {showType(param)}
       </View>
