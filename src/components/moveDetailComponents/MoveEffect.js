@@ -28,7 +28,7 @@ const MoveEffect = ({ results }) => {
 const styles = StyleSheet.create({
   nameView: {
     borderRadius: 10,
-    backgroundColor: '#464450',
+    backgroundColor: '#464450a6',
     paddingVertical: 5,
     marginBottom: 13,
   },
