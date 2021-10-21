@@ -18,7 +18,7 @@ const PokedexCard = (props) => {
       return <PokedexType fontSize={24} results={results} />
     }
     if (el === 'move') {
-      return <PokedexMove fontSize={24} results={results} />
+      return <PokedexMove fontSize={24} detailFontSize={14} results={results} />
     }
     if (el === 'ability') {
       return <PokedexAbility fontSize={24} results={results} />

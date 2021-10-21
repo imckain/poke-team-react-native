@@ -4,16 +4,80 @@ import { Text, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import checkType from '../components/functions/checkType';
 
-const PokedexMove = ({ results, fontSize }) => {
+const PokedexMove = ({ results, fontSize, detailFontSize }) => {
   const checkForNull = (el) => {
     if (el === null) return 'N/A'
     else return el
   }
 
+  const showTypeName = (el) => {
+    let typeName
+    if (el === 1) {
+      return typeName = 'normal'
+    }
+    if (el === 2) {
+      return typeName = 'fighting'
+    }
+    if (el === 3) {
+      return typeName = 'flying'
+    }
+    if (el === 4) {
+      return typeName = 'poison'
+    }
+    if (el === 5) {
+      return typeName = 'ground'
+    }
+    if (el === 6) {
+      return typeName = 'rock'
+    }
+    if (el === 7) {
+      return typeName = 'bug'
+    }
+    if (el === 8) {
+      return typeName = 'ghost'
+    }
+    if (el === 9) {
+      return typeName = 'steel'
+    }
+    if (el === 10) {
+      return typeName = 'fire'
+    }
+    if (el === 11) {
+      return typeName = 'water'
+    }
+    if (el === 12) {
+      return typeName = 'grass'
+    }
+    if (el === 13) {
+      return typeName = 'electric'
+    }
+    if (el === 14) {
+      return typeName = 'psychic'
+    }
+    if (el === 15) {
+      return typeName = 'ice'
+    }
+    if (el === 16) {
+      return typeName = 'dragon'
+    }
+    if (el === 17) {
+      return typeName = 'dark'
+    }
+    if (el === 18) {
+      return typeName = 'fairy'
+    }
+    else return typeName
+  }
+
   return (
     <View style={styles.container}>
       <View style={{flexDirection: 'column', paddingHorizontal: 12, paddingVertical: 4}}>
-        <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize, color: checkType(results.type_id)}]}>{results.identifier.replace('-', ' ')}</Text>
+        <View style={{ flexDirection: 'row', marginBottom: 2 }}>
+          <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize }]}>{results.identifier.replace('-', ' ')}</Text>
+          <View style={[styles.typeBox, { backgroundColor: checkType(results.type_id) }]}>
+            <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize }]}>{showTypeName(results.type_id)}</Text>
+          </View>
+        </View>
         <Text allowFontScaling={false} style={styles.attributes}>Power: {checkForNull(results.power)} | PP: {checkForNull(results.pp)} | Acc: {checkForNull(results.accuracy)}</Text>
       </View>
       <Ionicons style={{ paddingHorizontal: 12 }} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
@@ -40,6 +104,26 @@ const styles = StyleSheet.create({
     color: 'rgb(175, 175, 175)',
     fontSize: 14,
     paddingLeft: 12,
+    marginTop: 3,
+    marginBottom: 3
+  },
+  typeBox: {
+    borderRadius: 10,
+    backgroundColor: '#464450',
+    marginLeft: 12,
+    alignContent: 'center',
+    justifyContent: 'center',
+    width: 'auto',
+  },
+  typeText: {
+    color: '#fff',
+    fontWeight: '600',
+    textAlign: 'center',
+    paddingHorizontal: 10,
+    textShadowColor: 'rgb(0, 0, 0)',
+    textShadowOffset: { width: 0, height: 0},
+    textShadowRadius: 4,
+    textTransform: 'capitalize',
   },
 });
 
