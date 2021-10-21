@@ -44,7 +44,7 @@ const MoveMetaData = ({ results }) => {
               <Text allowFontScaling={false} style={styles.descriptionText}>{el.effect_entries[0].effect.replace('$effect_chance', el.effect_chance)}</Text>
               <LinearGradient 
                 style={styles.break} 
-                colors={['rgb(223, 223, 223)', 'transparent']} 
+                colors={['rgba(223, 223, 223, 0.747)', 'transparent']} 
                 start={{ x: 0.5, y: 0.5 }}
                 end={{ x: 1.1, y: 0.5 }}
               />
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
     width: '100%',
     borderRadius: 10,
-    backgroundColor: '#464450',
+    backgroundColor: '#464450a6',
     paddingVertical: 5,
     marginBottom: 13,
     paddingHorizontal: 12,
@@ -94,10 +94,11 @@ const styles = StyleSheet.create({
     fontSize: 22,
   },
   metaDataContainer: {
-    backgroundColor: '#353340',
+    backgroundColor: '#353340a6',
     borderRadius: 10,
     paddingVertical: 6,
     marginTop: 6,
+    marginBottom: 6,
   },
   headerWrapper: {
     width: '100%',
