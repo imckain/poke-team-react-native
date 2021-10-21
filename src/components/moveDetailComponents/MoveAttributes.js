@@ -10,7 +10,7 @@ const MoveAttributes = ({ results, fontSize, alignSelf }) => {
 
   return (
     <View style={[styles.container, { alignSelf: alignSelf }]}>
-      <Text allowFontScaling={false} style={[styles.attributes, { fontSize: fontSize }]}>Power: {checkForNull(results.power)} | PP: {checkForNull(results.pp)} | Acc: {checkForNull(results.accuracy)}</Text>
+      <Text allowFontScaling={false} style={[styles.attributes, { fontSize: fontSize }]}>Power: <Text style={styles.attributeResult}>{checkForNull(results.power)}</Text> | PP: <Text style={styles.attributeResult}>{checkForNull(results.pp)}</Text> | Acc: <Text style={styles.attributeResult}>{checkForNull(results.accuracy)}</Text></Text>
     </View>
   );
 };
@@ -22,8 +22,16 @@ const styles = StyleSheet.create({
     marginBottom: 12
   },
   attributes: {
-    color: 'rgb(175, 175, 175)',
+    color: '#fff',
     fontSize: 14,
+    textShadowColor: 'rgba(0, 0, 0, 0.712)',
+    textShadowOffset: { width: 0, height: 0},
+    textShadowRadius: 3,
+    fontWeight: '500'
+  },
+  attributeResult: {
+    color: 'rgb(223, 223, 223)',
+    fontWeight: '400'
   },
 });
 
