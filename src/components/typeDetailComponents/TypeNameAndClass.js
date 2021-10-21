@@ -11,7 +11,9 @@ const TypeName = ({ results, alignSelf, fontSize }) => {
 
   return (
     <View style={[styles.dmgClassView, { alignSelf: alignSelf }]}>
-      <Text allowFontScaling={false} style={[styles.name, { fontSize: fontSize, alignSelf: alignSelf, color: checkType(results.name) }]}>{results.name}</Text>
+      <View style={[styles.typeBox, { alignSelf: alignSelf, backgroundColor: checkType(results.name)}]}>
+        <Text allowFontScaling={false} style={[styles.typeText, { fontSize: fontSize, alignSelf: alignSelf }]}>{results.name}</Text>
+      </View>
       <Text allowFontScaling={false} style={[styles.damageClass]}>Damage Class:  <Text style={styles.damageClassSub}>{isValid(results)}</Text></Text>
     </View>
   );
@@ -19,19 +21,8 @@ const TypeName = ({ results, alignSelf, fontSize }) => {
 
 const styles = StyleSheet.create({
   dmgClassView: {
-    marginBottom: 10,
+    paddingVertical: 12,
     alignSelf: 'center',
-    marginBottom: 12,
-  },
-  name: {
-    color: '#fff',
-    fontWeight: '600',
-    marginVertical: 8,
-    alignSelf: 'center',
-    textShadowColor: 'rgba(0, 0, 0, 0.712)',
-    textShadowOffset: { width: 0, height: 0},
-    textShadowRadius: 3,
-    textTransform: 'capitalize',
   },
   damageClass: {
     color: '#fff',
@@ -40,6 +31,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.712)',
     textShadowOffset: { width: 0, height: 0},
     textShadowRadius: 3,
+    paddingHorizontal: 12
   },
   damageClassSub: {
     color: 'rgb(223, 223, 223)',
@@ -47,6 +39,23 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     marginHorizontal: 12,
     textShadowColor: 'rgba(0, 0, 0, 0.712)',
+    textShadowOffset: { width: 0, height: 0},
+    textShadowRadius: 3,
+    textTransform: 'capitalize',
+  },
+  typeBox: {
+    paddingVertical: 3,
+    paddingHorizontal: 6,
+    borderRadius: 10,
+    marginBottom: 6,
+    width: '100%'
+  },
+  typeText: {
+    color: '#fff',
+    fontWeight: '600',
+    paddingHorizontal: 12,
+    paddingVertical: 3,
+    textShadowColor: 'rgb(0, 0, 0)',
     textShadowOffset: { width: 0, height: 0},
     textShadowRadius: 3,
     textTransform: 'capitalize',
