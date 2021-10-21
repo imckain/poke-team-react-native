@@ -5,7 +5,7 @@ import Collapsible from 'react-native-collapsible';
 import { Entypo } from '@expo/vector-icons';
 
 const ModalBaseStats = ({ results, headerFontSize, detailFontSize, margin }) => {
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(false);
 
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
