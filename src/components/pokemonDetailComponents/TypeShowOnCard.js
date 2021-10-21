@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import checkType from '../functions/checkType';
 
-const TypeShowOnCard = ({ results, margin, headerFontSize, detailFontSize }) => {
+const TypeShowOnCard = ({ results, margin, detailFontSize }) => {
 
   const showType = (el) => {
     const typeBox = el.types.map(item => {      
