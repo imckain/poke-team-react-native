@@ -103,7 +103,6 @@ const styles = StyleSheet.create({
   attributes: {
     color: 'rgb(175, 175, 175)',
     fontSize: 14,
-    paddingLeft: 12,
     marginTop: 3,
     marginBottom: 3
   },
