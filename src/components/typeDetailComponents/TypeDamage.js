@@ -9,7 +9,7 @@ import { Entypo } from '@expo/vector-icons';
 
 const TypeDamage = ({ results, navigation }) => {
   const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(false);
   const [dblDmgToCollapsed, setDblDmgToCollapsed] = useState(true);
   const [halfDmgToCollapsed, setHalfDmgToCollapsed] = useState(true);
   const [noDmgToCollapsed, setNoDmgToCollapsed] = useState(true);
