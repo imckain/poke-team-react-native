@@ -7,7 +7,7 @@ import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
 import { Entypo } from '@expo/vector-icons';
 
 const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, navigation }) => {
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(false);
   const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
 
   const checkForCollapse = useCallback((el) => {
