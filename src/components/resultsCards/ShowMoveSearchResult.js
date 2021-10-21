@@ -12,7 +12,7 @@ const ShowAdvancedMoveResult = (props) => {
       <View style={styles.container}>
         <View style={styles.mainCardContainer}>
           <View style={styles.mainInfo}>
-            <MoveNameAndClass fontSize={22} alignSelf={'flex-start'} results={results} />
+            <MoveNameAndClass param={'card'} fontSize={22} alignSelf={'flex-start'} results={results} />
             <MoveAttributes alignSelf={'flex-start'} results={results} />
           </View>
         </View>
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     paddingTop: 2,
     fontSize: 12
-  }
+  },
 });
 
 export default React.memo(ShowAdvancedMoveResult);
