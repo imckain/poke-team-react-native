@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Entypo } from '@expo/vector-icons';
 
 const MoveMetaData = ({ results }) => {
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(false);
 
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
