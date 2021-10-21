@@ -68,7 +68,7 @@ const TypeSearchScreen = (props) => {
           <SearchBarByType 
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
-          onSearchTermSubmit={() => typeSearchApi(searchTerm.replace(' ', '-'))}
+          onSearchTermSubmit={() => typeSearchApi(searchTerm.replace(' ', '-').toLowerCase())}
           style={styles.searchBar}
           />
         </View>

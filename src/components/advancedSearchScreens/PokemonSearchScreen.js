@@ -69,7 +69,7 @@ const PokemonSearchScreen = (props) => {
   const searchPokemon = (el, param) => {
     if (param === '') return setFilteredResults(el)
     try {
-      const res = el.filter(item => item.identifier.includes(param.replace(' ', '-')))
+      const res = el.filter(item => item.identifier.includes(param.replace(' ', '-').toLowerCase()))
       return setFilteredResults(res)
     } catch (error) {
       console.log(error);
@@ -109,8 +109,8 @@ const PokemonSearchScreen = (props) => {
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
           onSearchTermSubmit={() => {
-            searchPokemon(pokemonData, searchTerm.replace(' ', '-'))
-            return advancedSearchAPI(searchTerm.replace(' ', '-'))
+            searchPokemon(pokemonData, searchTerm.replace(' ', '-').toLowerCase())
+            return advancedSearchAPI(searchTerm.replace(' ', '-').toLowerCase())
           }}
           style={styles.searchBar}
           />
