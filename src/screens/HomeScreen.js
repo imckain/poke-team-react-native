@@ -29,7 +29,7 @@ const HomeScreen = (props) => {
         <SearchBarByName 
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
-          onSearchTermSubmit={() => searchAPI(searchTerm.replace(' ', '-'))}
+          onSearchTermSubmit={() => searchAPI(searchTerm.replace(' ', '-').toLowerCase())}
         />
         <Pressable onPress={() => props.navigation.navigate('Detail Modal', { results: results })}>
           <ShowSearchResult results={results} />
