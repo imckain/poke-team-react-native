@@ -89,7 +89,6 @@ const styles = StyleSheet.create({
     width: '90%',
     flexDirection: 'column',
     alignSelf: 'center',
-    marginTop: 20,
     paddingBottom: 30
   },
 });

@@ -17,7 +17,7 @@ const AbilityDetailModal = (props) => {
     <View style={styles.container}>
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
-          <AbilityName results={results} />
+          <AbilityName alignSelf={'center'} fontSize={48} results={results} />
           <AbilityEffect results={results} />
           <AbilityPokemon navigation={props.navigation} results={results} />
         </View>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   },
   mainInfo: {
     maxWidth: '100%',
-    paddingTop: 20
+    paddingTop: 20,
   },
   detailInfo: {
     flex: 1,
