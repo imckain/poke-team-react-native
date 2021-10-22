@@ -11,7 +11,7 @@ const ShowAbilitySearchResult = (props) => {
     <View style={styles.container} >
       <View style={styles.mainCardContainer}>
         <View style={styles.mainInfo}>
-          <AbilityName results={results} />
+          <AbilityName fontSize={36} results={results} />
           <AbilityShortEffect results={results} />
         </View>
       </View>
@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
   },
   mainInfo: {
     justifyContent: 'flex-start',
-    maxWidth: '100%'
+    maxWidth: '100%',
+    paddingHorizontal: 12
   },
   infoNotice: {
     textAlign: 'center',

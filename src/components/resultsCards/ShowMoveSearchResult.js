@@ -12,8 +12,8 @@ const ShowAdvancedMoveResult = (props) => {
       <View style={styles.container}>
         <View style={styles.mainCardContainer}>
           <View style={styles.mainInfo}>
-            <MoveNameAndClass param={'card'} fontSize={22} alignSelf={'flex-start'} results={results} />
-            <MoveAttributes alignSelf={'flex-start'} results={results} />
+            <MoveNameAndClass param={'card'} fontSize={30} lines={1} typeFontSize={22} attributeFontSize={22} alignSelf={'flex-start'} results={results} />
+            <MoveAttributes fontSize={20} alignSelf={'flex-start'} results={results} />
           </View>
         </View>
         <Text allowFontScaling={false} style={styles.infoNotice}>Tap for more info</Text>
