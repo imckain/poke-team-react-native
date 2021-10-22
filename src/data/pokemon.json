@@ -1669,7 +1669,7 @@
    "base_experience": 64,
    "order": 234,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 153,
@@ -1680,7 +1680,7 @@
    "base_experience": 142,
    "order": 235,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 154,
@@ -1691,7 +1691,7 @@
    "base_experience": 236,
    "order": 236,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 155,
@@ -1702,7 +1702,7 @@
    "base_experience": 62,
    "order": 237,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 156,
@@ -1713,7 +1713,7 @@
    "base_experience": 142,
    "order": 238,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 157,
@@ -1724,7 +1724,7 @@
    "base_experience": 240,
    "order": 239,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 158,
@@ -1735,7 +1735,7 @@
    "base_experience": 63,
    "order": 240,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 159,
@@ -1746,7 +1746,7 @@
    "base_experience": 142,
    "order": 241,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 160,
@@ -1757,7 +1757,7 @@
    "base_experience": 239,
    "order": 242,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 161,
@@ -1768,7 +1768,7 @@
    "base_experience": 43,
    "order": 243,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 162,
@@ -1779,7 +1779,7 @@
    "base_experience": 145,
    "order": 244,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 163,
@@ -1790,7 +1790,7 @@
    "base_experience": 52,
    "order": 245,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 164,
@@ -1801,7 +1801,7 @@
    "base_experience": 158,
    "order": 246,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 165,
@@ -1812,7 +1812,7 @@
    "base_experience": 53,
    "order": 247,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 166,
@@ -1823,7 +1823,7 @@
    "base_experience": 137,
    "order": 248,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 167,
@@ -1834,7 +1834,7 @@
    "base_experience": 50,
    "order": 249,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 168,
@@ -1845,7 +1845,7 @@
    "base_experience": 140,
    "order": 250,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 169,
@@ -1856,7 +1856,7 @@
    "base_experience": 241,
    "order": 73,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 170,
@@ -1867,7 +1867,7 @@
    "base_experience": 66,
    "order": 251,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 171,
@@ -1878,7 +1878,7 @@
    "base_experience": 161,
    "order": 252,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 172,
@@ -1889,7 +1889,7 @@
    "base_experience": 41,
    "order": 34,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 173,
@@ -1900,7 +1900,7 @@
    "base_experience": 44,
    "order": 61,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 174,
@@ -1911,7 +1911,7 @@
    "base_experience": 42,
    "order": 68,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 175,
@@ -1922,7 +1922,7 @@
    "base_experience": 49,
    "order": 253,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 176,
@@ -1933,7 +1933,7 @@
    "base_experience": 142,
    "order": 254,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 177,
@@ -1944,7 +1944,7 @@
    "base_experience": 64,
    "order": 256,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 178,
@@ -1955,7 +1955,7 @@
    "base_experience": 165,
    "order": 257,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 179,
@@ -1966,7 +1966,7 @@
    "base_experience": 56,
    "order": 258,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 180,
@@ -1977,7 +1977,7 @@
    "base_experience": 128,
    "order": 259,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 181,
@@ -1988,7 +1988,7 @@
    "base_experience": 230,
    "order": 260,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 182,
@@ -1999,7 +1999,7 @@
    "base_experience": 221,
    "order": 77,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 183,
@@ -2010,7 +2010,7 @@
    "base_experience": 88,
    "order": 263,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 184,
@@ -2021,7 +2021,7 @@
    "base_experience": 189,
    "order": 264,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 185,
@@ -2032,7 +2032,7 @@
    "base_experience": 144,
    "order": 266,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 186,
@@ -2043,7 +2043,7 @@
    "base_experience": 225,
    "order": 99,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 187,
@@ -2054,7 +2054,7 @@
    "base_experience": 50,
    "order": 267,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 188,
@@ -2065,7 +2065,7 @@
    "base_experience": 119,
    "order": 268,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 189,
@@ -2076,7 +2076,7 @@
    "base_experience": 207,
    "order": 269,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 190,
@@ -2087,7 +2087,7 @@
    "base_experience": 72,
    "order": 270,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 191,
@@ -2098,7 +2098,7 @@
    "base_experience": 36,
    "order": 272,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 192,
@@ -2109,7 +2109,7 @@
    "base_experience": 149,
    "order": 273,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 193,
@@ -2120,7 +2120,7 @@
    "base_experience": 78,
    "order": 274,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 194,
@@ -2131,7 +2131,7 @@
    "base_experience": 42,
    "order": 276,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 195,
@@ -2142,7 +2142,7 @@
    "base_experience": 151,
    "order": 277,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 196,
@@ -2153,7 +2153,7 @@
    "base_experience": 184,
    "order": 208,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 197,
@@ -2164,7 +2164,7 @@
    "base_experience": 184,
    "order": 209,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 198,
@@ -2175,7 +2175,7 @@
    "base_experience": 81,
    "order": 278,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 199,
@@ -2186,7 +2186,7 @@
    "base_experience": 172,
    "order": 123,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 200,
@@ -2197,7 +2197,7 @@
    "base_experience": 87,
    "order": 280,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 201,
@@ -2208,7 +2208,7 @@
    "base_experience": 118,
    "order": 282,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 202,
@@ -2219,7 +2219,7 @@
    "base_experience": 142,
    "order": 284,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 203,
@@ -2230,7 +2230,7 @@
    "base_experience": 159,
    "order": 285,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 204,
@@ -2241,7 +2241,7 @@
    "base_experience": 58,
    "order": 286,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 205,
@@ -2252,7 +2252,7 @@
    "base_experience": 163,
    "order": 287,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 206,
@@ -2263,7 +2263,7 @@
    "base_experience": 145,
    "order": 288,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 207,
@@ -2274,7 +2274,7 @@
    "base_experience": 86,
    "order": 289,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 208,
@@ -2285,7 +2285,7 @@
    "base_experience": 179,
    "order": 143,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 209,
@@ -2296,7 +2296,7 @@
    "base_experience": 60,
    "order": 291,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 210,
@@ -2307,7 +2307,7 @@
    "base_experience": 158,
    "order": 292,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 211,
@@ -2318,7 +2318,7 @@
    "base_experience": 88,
    "order": 293,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 212,
@@ -2329,7 +2329,7 @@
    "base_experience": 175,
    "order": 186,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 213,
@@ -2340,7 +2340,7 @@
    "base_experience": 177,
    "order": 294,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 214,
@@ -2351,7 +2351,7 @@
    "base_experience": 175,
    "order": 295,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 215,
@@ -2362,7 +2362,7 @@
    "base_experience": 86,
    "order": 297,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 216,
@@ -2373,7 +2373,7 @@
    "base_experience": 66,
    "order": 299,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 217,
@@ -2384,7 +2384,7 @@
    "base_experience": 175,
    "order": 300,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 218,
@@ -2395,7 +2395,7 @@
    "base_experience": 50,
    "order": 301,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 219,
@@ -2406,7 +2406,7 @@
    "base_experience": 151,
    "order": 302,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 220,
@@ -2417,7 +2417,7 @@
    "base_experience": 50,
    "order": 303,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 221,
@@ -2428,7 +2428,7 @@
    "base_experience": 158,
    "order": 304,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 222,
@@ -2439,7 +2439,7 @@
    "base_experience": 144,
    "order": 306,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 223,
@@ -2450,7 +2450,7 @@
    "base_experience": 60,
    "order": 307,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 224,
@@ -2461,7 +2461,7 @@
    "base_experience": 168,
    "order": 308,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 225,
@@ -2472,7 +2472,7 @@
    "base_experience": 116,
    "order": 309,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 226,
@@ -2483,7 +2483,7 @@
    "base_experience": 170,
    "order": 311,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 227,
@@ -2494,7 +2494,7 @@
    "base_experience": 163,
    "order": 312,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 228,
@@ -2505,7 +2505,7 @@
    "base_experience": 66,
    "order": 313,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 229,
@@ -2516,7 +2516,7 @@
    "base_experience": 175,
    "order": 314,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 230,
@@ -2527,7 +2527,7 @@
    "base_experience": 243,
    "order": 178,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 231,
@@ -2538,7 +2538,7 @@
    "base_experience": 66,
    "order": 316,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 232,
@@ -2549,7 +2549,7 @@
    "base_experience": 175,
    "order": 317,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 233,
@@ -2560,7 +2560,7 @@
    "base_experience": 180,
    "order": 214,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 234,
@@ -2571,7 +2571,7 @@
    "base_experience": 163,
    "order": 318,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 235,
@@ -2582,7 +2582,7 @@
    "base_experience": 88,
    "order": 319,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 236,
@@ -2593,7 +2593,7 @@
    "base_experience": 42,
    "order": 158,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 237,
@@ -2604,7 +2604,7 @@
    "base_experience": 159,
    "order": 161,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 238,
@@ -2615,7 +2615,7 @@
    "base_experience": 61,
    "order": 188,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 239,
@@ -2626,7 +2626,7 @@
    "base_experience": 72,
    "order": 190,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 240,
@@ -2637,7 +2637,7 @@
    "base_experience": 73,
    "order": 193,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 241,
@@ -2648,7 +2648,7 @@
    "base_experience": 172,
    "order": 320,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 242,
@@ -2659,7 +2659,7 @@
    "base_experience": 608,
    "order": 171,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 243,
@@ -2670,7 +2670,7 @@
    "base_experience": 261,
    "order": 321,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 244,
@@ -2681,7 +2681,7 @@
    "base_experience": 261,
    "order": 322,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 245,
@@ -2692,7 +2692,7 @@
    "base_experience": 261,
    "order": 323,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 246,
@@ -2703,7 +2703,7 @@
    "base_experience": 60,
    "order": 324,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 247,
@@ -2714,7 +2714,7 @@
    "base_experience": 144,
    "order": 325,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 248,
@@ -2725,7 +2725,7 @@
    "base_experience": 270,
    "order": 326,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 249,
@@ -2736,7 +2736,7 @@
    "base_experience": 306,
    "order": 328,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 250,
@@ -2747,7 +2747,7 @@
    "base_experience": 306,
    "order": 329,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 251,
@@ -2758,7 +2758,7 @@
    "base_experience": 270,
    "order": 330,
    "is_default": 1,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 252,
@@ -2769,7 +2769,7 @@
    "base_experience": 62,
    "order": 331,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 253,
@@ -2780,7 +2780,7 @@
    "base_experience": 142,
    "order": 332,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 254,
@@ -2791,7 +2791,7 @@
    "base_experience": 239,
    "order": 333,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 255,
@@ -2802,7 +2802,7 @@
    "base_experience": 62,
    "order": 335,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 256,
@@ -2813,7 +2813,7 @@
    "base_experience": 142,
    "order": 336,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 257,
@@ -2824,7 +2824,7 @@
    "base_experience": 239,
    "order": 337,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 258,
@@ -2835,7 +2835,7 @@
    "base_experience": 62,
    "order": 339,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 259,
@@ -2846,7 +2846,7 @@
    "base_experience": 142,
    "order": 340,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 260,
@@ -2857,7 +2857,7 @@
    "base_experience": 241,
    "order": 341,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 261,
@@ -2868,7 +2868,7 @@
    "base_experience": 56,
    "order": 343,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 262,
@@ -2879,7 +2879,7 @@
    "base_experience": 147,
    "order": 344,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 263,
@@ -2890,7 +2890,7 @@
    "base_experience": 56,
    "order": 345,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 264,
@@ -2901,7 +2901,7 @@
    "base_experience": 147,
    "order": 346,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 265,
@@ -2912,7 +2912,7 @@
    "base_experience": 56,
    "order": 347,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 266,
@@ -2923,7 +2923,7 @@
    "base_experience": 72,
    "order": 348,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 267,
@@ -2934,7 +2934,7 @@
    "base_experience": 178,
    "order": 349,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 268,
@@ -2945,7 +2945,7 @@
    "base_experience": 72,
    "order": 350,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 269,
@@ -2956,7 +2956,7 @@
    "base_experience": 173,
    "order": 351,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 270,
@@ -2967,7 +2967,7 @@
    "base_experience": 44,
    "order": 352,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 271,
@@ -2978,7 +2978,7 @@
    "base_experience": 119,
    "order": 353,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 272,
@@ -2989,7 +2989,7 @@
    "base_experience": 216,
    "order": 354,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 273,
@@ -3000,7 +3000,7 @@
    "base_experience": 44,
    "order": 355,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 274,
@@ -3011,7 +3011,7 @@
    "base_experience": 119,
    "order": 356,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 275,
@@ -3022,7 +3022,7 @@
    "base_experience": 216,
    "order": 357,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 276,
@@ -3033,7 +3033,7 @@
    "base_experience": 54,
    "order": 358,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 277,
@@ -3044,7 +3044,7 @@
    "base_experience": 159,
    "order": 359,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 278,
@@ -3055,7 +3055,7 @@
    "base_experience": 54,
    "order": 360,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 279,
@@ -3066,7 +3066,7 @@
    "base_experience": 154,
    "order": 361,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 280,
@@ -3077,7 +3077,7 @@
    "base_experience": 40,
    "order": 362,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 281,
@@ -3088,7 +3088,7 @@
    "base_experience": 97,
    "order": 363,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 282,
@@ -3099,7 +3099,7 @@
    "base_experience": 233,
    "order": 364,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 283,
@@ -3110,7 +3110,7 @@
    "base_experience": 54,
    "order": 368,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 284,
@@ -3121,7 +3121,7 @@
    "base_experience": 159,
    "order": 369,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 285,
@@ -3132,7 +3132,7 @@
    "base_experience": 59,
    "order": 370,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 286,
@@ -3143,7 +3143,7 @@
    "base_experience": 161,
    "order": 371,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 287,
@@ -3154,7 +3154,7 @@
    "base_experience": 56,
    "order": 372,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 288,
@@ -3165,7 +3165,7 @@
    "base_experience": 154,
    "order": 373,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 289,
@@ -3176,7 +3176,7 @@
    "base_experience": 252,
    "order": 374,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 290,
@@ -3187,7 +3187,7 @@
    "base_experience": 53,
    "order": 375,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 291,
@@ -3198,7 +3198,7 @@
    "base_experience": 160,
    "order": 376,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 292,
@@ -3209,7 +3209,7 @@
    "base_experience": 83,
    "order": 377,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 293,
@@ -3220,7 +3220,7 @@
    "base_experience": 48,
    "order": 378,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 294,
@@ -3231,7 +3231,7 @@
    "base_experience": 126,
    "order": 379,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 295,
@@ -3242,7 +3242,7 @@
    "base_experience": 221,
    "order": 380,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 296,
@@ -3253,7 +3253,7 @@
    "base_experience": 47,
    "order": 381,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 297,
@@ -3264,7 +3264,7 @@
    "base_experience": 166,
    "order": 382,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 298,
@@ -3275,7 +3275,7 @@
    "base_experience": 38,
    "order": 262,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 299,
@@ -3286,7 +3286,7 @@
    "base_experience": 75,
    "order": 383,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 300,
@@ -3297,7 +3297,7 @@
    "base_experience": 52,
    "order": 385,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 301,
@@ -3308,7 +3308,7 @@
    "base_experience": 140,
    "order": 386,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 302,
@@ -3319,7 +3319,7 @@
    "base_experience": 133,
    "order": 387,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 303,
@@ -3330,7 +3330,7 @@
    "base_experience": 133,
    "order": 389,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 304,
@@ -3341,7 +3341,7 @@
    "base_experience": 66,
    "order": 391,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 305,
@@ -3352,7 +3352,7 @@
    "base_experience": 151,
    "order": 392,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 306,
@@ -3363,7 +3363,7 @@
    "base_experience": 239,
    "order": 393,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 307,
@@ -3374,7 +3374,7 @@
    "base_experience": 56,
    "order": 395,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 308,
@@ -3385,7 +3385,7 @@
    "base_experience": 144,
    "order": 396,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 309,
@@ -3396,7 +3396,7 @@
    "base_experience": 59,
    "order": 398,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 310,
@@ -3407,7 +3407,7 @@
    "base_experience": 166,
    "order": 399,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 311,
@@ -3418,7 +3418,7 @@
    "base_experience": 142,
    "order": 401,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 312,
@@ -3429,7 +3429,7 @@
    "base_experience": 142,
    "order": 402,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 313,
@@ -3440,7 +3440,7 @@
    "base_experience": 151,
    "order": 403,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 314,
@@ -3451,7 +3451,7 @@
    "base_experience": 151,
    "order": 404,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 315,
@@ -3462,7 +3462,7 @@
    "base_experience": 140,
    "order": 406,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 316,
@@ -3473,7 +3473,7 @@
    "base_experience": 60,
    "order": 408,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 317,
@@ -3484,7 +3484,7 @@
    "base_experience": 163,
    "order": 409,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 318,
@@ -3495,7 +3495,7 @@
    "base_experience": 61,
    "order": 410,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 319,
@@ -3506,7 +3506,7 @@
    "base_experience": 161,
    "order": 411,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 320,
@@ -3517,7 +3517,7 @@
    "base_experience": 80,
    "order": 413,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 321,
@@ -3528,7 +3528,7 @@
    "base_experience": 175,
    "order": 414,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 322,
@@ -3539,7 +3539,7 @@
    "base_experience": 61,
    "order": 415,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 323,
@@ -3550,7 +3550,7 @@
    "base_experience": 161,
    "order": 416,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 324,
@@ -3561,7 +3561,7 @@
    "base_experience": 165,
    "order": 418,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 325,
@@ -3572,7 +3572,7 @@
    "base_experience": 66,
    "order": 419,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 326,
@@ -3583,7 +3583,7 @@
    "base_experience": 165,
    "order": 420,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 327,
@@ -3594,7 +3594,7 @@
    "base_experience": 126,
    "order": 421,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 328,
@@ -3605,7 +3605,7 @@
    "base_experience": 58,
    "order": 422,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 329,
@@ -3616,7 +3616,7 @@
    "base_experience": 119,
    "order": 423,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 330,
@@ -3627,7 +3627,7 @@
    "base_experience": 234,
    "order": 424,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 331,
@@ -3638,7 +3638,7 @@
    "base_experience": 67,
    "order": 425,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 332,
@@ -3649,7 +3649,7 @@
    "base_experience": 166,
    "order": 426,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 333,
@@ -3660,7 +3660,7 @@
    "base_experience": 62,
    "order": 427,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 334,
@@ -3671,7 +3671,7 @@
    "base_experience": 172,
    "order": 428,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 335,
@@ -3682,7 +3682,7 @@
    "base_experience": 160,
    "order": 430,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 336,
@@ -3693,7 +3693,7 @@
    "base_experience": 160,
    "order": 431,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 337,
@@ -3704,7 +3704,7 @@
    "base_experience": 161,
    "order": 432,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 338,
@@ -3715,7 +3715,7 @@
    "base_experience": 161,
    "order": 433,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 339,
@@ -3726,7 +3726,7 @@
    "base_experience": 58,
    "order": 434,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 340,
@@ -3737,7 +3737,7 @@
    "base_experience": 164,
    "order": 435,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 341,
@@ -3748,7 +3748,7 @@
    "base_experience": 62,
    "order": 436,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 342,
@@ -3759,7 +3759,7 @@
    "base_experience": 164,
    "order": 437,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 343,
@@ -3770,7 +3770,7 @@
    "base_experience": 60,
    "order": 438,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 344,
@@ -3781,7 +3781,7 @@
    "base_experience": 175,
    "order": 439,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 345,
@@ -3792,7 +3792,7 @@
    "base_experience": 71,
    "order": 440,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 346,
@@ -3803,7 +3803,7 @@
    "base_experience": 173,
    "order": 441,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 347,
@@ -3814,7 +3814,7 @@
    "base_experience": 71,
    "order": 442,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 348,
@@ -3825,7 +3825,7 @@
    "base_experience": 173,
    "order": 443,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 349,
@@ -3836,7 +3836,7 @@
    "base_experience": 40,
    "order": 444,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 350,
@@ -3847,7 +3847,7 @@
    "base_experience": 189,
    "order": 445,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 351,
@@ -3858,7 +3858,7 @@
    "base_experience": 147,
    "order": 446,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 352,
@@ -3869,7 +3869,7 @@
    "base_experience": 154,
    "order": 450,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 353,
@@ -3880,7 +3880,7 @@
    "base_experience": 59,
    "order": 451,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 354,
@@ -3891,7 +3891,7 @@
    "base_experience": 159,
    "order": 452,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 355,
@@ -3902,7 +3902,7 @@
    "base_experience": 59,
    "order": 454,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 356,
@@ -3913,7 +3913,7 @@
    "base_experience": 159,
    "order": 455,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 357,
@@ -3924,7 +3924,7 @@
    "base_experience": 161,
    "order": 457,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 358,
@@ -3935,7 +3935,7 @@
    "base_experience": 159,
    "order": 459,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 359,
@@ -3946,7 +3946,7 @@
    "base_experience": 163,
    "order": 460,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 360,
@@ -3957,7 +3957,7 @@
    "base_experience": 52,
    "order": 283,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 361,
@@ -3968,7 +3968,7 @@
    "base_experience": 60,
    "order": 462,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 362,
@@ -3979,7 +3979,7 @@
    "base_experience": 168,
    "order": 463,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 363,
@@ -3990,7 +3990,7 @@
    "base_experience": 58,
    "order": 466,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 364,
@@ -4001,7 +4001,7 @@
    "base_experience": 144,
    "order": 467,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 365,
@@ -4012,7 +4012,7 @@
    "base_experience": 239,
    "order": 468,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 366,
@@ -4023,7 +4023,7 @@
    "base_experience": 69,
    "order": 469,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 367,
@@ -4034,7 +4034,7 @@
    "base_experience": 170,
    "order": 470,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 368,
@@ -4045,7 +4045,7 @@
    "base_experience": 170,
    "order": 471,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 369,
@@ -4056,7 +4056,7 @@
    "base_experience": 170,
    "order": 472,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 370,
@@ -4067,7 +4067,7 @@
    "base_experience": 116,
    "order": 473,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 371,
@@ -4078,7 +4078,7 @@
    "base_experience": 60,
    "order": 474,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 372,
@@ -4089,7 +4089,7 @@
    "base_experience": 147,
    "order": 475,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 373,
@@ -4100,7 +4100,7 @@
    "base_experience": 270,
    "order": 476,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 374,
@@ -4111,7 +4111,7 @@
    "base_experience": 60,
    "order": 478,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 375,
@@ -4122,7 +4122,7 @@
    "base_experience": 147,
    "order": 479,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 376,
@@ -4133,7 +4133,7 @@
    "base_experience": 270,
    "order": 480,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 377,
@@ -4144,7 +4144,7 @@
    "base_experience": 261,
    "order": 482,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 378,
@@ -4155,7 +4155,7 @@
    "base_experience": 261,
    "order": 483,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 379,
@@ -4166,7 +4166,7 @@
    "base_experience": 261,
    "order": 484,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 380,
@@ -4177,7 +4177,7 @@
    "base_experience": 270,
    "order": 485,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 381,
@@ -4188,7 +4188,7 @@
    "base_experience": 270,
    "order": 487,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 382,
@@ -4199,7 +4199,7 @@
    "base_experience": 302,
    "order": 489,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 383,
@@ -4210,7 +4210,7 @@
    "base_experience": 302,
    "order": 491,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 384,
@@ -4221,7 +4221,7 @@
    "base_experience": 306,
    "order": 493,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 385,
@@ -4232,7 +4232,7 @@
    "base_experience": 270,
    "order": 495,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 386,
@@ -4243,7 +4243,7 @@
    "base_experience": 270,
    "order": 496,
    "is_default": 1,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 387,
@@ -4254,7 +4254,7 @@
    "base_experience": 64,
    "order": 500,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 388,
@@ -4265,7 +4265,7 @@
    "base_experience": 142,
    "order": 501,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 389,
@@ -4276,7 +4276,7 @@
    "base_experience": 236,
    "order": 502,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 390,
@@ -4287,7 +4287,7 @@
    "base_experience": 62,
    "order": 503,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 391,
@@ -4298,7 +4298,7 @@
    "base_experience": 142,
    "order": 504,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 392,
@@ -4309,7 +4309,7 @@
    "base_experience": 240,
    "order": 505,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 393,
@@ -4320,7 +4320,7 @@
    "base_experience": 63,
    "order": 506,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 394,
@@ -4331,7 +4331,7 @@
    "base_experience": 142,
    "order": 507,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 395,
@@ -4342,7 +4342,7 @@
    "base_experience": 239,
    "order": 508,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 396,
@@ -4353,7 +4353,7 @@
    "base_experience": 49,
    "order": 509,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 397,
@@ -4364,7 +4364,7 @@
    "base_experience": 119,
    "order": 510,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 398,
@@ -4375,7 +4375,7 @@
    "base_experience": 218,
    "order": 511,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 399,
@@ -4386,7 +4386,7 @@
    "base_experience": 50,
    "order": 512,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 400,
@@ -4397,7 +4397,7 @@
    "base_experience": 144,
    "order": 513,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 401,
@@ -4408,7 +4408,7 @@
    "base_experience": 39,
    "order": 514,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 402,
@@ -4419,7 +4419,7 @@
    "base_experience": 134,
    "order": 515,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 403,
@@ -4430,7 +4430,7 @@
    "base_experience": 53,
    "order": 516,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 404,
@@ -4441,7 +4441,7 @@
    "base_experience": 127,
    "order": 517,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 405,
@@ -4452,7 +4452,7 @@
    "base_experience": 235,
    "order": 518,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 406,
@@ -4463,7 +4463,7 @@
    "base_experience": 56,
    "order": 405,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 407,
@@ -4474,7 +4474,7 @@
    "base_experience": 232,
    "order": 407,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 408,
@@ -4485,7 +4485,7 @@
    "base_experience": 70,
    "order": 519,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 409,
@@ -4496,7 +4496,7 @@
    "base_experience": 173,
    "order": 520,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 410,
@@ -4507,7 +4507,7 @@
    "base_experience": 70,
    "order": 521,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 411,
@@ -4518,7 +4518,7 @@
    "base_experience": 173,
    "order": 522,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 412,
@@ -4529,7 +4529,7 @@
    "base_experience": 45,
    "order": 523,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 413,
@@ -4540,7 +4540,7 @@
    "base_experience": 148,
    "order": 524,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 414,
@@ -4551,7 +4551,7 @@
    "base_experience": 148,
    "order": 527,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 415,
@@ -4562,7 +4562,7 @@
    "base_experience": 49,
    "order": 528,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 416,
@@ -4573,7 +4573,7 @@
    "base_experience": 166,
    "order": 529,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 417,
@@ -4584,7 +4584,7 @@
    "base_experience": 142,
    "order": 530,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 418,
@@ -4595,7 +4595,7 @@
    "base_experience": 66,
    "order": 531,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 419,
@@ -4606,7 +4606,7 @@
    "base_experience": 173,
    "order": 532,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 420,
@@ -4617,7 +4617,7 @@
    "base_experience": 55,
    "order": 533,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 421,
@@ -4628,7 +4628,7 @@
    "base_experience": 158,
    "order": 534,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 422,
@@ -4639,7 +4639,7 @@
    "base_experience": 65,
    "order": 535,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 423,
@@ -4650,7 +4650,7 @@
    "base_experience": 166,
    "order": 536,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 424,
@@ -4661,7 +4661,7 @@
    "base_experience": 169,
    "order": 271,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 425,
@@ -4672,7 +4672,7 @@
    "base_experience": 70,
    "order": 537,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 426,
@@ -4683,7 +4683,7 @@
    "base_experience": 174,
    "order": 538,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 427,
@@ -4694,7 +4694,7 @@
    "base_experience": 70,
    "order": 539,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 428,
@@ -4705,7 +4705,7 @@
    "base_experience": 168,
    "order": 540,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 429,
@@ -4716,7 +4716,7 @@
    "base_experience": 173,
    "order": 281,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 430,
@@ -4727,7 +4727,7 @@
    "base_experience": 177,
    "order": 279,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 431,
@@ -4738,7 +4738,7 @@
    "base_experience": 62,
    "order": 542,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 432,
@@ -4749,7 +4749,7 @@
    "base_experience": 158,
    "order": 543,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 433,
@@ -4760,7 +4760,7 @@
    "base_experience": 57,
    "order": 458,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 434,
@@ -4771,7 +4771,7 @@
    "base_experience": 66,
    "order": 544,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 435,
@@ -4782,7 +4782,7 @@
    "base_experience": 168,
    "order": 545,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 436,
@@ -4793,7 +4793,7 @@
    "base_experience": 60,
    "order": 546,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 437,
@@ -4804,7 +4804,7 @@
    "base_experience": 175,
    "order": 547,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 438,
@@ -4815,7 +4815,7 @@
    "base_experience": 58,
    "order": 265,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 439,
@@ -4826,7 +4826,7 @@
    "base_experience": 62,
    "order": 183,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 440,
@@ -4837,7 +4837,7 @@
    "base_experience": 110,
    "order": 169,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 441,
@@ -4848,7 +4848,7 @@
    "base_experience": 144,
    "order": 548,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 442,
@@ -4859,7 +4859,7 @@
    "base_experience": 170,
    "order": 549,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 443,
@@ -4870,7 +4870,7 @@
    "base_experience": 60,
    "order": 550,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 444,
@@ -4881,7 +4881,7 @@
    "base_experience": 144,
    "order": 551,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 445,
@@ -4892,7 +4892,7 @@
    "base_experience": 270,
    "order": 552,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 446,
@@ -4903,7 +4903,7 @@
    "base_experience": 78,
    "order": 222,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 447,
@@ -4914,7 +4914,7 @@
    "base_experience": 57,
    "order": 554,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 448,
@@ -4925,7 +4925,7 @@
    "base_experience": 184,
    "order": 555,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 449,
@@ -4936,7 +4936,7 @@
    "base_experience": 66,
    "order": 557,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 450,
@@ -4947,7 +4947,7 @@
    "base_experience": 184,
    "order": 558,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 451,
@@ -4958,7 +4958,7 @@
    "base_experience": 66,
    "order": 559,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 452,
@@ -4969,7 +4969,7 @@
    "base_experience": 175,
    "order": 560,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 453,
@@ -4980,7 +4980,7 @@
    "base_experience": 60,
    "order": 561,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 454,
@@ -4991,7 +4991,7 @@
    "base_experience": 172,
    "order": 562,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 455,
@@ -5002,7 +5002,7 @@
    "base_experience": 159,
    "order": 563,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 456,
@@ -5013,7 +5013,7 @@
    "base_experience": 66,
    "order": 564,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 457,
@@ -5024,7 +5024,7 @@
    "base_experience": 161,
    "order": 565,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 458,
@@ -5035,7 +5035,7 @@
    "base_experience": 69,
    "order": 310,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 459,
@@ -5046,7 +5046,7 @@
    "base_experience": 67,
    "order": 566,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 460,
@@ -5057,7 +5057,7 @@
    "base_experience": 173,
    "order": 567,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 461,
@@ -5068,7 +5068,7 @@
    "base_experience": 179,
    "order": 298,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 462,
@@ -5079,7 +5079,7 @@
    "base_experience": 241,
    "order": 126,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 463,
@@ -5090,7 +5090,7 @@
    "base_experience": 180,
    "order": 163,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 464,
@@ -5101,7 +5101,7 @@
    "base_experience": 241,
    "order": 168,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 465,
@@ -5112,7 +5112,7 @@
    "base_experience": 187,
    "order": 173,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 466,
@@ -5123,7 +5123,7 @@
    "base_experience": 243,
    "order": 192,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 467,
@@ -5134,7 +5134,7 @@
    "base_experience": 243,
    "order": 195,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 468,
@@ -5145,7 +5145,7 @@
    "base_experience": 245,
    "order": 255,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 469,
@@ -5156,7 +5156,7 @@
    "base_experience": 180,
    "order": 275,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 470,
@@ -5167,7 +5167,7 @@
    "base_experience": 184,
    "order": 210,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 471,
@@ -5178,7 +5178,7 @@
    "base_experience": 184,
    "order": 211,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 472,
@@ -5189,7 +5189,7 @@
    "base_experience": 179,
    "order": 290,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 473,
@@ -5200,7 +5200,7 @@
    "base_experience": 239,
    "order": 305,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 474,
@@ -5211,7 +5211,7 @@
    "base_experience": 241,
    "order": 215,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 475,
@@ -5222,7 +5222,7 @@
    "base_experience": 233,
    "order": 366,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 476,
@@ -5233,7 +5233,7 @@
    "base_experience": 184,
    "order": 384,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 477,
@@ -5244,7 +5244,7 @@
    "base_experience": 236,
    "order": 456,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 478,
@@ -5255,7 +5255,7 @@
    "base_experience": 168,
    "order": 465,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 479,
@@ -5266,7 +5266,7 @@
    "base_experience": 154,
    "order": 569,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 480,
@@ -5277,7 +5277,7 @@
    "base_experience": 261,
    "order": 575,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 481,
@@ -5288,7 +5288,7 @@
    "base_experience": 261,
    "order": 576,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 482,
@@ -5299,7 +5299,7 @@
    "base_experience": 261,
    "order": 577,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 483,
@@ -5310,7 +5310,7 @@
    "base_experience": 306,
    "order": 578,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 484,
@@ -5321,7 +5321,7 @@
    "base_experience": 306,
    "order": 579,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 485,
@@ -5332,7 +5332,7 @@
    "base_experience": 270,
    "order": 580,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 486,
@@ -5343,7 +5343,7 @@
    "base_experience": 302,
    "order": 581,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 487,
@@ -5354,7 +5354,7 @@
    "base_experience": 306,
    "order": 582,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 488,
@@ -5365,7 +5365,7 @@
    "base_experience": 270,
    "order": 584,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 489,
@@ -5376,7 +5376,7 @@
    "base_experience": 216,
    "order": 585,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 490,
@@ -5387,7 +5387,7 @@
    "base_experience": 270,
    "order": 586,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 491,
@@ -5398,7 +5398,7 @@
    "base_experience": 270,
    "order": 587,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 492,
@@ -5409,7 +5409,7 @@
    "base_experience": 270,
    "order": 588,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 493,
@@ -5420,7 +5420,7 @@
    "base_experience": 324,
    "order": 590,
    "is_default": 1,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 494,
@@ -5431,7 +5431,7 @@
    "base_experience": 270,
    "order": 591,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 495,
@@ -5442,7 +5442,7 @@
    "base_experience": 62,
    "order": 592,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 496,
@@ -5453,7 +5453,7 @@
    "base_experience": 145,
    "order": 593,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 497,
@@ -5464,7 +5464,7 @@
    "base_experience": 238,
    "order": 594,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 498,
@@ -5475,7 +5475,7 @@
    "base_experience": 62,
    "order": 595,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 499,
@@ -5486,7 +5486,7 @@
    "base_experience": 146,
    "order": 596,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 500,
@@ -5497,7 +5497,7 @@
    "base_experience": 238,
    "order": 597,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 501,
@@ -5508,7 +5508,7 @@
    "base_experience": 62,
    "order": 598,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 502,
@@ -5519,7 +5519,7 @@
    "base_experience": 145,
    "order": 599,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 503,
@@ -5530,7 +5530,7 @@
    "base_experience": 238,
    "order": 600,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 504,
@@ -5541,7 +5541,7 @@
    "base_experience": 51,
    "order": 601,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 505,
@@ -5552,7 +5552,7 @@
    "base_experience": 147,
    "order": 602,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 506,
@@ -5563,7 +5563,7 @@
    "base_experience": 55,
    "order": 603,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 507,
@@ -5574,7 +5574,7 @@
    "base_experience": 130,
    "order": 604,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 508,
@@ -5585,7 +5585,7 @@
    "base_experience": 225,
    "order": 605,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 509,
@@ -5596,7 +5596,7 @@
    "base_experience": 56,
    "order": 606,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 510,
@@ -5607,7 +5607,7 @@
    "base_experience": 156,
    "order": 607,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 511,
@@ -5618,7 +5618,7 @@
    "base_experience": 63,
    "order": 608,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 512,
@@ -5629,7 +5629,7 @@
    "base_experience": 174,
    "order": 609,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 513,
@@ -5640,7 +5640,7 @@
    "base_experience": 63,
    "order": 610,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 514,
@@ -5651,7 +5651,7 @@
    "base_experience": 174,
    "order": 611,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 515,
@@ -5662,7 +5662,7 @@
    "base_experience": 63,
    "order": 612,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 516,
@@ -5673,7 +5673,7 @@
    "base_experience": 174,
    "order": 613,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 517,
@@ -5684,7 +5684,7 @@
    "base_experience": 58,
    "order": 614,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 518,
@@ -5695,7 +5695,7 @@
    "base_experience": 170,
    "order": 615,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 519,
@@ -5706,7 +5706,7 @@
    "base_experience": 53,
    "order": 616,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 520,
@@ -5717,7 +5717,7 @@
    "base_experience": 125,
    "order": 617,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 521,
@@ -5728,7 +5728,7 @@
    "base_experience": 220,
    "order": 618,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 522,
@@ -5739,7 +5739,7 @@
    "base_experience": 59,
    "order": 619,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 523,
@@ -5750,7 +5750,7 @@
    "base_experience": 174,
    "order": 620,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 524,
@@ -5761,7 +5761,7 @@
    "base_experience": 56,
    "order": 621,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 525,
@@ -5772,7 +5772,7 @@
    "base_experience": 137,
    "order": 622,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 526,
@@ -5783,7 +5783,7 @@
    "base_experience": 232,
    "order": 623,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 527,
@@ -5794,7 +5794,7 @@
    "base_experience": 65,
    "order": 624,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 528,
@@ -5805,7 +5805,7 @@
    "base_experience": 149,
    "order": 625,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 529,
@@ -5816,7 +5816,7 @@
    "base_experience": 66,
    "order": 626,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 530,
@@ -5827,7 +5827,7 @@
    "base_experience": 178,
    "order": 627,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 531,
@@ -5838,7 +5838,7 @@
    "base_experience": 390,
    "order": 628,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 532,
@@ -5849,7 +5849,7 @@
    "base_experience": 61,
    "order": 630,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 533,
@@ -5860,7 +5860,7 @@
    "base_experience": 142,
    "order": 631,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 534,
@@ -5871,7 +5871,7 @@
    "base_experience": 227,
    "order": 632,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 535,
@@ -5882,7 +5882,7 @@
    "base_experience": 59,
    "order": 633,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 536,
@@ -5893,7 +5893,7 @@
    "base_experience": 134,
    "order": 634,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 537,
@@ -5904,7 +5904,7 @@
    "base_experience": 229,
    "order": 635,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 538,
@@ -5915,7 +5915,7 @@
    "base_experience": 163,
    "order": 636,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 539,
@@ -5926,7 +5926,7 @@
    "base_experience": 163,
    "order": 637,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 540,
@@ -5937,7 +5937,7 @@
    "base_experience": 62,
    "order": 638,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 541,
@@ -5948,7 +5948,7 @@
    "base_experience": 133,
    "order": 639,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 542,
@@ -5959,7 +5959,7 @@
    "base_experience": 225,
    "order": 640,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 543,
@@ -5970,7 +5970,7 @@
    "base_experience": 52,
    "order": 641,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 544,
@@ -5981,7 +5981,7 @@
    "base_experience": 126,
    "order": 642,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 545,
@@ -5992,7 +5992,7 @@
    "base_experience": 218,
    "order": 643,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 546,
@@ -6003,7 +6003,7 @@
    "base_experience": 56,
    "order": 644,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 547,
@@ -6014,7 +6014,7 @@
    "base_experience": 168,
    "order": 645,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 548,
@@ -6025,7 +6025,7 @@
    "base_experience": 56,
    "order": 646,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 549,
@@ -6036,7 +6036,7 @@
    "base_experience": 168,
    "order": 647,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 550,
@@ -6047,7 +6047,7 @@
    "base_experience": 161,
    "order": 648,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 551,
@@ -6058,7 +6058,7 @@
    "base_experience": 58,
    "order": 650,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 552,
@@ -6069,7 +6069,7 @@
    "base_experience": 123,
    "order": 651,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 553,
@@ -6080,7 +6080,7 @@
    "base_experience": 234,
    "order": 652,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 554,
@@ -6091,7 +6091,7 @@
    "base_experience": 63,
    "order": 653,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 555,
@@ -6102,7 +6102,7 @@
    "base_experience": 168,
    "order": 654,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 556,
@@ -6113,7 +6113,7 @@
    "base_experience": 161,
    "order": 656,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 557,
@@ -6124,7 +6124,7 @@
    "base_experience": 65,
    "order": 657,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 558,
@@ -6135,7 +6135,7 @@
    "base_experience": 170,
    "order": 658,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 559,
@@ -6146,7 +6146,7 @@
    "base_experience": 70,
    "order": 659,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 560,
@@ -6157,7 +6157,7 @@
    "base_experience": 171,
    "order": 660,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 561,
@@ -6168,7 +6168,7 @@
    "base_experience": 172,
    "order": 661,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 562,
@@ -6179,7 +6179,7 @@
    "base_experience": 61,
    "order": 662,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 563,
@@ -6190,7 +6190,7 @@
    "base_experience": 169,
    "order": 663,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 564,
@@ -6201,7 +6201,7 @@
    "base_experience": 71,
    "order": 664,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 565,
@@ -6212,7 +6212,7 @@
    "base_experience": 173,
    "order": 665,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 566,
@@ -6223,7 +6223,7 @@
    "base_experience": 71,
    "order": 666,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 567,
@@ -6234,7 +6234,7 @@
    "base_experience": 177,
    "order": 667,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 568,
@@ -6245,7 +6245,7 @@
    "base_experience": 66,
    "order": 668,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 569,
@@ -6256,7 +6256,7 @@
    "base_experience": 166,
    "order": 669,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 570,
@@ -6267,7 +6267,7 @@
    "base_experience": 66,
    "order": 670,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 571,
@@ -6278,7 +6278,7 @@
    "base_experience": 179,
    "order": 671,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 572,
@@ -6289,7 +6289,7 @@
    "base_experience": 60,
    "order": 672,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 573,
@@ -6300,7 +6300,7 @@
    "base_experience": 165,
    "order": 673,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 574,
@@ -6311,7 +6311,7 @@
    "base_experience": 58,
    "order": 674,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 575,
@@ -6322,7 +6322,7 @@
    "base_experience": 137,
    "order": 675,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 576,
@@ -6333,7 +6333,7 @@
    "base_experience": 221,
    "order": 676,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 577,
@@ -6344,7 +6344,7 @@
    "base_experience": 58,
    "order": 677,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 578,
@@ -6355,7 +6355,7 @@
    "base_experience": 130,
    "order": 678,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 579,
@@ -6366,7 +6366,7 @@
    "base_experience": 221,
    "order": 679,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 580,
@@ -6377,7 +6377,7 @@
    "base_experience": 61,
    "order": 680,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 581,
@@ -6388,7 +6388,7 @@
    "base_experience": 166,
    "order": 681,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 582,
@@ -6399,7 +6399,7 @@
    "base_experience": 61,
    "order": 682,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 583,
@@ -6410,7 +6410,7 @@
    "base_experience": 138,
    "order": 683,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 584,
@@ -6421,7 +6421,7 @@
    "base_experience": 241,
    "order": 684,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 585,
@@ -6432,7 +6432,7 @@
    "base_experience": 67,
    "order": 685,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 586,
@@ -6443,7 +6443,7 @@
    "base_experience": 166,
    "order": 686,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 587,
@@ -6454,7 +6454,7 @@
    "base_experience": 150,
    "order": 687,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 588,
@@ -6465,7 +6465,7 @@
    "base_experience": 63,
    "order": 688,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 589,
@@ -6476,7 +6476,7 @@
    "base_experience": 173,
    "order": 689,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 590,
@@ -6487,7 +6487,7 @@
    "base_experience": 59,
    "order": 690,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 591,
@@ -6498,7 +6498,7 @@
    "base_experience": 162,
    "order": 691,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 592,
@@ -6509,7 +6509,7 @@
    "base_experience": 67,
    "order": 692,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 593,
@@ -6520,7 +6520,7 @@
    "base_experience": 168,
    "order": 693,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 594,
@@ -6531,7 +6531,7 @@
    "base_experience": 165,
    "order": 694,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 595,
@@ -6542,7 +6542,7 @@
    "base_experience": 64,
    "order": 695,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 596,
@@ -6553,7 +6553,7 @@
    "base_experience": 165,
    "order": 696,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 597,
@@ -6564,7 +6564,7 @@
    "base_experience": 61,
    "order": 697,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 598,
@@ -6575,7 +6575,7 @@
    "base_experience": 171,
    "order": 698,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 599,
@@ -6586,7 +6586,7 @@
    "base_experience": 60,
    "order": 699,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 600,
@@ -6597,7 +6597,7 @@
    "base_experience": 154,
    "order": 700,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 601,
@@ -6608,7 +6608,7 @@
    "base_experience": 234,
    "order": 701,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 602,
@@ -6619,7 +6619,7 @@
    "base_experience": 55,
    "order": 702,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 603,
@@ -6630,7 +6630,7 @@
    "base_experience": 142,
    "order": 703,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 604,
@@ -6641,7 +6641,7 @@
    "base_experience": 232,
    "order": 704,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 605,
@@ -6652,7 +6652,7 @@
    "base_experience": 67,
    "order": 705,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 606,
@@ -6663,7 +6663,7 @@
    "base_experience": 170,
    "order": 706,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 607,
@@ -6674,7 +6674,7 @@
    "base_experience": 55,
    "order": 707,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 608,
@@ -6685,7 +6685,7 @@
    "base_experience": 130,
    "order": 708,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 609,
@@ -6696,7 +6696,7 @@
    "base_experience": 234,
    "order": 709,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 610,
@@ -6707,7 +6707,7 @@
    "base_experience": 64,
    "order": 710,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 611,
@@ -6718,7 +6718,7 @@
    "base_experience": 144,
    "order": 711,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 612,
@@ -6729,7 +6729,7 @@
    "base_experience": 243,
    "order": 712,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 613,
@@ -6740,7 +6740,7 @@
    "base_experience": 61,
    "order": 713,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 614,
@@ -6751,7 +6751,7 @@
    "base_experience": 177,
    "order": 714,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 615,
@@ -6762,7 +6762,7 @@
    "base_experience": 180,
    "order": 715,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 616,
@@ -6773,7 +6773,7 @@
    "base_experience": 61,
    "order": 716,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 617,
@@ -6784,7 +6784,7 @@
    "base_experience": 173,
    "order": 717,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 618,
@@ -6795,7 +6795,7 @@
    "base_experience": 165,
    "order": 718,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 619,
@@ -6806,7 +6806,7 @@
    "base_experience": 70,
    "order": 719,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 620,
@@ -6817,7 +6817,7 @@
    "base_experience": 179,
    "order": 720,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 621,
@@ -6828,7 +6828,7 @@
    "base_experience": 170,
    "order": 721,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 622,
@@ -6839,7 +6839,7 @@
    "base_experience": 61,
    "order": 722,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 623,
@@ -6850,7 +6850,7 @@
    "base_experience": 169,
    "order": 723,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 624,
@@ -6861,7 +6861,7 @@
    "base_experience": 68,
    "order": 724,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 625,
@@ -6872,7 +6872,7 @@
    "base_experience": 172,
    "order": 725,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 626,
@@ -6883,7 +6883,7 @@
    "base_experience": 172,
    "order": 726,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 627,
@@ -6894,7 +6894,7 @@
    "base_experience": 70,
    "order": 727,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 628,
@@ -6905,7 +6905,7 @@
    "base_experience": 179,
    "order": 728,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 629,
@@ -6916,7 +6916,7 @@
    "base_experience": 74,
    "order": 729,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 630,
@@ -6927,7 +6927,7 @@
    "base_experience": 179,
    "order": 730,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 631,
@@ -6938,7 +6938,7 @@
    "base_experience": 169,
    "order": 731,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 632,
@@ -6949,7 +6949,7 @@
    "base_experience": 169,
    "order": 732,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 633,
@@ -6960,7 +6960,7 @@
    "base_experience": 60,
    "order": 733,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 634,
@@ -6971,7 +6971,7 @@
    "base_experience": 147,
    "order": 734,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 635,
@@ -6982,7 +6982,7 @@
    "base_experience": 270,
    "order": 735,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 636,
@@ -6993,7 +6993,7 @@
    "base_experience": 72,
    "order": 736,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 637,
@@ -7004,7 +7004,7 @@
    "base_experience": 248,
    "order": 737,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 638,
@@ -7015,7 +7015,7 @@
    "base_experience": 261,
    "order": 738,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 639,
@@ -7026,7 +7026,7 @@
    "base_experience": 261,
    "order": 739,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 640,
@@ -7037,7 +7037,7 @@
    "base_experience": 261,
    "order": 740,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 641,
@@ -7048,7 +7048,7 @@
    "base_experience": 261,
    "order": 741,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 642,
@@ -7059,7 +7059,7 @@
    "base_experience": 261,
    "order": 743,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 643,
@@ -7070,7 +7070,7 @@
    "base_experience": 306,
    "order": 745,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 644,
@@ -7081,7 +7081,7 @@
    "base_experience": 306,
    "order": 746,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 645,
@@ -7092,7 +7092,7 @@
    "base_experience": 270,
    "order": 747,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 646,
@@ -7103,7 +7103,7 @@
    "base_experience": 297,
    "order": 749,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 647,
@@ -7114,7 +7114,7 @@
    "base_experience": 261,
    "order": 752,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 648,
@@ -7125,7 +7125,7 @@
    "base_experience": 270,
    "order": 754,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 649,
@@ -7136,7 +7136,7 @@
    "base_experience": 270,
    "order": 756,
    "is_default": 1,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 650,
@@ -7147,7 +7147,7 @@
    "base_experience": 63,
    "order": 757,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 651,
@@ -7158,7 +7158,7 @@
    "base_experience": 142,
    "order": 758,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 652,
@@ -7169,7 +7169,7 @@
    "base_experience": 239,
    "order": 759,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 653,
@@ -7180,7 +7180,7 @@
    "base_experience": 61,
    "order": 760,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 654,
@@ -7191,7 +7191,7 @@
    "base_experience": 143,
    "order": 761,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 655,
@@ -7202,7 +7202,7 @@
    "base_experience": 240,
    "order": 762,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 656,
@@ -7213,7 +7213,7 @@
    "base_experience": 63,
    "order": 763,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 657,
@@ -7224,7 +7224,7 @@
    "base_experience": 142,
    "order": 764,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 658,
@@ -7235,7 +7235,7 @@
    "base_experience": 239,
    "order": 765,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 659,
@@ -7246,7 +7246,7 @@
    "base_experience": 47,
    "order": 768,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 660,
@@ -7257,7 +7257,7 @@
    "base_experience": 148,
    "order": 769,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 661,
@@ -7268,7 +7268,7 @@
    "base_experience": 56,
    "order": 770,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 662,
@@ -7279,7 +7279,7 @@
    "base_experience": 134,
    "order": 771,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 663,
@@ -7290,7 +7290,7 @@
    "base_experience": 175,
    "order": 772,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 664,
@@ -7301,7 +7301,7 @@
    "base_experience": 40,
    "order": 773,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 665,
@@ -7312,7 +7312,7 @@
    "base_experience": 75,
    "order": 774,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 666,
@@ -7323,7 +7323,7 @@
    "base_experience": 185,
    "order": 775,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 667,
@@ -7334,7 +7334,7 @@
    "base_experience": 74,
    "order": 776,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 668,
@@ -7345,7 +7345,7 @@
    "base_experience": 177,
    "order": 777,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 669,
@@ -7356,7 +7356,7 @@
    "base_experience": 61,
    "order": 778,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 670,
@@ -7367,7 +7367,7 @@
    "base_experience": 130,
    "order": 779,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 671,
@@ -7378,7 +7378,7 @@
    "base_experience": 248,
    "order": 781,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 672,
@@ -7389,7 +7389,7 @@
    "base_experience": 70,
    "order": 782,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 673,
@@ -7400,7 +7400,7 @@
    "base_experience": 186,
    "order": 783,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 674,
@@ -7411,7 +7411,7 @@
    "base_experience": 70,
    "order": 784,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 675,
@@ -7422,7 +7422,7 @@
    "base_experience": 173,
    "order": 785,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 676,
@@ -7433,7 +7433,7 @@
    "base_experience": 165,
    "order": 786,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 677,
@@ -7444,7 +7444,7 @@
    "base_experience": 71,
    "order": 787,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 678,
@@ -7455,7 +7455,7 @@
    "base_experience": 163,
    "order": 788,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 679,
@@ -7466,7 +7466,7 @@
    "base_experience": 65,
    "order": 790,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 680,
@@ -7477,7 +7477,7 @@
    "base_experience": 157,
    "order": 791,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 681,
@@ -7488,7 +7488,7 @@
    "base_experience": 234,
    "order": 792,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 682,
@@ -7499,7 +7499,7 @@
    "base_experience": 68,
    "order": 794,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 683,
@@ -7510,7 +7510,7 @@
    "base_experience": 162,
    "order": 795,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 684,
@@ -7521,7 +7521,7 @@
    "base_experience": 68,
    "order": 796,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 685,
@@ -7532,7 +7532,7 @@
    "base_experience": 168,
    "order": 797,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 686,
@@ -7543,7 +7543,7 @@
    "base_experience": 58,
    "order": 798,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 687,
@@ -7554,7 +7554,7 @@
    "base_experience": 169,
    "order": 799,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 688,
@@ -7565,7 +7565,7 @@
    "base_experience": 61,
    "order": 800,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 689,
@@ -7576,7 +7576,7 @@
    "base_experience": 175,
    "order": 801,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 690,
@@ -7587,7 +7587,7 @@
    "base_experience": 64,
    "order": 802,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 691,
@@ -7598,7 +7598,7 @@
    "base_experience": 173,
    "order": 803,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 692,
@@ -7609,7 +7609,7 @@
    "base_experience": 66,
    "order": 804,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 693,
@@ -7620,7 +7620,7 @@
    "base_experience": 100,
    "order": 805,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 694,
@@ -7631,7 +7631,7 @@
    "base_experience": 58,
    "order": 806,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 695,
@@ -7642,7 +7642,7 @@
    "base_experience": 168,
    "order": 807,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 696,
@@ -7653,7 +7653,7 @@
    "base_experience": 72,
    "order": 808,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 697,
@@ -7664,7 +7664,7 @@
    "base_experience": 182,
    "order": 809,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 698,
@@ -7675,7 +7675,7 @@
    "base_experience": 72,
    "order": 810,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 699,
@@ -7686,7 +7686,7 @@
    "base_experience": 104,
    "order": 811,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 700,
@@ -7697,7 +7697,7 @@
    "base_experience": 184,
    "order": 212,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 701,
@@ -7708,7 +7708,7 @@
    "base_experience": 175,
    "order": 812,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 702,
@@ -7719,7 +7719,7 @@
    "base_experience": 151,
    "order": 813,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 703,
@@ -7730,7 +7730,7 @@
    "base_experience": 100,
    "order": 814,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 704,
@@ -7741,7 +7741,7 @@
    "base_experience": 60,
    "order": 815,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 705,
@@ -7752,7 +7752,7 @@
    "base_experience": 158,
    "order": 816,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 706,
@@ -7763,7 +7763,7 @@
    "base_experience": 270,
    "order": 817,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 707,
@@ -7774,7 +7774,7 @@
    "base_experience": 165,
    "order": 818,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 708,
@@ -7785,7 +7785,7 @@
    "base_experience": 62,
    "order": 819,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 709,
@@ -7796,7 +7796,7 @@
    "base_experience": 166,
    "order": 820,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 710,
@@ -7807,7 +7807,7 @@
    "base_experience": 67,
    "order": 821,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 711,
@@ -7818,7 +7818,7 @@
    "base_experience": 173,
    "order": 825,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 712,
@@ -7829,7 +7829,7 @@
    "base_experience": 61,
    "order": 829,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 713,
@@ -7840,7 +7840,7 @@
    "base_experience": 180,
    "order": 830,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 714,
@@ -7851,7 +7851,7 @@
    "base_experience": 49,
    "order": 831,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 715,
@@ -7862,7 +7862,7 @@
    "base_experience": 187,
    "order": 832,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 716,
@@ -7873,7 +7873,7 @@
    "base_experience": 306,
    "order": 833,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 717,
@@ -7884,7 +7884,7 @@
    "base_experience": 306,
    "order": 834,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 718,
@@ -7895,7 +7895,7 @@
    "base_experience": 270,
    "order": 835,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 719,
@@ -7906,7 +7906,7 @@
    "base_experience": 270,
    "order": 839,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 720,
@@ -7917,7 +7917,7 @@
    "base_experience": 270,
    "order": 841,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 721,
@@ -7928,7 +7928,7 @@
    "base_experience": 270,
    "order": 843,
    "is_default": 1,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 722,
@@ -7939,7 +7939,7 @@
    "base_experience": 64,
    "order": 844,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 723,
@@ -7950,7 +7950,7 @@
    "base_experience": 147,
    "order": 845,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 724,
@@ -7961,7 +7961,7 @@
    "base_experience": 239,
    "order": 846,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 725,
@@ -7972,7 +7972,7 @@
    "base_experience": 64,
    "order": 847,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 726,
@@ -7983,7 +7983,7 @@
    "base_experience": 147,
    "order": 848,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 727,
@@ -7994,7 +7994,7 @@
    "base_experience": 239,
    "order": 849,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 728,
@@ -8005,7 +8005,7 @@
    "base_experience": 64,
    "order": 850,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 729,
@@ -8016,7 +8016,7 @@
    "base_experience": 147,
    "order": 851,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 730,
@@ -8027,7 +8027,7 @@
    "base_experience": 239,
    "order": 852,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 731,
@@ -8038,7 +8038,7 @@
    "base_experience": 53,
    "order": 853,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 732,
@@ -8049,7 +8049,7 @@
    "base_experience": 124,
    "order": 854,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 733,
@@ -8060,7 +8060,7 @@
    "base_experience": 218,
    "order": 855,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 734,
@@ -8071,7 +8071,7 @@
    "base_experience": 51,
    "order": 856,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 735,
@@ -8082,7 +8082,7 @@
    "base_experience": 146,
    "order": 857,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 736,
@@ -8093,7 +8093,7 @@
    "base_experience": 60,
    "order": 859,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 737,
@@ -8104,7 +8104,7 @@
    "base_experience": 140,
    "order": 860,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 738,
@@ -8115,7 +8115,7 @@
    "base_experience": 225,
    "order": 861,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 739,
@@ -8126,7 +8126,7 @@
    "base_experience": 68,
    "order": 863,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 740,
@@ -8137,7 +8137,7 @@
    "base_experience": 167,
    "order": 864,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 741,
@@ -8148,7 +8148,7 @@
    "base_experience": 167,
    "order": 865,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 742,
@@ -8159,7 +8159,7 @@
    "base_experience": 61,
    "order": 869,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 743,
@@ -8170,7 +8170,7 @@
    "base_experience": 162,
    "order": 870,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 744,
@@ -8181,7 +8181,7 @@
    "base_experience": 56,
    "order": 872,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 745,
@@ -8192,7 +8192,7 @@
    "base_experience": 170,
    "order": 874,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 746,
@@ -8203,7 +8203,7 @@
    "base_experience": 61,
    "order": 877,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 747,
@@ -8214,7 +8214,7 @@
    "base_experience": 61,
    "order": 879,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 748,
@@ -8225,7 +8225,7 @@
    "base_experience": 173,
    "order": 880,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 749,
@@ -8236,7 +8236,7 @@
    "base_experience": 77,
    "order": 881,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 750,
@@ -8247,7 +8247,7 @@
    "base_experience": 175,
    "order": 882,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 751,
@@ -8258,7 +8258,7 @@
    "base_experience": 54,
    "order": 883,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 752,
@@ -8269,7 +8269,7 @@
    "base_experience": 159,
    "order": 884,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 753,
@@ -8280,7 +8280,7 @@
    "base_experience": 50,
    "order": 886,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 754,
@@ -8291,7 +8291,7 @@
    "base_experience": 168,
    "order": 887,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 755,
@@ -8302,7 +8302,7 @@
    "base_experience": 57,
    "order": 889,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 756,
@@ -8313,7 +8313,7 @@
    "base_experience": 142,
    "order": 890,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 757,
@@ -8324,7 +8324,7 @@
    "base_experience": 64,
    "order": 891,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 758,
@@ -8335,7 +8335,7 @@
    "base_experience": 168,
    "order": 892,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 759,
@@ -8346,7 +8346,7 @@
    "base_experience": 68,
    "order": 894,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 760,
@@ -8357,7 +8357,7 @@
    "base_experience": 175,
    "order": 895,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 761,
@@ -8368,7 +8368,7 @@
    "base_experience": 42,
    "order": 896,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 762,
@@ -8379,7 +8379,7 @@
    "base_experience": 102,
    "order": 897,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 763,
@@ -8390,7 +8390,7 @@
    "base_experience": 230,
    "order": 898,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 764,
@@ -8401,7 +8401,7 @@
    "base_experience": 170,
    "order": 899,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 765,
@@ -8412,7 +8412,7 @@
    "base_experience": 172,
    "order": 900,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 766,
@@ -8423,7 +8423,7 @@
    "base_experience": 172,
    "order": 901,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 767,
@@ -8434,7 +8434,7 @@
    "base_experience": 46,
    "order": 902,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 768,
@@ -8445,7 +8445,7 @@
    "base_experience": 186,
    "order": 903,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 769,
@@ -8456,7 +8456,7 @@
    "base_experience": 64,
    "order": 904,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 770,
@@ -8467,7 +8467,7 @@
    "base_experience": 168,
    "order": 905,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 771,
@@ -8478,7 +8478,7 @@
    "base_experience": 144,
    "order": 906,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 772,
@@ -8489,7 +8489,7 @@
    "base_experience": 107,
    "order": 907,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 773,
@@ -8500,7 +8500,7 @@
    "base_experience": 257,
    "order": 908,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 774,
@@ -8511,7 +8511,7 @@
    "base_experience": 154,
    "order": 909,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 775,
@@ -8522,7 +8522,7 @@
    "base_experience": 168,
    "order": 923,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 776,
@@ -8533,7 +8533,7 @@
    "base_experience": 170,
    "order": 924,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 777,
@@ -8544,7 +8544,7 @@
    "base_experience": 152,
    "order": 925,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 778,
@@ -8555,7 +8555,7 @@
    "base_experience": 167,
    "order": 927,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 779,
@@ -8566,7 +8566,7 @@
    "base_experience": 166,
    "order": 931,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 780,
@@ -8577,7 +8577,7 @@
    "base_experience": 170,
    "order": 932,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 781,
@@ -8588,7 +8588,7 @@
    "base_experience": 181,
    "order": 933,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 782,
@@ -8599,7 +8599,7 @@
    "base_experience": 60,
    "order": 934,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 783,
@@ -8610,7 +8610,7 @@
    "base_experience": 147,
    "order": 935,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 784,
@@ -8621,7 +8621,7 @@
    "base_experience": 270,
    "order": 936,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 785,
@@ -8632,7 +8632,7 @@
    "base_experience": 257,
    "order": 938,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 786,
@@ -8643,7 +8643,7 @@
    "base_experience": 257,
    "order": 939,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 787,
@@ -8654,7 +8654,7 @@
    "base_experience": 257,
    "order": 940,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 788,
@@ -8665,7 +8665,7 @@
    "base_experience": 257,
    "order": 941,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 789,
@@ -8676,7 +8676,7 @@
    "base_experience": 40,
    "order": 942,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 790,
@@ -8687,7 +8687,7 @@
    "base_experience": 140,
    "order": 943,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 791,
@@ -8698,7 +8698,7 @@
    "base_experience": 306,
    "order": 944,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 792,
@@ -8709,7 +8709,7 @@
    "base_experience": 306,
    "order": 945,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 793,
@@ -8720,7 +8720,7 @@
    "base_experience": 257,
    "order": 946,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 794,
@@ -8731,7 +8731,7 @@
    "base_experience": 257,
    "order": 947,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 795,
@@ -8742,7 +8742,7 @@
    "base_experience": 257,
    "order": 948,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 796,
@@ -8753,7 +8753,7 @@
    "base_experience": 257,
    "order": 949,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 797,
@@ -8764,7 +8764,7 @@
    "base_experience": 257,
    "order": 950,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 798,
@@ -8775,7 +8775,7 @@
    "base_experience": 257,
    "order": 951,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 799,
@@ -8786,7 +8786,7 @@
    "base_experience": 257,
    "order": 952,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 800,
@@ -8797,7 +8797,7 @@
    "base_experience": 270,
    "order": 953,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 801,
@@ -8808,7 +8808,7 @@
    "base_experience": 270,
    "order": 957,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 802,
@@ -8819,7 +8819,7 @@
    "base_experience": 270,
    "order": 959,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 803,
@@ -8830,7 +8830,7 @@
    "base_experience": 189,
    "order": 960,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 804,
@@ -8841,7 +8841,7 @@
    "base_experience": 243,
    "order": 961,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 805,
@@ -8852,7 +8852,7 @@
    "base_experience": 257,
    "order": 962,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 806,
@@ -8863,7 +8863,7 @@
    "base_experience": 257,
    "order": 963,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 807,
@@ -8874,7 +8874,7 @@
    "base_experience": 270,
    "order": 964,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 808,
@@ -8885,7 +8885,7 @@
    "base_experience": 135,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 809,
@@ -8896,7 +8896,7 @@
    "base_experience": 270,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 810,
@@ -8907,7 +8907,7 @@
    "base_experience": 62,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 811,
@@ -8918,7 +8918,7 @@
    "base_experience": 147,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 812,
@@ -8929,7 +8929,7 @@
    "base_experience": 265,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 813,
@@ -8940,7 +8940,7 @@
    "base_experience": 62,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 814,
@@ -8951,7 +8951,7 @@
    "base_experience": 147,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 815,
@@ -8962,7 +8962,7 @@
    "base_experience": 265,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 816,
@@ -8973,7 +8973,7 @@
    "base_experience": 62,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 817,
@@ -8984,7 +8984,7 @@
    "base_experience": 147,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 818,
@@ -8995,7 +8995,7 @@
    "base_experience": 265,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 819,
@@ -9006,7 +9006,7 @@
    "base_experience": 55,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 820,
@@ -9017,7 +9017,7 @@
    "base_experience": 161,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 821,
@@ -9028,7 +9028,7 @@
    "base_experience": 49,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 822,
@@ -9039,7 +9039,7 @@
    "base_experience": 128,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 823,
@@ -9050,7 +9050,7 @@
    "base_experience": 248,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 824,
@@ -9061,7 +9061,7 @@
    "base_experience": 36,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 825,
@@ -9072,7 +9072,7 @@
    "base_experience": 117,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 826,
@@ -9083,7 +9083,7 @@
    "base_experience": 253,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 827,
@@ -9094,7 +9094,7 @@
    "base_experience": 49,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 828,
@@ -9105,7 +9105,7 @@
    "base_experience": 159,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 829,
@@ -9116,7 +9116,7 @@
    "base_experience": 50,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 830,
@@ -9127,7 +9127,7 @@
    "base_experience": 161,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 831,
@@ -9138,7 +9138,7 @@
    "base_experience": 122,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 832,
@@ -9149,7 +9149,7 @@
    "base_experience": 172,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 833,
@@ -9160,7 +9160,7 @@
    "base_experience": 57,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 834,
@@ -9171,7 +9171,7 @@
    "base_experience": 170,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 835,
@@ -9182,7 +9182,7 @@
    "base_experience": 54,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 836,
@@ -9193,7 +9193,7 @@
    "base_experience": 172,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 837,
@@ -9204,7 +9204,7 @@
    "base_experience": 48,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 838,
@@ -9215,7 +9215,7 @@
    "base_experience": 144,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 839,
@@ -9226,7 +9226,7 @@
    "base_experience": 255,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 840,
@@ -9237,7 +9237,7 @@
    "base_experience": 52,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 841,
@@ -9248,7 +9248,7 @@
    "base_experience": 170,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 842,
@@ -9259,7 +9259,7 @@
    "base_experience": 170,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 843,
@@ -9270,7 +9270,7 @@
    "base_experience": 63,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 844,
@@ -9281,7 +9281,7 @@
    "base_experience": 179,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 845,
@@ -9292,7 +9292,7 @@
    "base_experience": 166,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 846,
@@ -9303,7 +9303,7 @@
    "base_experience": 56,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 847,
@@ -9314,7 +9314,7 @@
    "base_experience": 172,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 848,
@@ -9325,7 +9325,7 @@
    "base_experience": 48,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 849,
@@ -9336,7 +9336,7 @@
    "base_experience": 176,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 850,
@@ -9347,7 +9347,7 @@
    "base_experience": 61,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 851,
@@ -9358,7 +9358,7 @@
    "base_experience": 184,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 852,
@@ -9369,7 +9369,7 @@
    "base_experience": 62,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 853,
@@ -9380,7 +9380,7 @@
    "base_experience": 168,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 854,
@@ -9391,7 +9391,7 @@
    "base_experience": 62,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 855,
@@ -9402,7 +9402,7 @@
    "base_experience": 178,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 856,
@@ -9413,7 +9413,7 @@
    "base_experience": 53,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 857,
@@ -9424,7 +9424,7 @@
    "base_experience": 130,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 858,
@@ -9435,7 +9435,7 @@
    "base_experience": 255,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 859,
@@ -9446,7 +9446,7 @@
    "base_experience": 53,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 860,
@@ -9457,7 +9457,7 @@
    "base_experience": 130,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 861,
@@ -9468,7 +9468,7 @@
    "base_experience": 255,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 862,
@@ -9479,7 +9479,7 @@
    "base_experience": 260,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 863,
@@ -9490,7 +9490,7 @@
    "base_experience": 154,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 864,
@@ -9501,7 +9501,7 @@
    "base_experience": 179,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 865,
@@ -9512,7 +9512,7 @@
    "base_experience": 177,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 866,
@@ -9523,7 +9523,7 @@
    "base_experience": 182,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 867,
@@ -9534,7 +9534,7 @@
    "base_experience": 169,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 868,
@@ -9545,7 +9545,7 @@
    "base_experience": 54,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 869,
@@ -9556,7 +9556,7 @@
    "base_experience": 173,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 870,
@@ -9567,7 +9567,7 @@
    "base_experience": 165,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 871,
@@ -9578,7 +9578,7 @@
    "base_experience": 152,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 872,
@@ -9589,7 +9589,7 @@
    "base_experience": 37,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 873,
@@ -9600,7 +9600,7 @@
    "base_experience": 168,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 874,
@@ -9611,7 +9611,7 @@
    "base_experience": 165,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 875,
@@ -9622,7 +9622,7 @@
    "base_experience": 165,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 876,
@@ -9633,7 +9633,7 @@
    "base_experience": 166,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 877,
@@ -9644,7 +9644,7 @@
    "base_experience": 153,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 878,
@@ -9655,7 +9655,7 @@
    "base_experience": 66,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 879,
@@ -9666,7 +9666,7 @@
    "base_experience": 175,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 880,
@@ -9677,7 +9677,7 @@
    "base_experience": 177,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 881,
@@ -9688,7 +9688,7 @@
    "base_experience": 177,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 882,
@@ -9699,7 +9699,7 @@
    "base_experience": 177,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 883,
@@ -9710,7 +9710,7 @@
    "base_experience": 177,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 884,
@@ -9721,7 +9721,7 @@
    "base_experience": 187,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 885,
@@ -9732,7 +9732,7 @@
    "base_experience": 54,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 886,
@@ -9743,7 +9743,7 @@
    "base_experience": 144,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 887,
@@ -9754,7 +9754,7 @@
    "base_experience": 300,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 888,
@@ -9765,7 +9765,7 @@
    "base_experience": 335,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 889,
@@ -9776,7 +9776,7 @@
    "base_experience": 335,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 890,
@@ -9787,7 +9787,7 @@
    "base_experience": 345,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 891,
@@ -9798,7 +9798,7 @@
    "base_experience": 77,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 892,
@@ -9809,7 +9809,7 @@
    "base_experience": 275,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 893,
@@ -9820,7 +9820,7 @@
    "base_experience": 300,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 894,
@@ -9831,7 +9831,7 @@
    "base_experience": 290,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 895,
@@ -9842,7 +9842,7 @@
    "base_experience": 290,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 896,
@@ -9853,7 +9853,7 @@
    "base_experience": 290,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 897,
@@ -9864,7 +9864,7 @@
    "base_experience": 290,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 898,
@@ -9875,7 +9875,7 @@
    "base_experience": 250,
    "order": null,
    "is_default": 1,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10001,
@@ -9886,7 +9886,7 @@
    "base_experience": 270,
    "order": 497,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10002,
@@ -9897,7 +9897,7 @@
    "base_experience": 270,
    "order": 498,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10003,
@@ -9908,7 +9908,7 @@
    "base_experience": 270,
    "order": 499,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10004,
@@ -9919,7 +9919,7 @@
    "base_experience": 148,
    "order": 525,
    "is_default": 0,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 10005,
@@ -9930,7 +9930,7 @@
    "base_experience": 148,
    "order": 526,
    "is_default": 0,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 10006,
@@ -9941,7 +9941,7 @@
    "base_experience": 270,
    "order": 589,
    "is_default": 0,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 10007,
@@ -9952,7 +9952,7 @@
    "base_experience": 306,
    "order": 583,
    "is_default": 0,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 10008,
@@ -9963,7 +9963,7 @@
    "base_experience": 182,
    "order": 570,
    "is_default": 0,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 10009,
@@ -9974,7 +9974,7 @@
    "base_experience": 182,
    "order": 571,
    "is_default": 0,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 10010,
@@ -9985,7 +9985,7 @@
    "base_experience": 182,
    "order": 572,
    "is_default": 0,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 10011,
@@ -9996,7 +9996,7 @@
    "base_experience": 182,
    "order": 573,
    "is_default": 0,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 10012,
@@ -10007,7 +10007,7 @@
    "base_experience": 182,
    "order": 574,
    "is_default": 0,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 10013,
@@ -10018,7 +10018,7 @@
    "base_experience": 147,
    "order": 447,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10014,
@@ -10029,7 +10029,7 @@
    "base_experience": 147,
    "order": 448,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10015,
@@ -10040,7 +10040,7 @@
    "base_experience": 147,
    "order": 449,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10016,
@@ -10051,7 +10051,7 @@
    "base_experience": 161,
    "order": 649,
    "is_default": 0,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 10017,
@@ -10062,7 +10062,7 @@
    "base_experience": 189,
    "order": 655,
    "is_default": 0,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 10018,
@@ -10073,7 +10073,7 @@
    "base_experience": 270,
    "order": 755,
    "is_default": 0,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 10019,
@@ -10084,7 +10084,7 @@
    "base_experience": 261,
    "order": 742,
    "is_default": 0,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 10020,
@@ -10095,7 +10095,7 @@
    "base_experience": 261,
    "order": 744,
    "is_default": 0,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 10021,
@@ -10106,7 +10106,7 @@
    "base_experience": 270,
    "order": 748,
    "is_default": 0,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 10022,
@@ -10117,7 +10117,7 @@
    "base_experience": 315,
    "order": 751,
    "is_default": 0,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 10023,
@@ -10128,7 +10128,7 @@
    "base_experience": 315,
    "order": 750,
    "is_default": 0,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 10024,
@@ -10139,7 +10139,7 @@
    "base_experience": 261,
    "order": 753,
    "is_default": 0,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 10025,
@@ -10150,7 +10150,7 @@
    "base_experience": 163,
    "order": 789,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10026,
@@ -10161,7 +10161,7 @@
    "base_experience": 234,
    "order": 793,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10027,
@@ -10172,7 +10172,7 @@
    "base_experience": 67,
    "order": 822,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10028,
@@ -10183,7 +10183,7 @@
    "base_experience": 67,
    "order": 823,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10029,
@@ -10194,7 +10194,7 @@
    "base_experience": 67,
    "order": 824,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10030,
@@ -10205,7 +10205,7 @@
    "base_experience": 173,
    "order": 826,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10031,
@@ -10216,7 +10216,7 @@
    "base_experience": 173,
    "order": 827,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10032,
@@ -10227,7 +10227,7 @@
    "base_experience": 173,
    "order": 828,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10033,
@@ -10370,7 +10370,7 @@
    "base_experience": 275,
    "order": 261,
    "is_default": 0,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 10046,
@@ -10381,7 +10381,7 @@
    "base_experience": 210,
    "order": 187,
    "is_default": 0,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 10047,
@@ -10392,7 +10392,7 @@
    "base_experience": 210,
    "order": 296,
    "is_default": 0,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 10048,
@@ -10403,7 +10403,7 @@
    "base_experience": 210,
    "order": 315,
    "is_default": 0,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 10049,
@@ -10414,7 +10414,7 @@
    "base_experience": 315,
    "order": 327,
    "is_default": 0,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 10050,
@@ -10425,7 +10425,7 @@
    "base_experience": 284,
    "order": 338,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10051,
@@ -10436,7 +10436,7 @@
    "base_experience": 278,
    "order": 365,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10052,
@@ -10447,7 +10447,7 @@
    "base_experience": 168,
    "order": 390,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10053,
@@ -10458,7 +10458,7 @@
    "base_experience": 284,
    "order": 394,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10054,
@@ -10469,7 +10469,7 @@
    "base_experience": 179,
    "order": 397,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10055,
@@ -10480,7 +10480,7 @@
    "base_experience": 201,
    "order": 400,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10056,
@@ -10491,7 +10491,7 @@
    "base_experience": 194,
    "order": 453,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10057,
@@ -10502,7 +10502,7 @@
    "base_experience": 198,
    "order": 461,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10058,
@@ -10513,7 +10513,7 @@
    "base_experience": 315,
    "order": 553,
    "is_default": 0,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 10059,
@@ -10524,7 +10524,7 @@
    "base_experience": 219,
    "order": 556,
    "is_default": 0,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 10060,
@@ -10535,7 +10535,7 @@
    "base_experience": 208,
    "order": 568,
    "is_default": 0,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 10061,
@@ -10546,7 +10546,7 @@
    "base_experience": 243,
    "order": 780,
    "is_default": 0,
-   "generation": 1
+   "generation": 
   },
  {
    "id": 10062,
@@ -10557,7 +10557,7 @@
    "base_experience": 315,
    "order": 486,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10063,
@@ -10568,7 +10568,7 @@
    "base_experience": 315,
    "order": 488,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10064,
@@ -10579,7 +10579,7 @@
    "base_experience": 286,
    "order": 342,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10065,
@@ -10590,7 +10590,7 @@
    "base_experience": 284,
    "order": 334,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10066,
@@ -10601,7 +10601,7 @@
    "base_experience": 168,
    "order": 388,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10067,
@@ -10612,7 +10612,7 @@
    "base_experience": 207,
    "order": 429,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10068,
@@ -10623,7 +10623,7 @@
    "base_experience": 278,
    "order": 367,
    "is_default": 0,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 10069,
@@ -10634,7 +10634,7 @@
    "base_experience": 425,
    "order": 629,
    "is_default": 0,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 10070,
@@ -10645,7 +10645,7 @@
    "base_experience": 196,
    "order": 412,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10071,
@@ -10667,7 +10667,7 @@
    "base_experience": 214,
    "order": 144,
    "is_default": 0,
-   "generation": 1
+   "generation": 2
   },
  {
    "id": 10073,
@@ -10689,7 +10689,7 @@
    "base_experience": 203,
    "order": 464,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10075,
@@ -10700,7 +10700,7 @@
    "base_experience": 315,
    "order": 840,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10076,
@@ -10711,7 +10711,7 @@
    "base_experience": 315,
    "order": 481,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10077,
@@ -10722,7 +10722,7 @@
    "base_experience": 347,
    "order": 490,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10078,
@@ -10733,7 +10733,7 @@
    "base_experience": 347,
    "order": 492,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10079,
@@ -10744,7 +10744,7 @@
    "base_experience": 351,
    "order": 494,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10080,
@@ -10821,7 +10821,7 @@
    "base_experience": 306,
    "order": 842,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10087,
@@ -10832,7 +10832,7 @@
    "base_experience": 196,
    "order": 417,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10088,
@@ -10843,7 +10843,7 @@
    "base_experience": 203,
    "order": 541,
    "is_default": 0,
-   "generation": 1
+   "generation": 4
   },
  {
    "id": 10089,
@@ -10854,7 +10854,7 @@
    "base_experience": 315,
    "order": 477,
    "is_default": 0,
-   "generation": 1
+   "generation": 3
   },
  {
    "id": 10090,
@@ -10876,7 +10876,7 @@
    "base_experience": 51,
    "order": 26,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10092,
@@ -10887,7 +10887,7 @@
    "base_experience": 145,
    "order": 28,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10093,
@@ -10898,7 +10898,7 @@
    "base_experience": 145,
    "order": 29,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10094,
@@ -10964,7 +10964,7 @@
    "base_experience": 112,
    "order": 47,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10100,
@@ -10975,7 +10975,7 @@
    "base_experience": 218,
    "order": 50,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10101,
@@ -10986,7 +10986,7 @@
    "base_experience": 60,
    "order": 52,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10102,
@@ -10997,7 +10997,7 @@
    "base_experience": 158,
    "order": 54,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10103,
@@ -11008,7 +11008,7 @@
    "base_experience": 60,
    "order": 65,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10104,
@@ -11019,7 +11019,7 @@
    "base_experience": 177,
    "order": 67,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10105,
@@ -11030,7 +11030,7 @@
    "base_experience": 53,
    "order": 83,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10106,
@@ -11041,7 +11041,7 @@
    "base_experience": 149,
    "order": 85,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10107,
@@ -11052,7 +11052,7 @@
    "base_experience": 58,
    "order": 87,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10108,
@@ -11063,7 +11063,7 @@
    "base_experience": 154,
    "order": 89,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10109,
@@ -11074,7 +11074,7 @@
    "base_experience": 60,
    "order": 113,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10110,
@@ -11085,7 +11085,7 @@
    "base_experience": 137,
    "order": 115,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10111,
@@ -11096,7 +11096,7 @@
    "base_experience": 223,
    "order": 117,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10112,
@@ -11107,7 +11107,7 @@
    "base_experience": 65,
    "order": 133,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10113,
@@ -11118,7 +11118,7 @@
    "base_experience": 175,
    "order": 135,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10114,
@@ -11129,7 +11129,7 @@
    "base_experience": 186,
    "order": 153,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10115,
@@ -11140,7 +11140,7 @@
    "base_experience": 149,
    "order": 156,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10116,
@@ -11151,7 +11151,7 @@
    "base_experience": 239,
    "order": 766,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10117,
@@ -11162,7 +11162,7 @@
    "base_experience": 288,
    "order": 767,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10118,
@@ -11173,7 +11173,7 @@
    "base_experience": 219,
    "order": 836,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10119,
@@ -11184,7 +11184,7 @@
    "base_experience": 270,
    "order": 837,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10120,
@@ -11195,7 +11195,7 @@
    "base_experience": 319,
    "order": 838,
    "is_default": 0,
-   "generation": 1
+   "generation": 6
   },
  {
    "id": 10121,
@@ -11206,7 +11206,7 @@
    "base_experience": 146,
    "order": 858,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10122,
@@ -11217,7 +11217,7 @@
    "base_experience": 225,
    "order": 862,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10123,
@@ -11228,7 +11228,7 @@
    "base_experience": 167,
    "order": 866,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10124,
@@ -11239,7 +11239,7 @@
    "base_experience": 167,
    "order": 867,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10125,
@@ -11250,7 +11250,7 @@
    "base_experience": 167,
    "order": 868,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10126,
@@ -11261,7 +11261,7 @@
    "base_experience": 170,
    "order": 875,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10127,
@@ -11272,7 +11272,7 @@
    "base_experience": 217,
    "order": 878,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10128,
@@ -11283,7 +11283,7 @@
    "base_experience": 168,
    "order": 888,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10129,
@@ -11294,7 +11294,7 @@
    "base_experience": 168,
    "order": 893,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10130,
@@ -11305,7 +11305,7 @@
    "base_experience": 154,
    "order": 910,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10131,
@@ -11316,7 +11316,7 @@
    "base_experience": 154,
    "order": 911,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10132,
@@ -11327,7 +11327,7 @@
    "base_experience": 154,
    "order": 912,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10133,
@@ -11338,7 +11338,7 @@
    "base_experience": 154,
    "order": 913,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10134,
@@ -11349,7 +11349,7 @@
    "base_experience": 154,
    "order": 914,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10135,
@@ -11360,7 +11360,7 @@
    "base_experience": 154,
    "order": 915,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10136,
@@ -11371,7 +11371,7 @@
    "base_experience": 175,
    "order": 916,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10137,
@@ -11382,7 +11382,7 @@
    "base_experience": 175,
    "order": 917,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10138,
@@ -11393,7 +11393,7 @@
    "base_experience": 175,
    "order": 918,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10139,
@@ -11404,7 +11404,7 @@
    "base_experience": 175,
    "order": 919,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10140,
@@ -11415,7 +11415,7 @@
    "base_experience": 175,
    "order": 920,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10141,
@@ -11426,7 +11426,7 @@
    "base_experience": 175,
    "order": 921,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10142,
@@ -11437,7 +11437,7 @@
    "base_experience": 175,
    "order": 922,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10143,
@@ -11448,7 +11448,7 @@
    "base_experience": 167,
    "order": 928,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10144,
@@ -11459,7 +11459,7 @@
    "base_experience": 167,
    "order": 929,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10145,
@@ -11470,7 +11470,7 @@
    "base_experience": 167,
    "order": 930,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10146,
@@ -11481,7 +11481,7 @@
    "base_experience": 270,
    "order": 937,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10147,
@@ -11492,7 +11492,7 @@
    "base_experience": 270,
    "order": 958,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10148,
@@ -11525,7 +11525,7 @@
    "base_experience": 162,
    "order": 871,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10151,
@@ -11536,7 +11536,7 @@
    "base_experience": 56,
    "order": 873,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10152,
@@ -11547,7 +11547,7 @@
    "base_experience": 170,
    "order": 876,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10153,
@@ -11558,7 +11558,7 @@
    "base_experience": 159,
    "order": 885,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10154,
@@ -11569,7 +11569,7 @@
    "base_experience": 152,
    "order": 926,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10155,
@@ -11580,7 +11580,7 @@
    "base_experience": 306,
    "order": 954,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10156,
@@ -11591,7 +11591,7 @@
    "base_experience": 306,
    "order": 955,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10157,
@@ -11602,7 +11602,7 @@
    "base_experience": 339,
    "order": 956,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10158,
@@ -11613,7 +11613,7 @@
    "base_experience": 58,
    "order": 87,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10159,
@@ -11624,7 +11624,7 @@
    "base_experience": 82,
    "order": 118,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10160,
@@ -11635,7 +11635,7 @@
    "base_experience": 175,
    "order": 119,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10161,
@@ -11646,7 +11646,7 @@
    "base_experience": 63,
    "order": 120,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10162,
@@ -11657,7 +11657,7 @@
    "base_experience": 172,
    "order": 121,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10163,
@@ -11668,7 +11668,7 @@
    "base_experience": 132,
    "order": 127,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10164,
@@ -11679,7 +11679,7 @@
    "base_experience": 172,
    "order": 165,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10165,
@@ -11690,7 +11690,7 @@
    "base_experience": 161,
    "order": 184,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10166,
@@ -11701,7 +11701,7 @@
    "base_experience": 261,
    "order": 224,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10167,
@@ -11712,7 +11712,7 @@
    "base_experience": 261,
    "order": 225,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10168,
@@ -11723,7 +11723,7 @@
    "base_experience": 261,
    "order": 226,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10169,
@@ -11734,7 +11734,7 @@
    "base_experience": 172,
    "order": 123,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10170,
@@ -11745,7 +11745,7 @@
    "base_experience": 144,
    "order": 306,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10171,
@@ -11756,7 +11756,7 @@
    "base_experience": 56,
    "order": 345,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10172,
@@ -11767,7 +11767,7 @@
    "base_experience": 147,
    "order": 346,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10173,
@@ -11778,7 +11778,7 @@
    "base_experience": 63,
    "order": 653,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10174,
@@ -11789,7 +11789,7 @@
    "base_experience": 168,
    "order": 654,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10175,
@@ -11800,7 +11800,7 @@
    "base_experience": 168,
    "order": 655,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10176,
@@ -11811,7 +11811,7 @@
    "base_experience": 61,
    "order": 662,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10177,
@@ -11822,7 +11822,7 @@
    "base_experience": 165,
    "order": 718,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10178,
@@ -11833,7 +11833,7 @@
    "base_experience": 176,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10179,
@@ -11844,7 +11844,7 @@
    "base_experience": 165,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10180,
@@ -11855,7 +11855,7 @@
    "base_experience": 166,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10181,
@@ -11866,7 +11866,7 @@
    "base_experience": 335,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10182,
@@ -11877,7 +11877,7 @@
    "base_experience": 335,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10183,
@@ -11888,7 +11888,7 @@
    "base_experience": 275,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10184,
@@ -11899,7 +11899,7 @@
    "base_experience": 340,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10185,
@@ -11910,7 +11910,7 @@
    "base_experience": 340,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10186,
@@ -12053,7 +12053,7 @@
    "base_experience": 166,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 5
   },
  {
    "id": 10199,
@@ -12064,7 +12064,7 @@
    "base_experience": 270,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 7
   },
  {
    "id": 10200,
@@ -12075,7 +12075,7 @@
    "base_experience": 265,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10201,
@@ -12086,7 +12086,7 @@
    "base_experience": 265,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10202,
@@ -12097,7 +12097,7 @@
    "base_experience": 265,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10203,
@@ -12108,7 +12108,7 @@
    "base_experience": 248,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10204,
@@ -12119,7 +12119,7 @@
    "base_experience": 253,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10205,
@@ -12130,7 +12130,7 @@
    "base_experience": 170,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10206,
@@ -12141,7 +12141,7 @@
    "base_experience": 255,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10207,
@@ -12152,7 +12152,7 @@
    "base_experience": 170,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10208,
@@ -12163,7 +12163,7 @@
    "base_experience": 170,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10209,
@@ -12174,7 +12174,7 @@
    "base_experience": 179,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10210,
@@ -12185,7 +12185,7 @@
    "base_experience": 176,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10211,
@@ -12196,7 +12196,7 @@
    "base_experience": 184,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10212,
@@ -12207,7 +12207,7 @@
    "base_experience": 255,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10213,
@@ -12218,7 +12218,7 @@
    "base_experience": 255,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10214,
@@ -12229,7 +12229,7 @@
    "base_experience": 173,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10215,
@@ -12240,7 +12240,7 @@
    "base_experience": 175,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10216,
@@ -12251,7 +12251,7 @@
    "base_experience": 187,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10217,
@@ -12262,7 +12262,7 @@
    "base_experience": 345,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10218,
@@ -12273,7 +12273,7 @@
    "base_experience": 275,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10219,
@@ -12284,7 +12284,7 @@
    "base_experience": 275,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   },
  {
    "id": 10220,
@@ -12295,6 +12295,6 @@
    "base_experience": 176,
    "order": null,
    "is_default": 0,
-   "generation": 1
+   "generation": 8
   }
 ]
