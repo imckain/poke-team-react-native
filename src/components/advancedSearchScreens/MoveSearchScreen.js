@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
+import DropDownPicker from 'react-native-dropdown-picker';
 
 import SearchBarByMove from '../navigatorCards/searchBars/SearchBarByMove';
 import PokedexCard from '../../pokedex/PokedexCard';
@@ -19,12 +20,34 @@ const MoveSearchScreen = (props) => {
   const [moveSearchApi, moveResults] = useMoveResults([]);
   const [searchParam, setSearchParam] = useState('move');
   const [filteredResults, setFilteredResults] = useState([]);
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState('all');
+  const [params, setParams] = useState([
+    {label: 'All Move Types', value: 'all'},
+    {label: 'Normal', value: 1},
+    {label: 'Fighting', value: 2},
+    {label: 'Flying', value: 3},
+    {label: 'Poison', value: 4},
+    {label: 'Ground', value: 5},
+    {label: 'Rock', value: 6},
+    {label: 'Bug', value: 7},
+    {label: 'Steel', value: 9},
+    {label: 'Fire', value: 10},
+    {label: 'Water', value: 11},
+    {label: 'Grass', value: 12},
+    {label: 'Electric', value: 13},
+    {label: 'Psychic', value: 14},
+    {label: 'Ice', value: 15},
+    {label: 'Dragon', value: 16},
+    {label: 'Dark', value: 17},
+    {label: 'Fairy', value: 18},
+  ])
 
-  const showPokeDex = (param) => {
+  const showPokeDex = (el, param) => {
     if (param === 'move') {
       return <FlatList 
         horizontal={false}
-        data={moveData}
+        data={el}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
@@ -61,7 +84,7 @@ const MoveSearchScreen = (props) => {
       } catch (error) {
         console.log(error);
       }
-    } else return showPokeDex(param)
+    } else return showPokeDex(el, param)
   }
   
   const searchMoves = (el, param) => {
@@ -73,6 +96,11 @@ const MoveSearchScreen = (props) => {
       console.log(error);
     }
   };
+
+  const showType = (el, param) => {
+    if (param === 'all') return el
+    return el.filter(item => item.type_id === param)
+  }
 
   useEffect(() => {
     searchMoves(moveData, searchTerm)
@@ -116,7 +144,34 @@ const MoveSearchScreen = (props) => {
           {showMoveCard(searchTerm)}
         </View>
         <View style={{height: 5 }} />
-        {displayFilteredResults(filteredResults, searchParam)}
+        <DropDownPicker 
+          open={open}
+          value={value}
+          items={params}
+          setOpen={setOpen}
+          setValue={setValue}
+          setItems={setParams}
+          // searchable={true}
+          searchPlaceholder='Search Generations'
+          searchContainerStyle={{ borderWidth: 0 }}
+          searchTextInputStyle={{ color: '#fff', paddingLeft: 6, fontStyle: 'italic', fontSize: 20 }}
+          searchPlaceholderTextColor='rgba(223, 223, 223, 0.377)'
+          placeholder='Generations'
+          style={styles.dropDown}
+          textStyle={{
+            color: '#fff',
+            fontSize: 24,
+            paddingLeft: 2,
+            fontWeight: '500',
+          }}
+          dropDownContainerStyle={[styles.dropDown, { backgroundColor: '#464450', paddingHorizontal: 32 }]}
+          itemSeparator={true}
+          listItemLabelStyle={{ fontWeight: '400', fontSize: 24 }}
+          selectedItemLabelStyle={{ fontWeight: '600' }}
+          closeAfterSelecting={true}
+          theme='DARK'
+        />
+        {displayFilteredResults(showType(filteredResults, value), searchParam)}
       </View>
     </HideKeyboard>
   );
@@ -135,6 +190,13 @@ const styles = StyleSheet.create({
   },
   searchBar:{
     paddingHorizontal: 6
+  },
+  dropDown: {
+    backgroundColor: '#464450a6',
+    marginBottom: 22,
+    borderWidth: 0,
+    width: '90%',
+    alignSelf: 'center'
   },
   searchSettingIcon: {
     paddingRight: 20
