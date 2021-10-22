@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   name: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 16,
+    fontSize: 22,
     fontWeight: '400',
     marginHorizontal: 12,
   },
