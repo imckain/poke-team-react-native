@@ -18,7 +18,7 @@ const TypeDetailModal = (props) => {
     <View style={styles.container}>
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
-          <TypeNameAndClass alignSelf={'center'} fontSize={38} results={results} />
+          <TypeNameAndClass alignSelf={'center'} fontSize={48} results={results} />
           <TypeDamage navigation={props.navigation} results={results} />
           <TypeMoves navigation={props.navigation} results={results} />
           <TypePokemon navigation={props.navigation} results={results} />
