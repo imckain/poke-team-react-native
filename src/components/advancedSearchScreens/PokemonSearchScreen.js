@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
+import DropDownPicker from 'react-native-dropdown-picker';
 
 import SearchBarByName from '../navigatorCards/searchBars/SearchBarByName';
 import ShowAdvancedSearchResult from '../resultsCards/ShowAdvancedSearchResult';
@@ -21,6 +22,19 @@ const PokemonSearchScreen = (props) => {
   const [advancedSearchAPI, advancedResults] = useAdvancedResults([]);
   const [searchParam, setSearchParam] = useState('pokemon');
   const [filteredResults, setFilteredResults] = useState([]);
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState('all');
+  const [params, setParams] = useState([
+    {label: 'All Generations', value: 'all'},
+    {label: 'Gen I', value: 1},
+    {label: 'Gen II', value: 2},
+    {label: 'Gen III', value: 3},
+    {label: 'Gen IV', value: 4},
+    {label: 'Gen V', value: 5},
+    {label: 'Gen VI', value: 6},
+    {label: 'Gen VII', value: 7},
+    {label: 'Gen VIII', value: 8},
+  ])
   
   const showPokeDex = (param) => {
     if (param === 'pokemon') {
@@ -119,6 +133,33 @@ const PokemonSearchScreen = (props) => {
           {showPokemonCard(searchTerm)}
         </View>
         <View style={{height: 5 }} />
+        <DropDownPicker 
+          open={open}
+          value={value}
+          items={params}
+          setOpen={setOpen}
+          setValue={setValue}
+          setItems={setParams}
+          // searchable={true}
+          searchPlaceholder='Search Generations'
+          searchContainerStyle={{ borderWidth: 0 }}
+          searchTextInputStyle={{ color: '#fff', paddingLeft: 6, fontStyle: 'italic', fontSize: 20 }}
+          searchPlaceholderTextColor='rgba(223, 223, 223, 0.377)'
+          placeholder='Generations'
+          style={styles.dropDown}
+          textStyle={{
+            color: '#fff',
+            fontSize: 24,
+            paddingLeft: 2,
+            fontWeight: '500',
+          }}
+          dropDownContainerStyle={[styles.dropDown, { backgroundColor: '#464450', paddingHorizontal: 32 }]}
+          itemSeparator={true}
+          listItemLabelStyle={{ fontWeight: '400', fontSize: 24 }}
+          selectedItemLabelStyle={{ fontWeight: '600' }}
+          closeAfterSelecting={true}
+          theme='DARK'
+        />
         {displayFilteredResults(filteredResults, searchParam)}
       </View>
     </HideKeyboard>
@@ -136,6 +177,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 80,
     marginBottom: 5
+  },
+  dropDown: {
+    backgroundColor: '#464450a6',
+    marginBottom: 22,
+    borderWidth: 0,
+    width: '90%',
+    alignSelf: 'center'
   },
   searchBar:{
     paddingHorizontal: 6
