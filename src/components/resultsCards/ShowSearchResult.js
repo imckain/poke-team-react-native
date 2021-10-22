@@ -15,29 +15,36 @@ const ShowSearchResult = (props) => {
 
   return (
     <View>
-      <View style={styles.mainCardContainer}>
-        <View style={styles.mainInfo}>
-          <PokemonNameAndId fontSize={26} results={results} />
-          <FrontSprite width={120} height={120} results={results} />
-        </View>
-        <View style={styles.detailInfo}>
-          <BaseStats headerFontSize={22} detailFontSize={14} results={results} />
-          <TypeShowOnCard flexDirection={'row'} margin={7} headerFontSize={16} detailFontSize={14} results={results} />
+      <View style={styles.container}>
+        <PokemonNameAndId lines={1} fontSize={38} results={results} />
+        <View style={styles.mainCardContainer}>
+          <View style={styles.mainInfo}>
+            <FrontSprite width={120} height={120} results={results} />
+          </View>
+          <View style={styles.detailInfo}>
+            <BaseStats headerFontSize={20} detailFontSize={15} results={results} />
+            <TypeShowOnCard margin={7} detailFontSize={14} results={results} />
+          </View>
         </View>
       </View>
-      <Text style={styles.infoNotice}>Tap for more info</Text>
+      <Text allowFontScaling={false} style={styles.infoNotice}>Tap for more info</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  mainCardContainer: {
-    flexDirection: 'row',
-    borderRadius: 10,
+  container: {
     width: '90%',
     height: 'auto',
     alignSelf: 'center',
     backgroundColor: '#464450',
+    borderRadius: 10,
+  },
+  mainCardContainer: {
+    flexDirection: 'row',
+    height: 'auto',
+    alignSelf: 'center',
+    alignItems: 'center'
   },
   mainInfo: {
     flexDirection: 'column',
@@ -55,7 +62,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#ffffffa7',
     fontStyle: 'italic',
-    paddingTop: 6,
+    paddingTop: 2,
+    fontSize: 12
   }
 });
 
