@@ -36,11 +36,11 @@ const PokemonSearchScreen = (props) => {
     {label: 'Gen VIII', value: 8},
   ])
   
-  const showPokeDex = (param) => {
+  const showPokeDex = (el, param) => {
     if (param === 'pokemon') {
       return <FlatList 
         horizontal={false}
-        data={pokemonData}
+        data={el}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
@@ -77,7 +77,7 @@ const PokemonSearchScreen = (props) => {
       } catch (error) {
         console.log(error);
       }
-    } else return showPokeDex(param)
+    } else return showPokeDex(el, param)
   }
   
   const searchPokemon = (el, param) => {
@@ -89,6 +89,11 @@ const PokemonSearchScreen = (props) => {
       console.log(error);
     }
   };
+
+  const showGeneration = (el, param) => {
+    if (param === 'all') return el
+    return el.filter(item => item.generation === param)
+  }
 
   useEffect(() => {
     searchPokemon(pokemonData, searchTerm)
@@ -160,7 +165,7 @@ const PokemonSearchScreen = (props) => {
           closeAfterSelecting={true}
           theme='DARK'
         />
-        {displayFilteredResults(filteredResults, searchParam)}
+        {displayFilteredResults(showGeneration(filteredResults, value), searchParam)}
       </View>
     </HideKeyboard>
   );
