@@ -68,7 +68,7 @@ const LocationDetailModal = (props) => {
             return (i.version.name + '  ')
           })
           return (
-            <View style={{paddingBottom: 12}}>
+            <View style={styles.encounterContainer}>
               <View style={styles.versionHeader}>
                 <Text adjustsFontSizeToFit={true}  numberOfLines={2} style={styles.versionText}>{version}</Text>
               </View>
@@ -111,7 +111,7 @@ const LocationDetailModal = (props) => {
         closeAfterSelecting={true}
         theme='DARK'
         />
-      <View style={{paddingBottom: 80}}>
+      <View>
         {locationBox(showVersionEncounters(results, value))}
       </View>
     </View>
@@ -126,44 +126,51 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: '#353340',
     paddingHorizontal: 12,
-    paddingTop: 22
+    paddingTop: 32,
+    paddingBottom: 120,
   },
   dropDown: {
     backgroundColor: '#464450a6',
     marginBottom: 22,
     borderWidth: 0,
   },
+  encounterContainer: { 
+    borderColor: '#464450a6', 
+    borderWidth: 2, 
+    borderRadius: 10, 
+    height: 'auto', 
+    marginVertical: 16, 
+  },
   versionHeader: {
     flexDirection: 'row',
     paddingLeft: 12,
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    paddingTop: 12,
+    paddingBottom: 6
   },
   versionText: {
     color: '#fff',
     fontWeight: '600',
     paddingRight: 10,
-    fontSize: 28,
+    fontSize: 26,
     textTransform: 'capitalize',
   },
   locationBox: {
-    paddingVertical: 5,
-    borderRadius: 10,
+    paddingVertical: 6,
     backgroundColor: '#464450a6',
-    marginVertical: 16,
-    marginHorizontal: 6,
     alignContent: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    width: 'auto'
+    width: 'auto',
   },
   locationName: {
     color: 'rgb(223, 223, 223)',
     fontSize: 22,
     fontWeight: '600',
-    paddingHorizontal: 12,
-    paddingVertical: 3,
+    paddingHorizontal: 24,
+    paddingVertical: 6,
     textTransform: 'capitalize',
   },
 });
 
-export default LocationDetailModal;
+export default React.memo(LocationDetailModal);
