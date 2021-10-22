@@ -16,7 +16,7 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
         <View style={styles.headerWrapper}>
           <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(false)}>
             <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities</Text>  
-            <Entypo name="plus" size={22} color="rgb(175, 175, 175)" />
+            <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
           </Pressable>
         </View>
       )
@@ -25,7 +25,7 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
         <View style={styles.headerWrapper}>
           <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(true)}>
             <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities</Text>  
-            <Entypo name="minus" size={22} color="rgb(175, 175, 175)" />
+            <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
           </Pressable>
         </View>
       )

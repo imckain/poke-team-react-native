@@ -19,7 +19,7 @@ const MovesDetail = ({ results, navigation, margin }) => {
         <View style={styles.headerWrapper}>
           <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(false)}>
             <Text allowFontScaling={false} style={[styles.headerText]}>Moves</Text>  
-            <Entypo name="plus" size={22} color="rgb(175, 175, 175)" />
+            <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
           </Pressable>
         </View>
       )
@@ -28,7 +28,7 @@ const MovesDetail = ({ results, navigation, margin }) => {
         <View style={styles.headerWrapper}>
           <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(true)}>
             <Text allowFontScaling={false} style={[styles.headerText]}>Moves</Text>  
-            <Entypo name="minus" size={22} color="rgb(175, 175, 175)" />
+            <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
           </Pressable>
         </View>
       )
@@ -88,7 +88,7 @@ const MovesDetail = ({ results, navigation, margin }) => {
                   return navigate(item.move.url, item.move.name)
                 }}
               >
-                <Text allowFontScaling={false} style={[styles.moveText]}>{item.move.name.replace('-', ' ')}</Text>
+                <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.moveText]}>{item.move.name.replace('-', ' ')}</Text>
               </Pressable>
               <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
               <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
   headerText: {
     color: '#fff',
     fontWeight: '600',
-    fontSize: 22,
+    fontSize: 28,
   },
   scrollViewStyle: {
     marginBottom: 180,

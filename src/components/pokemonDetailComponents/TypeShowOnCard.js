@@ -40,10 +40,10 @@ const styles = StyleSheet.create({
   },
   typeText: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '600',
     textAlign: 'center',
-    paddingHorizontal: 12,
+    paddingHorizontal: 6,
     paddingVertical: 3,
     textShadowColor: 'rgb(0, 0, 0)',
     textShadowOffset: { width: 0, height: 0},
