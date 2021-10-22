@@ -65,7 +65,7 @@ const LocationDetailModal = (props) => {
         keyExtractor={(item) => item.location_area.url}
         renderItem={({ item }) => {
           const version = item.version_details.map(i => {
-            return (i.version.name + ' ')
+            return (i.version.name + '  ')
           })
           return (
             <View style={{paddingBottom: 12}}>
