@@ -35,12 +35,12 @@ const styles = StyleSheet.create({
   subHeaderText: {
     color: '#fff',
     fontWeight: '600',
-    fontSize: 22,
+    fontSize: 28,
     paddingHorizontal: 12
   },
   effect: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 16,
+    fontSize: 19,
     fontWeight: '400',
     paddingHorizontal: 24,
   },

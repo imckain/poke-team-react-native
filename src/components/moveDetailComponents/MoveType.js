@@ -30,7 +30,7 @@ const MoveType = ({ results, navigation, detailFontSize, headerFontSize, margin,
           }}
           onPressOut={() => navigate(el.type.url, el.type.name)}
         >
-          <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize }]}>{isValid(el) + ' '}</Text>
+          <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize }]}>{isValid(el)}</Text>
         </Pressable>
       </View>
     )

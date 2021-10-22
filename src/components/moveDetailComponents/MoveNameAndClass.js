@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 import checkType from '../functions/checkType';
 
-const MoveNameAndClass = ({ results, fontSize, alignSelf, param }) => {
+const MoveNameAndClass = ({ results, fontSize, alignSelf, param, lines, typeFontSize, attributeFontSize, textAlign }) => {
   const isValid = (el) => {
     if (el.damage_class === null) {
       return 'N/A'
@@ -10,22 +10,20 @@ const MoveNameAndClass = ({ results, fontSize, alignSelf, param }) => {
   }
 
   const showType = (el) => {
-    if (el === 'card') {
-      return (
-        <View style={[styles.typeBox, { backgroundColor: checkType(results.type.name) }]}>
-          <Text allowFontScaling={false} style={[styles.typeText]}>{results.type.name}</Text>
-        </View>
-      )
-    }
+    return el === 'card' ? <View style={[styles.typeBox, { backgroundColor: checkType(results.type.name) }]}><Text allowFontScaling={false} style={[styles.typeText, { fontSize: typeFontSize }]}>{results.type.name}</Text></View> : null
+  }
+
+  const showAttribute = (el) => {
+    return el === 'modal' ? <Text allowFontScaling={false} style={[styles.damageClass, { alignSelf: alignSelf, fontSize: attributeFontSize }]}>Damage Class:  <Text style={[styles.damageClassSub, { fontSize: attributeFontSize }]}>{isValid(results)}</Text></Text> : null
   }
 
   return (
     <View style={[styles.dmgClassView, { alignSelf: alignSelf }]}>
-      <View style={{ flexDirection: 'row', marginBottom: 6, alignSelf: alignSelf }}>
-        <Text allowFontScaling={false} style={[styles.name, { fontSize: fontSize, alignSelf: alignSelf }]}>{results.name.replace('-', ' ')}</Text>
+      <View style={{ flexDirection: 'column', alignItems: 'flex-start', alignSelf: alignSelf }}>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={lines} style={[styles.name, { fontSize: fontSize, alignSelf: alignSelf, textAlign: textAlign }]}>{results.name.replace('-', ' ')}</Text>
         {showType(param)}
       </View>
-      <Text allowFontScaling={false} style={[styles.damageClass, { alignSelf: alignSelf }]}>Damage Class:  <Text style={styles.damageClassSub}>{isValid(results)}</Text></Text>
+      {showAttribute(param)}
     </View>
   );
 };
@@ -45,6 +43,8 @@ const styles = StyleSheet.create({
     textShadowRadius: 3,
     alignSelf: 'center',
     textTransform: 'capitalize',
+    paddingBottom: 6
+    
   },
   damageClass: {
     color: '#fff',
@@ -67,10 +67,11 @@ const styles = StyleSheet.create({
   typeBox: {
     borderRadius: 10,
     backgroundColor: '#464450',
-    marginLeft: 12,
     justifyContent: 'center',
     width: 'auto',
     height: 'auto',
+    marginBottom: 6,
+    paddingVertical: 3,
   },
   typeText: {
     color: '#fff',
