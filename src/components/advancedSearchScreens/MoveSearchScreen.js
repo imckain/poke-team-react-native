@@ -151,11 +151,6 @@ const MoveSearchScreen = (props) => {
           setOpen={setOpen}
           setValue={setValue}
           setItems={setParams}
-          // searchable={true}
-          searchPlaceholder='Search Generations'
-          searchContainerStyle={{ borderWidth: 0 }}
-          searchTextInputStyle={{ color: '#fff', paddingLeft: 6, fontStyle: 'italic', fontSize: 20 }}
-          searchPlaceholderTextColor='rgba(223, 223, 223, 0.377)'
           placeholder='Generations'
           style={styles.dropDown}
           textStyle={{
