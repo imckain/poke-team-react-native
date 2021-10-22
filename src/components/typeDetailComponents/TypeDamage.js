@@ -23,7 +23,7 @@ const TypeDamage = ({ results, navigation }) => {
         <View style={styles.headerWrapper}>
           <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(false)}>
             <Text allowFontScaling={false} style={[styles.headerText]}>Damage Multipliers</Text>  
-            <Entypo name="plus" size={22} color="rgb(175, 175, 175)" />
+            <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
           </Pressable>
         </View>
       )
@@ -32,7 +32,7 @@ const TypeDamage = ({ results, navigation }) => {
         <View style={styles.headerWrapper}>
           <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(true)}>
             <Text allowFontScaling={false} style={[styles.headerText]}>Damage Multipliers</Text>  
-            <Entypo name="minus" size={22} color="rgb(175, 175, 175)" />
+            <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
           </Pressable>
         </View>
       )
@@ -45,7 +45,7 @@ const TypeDamage = ({ results, navigation }) => {
         <View style={styles.headerWrapper}>
           <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => fn(false)}>
             <Text allowFontScaling={false} style={styles.dmgCaseHeader}>{dmg}</Text> 
-            <Entypo name="plus" size={16} color="rgb(175, 175, 175)" />
+            <Entypo name="plus" size={24} color="rgb(175, 175, 175)" />
           </Pressable>
         </View>
       )
@@ -54,7 +54,7 @@ const TypeDamage = ({ results, navigation }) => {
         <View style={styles.headerWrapper}>
           <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => fn(true)}>
             <Text allowFontScaling={false} style={styles.dmgCaseHeader}>{dmg}</Text> 
-            <Entypo name="minus" size={16} color="rgb(175, 175, 175)" />
+            <Entypo name="minus" size={24} color="rgb(175, 175, 175)" />
           </Pressable>
         </View>
       )
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
   headerText: {
     color: '#fff',
     fontWeight: '600',
-    fontSize: 22,
+    fontSize: 28,
   },
   headerWrapper: {
     width: '100%',
@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
   dmgCaseHeader: {
     color: '#fff',
     fontWeight: '600',
-    fontSize: 16,
+    fontSize: 22,
   },
   dmgResultsContainer: {
     width: '100%',

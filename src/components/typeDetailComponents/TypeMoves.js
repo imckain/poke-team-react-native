@@ -18,7 +18,7 @@ const TypeMoves = ({ results, navigation }) => {
         <View style={styles.headerWrapper}>
           <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(false)}>
             <Text allowFontScaling={false} style={[styles.headerText]}>Moves</Text>  
-            <Entypo name="plus" size={22} color="rgb(175, 175, 175)" />
+            <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
           </Pressable>
         </View>
       )
@@ -27,7 +27,7 @@ const TypeMoves = ({ results, navigation }) => {
         <View style={styles.headerWrapper}>
           <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(true)}>
             <Text allowFontScaling={false} style={[styles.headerText]}>Moves</Text>  
-            <Entypo name="minus" size={22} color="rgb(175, 175, 175)" />
+            <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
           </Pressable>
         </View>
       )
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   headerText: {
     color: '#fff',
     fontWeight: '600',
-    fontSize: 22,
+    fontSize: 28,
   },
   headerWrapper: {
     width: '100%',
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   },
   moveText: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 16,
+    fontSize: 24,
     fontWeight: '600',
     textAlign: 'center',
     paddingHorizontal: 12,
