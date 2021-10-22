@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
   },
   typeBox: {
     paddingVertical: 3,
-    paddingHorizontal: 6,
     borderRadius: 10,
     backgroundColor: '#464450',
     margin: 7,
@@ -35,7 +34,6 @@ const styles = StyleSheet.create({
   },
   typeText: {
     color: 'rgb(223, 223, 223)',
-    fontSize: 18,
     fontWeight: '600',
     textAlign: 'center',
     paddingHorizontal: 12,

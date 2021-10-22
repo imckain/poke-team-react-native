@@ -4,7 +4,7 @@ import { Text, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import checkType from '../components/functions/checkType';
 
-const PokedexMove = ({ results, fontSize, detailFontSize }) => {
+const PokedexMove = ({ results, fontSize, detailFontSize, lines, alignSelf }) => {
   const checkForNull = (el) => {
     if (el === null) return 'N/A'
     else return el
@@ -71,12 +71,10 @@ const PokedexMove = ({ results, fontSize, detailFontSize }) => {
 
   return (
     <View style={styles.container}>
-      <View style={{flexDirection: 'column', paddingHorizontal: 12, paddingVertical: 4}}>
-        <View style={{ flexDirection: 'row', marginBottom: 2 }}>
-          <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize }]}>{results.identifier.replace('-', ' ')}</Text>
-          <View style={[styles.typeBox, { backgroundColor: checkType(results.type_id) }]}>
-            <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize }]}>{showTypeName(results.type_id)}</Text>
-          </View>
+      <View style={[styles.moveInfo]}>
+        <Text allowFontScaling={false} numberOfLines={lines} adjustsFontSizeToFit={true} style={[styles.name, {fontSize: fontSize }]}>{results.identifier.replace('-', ' ')}</Text>
+        <View style={[styles.typeBox, { backgroundColor: checkType(results.type_id) }]}>
+          <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize, alignSelf: alignSelf, alignItems: 'center' }]}>{showTypeName(results.type_id)}</Text>
         </View>
         <Text allowFontScaling={false} style={styles.attributes}>Power: {checkForNull(results.power)} | PP: {checkForNull(results.pp)} | Acc: {checkForNull(results.accuracy)}</Text>
       </View>
@@ -92,6 +90,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '100%'
   },
+  moveInfo: {
+    flexDirection: 'column', 
+    paddingLeft: 12, 
+    paddingVertical: 4, 
+    alignItems: 'flex-start',
+    width: '80%'
+  },
   name: {
     color: '#fff',
     fontWeight: '600',
@@ -102,23 +107,23 @@ const styles = StyleSheet.create({
   },
   attributes: {
     color: 'rgb(175, 175, 175)',
-    fontSize: 14,
-    marginTop: 3,
+    fontSize: 18,
     marginBottom: 3
   },
   typeBox: {
     borderRadius: 10,
     backgroundColor: '#464450',
-    marginLeft: 12,
-    alignContent: 'center',
     justifyContent: 'center',
     width: 'auto',
+    height: 'auto',
+    marginVertical: 6,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
   },
   typeText: {
     color: '#fff',
     fontWeight: '600',
     textAlign: 'center',
-    paddingHorizontal: 10,
     textShadowColor: 'rgb(0, 0, 0)',
     textShadowOffset: { width: 0, height: 0},
     textShadowRadius: 4,
