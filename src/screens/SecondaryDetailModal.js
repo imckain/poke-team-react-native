@@ -77,11 +77,11 @@ const SecondaryDetailModal = (props) => {
   };
   
   const isLocationAvailable = () => {
-    if (urlResults[0] === undefined) return <View style={styles.headerWrapper}><Text style={[styles.locationNavigation, {fontStyle: 'italic', color: 'rgb(175, 175, 175)'}]}>Encounter Details Not Available</Text></View>
+    if (urlResults[0] === undefined) return <View style={[styles.headerWrapper, { width: '90%' }]}><Text adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.locationNavigation, {fontStyle: 'italic', color: 'rgb(175, 175, 175)'}]}>Encounter Details Not Available</Text></View>
     else return (
-      <View style={[styles.headerWrapper, {flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignItems: 'baseline'}]}>
-        <Text style={styles.locationNavigation}>Encounter Details</Text>  
-        <Entypo name="triangle-right" size={22} color="rgb(175, 175, 175)" />
+      <View style={[styles.headerWrapper, {flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignItems: 'center'}]}>
+        <Text adjustsFontSizeToFit={true} numberOfLines={1} style={styles.locationNavigation}>Encounter Details</Text>  
+        <Entypo name="triangle-right" size={32} color="rgb(175, 175, 175)" />
       </View>
     )
   }
@@ -94,14 +94,14 @@ const SecondaryDetailModal = (props) => {
     <View style={styles.container}>
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
-          <PokemonNameAndId fontSize={34} results={results} />
+          <PokemonNameAndId lines={1} fontSize={48} results={results} />
           <View style={{height: 20}} />
           {changeSprites(isShiny)}
         </View>
         <View style={styles.detailInfo}>
-          <TypeDetail navigation={props.navigation} margin={13} headerFontSize={22} detailFontSize={18} results={results} />
-          <AbilityDetail navigation={props.navigation} margin={13} headerFontSize={22} detailFontSize={18} results={results} />
-          <ModalBaseStats headerFontSize={22} detailFontSize={16} margin={13} results={results} />
+          <TypeDetail navigation={props.navigation} margin={13} detailFontSize={24} results={results} />
+          <AbilityDetail navigation={props.navigation} margin={13} headerFontSize={28} detailFontSize={24} results={results} />
+          <ModalBaseStats headerFontSize={28} detailFontSize={22} margin={13} results={results} />
           <SecondaryMovesDetail navigation={props.navigation} margin={13} results={results} />
           <Pressable 
             onPressIn={async() => {
@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
   locationNavigation: {
     color: '#fff',
     fontWeight: '600',
-    fontSize: 22
+    fontSize: 28
   },
 });
 
