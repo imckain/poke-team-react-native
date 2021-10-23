@@ -6,7 +6,7 @@ export default () => {
   const [apiErrorMessage, setApiErrorMessage] = useState('');
 
   const searchAPI = useCallback(async (defaultTerm) => {
-    if (defaultTerm === '') { return null }
+    if (defaultTerm === '' || defaultTerm === undefined) { return setResults(null) }
     try {
       const response = await pokeApi.get(`https://pokeapi.co/api/v2/pokemon/${defaultTerm}`);
       setResults([response.data])

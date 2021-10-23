@@ -6,7 +6,7 @@ export default () => {
   const [advancedApiErrorMessage, setAdvancedApiErrorMessage] = useState('');
   
   const typeSearchApi = useCallback(async (defaultTerm) => {
-    if (defaultTerm === '') { return null }
+    if (defaultTerm === '' || defaultTerm === undefined) { return setTypeResults(null) }
     try {
       const response = await pokeApi.get(`https://pokeapi.co/api/v2/type/${defaultTerm}`);
       setTypeResults([response.data])
