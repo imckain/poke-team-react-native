@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 const PokedexNameAndId = ({ results, fontSize, numFontSize }) => {
   return (
     <View style={styles.container}>
-      <View style={{flexDirection: 'row', alignItems: 'baseline', width: '70%'}}>
+      <View style={{flexDirection: 'row', alignItems: 'center', width: '70%'}}>
         <Text style={[styles.name, {fontSize: numFontSize, color: 'rgba(255, 255, 255, 0.5)'}]}>{results.id}</Text>
         <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.name, { fontSize: fontSize }]}>{results.identifier.replace('-', ' ')}</Text> 
       </View>
