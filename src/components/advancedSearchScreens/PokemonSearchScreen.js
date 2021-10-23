@@ -159,6 +159,8 @@ const PokemonSearchScreen = (props) => {
           selectedItemLabelStyle={{ fontWeight: '600' }}
           closeAfterSelecting={true}
           theme='DARK'
+          // listMode='MODAL'
+          listMode='FLATLIST'
         />
         {displayFilteredResults(showGeneration(filteredResults, value), searchParam)}
       </View>
