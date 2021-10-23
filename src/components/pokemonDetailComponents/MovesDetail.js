@@ -17,7 +17,7 @@ const MovesDetail = ({ results, navigation, margin }) => {
     if (el === true) {
       return (
         <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(false)}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}} onPressIn={() => setCollapsed(false)}>
             <Text allowFontScaling={false} style={[styles.headerText]}>Moves</Text>  
             <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
           </Pressable>
@@ -26,7 +26,7 @@ const MovesDetail = ({ results, navigation, margin }) => {
     } if (el === false) {
       return(
         <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(true)}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}} onPressIn={() => setCollapsed(true)}>
             <Text allowFontScaling={false} style={[styles.headerText]}>Moves</Text>  
             <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
           </Pressable>
@@ -141,7 +141,6 @@ const MovesDetail = ({ results, navigation, margin }) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
-    alignItems: 'stretch',
     width: '100%',
     borderRadius: 10,
     backgroundColor: '#464450a6',
@@ -161,7 +160,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
   },
   scrollViewStyle: {
-    marginBottom: 180,
+    paddingHorizontal: 12,
     flexDirection: 'row',
     flexWrap: 'wrap',
     width: '100%',
