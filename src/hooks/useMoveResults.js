@@ -6,7 +6,7 @@ export default () => {
   const [advancedApiErrorMessage, setAdvancedApiErrorMessage] = useState('');
   
   const moveSearchApi = useCallback(async (defaultTerm) => {
-    if (defaultTerm === '') { return null }
+    if (defaultTerm === '' || defaultTerm === undefined) { return setMoveResults(null) }
     try {
       const response = await pokeApi.get(`https://pokeapi.co/api/v2/move/${defaultTerm}`);
       setMoveResults([response.data])
