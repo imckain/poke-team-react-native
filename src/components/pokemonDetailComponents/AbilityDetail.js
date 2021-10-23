@@ -7,14 +7,14 @@ import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
 import { Entypo } from '@expo/vector-icons';
 
 const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, navigation }) => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
 
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
       return (
         <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(false)}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}} onPressIn={() => setCollapsed(false)}>
             <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities</Text>  
             <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
           </Pressable>
@@ -23,7 +23,7 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
     } if (el === false) {
       return(
         <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(true)}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}} onPressIn={() => setCollapsed(true)}>
             <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities</Text>  
             <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
           </Pressable>

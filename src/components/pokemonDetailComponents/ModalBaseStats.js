@@ -5,13 +5,13 @@ import Collapsible from 'react-native-collapsible';
 import { Entypo } from '@expo/vector-icons';
 
 const ModalBaseStats = ({ results, headerFontSize, detailFontSize, margin }) => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
       return (
         <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(false)}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}} onPressIn={() => setCollapsed(false)}>
             <Text allowFontScaling={false} style={[styles.baseStatHeaderText, { fontSize: headerFontSize }]}>Base Stats</Text>  
             <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
           </Pressable>
@@ -20,7 +20,7 @@ const ModalBaseStats = ({ results, headerFontSize, detailFontSize, margin }) => 
     } if (el === false) {
       return(
         <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline'}} onPressIn={() => setCollapsed(true)}>
+          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}} onPressIn={() => setCollapsed(true)}>
             <Text allowFontScaling={false} style={[styles.baseStatHeaderText, { fontSize: headerFontSize }]}>Base Stats</Text>  
             <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
           </Pressable>
