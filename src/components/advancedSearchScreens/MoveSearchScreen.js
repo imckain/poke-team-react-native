@@ -131,8 +131,8 @@ const MoveSearchScreen = (props) => {
     }
   }
 
-  const showClear = (el) => {
-    if(el !== null) {
+  const showClear = (el, term) => {
+    if(el !== null || term !== '') {
       return <Pressable 
       onPress={async() => {
         await moveSearchApi()
@@ -159,7 +159,7 @@ const MoveSearchScreen = (props) => {
           />
         </View>
         <View style={{height: 'auto'}}>
-          {showClear(moveResults)}
+          {showClear(moveResults, searchTerm)}
           {showMoveCard(searchTerm)}
         </View>
         <View style={{height: 5 }} />

@@ -118,8 +118,8 @@ const PokemonSearchScreen = (props) => {
     } else return null;
   }
 
-  const showClear = (el) => {
-    if(el !== null) {
+  const showClear = (el, term) => {
+    if(el !== null || term !== '') {
       return <Pressable 
       onPress={async() => {
         await advancedSearchAPI()
@@ -147,7 +147,7 @@ const PokemonSearchScreen = (props) => {
         </View>
         <View style={{height: 'auto'}}>
           <View>
-            {showClear(advancedResults)}
+            {showClear(advancedResults, searchTerm)}
             {showPokemonCard(searchTerm)}
           </View>
         </View>
