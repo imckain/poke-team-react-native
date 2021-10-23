@@ -49,9 +49,7 @@ const LocationDetailModal = (props) => {
   } else results = props.route.params.results
 
   const showVersionEncounters = (el, param) => {
-    if (param === 'all') {
-      return el
-    }
+    if (param === 'all') return el
     return el.filter(item => item.version_details.some(i => i.version.name === param))
   }
   
@@ -94,19 +92,19 @@ const LocationDetailModal = (props) => {
         searchable={true}
         searchPlaceholder='Search Versions'
         searchContainerStyle={{ borderWidth: 0 }}
-        searchTextInputStyle={{ color: '#fff', paddingLeft: 6, fontStyle: 'italic', fontSize: 26 }}
+        searchTextInputStyle={{ color: '#fff', paddingLeft: 6, fontStyle: 'italic', fontSize: 20 }}
         searchPlaceholderTextColor='rgba(223, 223, 223, 0.377)'
         placeholder='Select a Version'
         style={styles.dropDown}
         textStyle={{
           color: '#fff',
-          fontSize: 32,
+          fontSize: 26,
           paddingLeft: 2,
           fontWeight: '500',
         }}
         dropDownContainerStyle={[styles.dropDown, { backgroundColor: '#464450', paddingHorizontal: 32 }]}
         itemSeparator={true}
-        listItemLabelStyle={{ fontWeight: '400', fontSize: 26 }}
+        listItemLabelStyle={{ fontWeight: '400', fontSize: 22 }}
         selectedItemLabelStyle={{ fontWeight: '600' }}
         closeAfterSelecting={true}
         theme='DARK'
