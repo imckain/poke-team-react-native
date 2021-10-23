@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     width: '90%',
     height: 'auto',
     alignSelf: 'center',
-    backgroundColor: '#464450',
+    backgroundColor: '#464450a6',
     borderRadius: 10,
   },
   mainCardContainer: {

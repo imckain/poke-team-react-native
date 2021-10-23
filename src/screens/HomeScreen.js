@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: 12,
     justifyContent: 'space-evenly',
-    backgroundColor: '#464450',
+    backgroundColor: '#464450a6',
     borderRadius: 10,
     width: '90%',
     height: 'auto'
