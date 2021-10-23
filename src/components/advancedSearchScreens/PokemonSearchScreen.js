@@ -109,20 +109,26 @@ const PokemonSearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <View>
-              <Pressable onPress={() => setSearchTerm('')} style={{width: '90%', alignSelf: 'center', zIndex: 1}}>
-                <Text style={{ position: 'absolute', right: 6, top: 6, fontStyle: 'italic', color: 'rgb(175, 175, 175)' }}>CLEAR</Text>
-              </Pressable>
-              <Pressable style={{}} onPress={() => props.navigation.navigate('Detail Modal', { results: item, navigation: props.navigation })}>
-                <ShowAdvancedSearchResult results={item} />
-              </Pressable>
-            </View>
+            <Pressable style={{}} onPress={() => props.navigation.navigate('Detail Modal', { results: item, navigation: props.navigation })}>
+              <ShowAdvancedSearchResult results={item} />
+            </Pressable>
           )
         }}
       />
-    } else {
-      return null;
-    }
+    } else return null;
+  }
+
+  const showClear = (el) => {
+    if(el !== null) {
+      return <Pressable 
+      onPress={async() => {
+        await advancedSearchAPI()
+        setSearchTerm('')
+      }} 
+      style={{ width: '90%', alignSelf: 'center', zIndex: 1 }}>
+      <Text style={{ position: 'absolute', right: 6, top: 6, fontStyle: 'italic', color: 'rgb(175, 175, 175)' }}>CLEAR</Text>
+    </Pressable>
+    } else return null
   }
 
   return (
@@ -140,7 +146,10 @@ const PokemonSearchScreen = (props) => {
           />
         </View>
         <View style={{height: 'auto'}}>
-          {showPokemonCard(searchTerm)}
+          <View>
+            {showClear(advancedResults)}
+            {showPokemonCard(searchTerm)}
+          </View>
         </View>
         <View style={{height: 5 }} />
         <DropDownPicker 

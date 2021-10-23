@@ -131,6 +131,19 @@ const MoveSearchScreen = (props) => {
     }
   }
 
+  const showClear = (el) => {
+    if(el !== null) {
+      return <Pressable 
+      onPress={async() => {
+        await moveSearchApi()
+        setSearchTerm('')
+      }} 
+      style={{ width: '90%', alignSelf: 'center', zIndex: 1 }}>
+      <Text style={{ position: 'absolute', right: 6, top: 6, fontStyle: 'italic', color: 'rgb(175, 175, 175)' }}>CLEAR</Text>
+    </Pressable>
+    } else return null
+  }
+
   return (
     <HideKeyboard>
       <View style={styles.container}>
@@ -146,6 +159,7 @@ const MoveSearchScreen = (props) => {
           />
         </View>
         <View style={{height: 'auto'}}>
+          {showClear(moveResults)}
           {showMoveCard(searchTerm)}
         </View>
         <View style={{height: 5 }} />

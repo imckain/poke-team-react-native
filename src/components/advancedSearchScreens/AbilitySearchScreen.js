@@ -87,20 +87,28 @@ const AbilitySearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <View>
-              <Pressable onPress={() => setSearchTerm('')} style={{width: '90%', alignSelf: 'center', zIndex: 1}}>
-                <Text style={{ position: 'absolute', right: 6, top: 6, fontStyle: 'italic', color: 'rgb(175, 175, 175)' }}>CLEAR</Text>
-              </Pressable>
-              <Pressable onPress={() => props.navigation.navigate('Ability Detail Modal', { results: item })}>
-                <ShowAbilitySearchResult results={item} />
-              </Pressable>
-            </View>
+            <Pressable onPress={() => props.navigation.navigate('Ability Detail Modal', { results: item })}>
+              <ShowAbilitySearchResult results={item} />
+            </Pressable>
           )
         }}
       />
     } else {
       return null;
     }
+  }
+
+  const showClear = (el) => {
+    if(el !== null) {
+      return <Pressable 
+      onPress={async() => {
+        await abilitySearchApi()
+        setSearchTerm('')
+      }} 
+      style={{ width: '90%', alignSelf: 'center', zIndex: 1 }}>
+      <Text style={{ position: 'absolute', right: 6, top: 6, fontStyle: 'italic', color: 'rgb(175, 175, 175)' }}>CLEAR</Text>
+    </Pressable>
+    } else return null
   }
 
   return (
@@ -118,6 +126,7 @@ const AbilitySearchScreen = (props) => {
           />
         </View>
         <View style={{height: 'auto'}}>
+          {showClear(abilityResults)}
           {showAbilityCard(searchTerm)}
         </View>
         <View style={{height: 5 }} />
