@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 
 import SearchBarByAbility from '../navigatorCards/searchBars/SearchBarByAbility';
@@ -87,9 +87,14 @@ const AbilitySearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable onPress={() => props.navigation.navigate('Ability Detail Modal', { results: item })}>
-              <ShowAbilitySearchResult results={item} />
-            </Pressable>
+            <View>
+              <Pressable onPress={() => setSearchTerm('')} style={{width: '90%', alignSelf: 'center', zIndex: 1}}>
+                <Text style={{ position: 'absolute', right: 6, top: 6, fontStyle: 'italic', color: 'rgb(175, 175, 175)' }}>CLEAR</Text>
+              </Pressable>
+              <Pressable onPress={() => props.navigation.navigate('Ability Detail Modal', { results: item })}>
+                <ShowAbilitySearchResult results={item} />
+              </Pressable>
+            </View>
           )
         }}
       />
