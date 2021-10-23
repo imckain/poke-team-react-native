@@ -90,6 +90,28 @@ const DetailModal = (props) => {
     getResultsFromUrl(results.location_area_encounters)
   }, [])
 
+  const getGeneration = (el) => {
+    return (
+      el.id <= 151 ? 
+        'Gen I' 
+      : el.id <= 251 ? 
+        'Gen II' 
+      : el.id <= 386 ? 
+        'Gen III' 
+      : el.id <= 493 ? 
+        'Gen IV' 
+      : el.id <= 649 ? 
+        'Gen V' 
+      : el.id <= 721 ? 
+        'Gen VI' 
+      : el.id <= 809 ? 
+        'Gen VII' 
+      : el.id <= 901 ? 
+        'Gen VIII' 
+      : null
+    )
+  }
+
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scrollViewContainer}>
@@ -99,6 +121,7 @@ const DetailModal = (props) => {
           {changeSprites(isShiny)}
         </View>
         <View style={styles.detailInfo}>
+          <Text style={styles.gen}>{getGeneration(results)}</Text>
           <TypeDetail navigation={props.navigation} margin={13} detailFontSize={24} results={results} />
           <AbilityDetail navigation={props.navigation} margin={13} headerFontSize={28} detailFontSize={24} results={results} />
           <ModalBaseStats headerFontSize={28} detailFontSize={22} margin={13} results={results} />
@@ -143,6 +166,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     paddingTop: 12
+  },
+  gen: {
+    textAlign: 'center',
+    color: 'rgba(255, 255, 255, 0.5)',
+    fontSize: 28,
+    fontWeight: '600',
+    paddingBottom: 12,
   },
   headerWrapper: {
     width: '100%',
