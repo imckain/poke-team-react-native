@@ -46,11 +46,11 @@ const ModalBaseStats = ({ results, headerFontSize, detailFontSize, margin }) => 
             <Text allowFontScaling={false} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[2].base_stat}</Text>
           </View>
           <View style={styles.baseStatContainer}>
-            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[3].stat.name.replace('-', ' ')}:</Text>
+            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[3].stat.name.replace('special-', 'Sp ')}:</Text>
             <Text allowFontScaling={false} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[3].base_stat}</Text>
           </View>
           <View style={styles.baseStatContainer}>
-            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[4].stat.name.replace('-', ' ')}:</Text>
+            <Text allowFontScaling={false} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[4].stat.name.replace('special-', 'Sp ')}:</Text>
             <Text allowFontScaling={false} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[4].base_stat}</Text>
           </View>
           <View style={styles.baseStatContainer}>

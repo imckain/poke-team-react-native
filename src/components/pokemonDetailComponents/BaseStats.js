@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
-const BaseStats = ({ results, headerFontSize, detailFontSize }) => {
+const BaseStats = ({ results, detailFontSize }) => {
   return (
     <View style={styles.infoContainer}>
       <View style={styles.baseStatContainer}>
@@ -17,11 +17,11 @@ const BaseStats = ({ results, headerFontSize, detailFontSize }) => {
         <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[2].base_stat}</Text>
       </View>
       <View style={styles.baseStatContainer}>
-        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[3].stat.name.replace('-', ' ')}:</Text>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[3].stat.name.replace('special-', 'SP ')}:</Text>
         <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[3].base_stat}</Text>
       </View>
       <View style={styles.baseStatContainer}>
-        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[4].stat.name.replace('-', ' ')}:</Text>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[4].stat.name.replace('special-', 'SP ')}:</Text>
         <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[4].base_stat}</Text>
       </View>
       <View style={styles.baseStatContainer}>
