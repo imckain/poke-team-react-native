@@ -14,6 +14,7 @@ import ModalBaseStats from '../components/pokemonDetailComponents/ModalBaseStats
 import MovesDetail from '../components/pokemonDetailComponents/MovesDetail';
 
 import { MaterialIcons, Entypo } from '@expo/vector-icons';
+import VersionDetail from '../components/pokemonDetailComponents/VersionDetail';
 
 const DetailModal = (props) => {
   const [isShiny, setIsShiny] = useState(false);
@@ -126,6 +127,7 @@ const DetailModal = (props) => {
           <AbilityDetail navigation={props.navigation} margin={13} headerFontSize={28} detailFontSize={24} results={results} />
           <ModalBaseStats headerFontSize={28} detailFontSize={22} margin={13} results={results} />
           <MovesDetail navigation={props.navigation} margin={13} results={results} />
+          <VersionDetail results={results} margin={13} />
           <Pressable 
             onPressIn={async() => {
               await getResultsFromUrl(results.location_area_encounters)

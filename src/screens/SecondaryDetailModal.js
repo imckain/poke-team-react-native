@@ -14,6 +14,7 @@ import SecondaryMovesDetail from '../components/pokemonDetailComponents/Secondar
 import { ScrollView } from 'react-native-gesture-handler';
 
 import { MaterialIcons, Entypo } from '@expo/vector-icons';
+import VersionDetail from '../components/pokemonDetailComponents/VersionDetail';
 
 const SecondaryDetailModal = (props) => {
   const [isShiny, setIsShiny] = useState(false);
@@ -126,6 +127,7 @@ const SecondaryDetailModal = (props) => {
           <AbilityDetail navigation={props.navigation} margin={13} headerFontSize={28} detailFontSize={24} results={results} />
           <ModalBaseStats headerFontSize={28} detailFontSize={22} margin={13} results={results} />
           <SecondaryMovesDetail navigation={props.navigation} margin={13} results={results} />
+          <VersionDetail margin={13} results={results} />
           <Pressable 
             onPressIn={async() => {
               await getResultsFromUrl(results.location_area_encounters)
