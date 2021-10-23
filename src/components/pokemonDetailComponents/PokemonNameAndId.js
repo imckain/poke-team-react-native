@@ -5,7 +5,7 @@ const PokemonNameAndId = ({ results, fontSize, lines }) => {
   return (
     <View style={{width: '90%', flexDirection: 'column', justifyContent: 'center', alignSelf: 'center'}}>
       <Text adjustsFontSizeToFit={true} allowFontScaling={false} numberOfLines={lines} style={[styles.name, {fontSize: fontSize}]}>{results.name.replace('-', ' ')}</Text>
-      <Text style={[styles.id, {color: 'rgba(255, 255, 255, 0.5)'}]}>{results.id}</Text>
+      <Text style={[styles.id]}>{results.id}</Text>
     </View>
   );
 };
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   },
   id: {
     textAlign: 'center',
-    color: '#fff',
+    color: 'rgba(255, 255, 255, 0.5)',
     fontSize: 18,
     fontWeight: '600',
   },
