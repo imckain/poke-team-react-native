@@ -78,8 +78,8 @@ const AbilitySearchScreen = (props) => {
     searchAbilities(abilityData, searchTerm)
   }, [searchTerm])
 
-  const showAbilityCard = (param) => {
-    if (param !== '') {
+  const showAbilityCard = (el, term) => {
+    if (term !== '') {
       return <FlatList 
         horizontal={false}
         scrollEnabled={false}
@@ -88,6 +88,7 @@ const AbilitySearchScreen = (props) => {
         renderItem={({ item }) => {
           return(
             <Pressable onPress={() => props.navigation.navigate('Ability Detail Modal', { results: item })}>
+              {showClear(el, term)}
               <ShowAbilitySearchResult results={item} />
             </Pressable>
           )
@@ -98,16 +99,18 @@ const AbilitySearchScreen = (props) => {
     }
   }
 
-  const showClear = (el) => {
-    if(el !== null) {
-      return <Pressable 
-      onPress={async() => {
-        await abilitySearchApi()
-        setSearchTerm('')
-      }} 
-      style={{ width: '90%', alignSelf: 'center', zIndex: 1 }}>
-      <Text style={{ position: 'absolute', right: 6, top: 6, fontStyle: 'italic', color: 'rgb(175, 175, 175)' }}>CLEAR</Text>
-    </Pressable>
+  const showClear = (el, term) => {
+    if(el !== null || term !== '') {
+      return (
+        <Pressable 
+          onPress={async() => {
+            await abilitySearchApi()
+            setSearchTerm('')
+          }} 
+          style={{ zIndex: 1, position: 'absolute', top: 6, right: 30, width: 'auto' }}>
+          <Text style={{ fontStyle: 'italic', color: 'rgb(175, 175, 175)', fontSize: 14 }}>CLEAR</Text>
+        </Pressable>
+      )
     } else return null
   }
 
@@ -126,8 +129,7 @@ const AbilitySearchScreen = (props) => {
           />
         </View>
         <View style={{height: 'auto'}}>
-          {showClear(abilityResults)}
-          {showAbilityCard(searchTerm)}
+          {showAbilityCard(abilityResults, searchTerm)}
         </View>
         <View style={{height: 5 }} />
           {displayFilteredResults(filteredResults, searchParam)}

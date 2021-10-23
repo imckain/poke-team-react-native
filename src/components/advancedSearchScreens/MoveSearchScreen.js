@@ -106,8 +106,8 @@ const MoveSearchScreen = (props) => {
     searchMoves(moveData, searchTerm)
   }, [searchTerm])
 
-  const showMoveCard = (param) => {
-    if (param !== '') {
+  const showMoveCard = (el, term) => {
+    if (term !== '') {
       return <FlatList 
         horizontal={false}
         scrollEnabled={false}
@@ -115,14 +115,10 @@ const MoveSearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <View>
-              <Pressable onPress={() => setSearchTerm('')} style={{width: '90%', alignSelf: 'center', zIndex: 1}}>
-                <Text style={{ position: 'absolute', right: 6, top: 6, fontStyle: 'italic', color: 'rgb(175, 175, 175)' }}>CLEAR</Text>
-              </Pressable>
-              <Pressable onPress={() => props.navigation.navigate('Move Detail Modal', { results: item })}>
-                <ShowMoveSearchResult results={item} />
-              </Pressable>
-            </View>
+            <Pressable onPress={() => props.navigation.navigate('Move Detail Modal', { results: item })}>
+              {showClear(el, term)}
+              <ShowMoveSearchResult results={item} />
+            </Pressable>
           )
         }}
       />
@@ -133,14 +129,16 @@ const MoveSearchScreen = (props) => {
 
   const showClear = (el, term) => {
     if(el !== null || term !== '') {
-      return <Pressable 
-      onPress={async() => {
-        await moveSearchApi()
-        setSearchTerm('')
-      }} 
-      style={{ width: '90%', alignSelf: 'center', zIndex: 1 }}>
-      <Text style={{ position: 'absolute', right: 6, top: 6, fontStyle: 'italic', color: 'rgb(175, 175, 175)' }}>CLEAR</Text>
-    </Pressable>
+      return (
+        <Pressable 
+          onPress={async() => {
+            await moveSearchApi()
+            setSearchTerm('')
+          }} 
+          style={{ zIndex: 1, position: 'absolute', top: 6, right: 30, width: 'auto' }}>
+          <Text style={{ fontStyle: 'italic', color: 'rgb(175, 175, 175)', fontSize: 14 }}>CLEAR</Text>
+        </Pressable>
+      )
     } else return null
   }
 
@@ -159,8 +157,7 @@ const MoveSearchScreen = (props) => {
           />
         </View>
         <View style={{height: 'auto'}}>
-          {showClear(moveResults, searchTerm)}
-          {showMoveCard(searchTerm)}
+          {showMoveCard(moveResults, searchTerm)}
         </View>
         <View style={{height: 5 }} />
         <DropDownPicker 

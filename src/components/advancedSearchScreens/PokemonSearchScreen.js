@@ -99,8 +99,8 @@ const PokemonSearchScreen = (props) => {
     searchPokemon(pokemonData, searchTerm)
   }, [searchTerm])
 
-  const showPokemonCard = (param) => {
-    if (param !== '') {
+  const showPokemonCard = (el, term) => {
+    if (term !== '') {
       return <FlatList 
         horizontal={false}
         scrollEnabled={false}
@@ -110,6 +110,7 @@ const PokemonSearchScreen = (props) => {
         renderItem={({ item }) => {
           return(
             <Pressable style={{}} onPress={() => props.navigation.navigate('Detail Modal', { results: item, navigation: props.navigation })}>
+              {showClear(el, term)}
               <ShowAdvancedSearchResult results={item} />
             </Pressable>
           )
@@ -120,14 +121,16 @@ const PokemonSearchScreen = (props) => {
 
   const showClear = (el, term) => {
     if(el !== null || term !== '') {
-      return <Pressable 
-      onPress={async() => {
-        await advancedSearchAPI()
-        setSearchTerm('')
-      }} 
-      style={{ width: '90%', alignSelf: 'center', zIndex: 1 }}>
-      <Text style={{ position: 'absolute', right: 6, top: 6, fontStyle: 'italic', color: 'rgb(175, 175, 175)' }}>CLEAR</Text>
-    </Pressable>
+      return (
+        <Pressable 
+          onPress={async() => {
+            await advancedSearchAPI()
+            setSearchTerm('')
+          }} 
+          style={{ zIndex: 1, position: 'absolute', top: 6, right: 30, width: 'auto' }}>
+          <Text style={{ fontStyle: 'italic', color: 'rgb(175, 175, 175)', fontSize: 14 }}>CLEAR</Text>
+        </Pressable>
+      )
     } else return null
   }
 
@@ -147,8 +150,7 @@ const PokemonSearchScreen = (props) => {
         </View>
         <View style={{height: 'auto'}}>
           <View>
-            {showClear(advancedResults, searchTerm)}
-            {showPokemonCard(searchTerm)}
+            {showPokemonCard(advancedResults, searchTerm)}
           </View>
         </View>
         <View style={{height: 5 }} />
