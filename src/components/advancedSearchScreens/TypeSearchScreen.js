@@ -1,6 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
-import { FlatList, ScrollView } from 'react-native-gesture-handler';
+import React, { useState } from 'react';
+import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { FlatList } from 'react-native-gesture-handler';
+
+import { Ionicons } from '@expo/vector-icons';
 
 import SearchBarByType from '../navigatorCards/searchBars/SearchBarByType';
 import ShowTypeSearchResult from '../resultsCards/ShowTypeSearchResult';
@@ -61,6 +63,22 @@ const TypeSearchScreen = (props) => {
     }
   }
 
+  const showClear = (el, term) => {
+    if(el !== null || term !== '') {
+      return (
+        <Pressable 
+          onPress={async() => {
+            await typeSearchApi()
+            setSearchTerm('')
+          }} 
+          style={styles.clear}
+        >
+          <Ionicons name="ios-close-circle" size={18} color="rgb(175, 175, 175)" />
+        </Pressable>
+      )
+    } else return null
+  }
+
   return (
     <HideKeyboard>
       <View style={styles.container}>
@@ -69,8 +87,9 @@ const TypeSearchScreen = (props) => {
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
           onSearchTermSubmit={() => typeSearchApi(searchTerm.replace(' ', '-').toLowerCase())}
-          style={styles.searchBar}
+          style={{zIndex: 0}}
           />
+          {showClear(typeResults, searchTerm)}
         </View>
         <View style={{height: 'auto'}}>
           {showTypeCard(searchTerm)}
@@ -89,15 +108,16 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   searchBarContainer: {
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
     height: 80,
   },
-  searchBar:{
-    paddingHorizontal: 6
-  },
-  searchSettingIcon: {
-    paddingRight: 20
+  clear: { 
+    zIndex: 1, 
+    position: 'absolute', 
+    alignSelf: 'center',
+    right: 30, 
+    width: 'auto',
   },
   searchParamsContainter: {
     flexDirection: 'row',

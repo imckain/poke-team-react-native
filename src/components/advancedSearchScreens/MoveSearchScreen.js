@@ -3,6 +3,8 @@ import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard }
 import { FlatList } from 'react-native-gesture-handler';
 import DropDownPicker from 'react-native-dropdown-picker';
 
+import { Ionicons } from '@expo/vector-icons';
+
 import SearchBarByMove from '../navigatorCards/searchBars/SearchBarByMove';
 import PokedexCard from '../../pokedex/PokedexCard';
 import moveData from '../../data/moves.json';
@@ -116,7 +118,6 @@ const MoveSearchScreen = (props) => {
         renderItem={({ item }) => {
           return(
             <Pressable onPress={() => props.navigation.navigate('Move Detail Modal', { results: item })}>
-              {showClear(el, term)}
               <ShowMoveSearchResult results={item} />
             </Pressable>
           )
@@ -135,8 +136,9 @@ const MoveSearchScreen = (props) => {
             await moveSearchApi()
             setSearchTerm('')
           }} 
-          style={{ zIndex: 1, position: 'absolute', top: 6, right: 30, width: 'auto' }}>
-          <Text style={{ fontStyle: 'italic', color: 'rgb(175, 175, 175)', fontSize: 14 }}>CLEAR</Text>
+          style={styles.clear}
+        >
+          <Ionicons name="ios-close-circle" size={18} color="rgb(175, 175, 175)" />
         </Pressable>
       )
     } else return null
@@ -153,8 +155,9 @@ const MoveSearchScreen = (props) => {
             searchMoves(moveData, searchTerm.replace(' ', '-').toLowerCase())
             return moveSearchApi(searchTerm.replace(' ', '-').toLowerCase())
           }}
-          style={styles.searchBar}
+          style={{zIndex: 0}}
           />
+          {showClear(moveResults, searchTerm)}
         </View>
         <View style={{height: 'auto'}}>
           {showMoveCard(moveResults, searchTerm)}
@@ -195,12 +198,16 @@ const styles = StyleSheet.create({
     flex: 1
   },
   searchBarContainer: {
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
     height: 80,
   },
-  searchBar:{
-    paddingHorizontal: 6
+  clear: { 
+    zIndex: 1, 
+    position: 'absolute', 
+    alignSelf: 'center',
+    right: 30, 
+    width: 'auto',
   },
   dropDown: {
     backgroundColor: '#464450a6',

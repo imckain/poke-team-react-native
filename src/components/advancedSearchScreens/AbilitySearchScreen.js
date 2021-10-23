@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
+
+import { Ionicons } from '@expo/vector-icons';
 
 import SearchBarByAbility from '../navigatorCards/searchBars/SearchBarByAbility';
 import useAbilityResults from '../../hooks/useAbilityResults';
@@ -88,7 +90,6 @@ const AbilitySearchScreen = (props) => {
         renderItem={({ item }) => {
           return(
             <Pressable onPress={() => props.navigation.navigate('Ability Detail Modal', { results: item })}>
-              {showClear(el, term)}
               <ShowAbilitySearchResult results={item} />
             </Pressable>
           )
@@ -107,8 +108,9 @@ const AbilitySearchScreen = (props) => {
             await abilitySearchApi()
             setSearchTerm('')
           }} 
-          style={{ zIndex: 1, position: 'absolute', top: 6, right: 30, width: 'auto' }}>
-          <Text style={{ fontStyle: 'italic', color: 'rgb(175, 175, 175)', fontSize: 14 }}>CLEAR</Text>
+          style={styles.clear}
+        >
+          <Ionicons name="ios-close-circle" size={18} color="rgb(175, 175, 175)" />
         </Pressable>
       )
     } else return null
@@ -127,6 +129,7 @@ const AbilitySearchScreen = (props) => {
           }}
           style={styles.searchBar}
           />
+          {showClear(abilityResults, searchTerm)}
         </View>
         <View style={{height: 'auto'}}>
           {showAbilityCard(abilityResults, searchTerm)}
@@ -145,15 +148,16 @@ const styles = StyleSheet.create({
     flex: 1
   },
   searchBarContainer: {
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
     height: 80,
   },
-  searchBar:{
-    paddingHorizontal: 6
-  },
-  searchSettingIcon: {
-    paddingRight: 20
+  clear: { 
+    zIndex: 1, 
+    position: 'absolute', 
+    alignSelf: 'center',
+    right: 30, 
+    width: 'auto',
   },
   searchParamsContainter: {
     flexDirection: 'row',

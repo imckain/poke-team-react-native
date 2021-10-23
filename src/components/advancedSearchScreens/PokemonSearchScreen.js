@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import DropDownPicker from 'react-native-dropdown-picker';
+
+import { Ionicons } from '@expo/vector-icons';
 
 import SearchBarByName from '../navigatorCards/searchBars/SearchBarByName';
 import ShowAdvancedSearchResult from '../resultsCards/ShowAdvancedSearchResult';
@@ -99,7 +101,7 @@ const PokemonSearchScreen = (props) => {
     searchPokemon(pokemonData, searchTerm)
   }, [searchTerm])
 
-  const showPokemonCard = (el, term) => {
+  const showPokemonCard = (term) => {
     if (term !== '') {
       return <FlatList 
         horizontal={false}
@@ -110,7 +112,6 @@ const PokemonSearchScreen = (props) => {
         renderItem={({ item }) => {
           return(
             <Pressable style={{}} onPress={() => props.navigation.navigate('Detail Modal', { results: item, navigation: props.navigation })}>
-              {showClear(el, term)}
               <ShowAdvancedSearchResult results={item} />
             </Pressable>
           )
@@ -127,8 +128,9 @@ const PokemonSearchScreen = (props) => {
             await advancedSearchAPI()
             setSearchTerm('')
           }} 
-          style={{ zIndex: 1, position: 'absolute', top: 6, right: 30, width: 'auto' }}>
-          <Text style={{ fontStyle: 'italic', color: 'rgb(175, 175, 175)', fontSize: 14 }}>CLEAR</Text>
+          style={styles.clear}
+        >
+          <Ionicons name="ios-close-circle" size={18} color="rgb(175, 175, 175)" />
         </Pressable>
       )
     } else return null
@@ -145,12 +147,13 @@ const PokemonSearchScreen = (props) => {
             searchPokemon(pokemonData, searchTerm.replace(' ', '-').toLowerCase())
             return advancedSearchAPI(searchTerm.replace(' ', '-').toLowerCase())
           }}
-          style={styles.searchBar}
+          style={{zIndex: 0}}
           />
+          {showClear(advancedResults, searchTerm)}
         </View>
         <View style={{height: 'auto'}}>
           <View>
-            {showPokemonCard(advancedResults, searchTerm)}
+            {showPokemonCard(searchTerm)}
           </View>
         </View>
         <View style={{height: 5 }} />
@@ -191,10 +194,16 @@ const styles = StyleSheet.create({
     flex: 1
   },
   searchBarContainer: {
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
     height: 80,
-    marginBottom: 5
+  },
+  clear: { 
+    zIndex: 1, 
+    position: 'absolute', 
+    alignSelf: 'center',
+    right: 30, 
+    width: 'auto',
   },
   dropDown: {
     backgroundColor: '#464450a6',
@@ -202,12 +211,6 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     width: '90%',
     alignSelf: 'center'
-  },
-  searchBar:{
-    paddingHorizontal: 6
-  },
-  searchSettingIcon: {
-    paddingRight: 20
   },
   searchParamsContainter: {
     flexDirection: 'row',
