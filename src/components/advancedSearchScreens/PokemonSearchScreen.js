@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
     zIndex: 1, 
     position: 'absolute', 
     alignSelf: 'center',
-    right: 30, 
+    right: 34, 
     width: 'auto',
   },
   dropDown: {
