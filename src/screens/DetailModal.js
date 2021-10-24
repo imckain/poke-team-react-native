@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, Pressable } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import useGetReultsFromUrl from '../hooks/useGetResultsFromUrl';
+import useAdvancedResults from '../hooks/useAdvancedResults'
 import PokemonNameAndId from '../components/pokemonDetailComponents/PokemonNameAndId';
 import FrontSprite from '../components/pokemonDetailComponents/FrontSprite';
 import ShinyFrontSprite from '../components/pokemonDetailComponents/ShinyFrontSprite';
@@ -13,12 +14,13 @@ import AbilityDetail from '../components/pokemonDetailComponents/AbilityDetail';
 import ModalBaseStats from '../components/pokemonDetailComponents/ModalBaseStats';
 import MovesDetail from '../components/pokemonDetailComponents/MovesDetail';
 
-import { MaterialIcons, Entypo } from '@expo/vector-icons';
+import { MaterialIcons, Entypo, Ionicons } from '@expo/vector-icons';
 import VersionDetail from '../components/pokemonDetailComponents/VersionDetail';
 
 const DetailModal = (props) => {
   const [isShiny, setIsShiny] = useState(false);
   const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
+  const [advancedSearchAPI, advancedResults] = useAdvancedResults([]);
 
   let results;
 
@@ -117,7 +119,23 @@ const DetailModal = (props) => {
     <View style={styles.container}>
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
-          <PokemonNameAndId lines={1} fontSize={48} results={results} />
+          <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 22}}>
+            <Pressable 
+              onPressIn={async() => {
+                await advancedSearchAPI((results.id - 1))
+                results = advancedResults
+              }}
+              onPressOut={async() => {
+                await advancedSearchAPI((results.id - 1))
+                results = advancedResults
+                console.log(results);
+              }}
+            >
+              <Ionicons name="chevron-back" size={32} color="rgba(255, 255, 255, 0.5)" />
+            </Pressable>
+            <PokemonNameAndId lines={1} fontSize={48} results={results} />
+            <Ionicons name="chevron-forward" size={32} color="rgba(255, 255, 255, 0.5)" />
+          </View>
           <View style={{height: 20}} />
           {changeSprites(isShiny)}
         </View>
@@ -216,4 +234,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default React.memo(DetailModal);
+export default DetailModal;
