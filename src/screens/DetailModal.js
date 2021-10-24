@@ -21,12 +21,13 @@ const DetailModal = (props) => {
   const [isShiny, setIsShiny] = useState(false);
   const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
   const [advancedSearchAPI, advancedResults] = useAdvancedResults([]);
+  const [results, setResults] = useState(props.route.params.results[0])
 
-  let results;
+  // let results;
 
-  if (props.route.params.results[0] === undefined) {
-    results = props.route.params.results
-  } else results = props.route.params.results[0]
+  // if (props.route.params.results[0] === undefined) {
+  //   results = props.route.params.results
+  // } else results = props.route.params.results[0]
 
   const changeSprites = useCallback((el) => {
     if (el === true) {
@@ -61,7 +62,7 @@ const DetailModal = (props) => {
         </View>
       )
     }
-  }, [])
+  }, [results])
 
   const showLocationData = async(el) => {
     try {
@@ -123,18 +124,36 @@ const DetailModal = (props) => {
             <Pressable 
               onPressIn={async() => {
                 await advancedSearchAPI((results.id - 1))
-                results = advancedResults
+                if (advancedResults[0].id !== null) {
+                  setResults(advancedResults[0])
+                }
               }}
               onPressOut={async() => {
                 await advancedSearchAPI((results.id - 1))
-                results = advancedResults
-                console.log(results);
+                if (advancedResults[0].id !== null) {
+                  setResults(advancedResults[0])
+                }
               }}
             >
               <Ionicons name="chevron-back" size={32} color="rgba(255, 255, 255, 0.5)" />
             </Pressable>
             <PokemonNameAndId lines={1} fontSize={48} results={results} />
-            <Ionicons name="chevron-forward" size={32} color="rgba(255, 255, 255, 0.5)" />
+            <Pressable 
+              onPressIn={async() => {
+                await advancedSearchAPI((results.id + 1))
+                if (advancedResults[0].id !== null) {
+                  setResults(advancedResults[0])
+                }
+              }}
+              onPressOut={async() => {
+                await advancedSearchAPI((results.id + 1))
+                if (advancedResults[0].id !== null) {
+                  setResults(advancedResults[0])
+                }
+              }}
+            >
+              <Ionicons name="chevron-forward" size={32} color="rgba(255, 255, 255, 0.5)" />
+            </Pressable>
           </View>
           <View style={{height: 20}} />
           {changeSprites(isShiny)}
