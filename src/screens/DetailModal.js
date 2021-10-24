@@ -22,13 +22,7 @@ const DetailModal = (props) => {
   const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
   const [advancedSearchAPI, advancedResults] = useAdvancedResults([]);
   const [results, setResults] = useState(props.route.params.results[0])
-
-  // let results;
-
-  // if (props.route.params.results[0] === undefined) {
-  //   results = props.route.params.results
-  // } else results = props.route.params.results[0]
-
+  
   const changeSprites = useCallback((el) => {
     if (el === true) {
       return (
