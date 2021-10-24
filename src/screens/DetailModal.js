@@ -2,7 +2,7 @@ import React, { useCallback, useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
-import useGetReultsFromUrl from '../hooks/useGetResultsFromUrl';
+import useGetResultsFromUrl from '../hooks/useGetResultsFromUrl';
 import useAdvancedResults from '../hooks/useAdvancedResults'
 import PokemonNameAndId from '../components/pokemonDetailComponents/PokemonNameAndId';
 import FrontSprite from '../components/pokemonDetailComponents/FrontSprite';
@@ -19,7 +19,7 @@ import VersionDetail from '../components/pokemonDetailComponents/VersionDetail';
 
 const DetailModal = (props) => {
   const [isShiny, setIsShiny] = useState(false);
-  const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
+  const [getResultsFromUrl, urlResults] = useGetResultsFromUrl();
   const [advancedSearchAPI, advancedResults] = useAdvancedResults([]);
   const [results, setResults] = useState(props.route.params.results[0])
   
@@ -110,44 +110,60 @@ const DetailModal = (props) => {
     )
   }
 
+  const showPrevious = () => {
+    if (results.id > 1) {
+      return(
+        <Pressable 
+          onPressIn={async() => {
+            await advancedSearchAPI((results.id - 1))
+            if (advancedResults[0].id !== null) {
+              setResults(advancedResults[0])
+            }
+          }}
+          onPressOut={async() => {
+            await advancedSearchAPI((results.id - 1))
+            if (advancedResults[0].id !== null) {
+              setResults(advancedResults[0])
+            }
+          }}
+        >
+          <Ionicons name="chevron-back" size={32} color="rgba(255, 255, 255, 0.5)" />
+        </Pressable>
+      )
+    } else return <View style={{width: 37}} />
+  }
+
+  const showNext = () => {
+    if (results.id < 898) {
+      return (
+        <Pressable 
+          onPressIn={async() => {
+            await advancedSearchAPI((results.id + 1))
+            if (advancedResults[0].id !== null) {
+              setResults(advancedResults[0])
+            }
+          }}
+          onPressOut={async() => {
+            await advancedSearchAPI((results.id + 1))
+            if (advancedResults[0].id !== null) {
+              setResults(advancedResults[0])
+            }
+          }}
+        >
+          <Ionicons name="chevron-forward" size={32} color="rgba(255, 255, 255, 0.5)" />
+        </Pressable>
+      )
+    } else return <View style={{width: 37}} />
+  }
+
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
           <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 22}}>
-            <Pressable 
-              onPressIn={async() => {
-                await advancedSearchAPI((results.id - 1))
-                if (advancedResults[0].id !== null) {
-                  setResults(advancedResults[0])
-                }
-              }}
-              onPressOut={async() => {
-                await advancedSearchAPI((results.id - 1))
-                if (advancedResults[0].id !== null) {
-                  setResults(advancedResults[0])
-                }
-              }}
-            >
-              <Ionicons name="chevron-back" size={32} color="rgba(255, 255, 255, 0.5)" />
-            </Pressable>
+            {showPrevious()}
             <PokemonNameAndId lines={1} fontSize={48} results={results} />
-            <Pressable 
-              onPressIn={async() => {
-                await advancedSearchAPI((results.id + 1))
-                if (advancedResults[0].id !== null) {
-                  setResults(advancedResults[0])
-                }
-              }}
-              onPressOut={async() => {
-                await advancedSearchAPI((results.id + 1))
-                if (advancedResults[0].id !== null) {
-                  setResults(advancedResults[0])
-                }
-              }}
-            >
-              <Ionicons name="chevron-forward" size={32} color="rgba(255, 255, 255, 0.5)" />
-            </Pressable>
+            {showNext()}
           </View>
           <View style={{height: 20}} />
           {changeSprites(isShiny)}
