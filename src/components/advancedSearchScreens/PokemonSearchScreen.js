@@ -21,9 +21,9 @@ const HideKeyboard = ({ children }) => (
 
 const PokemonSearchScreen = (props) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [advancedSearchAPI, advancedResults] = useAdvancedResults([]);
+  const [advancedSearchAPI, advancedResults] = useAdvancedResults();
   const [searchParam, setSearchParam] = useState('pokemon');
-  const [filteredResults, setFilteredResults] = useState([]);
+  const [filteredResults, setFilteredResults] = useState();
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState('all');
   const [params, setParams] = useState([
@@ -111,7 +111,7 @@ const PokemonSearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable style={{}} onPress={() => props.navigation.navigate('Detail Modal', { results: item, navigation: props.navigation })}>
+            <Pressable style={{}} onPress={() => props.navigation.navigate('Detail Modal', { results: [item], navigation: props.navigation })}>
               <ShowAdvancedSearchResult results={item} />
             </Pressable>
           )
