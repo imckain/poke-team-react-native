@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
-const ProfileNavigator = () => {
+const AboutNavigator = () => {
 
   return (
     <View style={styles.container}>
-      <Text allowFontScaling={false} style={styles.label}>Profile</Text>
+      <Text allowFontScaling={false} style={styles.label}>About</Text>
     </View>
   );
 };
@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ProfileNavigator;
+export default AboutNavigator;
