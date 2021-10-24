@@ -6,7 +6,7 @@ import AdvancedSearchNavigator from '../components/navigatorCards/AdvancedSearch
 import { Ionicons } from '@expo/vector-icons';
 
 import BuildTeamsNavigator from '../components/navigatorCards/BuildTeamsNavigator';
-import ProfileNavigator from '../components/navigatorCards/ProfileNavigator';
+import AboutNavigator from '../components/navigatorCards/AboutNavigator';
 import SearchBarByName from '../components/navigatorCards/searchBars/SearchBarByName';
 import TeamsNavigator from '../components/navigatorCards/ViewTeamsNavigator';
 import ShowSearchResult from '../components/resultsCards/ShowSearchResult';
@@ -72,11 +72,8 @@ const HomeScreen = (props) => {
           </Pressable>
         </View>
         <View style={styles.largeNavContainer}>
-          <Pressable style={styles.largeButtonStyle} onPress={() => props.navigation.navigate('Search', { results: results })}>
-            <AdvancedSearchNavigator results={results} />
-          </Pressable>
           <Pressable style={styles.largeButtonStyle} onPress={() => props.navigation.navigate('Profile')} >
-            <ProfileNavigator />
+            <AboutNavigator />
           </Pressable>
         </View>
       </ScrollView>
@@ -130,7 +127,8 @@ const styles = StyleSheet.create({
     width: '90%',
     flexDirection: 'column',
     alignSelf: 'center',
-    paddingBottom: 30
+    paddingBottom: 30,
+    paddingTop: 12
   },
 });
 
