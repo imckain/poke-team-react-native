@@ -2,9 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
-import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
-import FilterMoveSearchBar from './FilterMoveSearchBar';
-
 import { Entypo } from '@expo/vector-icons';
 
 const VersionDetail = ({ results, margin }) => {
