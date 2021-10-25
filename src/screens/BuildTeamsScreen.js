@@ -12,6 +12,8 @@ import AddPokemonButton from '../components/buildTeamComponents/AddPokemon';
 import PokemonSlotCard from '../components/buildTeamComponents/PokemonSlotCard';
 import SaveTeamButton from '../components/buildTeamComponents/SaveTeamButton';
 
+import { Ionicons } from '@expo/vector-icons';
+
 const HideKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
     {children}
@@ -21,7 +23,7 @@ const HideKeyboard = ({ children }) => (
 const BuildTeamsScreen = (props) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [teamName, setTeamName] = useState('');
-  const [buildSearchApi, buildResults] = useBuildResults([]);
+  const [buildSearchApi, buildResults] = useBuildResults();
 
   const { state, addTeam } = useContext(TeamsContext);
 
@@ -35,25 +37,39 @@ const BuildTeamsScreen = (props) => {
         renderItem={({ item }) => {
           return(
             <View style={styles.addMonCard}>
-              <Pressable style={{flex: 1}} onPress={() => props.navigation.navigate('Detail Modal', { results: item })}>
+              <Pressable style={{flex: 1}} onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
                 <ShowAdvancedSearchResult results={item} />
               </Pressable>
               <Pressable>
-                <AddPokemonButton name={item.name} width={'90%'} height={40} />
+                <AddPokemonButton name={item.name.replaceAll('-', ' ')} width={'90%'} height={40} />
               </Pressable>
             </View>
           )
         }}
       />
-    } else {
-      return null;
-    }
+    } else return null;
   }
 
   const addTeamAndGoBack = useCallback(async () => {
     await addTeam()
     return (props.navigation.navigate('Teams Tab Nav'))
   }, [])
+
+  const showClear = (el, term) => {
+    if(el !== null || term !== '') {
+      return (
+        <Pressable 
+          onPress={async() => {
+            await buildSearchApi()
+            setSearchTerm('')
+          }} 
+          style={styles.clear}
+        >
+          <Ionicons name="ios-close-circle" size={18} color="rgb(175, 175, 175)" />
+        </Pressable>
+      )
+    } else return null
+  }
 
   return (
     <HideKeyboard>
@@ -69,7 +85,7 @@ const BuildTeamsScreen = (props) => {
             value={teamName}
             onChangeText={setTeamName}
             // onEndEditing={onSearchTermSubmit}
-            // clearButtonMode='always'
+            clearButtonMode='never'
             keyboardAppearance='dark'
             returnKeyType={'done'}
             allowFontScaling={false}
@@ -77,11 +93,12 @@ const BuildTeamsScreen = (props) => {
         </View>
         <View style={styles.searchBarContainer}>
           <BuildTeamSearchBar 
-          searchTerm={searchTerm} 
-          onSearchTermChange={setSearchTerm} 
-          onSearchTermSubmit={() => buildSearchApi(searchTerm)}
-          style={styles.searchBar}
+            searchTerm={searchTerm} 
+            onSearchTermChange={setSearchTerm} 
+            onSearchTermSubmit={() => buildSearchApi(searchTerm.replaceAll(' ', '-').toLowerCase())}
+            style={styles.searchBar}
           />
+          {showClear(buildResults, searchTerm)}
         </View>
         <View style={{height: 'auto'}}>
           {showPokemonCard(searchTerm)}
@@ -89,12 +106,12 @@ const BuildTeamsScreen = (props) => {
         <View style={{height: 5 }} />
         <View style={styles.teamInfoContainer}>
           <View style={styles.teamSlotContainer}>
-            <PokemonSlotCard results={buildResults} />
-            <PokemonSlotCard results={buildResults} />
-            <PokemonSlotCard results={buildResults} />
-            <PokemonSlotCard results={buildResults} />
-            <PokemonSlotCard results={buildResults} />
-            <PokemonSlotCard results={buildResults} />
+            <PokemonSlotCard results={[buildResults]} />
+            <PokemonSlotCard results={[buildResults]} />
+            <PokemonSlotCard results={[buildResults]} />
+            <PokemonSlotCard results={[buildResults]} />
+            <PokemonSlotCard results={[buildResults]} />
+            <PokemonSlotCard results={[buildResults]} />
           </View>
           <Pressable onPress={() => addTeamAndGoBack()} >
             <SaveTeamButton height={54} width={'90%'} />
@@ -121,13 +138,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   searchBarContainer: {
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
     height: 80,
-    marginBottom: 5
   },
-  searchBar:{
-    paddingHorizontal: 6
+  searchBar: {
+    zIndex: 0
+  },
+  clear: { 
+    zIndex: 1, 
+    position: 'absolute', 
+    alignSelf: 'center',
+    right: 34, 
+    width: 'auto',
   },
   teamNameContainer: {
     height: 'auto',
