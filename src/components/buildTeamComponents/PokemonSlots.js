@@ -7,7 +7,7 @@ const PokemonSlots = ({ results, fontSize }) => {
   
   const isValid = (el) => {
     if (el.name !== undefined) {
-      <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{results.name} <Ionicons name="ios-chevron-forward-sharp" size={24} color="rgb(175, 175, 175)" /> #{results.id}</Text>
+      <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{results.name.replaceAll('-', ' ')} <Ionicons name="ios-chevron-forward-sharp" size={24} color="rgb(175, 175, 175)" /> #{results.id}</Text>
     } else return <Text allowFontScaling={false} style={[styles.emptyName, {fontSize: fontSize}]}> Empty Slot</Text>
   }
   
