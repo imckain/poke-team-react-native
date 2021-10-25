@@ -18,7 +18,7 @@ const BuildTeamSearchBar = ({ searchTerm, onSearchTermChange, onSearchTermSubmit
         value={searchTerm}
         onChangeText={onSearchTermChange}
         onEndEditing={onSearchTermSubmit}
-        clearButtonMode='always'
+        clearButtonMode='never'
         keyboardAppearance='dark'
         returnKeyType={'search'}
         allowFontScaling={false}
@@ -31,13 +31,13 @@ const styles = StyleSheet.create({
   searchWrapperStyle: {
     height: 44,
     flex: 1,
-    marginTop: 20,
+    marginTop: 12,
     marginBottom: 12,
     flexDirection: 'row',
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    paddingHorizontal: 5,
+    paddingHorizontal: 12,
     backgroundColor: '#464450',
     borderRadius: 10,
     marginHorizontal: 20
