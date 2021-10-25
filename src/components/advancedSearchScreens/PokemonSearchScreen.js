@@ -85,7 +85,7 @@ const PokemonSearchScreen = (props) => {
   const searchPokemon = (el, param) => {
     if (param === '') return setFilteredResults(el)
     try {
-      const res = el.filter(item => item.identifier.includes(param.replace(' ', '-').toLowerCase()))
+      const res = el.filter(item => item.identifier.includes(param.replaceAll(' ', '-').toLowerCase()))
       return setFilteredResults(res)
     } catch (error) {
       console.log(error);
@@ -141,20 +141,18 @@ const PokemonSearchScreen = (props) => {
       <View style={styles.container}>
         <View style={styles.searchBarContainer}>
           <SearchBarByName 
-          searchTerm={searchTerm} 
-          onSearchTermChange={setSearchTerm} 
-          onSearchTermSubmit={() => {
-            searchPokemon(pokemonData, searchTerm.replace(' ', '-').toLowerCase())
-            return advancedSearchAPI(searchTerm.replace(' ', '-').toLowerCase())
-          }}
-          style={{zIndex: 0}}
+            searchTerm={searchTerm} 
+            onSearchTermChange={setSearchTerm} 
+            onSearchTermSubmit={() => {
+              searchPokemon(pokemonData, searchTerm.replaceAll(' ', '-').toLowerCase())
+              return advancedSearchAPI(searchTerm.replaceAll(' ', '-').toLowerCase())
+            }}
+            style={{zIndex: 0}}
           />
           {showClear(advancedResults, searchTerm)}
         </View>
-        <View style={{height: 'auto'}}>
-          <View>
-            {showPokemonCard(searchTerm)}
-          </View>
+        <View>
+          {showPokemonCard(searchTerm)}
         </View>
         <View style={{height: 5 }} />
         <DropDownPicker 

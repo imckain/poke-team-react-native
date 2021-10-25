@@ -69,7 +69,7 @@ const AbilitySearchScreen = (props) => {
   const searchAbilities = (el, param) => {
     if (param === '') return setFilteredResults(el)
     try {
-      const res = el.filter(item => item.identifier.includes(param.replace(' ', '-').toLowerCase()))
+      const res = el.filter(item => item.identifier.includes(param.replaceAll(' ', '-').toLowerCase()))
       return setFilteredResults(res)
     } catch (error) {
       console.log(error);
@@ -124,8 +124,8 @@ const AbilitySearchScreen = (props) => {
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
           onSearchTermSubmit={() => {
-            searchAbilities(abilityData, searchTerm.replace(' ', '-').toLowerCase())
-            return abilitySearchApi(searchTerm.replace(' ', '-').toLowerCase())
+            searchAbilities(abilityData, searchTerm.replaceAll(' ', '-').toLowerCase())
+            return abilitySearchApi(searchTerm.replaceAll(' ', '-').toLowerCase())
           }}
           style={styles.searchBar}
           />

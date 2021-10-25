@@ -5,13 +5,9 @@ import { Ionicons } from '@expo/vector-icons';
 
 const PokemonSlots = ({ results, fontSize }) => {
   
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
   const isValid = (el) => {
     if (el.name !== undefined) {
-      <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{Capitalize(results.name)} <Ionicons name="ios-chevron-forward-sharp" size={24} color="rgb(175, 175, 175)" /> #{results.id}</Text>
+      <Text allowFontScaling={false} style={[styles.name, {fontSize: fontSize}]}>{results.name} <Ionicons name="ios-chevron-forward-sharp" size={24} color="rgb(175, 175, 175)" /> #{results.id}</Text>
     } else return <Text allowFontScaling={false} style={[styles.emptyName, {fontSize: fontSize}]}> Empty Slot</Text>
   }
   
@@ -34,7 +30,8 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: '600',
     marginVertical: 12,
-    marginHorizontal: 12
+    marginHorizontal: 12,
+    textTransform: 'capitalize',
   },
   emptyName: {
     textAlign: 'center',

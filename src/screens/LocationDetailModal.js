@@ -71,7 +71,7 @@ const LocationDetailModal = (props) => {
                 <Text adjustsFontSizeToFit={true}  numberOfLines={2} style={styles.versionText}>{version}</Text>
               </View>
               <View style={styles.locationBox}>
-                <Text style={styles.locationName}>{item.location_area.name.replace('-', ' ')}</Text>
+                <Text style={styles.locationName}>{item.location_area.name.replaceAll('-', ' ')}</Text>
               </View>
             </View>
           )

@@ -92,7 +92,7 @@ const MoveSearchScreen = (props) => {
   const searchMoves = (el, param) => {
     if (param === '') return setFilteredResults(el)
     try {
-      const res = el.filter(item => item.identifier.includes(param.replace(' ', '-').toLowerCase()))
+      const res = el.filter(item => item.identifier.includes(param.replaceAll(' ', '-').toLowerCase()))
       return setFilteredResults(res)
     } catch (error) {
       console.log(error);
@@ -152,8 +152,8 @@ const MoveSearchScreen = (props) => {
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
           onSearchTermSubmit={() => {
-            searchMoves(moveData, searchTerm.replace(' ', '-').toLowerCase())
-            return moveSearchApi(searchTerm.replace(' ', '-').toLowerCase())
+            searchMoves(moveData, searchTerm.replaceAll(' ', '-').toLowerCase())
+            return moveSearchApi(searchTerm.replaceAll(' ', '-').toLowerCase())
           }}
           style={{zIndex: 0}}
           />

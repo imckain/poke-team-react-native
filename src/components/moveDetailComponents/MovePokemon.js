@@ -51,7 +51,7 @@ const MovePokemon = ({ results, navigation }) => {
               }}
               onPressOut={() => navigate(item.url, item.name)}
             >
-              <Text allowFontScaling={false} style={[styles.text]}>{item.name.replace('-', ' ')}</Text>
+              <Text allowFontScaling={false} style={[styles.text]}>{item.name.replaceAll('-', ' ')}</Text>
             </Pressable>
           </View>
         )

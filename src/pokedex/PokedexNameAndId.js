@@ -8,7 +8,7 @@ const PokedexNameAndId = ({ results, fontSize, numFontSize }) => {
     <View style={styles.container}>
       <View style={{flexDirection: 'row', alignItems: 'center', width: '70%'}}>
         <Text style={[styles.name, {fontSize: numFontSize, color: 'rgba(255, 255, 255, 0.5)'}]}>{results.id}</Text>
-        <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.name, { fontSize: fontSize }]}>{results.identifier.replace('-', ' ')}</Text> 
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.name, { fontSize: fontSize }]}>{results.identifier.replaceAll('-', ' ')}</Text> 
       </View>
       <Ionicons style={{ paddingHorizontal: 12 }} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
     </View>

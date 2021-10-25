@@ -21,11 +21,7 @@ const TeamsScreen = (props) => {
           return <ViewTeams results={item} height={'auto'} width={'100%'} />
         }}
       />
-    } else {
-      return (
-        null
-      )
-    }
+    } else return null
   }
 
   return (

@@ -52,7 +52,7 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
               return navigate(item.ability.url, item.ability.name)
             }}
           >
-            <Text allowFontScaling={false} style={[styles.abilityText, { fontSize: detailFontSize }]}>{item.ability.name.replace('-', ' ')}</Text>
+            <Text allowFontScaling={false} style={[styles.abilityText, { fontSize: detailFontSize }]}>{item.ability.name.replaceAll('-', ' ')}</Text>
           </Pressable>
         </View>
       )

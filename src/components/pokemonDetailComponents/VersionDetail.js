@@ -33,7 +33,7 @@ const VersionDetail = ({ results, margin }) => {
     const versionBox = el.game_indices.map(item => {
       return (
         <View key={item.version.name} style={styles.versionTextBox}>
-          <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.versionText]}>{item.version.name.replace('-', ' ')}</Text>
+          <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.versionText]}>{item.version.name.replaceAll('-', ' ')}</Text>
         </View>
       )
     })

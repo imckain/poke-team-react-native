@@ -86,7 +86,7 @@ const TypeSearchScreen = (props) => {
           <SearchBarByType 
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
-          onSearchTermSubmit={() => typeSearchApi(searchTerm.replace(' ', '-').toLowerCase())}
+          onSearchTermSubmit={() => typeSearchApi(searchTerm.replaceAll(' ', '-').toLowerCase())}
           style={{zIndex: 0}}
           />
           {showClear(typeResults, searchTerm)}

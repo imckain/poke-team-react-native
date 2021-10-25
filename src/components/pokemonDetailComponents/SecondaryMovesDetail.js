@@ -57,7 +57,7 @@ const SecondaryMovesDetail = ({ results, navigation, margin }) => {
               return navigate(item.move.url, item.move.name)
             }}
           >
-            <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.moveText]}>{item.move.name.replace('-', ' ')}</Text>
+            <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.moveText]}>{item.move.name.replaceAll('-', ' ')}</Text>
           </Pressable>
           <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
           <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>
@@ -88,7 +88,7 @@ const SecondaryMovesDetail = ({ results, navigation, margin }) => {
                   return navigate(item.move.url, item.move.name)
                 }}
               >
-                <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.moveText]}>{item.move.name.replace('-', ' ')}</Text>
+                <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.moveText]}>{item.move.name.replaceAll('-', ' ')}</Text>
               </Pressable>
               <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
               <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>
@@ -105,7 +105,7 @@ const SecondaryMovesDetail = ({ results, navigation, margin }) => {
   const searchMoves = (el, param) => {
     if (param === '') return setFilteredResults(el)
     try {
-      const res = el.moves.filter(item => item.move.name.includes(param.replace(' ', '-').toLowerCase()))
+      const res = el.moves.filter(item => item.move.name.includes(param.replaceAll(' ', '-').toLowerCase()))
       const sorted = [].concat(res)
         .sort((a, b) => a.version_group_details[0].level_learned_at < b.version_group_details[0].level_learned_at ? 1 : -1)
       return setFilteredResults(sorted)
@@ -126,7 +126,7 @@ const SecondaryMovesDetail = ({ results, navigation, margin }) => {
           <FilterMoveSearchBar 
             searchTerm={searchTerm} 
             onSearchTermChange={setSearchTerm} 
-            onSearchTermSubmit={() => searchMoves(results, searchTerm.replace(' ', '-'))}
+            onSearchTermSubmit={() => searchMoves(results, searchTerm.replaceAll(' ', '-'))}
             style={styles.searchBar}
           />
         </View>

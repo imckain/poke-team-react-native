@@ -57,7 +57,7 @@ const HomeScreen = (props) => {
           <SearchBarByName 
             searchTerm={searchTerm} 
             onSearchTermChange={setSearchTerm} 
-            onSearchTermSubmit={() => searchAPI(searchTerm.replace(' ', '-').toLowerCase())}
+            onSearchTermSubmit={() => searchAPI(searchTerm.replaceAll(' ', '-').toLowerCase())}
             style={{zIndex: 0}}
           />
           {showClear(searchTerm)}

@@ -3,13 +3,9 @@ import { Text, View, StyleSheet } from 'react-native';
 
 const AddPokemonButton = (props) => {
 
-  function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
   return (
     <View style={[styles.container, { height: props.height, width: props.width }]}>
-      <Text allowFontScaling={false} style={styles.label}>Add {Capitalize(props.name)}</Text>
+      <Text allowFontScaling={false} style={styles.label}>Add {props.name}</Text>
     </View>
   );
 };
@@ -30,6 +26,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#fff',
     textAlign: 'center',
+    textTransform: 'capitalize'
   },
 });
 

@@ -5,15 +5,15 @@ const BaseStats = ({ results, detailFontSize }) => {
   return (
     <View style={styles.infoContainer}>
       <View style={styles.baseStatContainer}>
-        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[0].stat.name.replace('-', ' ')}:</Text>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[0].stat.name.replaceAll('-', ' ')}:</Text>
         <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[0].base_stat}</Text>
       </View>
       <View style={styles.baseStatContainer}>
-        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[1].stat.name.replace('-', ' ')}:</Text>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[1].stat.name.replaceAll('-', ' ')}:</Text>
         <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[1].base_stat}</Text>
       </View>
       <View style={styles.baseStatContainer}>
-        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[2].stat.name.replace('-', ' ')}:</Text>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[2].stat.name.replaceAll('-', ' ')}:</Text>
         <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[2].base_stat}</Text>
       </View>
       <View style={styles.baseStatContainer}>
@@ -25,7 +25,7 @@ const BaseStats = ({ results, detailFontSize }) => {
         <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[4].base_stat}</Text>
       </View>
       <View style={styles.baseStatContainer}>
-        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[5].stat.name.replace('-', ' ')}:</Text>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatNameText, {fontSize: detailFontSize}]}>{results.stats[5].stat.name.replaceAll('-', ' ')}:</Text>
         <Text allowFontScaling={false} adjustsFontSizeToFit={true} style={[styles.baseStatText, {fontSize: detailFontSize}]}>{results.stats[5].base_stat}</Text>
       </View>
     </View>
