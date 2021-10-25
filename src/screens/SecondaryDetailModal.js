@@ -111,7 +111,27 @@ const SecondaryDetailModal = (props) => {
   }
 
   const showPrevious = () => {
-    if (results.id > 1) {
+    if (results.id > 1 && results.id < 899) {
+      return(
+        <Pressable 
+          onPressIn={async() => {
+            await advancedSearchAPI((results.id - 1))
+            if (advancedResults[0].id !== null) {
+              setResults(advancedResults[0])
+            }
+          }}
+          onPressOut={async() => {
+            await advancedSearchAPI((results.id - 1))
+            if (advancedResults[0].id !== null) {
+              setResults(advancedResults[0])
+            }
+          }}
+        >
+          <Ionicons name="chevron-back" size={32} color="rgba(255, 255, 255, 0.5)" />
+        </Pressable>
+      )
+    }
+    if (results.id > 10001) {
       return(
         <Pressable 
           onPressIn={async() => {
@@ -153,8 +173,28 @@ const SecondaryDetailModal = (props) => {
           <Ionicons name="chevron-forward" size={32} color="rgba(255, 255, 255, 0.5)" />
         </Pressable>
       )
+    }
+    if (results.id > 898 && results.id < 10200) {
+      return (
+        <Pressable 
+          onPressIn={async() => {
+            await advancedSearchAPI((results.id + 1))
+            if (advancedResults[0].id !== null) {
+              setResults(advancedResults[0])
+            }
+          }}
+          onPressOut={async() => {
+            await advancedSearchAPI((results.id + 1))
+            if (advancedResults[0].id !== null) {
+              setResults(advancedResults[0])
+            }
+          }}
+        >
+          <Ionicons name="chevron-forward" size={32} color="rgba(255, 255, 255, 0.5)" />
+        </Pressable>
+      )
     } else return <View style={{width: 37}} />
-  } 
+  }
 
   return (
     <View style={styles.container}>
