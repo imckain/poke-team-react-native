@@ -12,7 +12,7 @@ const SaveTeamButton = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#ff0000',
+    backgroundColor: '#346d29',
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
