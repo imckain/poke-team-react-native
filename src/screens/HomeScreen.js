@@ -67,7 +67,7 @@ const HomeScreen = (props) => {
           <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Teams Tab Nav')} >
             <TeamsNavigator />
           </Pressable>
-          <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build a Team')}>
+          <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build Team')}>
             <BuildTeamsNavigator height={140} width={'100%'} />
           </Pressable>
         </View>
