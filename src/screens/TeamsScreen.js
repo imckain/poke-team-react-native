@@ -7,18 +7,25 @@ import BuildTeamsButton from '../components/buildTeamComponents/BuildTeamsButton
 import ViewTeams from '../components/buildTeamComponents/ViewTeams';
 
 const TeamsScreen = (props) => {
-
-  const { state, addTeam } = useContext(TeamsContext);
+  const { state, addTeam, deleteTeam } = useContext(TeamsContext);
 
   const showTeams = (el) => {
     if (el !== undefined) {
       return <FlatList 
         horizontal={false}
         data={el}
-        keyExtractor={(item) => item.name}
+        keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
-          console.log(item.id);
-          return <ViewTeams results={item} height={'auto'} width={'100%'} />
+          console.log(item.name);
+          try {
+            return (
+              <Pressable onPress={() => props.navigation.navigate('Team Detail', { id: item.id, results: item.content, name: item.name })}>
+                <ViewTeams results={item} id={item.id} height={'auto'} width={'100%'} />
+              </Pressable>
+            )
+          } catch (error) {
+            console.log(error);
+          }
         }}
       />
     } else return null
@@ -31,7 +38,7 @@ const TeamsScreen = (props) => {
           {showTeams(state)}
         </View>
       </View>
-      <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build a Team')}>
+      <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build Team')}>
         <BuildTeamsButton height={60} width={'100%'} />
       </Pressable>
     </View>
