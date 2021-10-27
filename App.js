@@ -18,6 +18,8 @@ import MoveDetailModal from './src/screens/MoveDetailModal';
 import AbilityDetailModal from './src/screens/AbilityDetailModal';
 import SecondaryDetailModal from './src/screens/SecondaryDetailModal';
 import LocationDetailModal from './src/screens/LocationDetailModal';
+import TeamDetailScreen from './src/screens/TeamDetailScreen';
+import EditTeamsScreen from './src/screens/EditTeamsScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -136,8 +138,16 @@ function App() {
             component={TeamsScreen} 
             />
           <Stack.Screen 
-            name="Build a Team" 
+            name="Build Team" 
             component={BuildTeamsScreen} 
+          />
+          <Stack.Screen 
+            name="Edit Team" 
+            component={EditTeamsScreen} 
+          />
+          <Stack.Screen 
+            name="Team Detail" 
+            component={TeamDetailScreen} 
           />
           <Stack.Screen 
             name="Profile" 
