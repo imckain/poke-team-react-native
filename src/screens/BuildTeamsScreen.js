@@ -1,7 +1,8 @@
 import React, { useState, useContext, useCallback } from 'react';
-import { View, StyleSheet, FlatList, ScrollView, TouchableWithoutFeedback, Pressable, Keyboard } from 'react-native';
+import { Text, View, StyleSheet, FlatList, ScrollView, TouchableWithoutFeedback, Pressable, Keyboard } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import { Context as TeamsContext } from '../context/TeamContext';
+import uuid from 'react-native-uuid'
 
 import * as SQLite from 'expo-sqlite';
 
@@ -24,25 +25,35 @@ const BuildTeamsScreen = (props) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [teamName, setTeamName] = useState('');
   const [buildSearchApi, buildResults] = useBuildResults();
+  const [teamMembers, setTeamMembers] = useState([])
 
   const { state, addTeam } = useContext(TeamsContext);
 
+  
   const showPokemonCard = (param) => {
     if (param !== '') {
       return <FlatList 
-        scrollEnabled={false}
-        data={buildResults}
-        style={{height: 'auto'}}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => {
+      scrollEnabled={false}
+      data={buildResults}
+      style={{height: 'auto'}}
+      keyExtractor={(item) => item.id}
+      renderItem={({ item }) => {
+        const showAddButton = (el) => {
+            return (
+              teamMembers.length < 6 ?
+                <Pressable onPress={() => setTeamMembers([...teamMembers].concat(item))}>
+                  <AddPokemonButton name={item.name.replaceAll('-', ' ')} width={'90%'} height={40} />
+                </Pressable>
+              :
+                null
+            )
+          }
           return(
             <View style={styles.addMonCard}>
               <Pressable style={{flex: 1}} onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
                 <ShowAdvancedSearchResult results={item} />
               </Pressable>
-              <Pressable>
-                <AddPokemonButton name={item.name.replaceAll('-', ' ')} width={'90%'} height={40} />
-              </Pressable>
+              {showAddButton(item)}
             </View>
           )
         }}
@@ -50,9 +61,11 @@ const BuildTeamsScreen = (props) => {
     } else return null;
   }
 
-  const addTeamAndGoBack = useCallback(async () => {
-    await addTeam()
-    return (props.navigation.navigate('Teams Tab Nav'))
+  const addTeamAndGoBack = useCallback(async (name, content) => {;
+    if (teamMembers[0] !== null) {
+      await addTeam(name, content)
+      return (props.navigation.navigate('Teams Tab Nav', { results: content }))
+    } else return (props.navigation.navigate('Teams Tab Nav'))
   }, [])
 
   const showClear = (el, term) => {
@@ -71,24 +84,55 @@ const BuildTeamsScreen = (props) => {
     } else return null
   }
 
+  const createTeamMember = (el) => {
+    if (el[0] !== undefined) {
+      return el.map((item) => {
+        const id = uuid.v4()
+        return (
+          <View key={id} style={{ flexDirection: 'row', width: '90%', alignSelf: 'center' }}>
+            <Pressable onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
+              <PokemonSlotCard results={item} />
+            </Pressable>
+            <Pressable style={{ position: 'absolute', alignSelf: 'center', right: 5, zIndex: 1 }} onPress={() => deleteTeamMember(item)}>
+              <Ionicons name="ios-remove-circle-outline" size={16} color="#ff0000" />
+            </Pressable>
+          </View>
+        )
+      })
+    } else return (
+      <View style={{ width: '90%', alignSelf: 'center', marginTop: 12 }}>
+        <Text adjustsFontSizeToFit={true} numberOfLines={1} style={styles.nullMessage}>Search for a Pokemon to add it to your team</Text>
+      </View>
+    )
+  }
+
+  const deleteTeamMember = (el) => {
+    const arr = [...teamMembers];
+    const idx = teamMembers.indexOf(el);
+    if (idx !== -1) {
+      arr.splice(idx, 1)
+      setTeamMembers(arr)
+    }
+  }
+
   return (
     <HideKeyboard>
       <ScrollView style={styles.container}>
         <View style={styles.teamNameContainer}>
           <TextInput 
-            placeholder={'Team 1'} 
+            placeholder={'Team Name'} 
             showSoftInputOnFocus={false}
             autoCapitalize='none'
             autoCorrect={false}
             style={styles.inputStyle} 
             placeholderTextColor='rgb(175, 175, 175)'
             value={teamName}
-            onChangeText={setTeamName}
-            // onEndEditing={onSearchTermSubmit}
+            onChangeText={(text) => setTeamName(text)}
             clearButtonMode='never'
             keyboardAppearance='dark'
             returnKeyType={'done'}
             allowFontScaling={false}
+            maxLength={10}
           />
         </View>
         <View style={styles.searchBarContainer}>
@@ -106,14 +150,9 @@ const BuildTeamsScreen = (props) => {
         <View style={{height: 5 }} />
         <View style={styles.teamInfoContainer}>
           <View style={styles.teamSlotContainer}>
-            <PokemonSlotCard results={[buildResults]} />
-            <PokemonSlotCard results={[buildResults]} />
-            <PokemonSlotCard results={[buildResults]} />
-            <PokemonSlotCard results={[buildResults]} />
-            <PokemonSlotCard results={[buildResults]} />
-            <PokemonSlotCard results={[buildResults]} />
+            {createTeamMember(teamMembers)}
           </View>
-          <Pressable onPress={() => addTeamAndGoBack()} >
+          <Pressable onPress={() => addTeamAndGoBack(teamName, teamMembers)} >
             <SaveTeamButton height={54} width={'90%'} />
           </Pressable>
         </View>
@@ -163,7 +202,7 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     height: '100%',
-    fontSize: 60,
+    fontSize: 48,
     textAlign: 'center',
     fontWeight: '500',
     color: '#fff',
@@ -172,6 +211,11 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-between',
     paddingBottom: 60,
+  },
+  nullMessage: {
+    fontSize: 32,
+    fontWeight: '600',
+    color: '#fff'
   },
 });
 
