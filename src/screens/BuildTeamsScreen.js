@@ -29,7 +29,6 @@ const BuildTeamsScreen = (props) => {
 
   const { state, addTeam } = useContext(TeamsContext);
 
-  
   const showPokemonCard = (param) => {
     if (param !== '') {
       return <FlatList 
