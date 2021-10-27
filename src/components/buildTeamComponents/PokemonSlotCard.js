@@ -1,38 +1,57 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-
-import PokemonSlots from './PokemonSlots';
+import { Text, View, StyleSheet } from 'react-native';
+import FrontSprite from '../pokemonDetailComponents/FrontSprite';
 
 const PokemonSlotCard = (props) => {
   const results = props.results
 
+  const isValid = (el) => {
+    if (el.name !== undefined) {
+      return (
+        <View style={{ width: '100%', flexDirection: 'row', alignItems: 'center', padding: 12 }}>
+          <FrontSprite width={70} height={70} results={el} />
+          <Text adjustsFontSizeToFit={true} numberOfLines={1} allowFontScaling={false} style={[styles.name]}>{el.name.replaceAll('-', ' ')}</Text>
+          <Text style={styles.id}>{el.id}</Text>
+        </View>
+      )
+    } else return <Text allowFontScaling={false} style={[styles.emptyName]}> Empty Slot</Text>
+  }
+  
   return (
     <View style={styles.container}>
-      <View style={styles.mainInfo}>
-        <PokemonSlots fontSize={16} results={results} />
-      </View>
+      {isValid(results)}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    borderTopLeftRadius: 0,
-    borderBottomLeftRadius: 10,
-    borderBottomRightRadius: 0,
-    borderBottomWidth: 2,
-    borderLeftWidth: 2,
-    borderColor: '#fff', 
-    width: '90%',
-    height: 'auto',
-    alignSelf: 'center',
-    marginBottom: 12,
-    marginTop: 2,
-    backgroundColor: '#464450',
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#464450a6',
+    width: '100%',
+    borderRadius: 10,
+    marginVertical: 6
   },
-  mainInfo: {
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
+  name: {
+    color: '#fff',
+    fontSize: 32,
+    fontWeight: '600',
+    textTransform: 'capitalize',
+    paddingHorizontal: 12,
+    width: '50%'
+  },
+  emptyName: {
+    textAlign: 'center',
+    color: '#fff',
+    fontWeight: '600',
+    fontStyle: 'italic',
+  },
+  id: {
+    color: 'rgba(255, 255, 255, 0.5)',
+    fontSize: 18,
+    fontWeight: '600',
+    paddingLeft: 12
   },
 });
 
