@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Text, View, StyleSheet, Image, Pressable, Alert } from 'react-native';
+import { Context as TeamsContext} from '../../context/TeamContext';
+import uuid from 'react-native-uuid'
 
 import { Ionicons } from '@expo/vector-icons';
+import FrontSprite from '../pokemonDetailComponents/FrontSprite';
 
 const ViewTeams = (props) => {
+  const { state, deleteTeam } = useContext(TeamsContext)
   
   const results = props.results
 
-  const createTwoButtonAlert = () =>
+  const createTwoButtonAlert = () => {
     Alert.alert(
       "Delete Team",
       "Are you sure you want to delete this team?",
@@ -17,21 +21,27 @@ const ViewTeams = (props) => {
           onPress: () => console.log("Cancel Pressed"),
           style: "cancel"
         },
-        { text: "OK", onPress: () => console.log("OK Pressed") }
+        { 
+          text: "OK", 
+          onPress: () => deleteTeam(props.id)
+        }
       ],
       { cancelable: false }
     );
+  }
+
+  const showSprite = (el) => {
+    return el.map(item => {
+      const id = uuid.v4();
+      return <FrontSprite key={id} width={50} height={50} results={item} />
+    })
+  }
 
   return (
     <View style={[styles.container, { height: props.height, width: props.width }]}>
       <Text allowFontScaling={false} style={styles.label}>{results.name}</Text>
       <View style={styles.spriteContainer}>
-        <Image resizeMode={'contain'} style={styles.sprite} source={require('../../../assets/pokeball.png')} />
-        <Image resizeMode={'contain'} style={styles.sprite} source={require('../../../assets/pokeball.png')} />
-        <Image resizeMode={'contain'} style={styles.sprite} source={require('../../../assets/pokeball.png')} />
-        <Image resizeMode={'contain'} style={styles.sprite} source={require('../../../assets/pokeball.png')} />
-        <Image resizeMode={'contain'} style={styles.sprite} source={require('../../../assets/pokeball.png')} />
-        <Image resizeMode={'contain'} style={styles.sprite} source={require('../../../assets/pokeball.png')} />
+        {showSprite(results.content)}
       </View>
       <Pressable style={{position: 'absolute', top: 0, right: 0, padding: 5}} onPress={createTwoButtonAlert}>
         <Ionicons name="ios-remove-circle-outline" size={16} color="#ff0000" />
@@ -66,11 +76,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     marginBottom: 12,
-  },
-  sprite: {
-    width: 30,
-    height: 30,
-    marginLeft: 12,
+    justifyContent: 'space-evenly'
   },
 });
 
