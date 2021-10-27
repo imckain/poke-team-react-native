@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default (reducer, actions, initialState) => {
   const Context = React.createContext();
@@ -11,7 +12,7 @@ export default (reducer, actions, initialState) => {
       boundActions[key] = actions[key](dispatch)
     }
 
-    return <Context.Provider value={{ state, ...boundActions }}>{children}</Context.Provider>
+    return <Context.Provider value={{ state: state, ...boundActions }}>{children}</Context.Provider>
   };
 
   return { Context, Provider };
