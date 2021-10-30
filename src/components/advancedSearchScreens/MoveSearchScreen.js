@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import DropDownPicker from 'react-native-dropdown-picker';
 
@@ -178,7 +178,7 @@ const MoveSearchScreen = (props) => {
             paddingLeft: 2,
             fontWeight: '500',
           }}
-          dropDownContainerStyle={[styles.dropDown, { backgroundColor: '#464450', paddingHorizontal: 32 }]}
+          dropDownContainerStyle={styles.dropDown}
           itemSeparator={true}
           listItemLabelStyle={{ fontWeight: '400', fontSize: 24 }}
           selectedItemLabelStyle={{ fontWeight: '600' }}
@@ -214,7 +214,8 @@ const styles = StyleSheet.create({
     marginBottom: 22,
     borderWidth: 0,
     width: '90%',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    paddingHorizontal: 12
   },
   searchSettingIcon: {
     paddingRight: 20
