@@ -127,7 +127,7 @@ const AbilitySearchScreen = (props) => {
             searchAbilities(abilityData, searchTerm.replaceAll(' ', '-').toLowerCase())
             return abilitySearchApi(searchTerm.replaceAll(' ', '-').toLowerCase())
           }}
-          style={styles.searchBar}
+          style={{zIndex: 0}}
           />
           {showClear(abilityResults, searchTerm)}
         </View>
@@ -135,7 +135,7 @@ const AbilitySearchScreen = (props) => {
           {showAbilityCard(abilityResults, searchTerm)}
         </View>
         <View style={{height: 5 }} />
-          {displayFilteredResults(filteredResults, searchParam)}
+        {displayFilteredResults(filteredResults, searchParam)}
       </View>
     </HideKeyboard>
   );
