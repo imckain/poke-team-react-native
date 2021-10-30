@@ -170,13 +170,12 @@ const PokemonSearchScreen = (props) => {
             paddingLeft: 2,
             fontWeight: '500',
           }}
-          dropDownContainerStyle={[styles.dropDown, { backgroundColor: '#464450', paddingHorizontal: 32 }]}
+          dropDownContainerStyle={styles.dropDown}
           itemSeparator={true}
           listItemLabelStyle={{ fontWeight: '400', fontSize: 24 }}
           selectedItemLabelStyle={{ fontWeight: '600' }}
           closeAfterSelecting={true}
           theme='DARK'
-          // listMode='MODAL'
           listMode='FLATLIST'
         />
         {displayFilteredResults(showGeneration(filteredResults, value), searchParam)}
@@ -208,7 +207,8 @@ const styles = StyleSheet.create({
     marginBottom: 22,
     borderWidth: 0,
     width: '90%',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    paddingHorizontal: 12
   },
   searchParamsContainter: {
     flexDirection: 'row',
