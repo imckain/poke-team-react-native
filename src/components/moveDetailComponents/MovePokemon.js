@@ -13,21 +13,17 @@ const MovePokemon = ({ results, navigation }) => {
   const checkForPokemonCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}} onPressIn={() => setPokemonCollapsed(false)}>
-            <Text allowFontScaling={false} style={[styles.headerText]}>Learned By:</Text>  
-            <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
-          </Pressable>
-        </View>
+        <Pressable style={styles.headerWrapper} onPressIn={() => setPokemonCollapsed(false)}>
+          <Text allowFontScaling={false} style={[styles.headerText]}>Learned By:</Text>  
+          <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
+        </Pressable>
       )
     } if (el === false) {
       return(
-        <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}} onPressIn={() => setPokemonCollapsed(true)}>
-            <Text allowFontScaling={false} style={[styles.headerText]}>Learned By:</Text>  
-            <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
-          </Pressable>
-        </View>
+        <Pressable style={styles.headerWrapper} onPressIn={() => setPokemonCollapsed(true)}>
+          <Text allowFontScaling={false} style={[styles.headerText]}>Learned By:</Text>  
+          <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
+        </Pressable>
       )
     }
   }, []);
@@ -89,7 +85,10 @@ const styles = StyleSheet.create({
   },
   headerWrapper: {
     width: '100%',
-    paddingHorizontal: 12
+    paddingHorizontal: 12,
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    alignItems: 'center'
   },
   scrollViewStyle: {
     flexDirection: 'row',
