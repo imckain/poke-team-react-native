@@ -19,7 +19,7 @@ const MoveNameAndClass = ({ results, fontSize, alignSelf, param, lines, typeFont
 
   return (
     <View style={[styles.dmgClassView, { alignSelf: alignSelf }]}>
-      <View style={{ flexDirection: 'column', alignItems: 'flex-start', alignSelf: alignSelf }}>
+      <View style={[styles.nameContainer, { alignSelf: alignSelf }]}>
         <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={lines} style={[styles.name, { fontSize: fontSize, alignSelf: alignSelf, textAlign: textAlign }]}>{results.name.replaceAll('-', ' ')}</Text>
         {showType(param)}
       </View>
@@ -34,6 +34,10 @@ const styles = StyleSheet.create({
     paddingBottom: 6,
     width: 'auto',
     height: 'auto',
+  },
+  nameContainer: {
+    flexDirection: 'column', 
+    alignItems: 'flex-start',
   },
   name: {
     color: '#fff',
