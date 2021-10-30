@@ -8,7 +8,7 @@ const PokemonSlotCard = (props) => {
   const isValid = (el) => {
     if (el.name !== undefined) {
       return (
-        <View style={{ width: '100%', flexDirection: 'row', alignItems: 'center', padding: 12 }}>
+        <View style={styles.infoContainer}>
           <FrontSprite width={70} height={70} results={el} />
           <Text adjustsFontSizeToFit={true} numberOfLines={1} allowFontScaling={false} style={[styles.name]}>{el.name.replaceAll('-', ' ')}</Text>
           <Text style={styles.id}>{el.id}</Text>
@@ -32,6 +32,12 @@ const styles = StyleSheet.create({
     width: '100%',
     borderRadius: 10,
     marginVertical: 6
+  },
+  infoContainer: { 
+    width: '100%', 
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    padding: 12 
   },
   name: {
     color: '#fff',
