@@ -43,7 +43,7 @@ const ViewTeams = (props) => {
       <View style={styles.spriteContainer}>
         {showSprite(results.content)}
       </View>
-      <Pressable style={{position: 'absolute', top: 0, right: 0, padding: 5}} onPress={createTwoButtonAlert}>
+      <Pressable style={styles.delete} onPress={createTwoButtonAlert}>
         <Ionicons name="ios-remove-circle-outline" size={16} color="#ff0000" />
       </Pressable>
     </View>
@@ -78,6 +78,12 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     justifyContent: 'space-evenly'
   },
+  delete: {
+    position: 'absolute', 
+    top: 0, 
+    right: 0, 
+    padding: 5
+  }
 });
 
 export default React.memo(ViewTeams);
