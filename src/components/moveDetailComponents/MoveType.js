@@ -1,10 +1,10 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { Text, StyleSheet, View, Pressable } from 'react-native';
 
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
 import checkType from '../functions/checkType';
 
-const MoveType = ({ results, navigation, detailFontSize, headerFontSize, margin, flexDirection }) => {
+const MoveType = ({ results, navigation, detailFontSize, margin, flexDirection }) => {
   const [getResultsFromUrl, urlResults] = useGetReultsFromUrl();
 
   const isValid = (el) => {
