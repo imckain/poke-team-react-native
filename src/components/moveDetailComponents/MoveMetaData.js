@@ -11,21 +11,17 @@ const MoveMetaData = ({ results }) => {
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignItems: 'center'}} onPressIn={() => setCollapsed(false)}>
-            <Text allowFontScaling={false} style={[styles.metaDataHeaderText]}>Meta Data:</Text>  
-            <Entypo name="plus" size={28} color="rgb(175, 175, 175)" />
-          </Pressable>
-        </View>
+        <Pressable style={styles.headerWrapper} onPressIn={() => setCollapsed(false)}>
+          <Text allowFontScaling={false} style={[styles.metaDataHeaderText]}>Meta Data:</Text>  
+          <Entypo name="plus" size={28} color="rgb(175, 175, 175)" />
+        </Pressable>
       )
     } if (el === false) {
       return(
-        <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignItems: 'center'}} onPressIn={() => setCollapsed(true)}>
-            <Text allowFontScaling={false} style={[styles.metaDataHeaderText]}>Meta Data:</Text>  
-            <Entypo name="minus" size={28} color="rgb(175, 175, 175)" />
-          </Pressable>
-        </View>
+        <Pressable style={styles.headerWrapper} onPressIn={() => setCollapsed(true)}>
+          <Text allowFontScaling={false} style={[styles.metaDataHeaderText]}>Meta Data:</Text>  
+          <Entypo name="minus" size={28} color="rgb(175, 175, 175)" />
+        </Pressable>
       )
     }
   }, []);
@@ -98,7 +94,11 @@ const styles = StyleSheet.create({
   },
   headerWrapper: {
     width: '100%',
-    paddingHorizontal: 12
+    paddingHorizontal: 12,
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    width: '100%', 
+    alignItems: 'center'
   },
   metaDataHeaderText: {
     color: '#fff',
