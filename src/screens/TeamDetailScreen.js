@@ -1,19 +1,11 @@
-import React, { useState, useContext, useCallback } from 'react';
-import { Text, View, StyleSheet, FlatList, ScrollView, TouchableWithoutFeedback, Pressable, Keyboard } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
+import React, { useContext } from 'react';
+import { Text, View, StyleSheet, ScrollView, TouchableWithoutFeedback, Pressable, Keyboard } from 'react-native';
 import { Context as TeamsContext } from '../context/TeamContext';
 import uuid from 'react-native-uuid'
 
 import * as SQLite from 'expo-sqlite';
 
-import BuildTeamSearchBar from '../components/buildTeamComponents/BuildTeamSearchBar';
-import useBuildResults from '../hooks/useBuildResults';
-import ShowAdvancedSearchResult from '../components/resultsCards/ShowAdvancedSearchResult';
-import AddPokemonButton from '../components/buildTeamComponents/AddPokemon';
 import PokemonSlotCard from '../components/buildTeamComponents/PokemonSlotCard';
-import SaveTeamButton from '../components/buildTeamComponents/SaveTeamButton';
-
-import { Ionicons } from '@expo/vector-icons';
 import EditTeamButton from '../components/buildTeamComponents/EditTeamButton';
 
 const HideKeyboard = ({ children }) => (
