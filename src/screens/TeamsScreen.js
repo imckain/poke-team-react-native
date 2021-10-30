@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useCallback, useContext } from 'react';
 import { View, StyleSheet, Pressable, FlatList } from 'react-native';
 import { Context as TeamsContext} from '../context/TeamContext';
 import * as SQLite from 'expo-sqlite';
@@ -9,27 +9,24 @@ import ViewTeams from '../components/buildTeamComponents/ViewTeams';
 const TeamsScreen = (props) => {
   const { state, addTeam, deleteTeam } = useContext(TeamsContext);
 
-  const showTeams = (el) => {
-    if (el !== undefined) {
-      return <FlatList 
-        horizontal={false}
-        data={el}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => {
-          console.log(item.name);
-          try {
-            return (
-              <Pressable onPress={() => props.navigation.navigate('Team Detail', { id: item.id, results: item.content, name: item.name })}>
-                <ViewTeams results={item} id={item.id} height={'auto'} width={'100%'} />
-              </Pressable>
-            )
-          } catch (error) {
-            console.log(error);
-          }
-        }}
-      />
-    } else return null
-  }
+  const showTeams = useCallback((el) => {
+    console.log(el);
+    return <FlatList 
+      horizontal={false}
+      data={el._W}
+      keyExtractor={(item) => item.id}
+      renderItem={({ item }) => {
+        // console.log(item.name);
+        if (item.id !== 0) {
+          return (
+            <Pressable onPress={() => props.navigation.navigate('Team Detail', { id: item.id, results: item.content, name: item.name })}>
+              <ViewTeams results={item} id={item.id} height={'auto'} width={'100%'} />
+            </Pressable>
+          )
+        } else return null
+      }}
+    />
+  }, [state])
 
   return (
     <View style={styles.container}>
