@@ -8,8 +8,8 @@ const BuildTeamsButton = (props) => {
   return (
     <View style={{}}>
       <View style={[styles.container, { height: props.height, width: props.width }]}>
-        <Text allowFontScaling={false} style={styles.label}>Build Team</Text>
-        <Entypo style={{textShadowColor: '#53535383', textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 6}} name="squared-plus" size={32} color="#fff" />
+        <Text allowFontScaling={false} style={styles.label}>Build a Team  </Text>
+        <Entypo style={styles.icon} name="squared-plus" size={32} color="#fff" />
       </View>
     </View>
   );
@@ -33,6 +33,11 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 12
   },
+  icon: {
+    textShadowColor: '#53535383', 
+    textShadowOffset: { width: 0, height: 0 }, 
+    textShadowRadius: 6
+  }
 });
 
 export default BuildTeamsButton;
