@@ -49,6 +49,6 @@ const deleteTeam = dispatch => {
 
 export const { Context, Provider } = createDataContext(
   teamsReducer, 
-  { addTeam, deleteTeam, editTeam }, 
-  []
+  { addTeam, deleteTeam, editTeam },
+  [{ id: 0, name: 'Build Your Team', content: {} }]
 );
