@@ -13,27 +13,22 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}} onPressIn={() => setCollapsed(false)}>
-            <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities</Text>  
-            <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
-          </Pressable>
-        </View>
+        <Pressable style={styles.headerWrapper} onPressIn={() => setCollapsed(false)}>
+          <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities</Text>  
+          <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
+        </Pressable>
       )
     } if (el === false) {
       return(
-        <View style={styles.headerWrapper}>
-          <Pressable style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}} onPressIn={() => setCollapsed(true)}>
-            <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities</Text>  
-            <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
-          </Pressable>
-        </View>
+        <Pressable style={styles.headerWrapper} onPressIn={() => setCollapsed(true)}>
+          <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities</Text>  
+          <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
+        </Pressable>
       )
     }
   }, []);
   
   const showAbilities = (el) => {
-
     const navigate = async(url, param) => {
       if (urlResults.name === param) {
         await getResultsFromUrl(url)
@@ -64,7 +59,7 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
   return (
     <View style={[styles.container, { marginBottom: margin }]}>
       {checkForCollapse(collapsed)}
-      <Collapsible style={{flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 12}} collapsed={collapsed}>{showAbilities(results)}</Collapsible>
+      <Collapsible style={styles.collapsibleContainer} collapsed={collapsed}>{showAbilities(results)}</Collapsible>
     </View>
   );
 };
@@ -78,13 +73,21 @@ const styles = StyleSheet.create({
     backgroundColor: '#464450a6',
     paddingVertical: 5,
   },
+  collapsibleContainer: {
+    flexDirection: 'row', 
+    flexWrap: 'wrap', 
+    paddingHorizontal: 12
+  },
   headerText: {
     color: '#fff',
     fontWeight: '600',
   },
   headerWrapper: {
     width: '100%',
-    paddingHorizontal: 12
+    paddingHorizontal: 12,
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    alignItems: 'center'
   },
   abilityBox: {
     paddingVertical: 5,
