@@ -12,7 +12,7 @@ const ShinyBackSprite = ({ results, width, height }) => {
 
   return (
     <Image 
-      style={[styles.imageStyle, { width: width, height: height }]} 
+      style={[{ width: width, height: height }]} 
       resizeMode='contain' 
       source={{ uri: sprite(results) }} 
     />
