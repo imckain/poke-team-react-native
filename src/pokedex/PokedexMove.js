@@ -11,62 +11,43 @@ const PokedexMove = ({ results, fontSize, detailFontSize, lines, alignSelf }) =>
   }
 
   const showTypeName = (el) => {
-    let typeName
-    if (el === 1) {
-      return typeName = 'normal'
-    }
-    if (el === 2) {
-      return typeName = 'fighting'
-    }
-    if (el === 3) {
-      return typeName = 'flying'
-    }
-    if (el === 4) {
-      return typeName = 'poison'
-    }
-    if (el === 5) {
-      return typeName = 'ground'
-    }
-    if (el === 6) {
-      return typeName = 'rock'
-    }
-    if (el === 7) {
-      return typeName = 'bug'
-    }
-    if (el === 8) {
-      return typeName = 'ghost'
-    }
-    if (el === 9) {
-      return typeName = 'steel'
-    }
-    if (el === 10) {
-      return typeName = 'fire'
-    }
-    if (el === 11) {
-      return typeName = 'water'
-    }
-    if (el === 12) {
-      return typeName = 'grass'
-    }
-    if (el === 13) {
-      return typeName = 'electric'
-    }
-    if (el === 14) {
-      return typeName = 'psychic'
-    }
-    if (el === 15) {
-      return typeName = 'ice'
-    }
-    if (el === 16) {
-      return typeName = 'dragon'
-    }
-    if (el === 17) {
-      return typeName = 'dark'
-    }
-    if (el === 18) {
-      return typeName = 'fairy'
-    }
-    else return typeName
+    return el === 1 ?
+      'normal'
+      : el === 2 ?
+      'fighting'
+      : el === 3 ?
+      'flying'
+      : el === 4 ?
+      'poison'
+      : el === 5 ?
+      'ground'
+      : el === 6 ?
+      'rock'
+      : el === 7 ?
+      'bug'
+      : el === 8 ?
+      'ghost'
+      : el === 9 ?
+      'steel'
+      : el === 10 ?
+      'fire'
+      : el === 11 ?
+      'water'
+      : el === 12 ?
+      'grass'
+      : el === 13 ?
+      'electric'
+      : el === 14 ?
+      'psychic'
+      : el === 15 ?
+      'ice'
+      : el === 16 ?
+      'dragon'
+      : el === 17 ?
+      'dark'
+      : el === 18 ?
+      'fairy'
+      : null
   }
 
   return (
@@ -74,7 +55,7 @@ const PokedexMove = ({ results, fontSize, detailFontSize, lines, alignSelf }) =>
       <View style={[styles.moveInfo]}>
         <Text allowFontScaling={false} numberOfLines={lines} adjustsFontSizeToFit={true} style={[styles.name, {fontSize: fontSize }]}>{results.identifier.replaceAll('-', ' ')}</Text>
         <View style={[styles.typeBox, { backgroundColor: checkType(results.type_id) }]}>
-          <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize, alignSelf: alignSelf, alignItems: 'center' }]}>{showTypeName(results.type_id)}</Text>
+          <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize, alignSelf: alignSelf }]}>{showTypeName(results.type_id)}</Text>
         </View>
         <Text allowFontScaling={false} style={styles.attributes}>Power: {checkForNull(results.power)} | PP: {checkForNull(results.pp)} | Acc: {checkForNull(results.accuracy)}</Text>
       </View>
@@ -128,6 +109,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 0, height: 0},
     textShadowRadius: 4,
     textTransform: 'capitalize',
+    alignItems: 'center'
   },
 });
 
