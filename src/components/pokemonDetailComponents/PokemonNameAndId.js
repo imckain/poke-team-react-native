@@ -3,7 +3,7 @@ import { Text, StyleSheet, View } from 'react-native';
 
 const PokemonNameAndId = ({ results, fontSize, lines }) => {
   return (
-    <View style={{width: '90%', flexDirection: 'column', justifyContent: 'center', alignSelf: 'center', paddingHorizontal: 12}}>
+    <View style={styles.nameContainer}>
       <Text adjustsFontSizeToFit={true} allowFontScaling={false} numberOfLines={lines} style={[styles.name, {fontSize: fontSize}]}>{results.name.replaceAll('-', ' ')}</Text>
       <Text style={[styles.id]}>{results.id}</Text>
     </View>
@@ -11,6 +11,13 @@ const PokemonNameAndId = ({ results, fontSize, lines }) => {
 };
 
 const styles = StyleSheet.create({
+  nameContainer: {
+    width: '90%', 
+    flexDirection: 'column', 
+    justifyContent: 'center', 
+    alignSelf: 'center', 
+    paddingHorizontal: 12
+  },
   name: {
     textAlign: 'center',
     color: '#fff',
