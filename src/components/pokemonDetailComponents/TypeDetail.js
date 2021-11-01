@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
