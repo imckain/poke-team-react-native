@@ -32,7 +32,7 @@ export default (reducer, actions, initialState) => {
     }
 
     const storedState = async() => await getData()
-    // console.log(storedState());
+    console.log(storedState());
 
     const boundActions ={};
     for (let key in actions) {
