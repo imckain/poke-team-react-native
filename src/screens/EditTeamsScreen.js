@@ -25,7 +25,7 @@ const EditTeamsScreen = (props) => {
   const { state, editTeam } = useContext(TeamsContext);
 
   const id = props.route.params.id
-  const team = state.find(team => team.id === id)
+  const team = state._W.find(team => team.id === id)
 
   const [searchTerm, setSearchTerm] = useState('');
   const [teamName, setTeamName] = useState(team.name);
