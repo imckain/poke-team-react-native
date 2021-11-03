@@ -54,8 +54,6 @@ const LocationDetailModal = (props) => {
   }
   
   const locationBox = (el) => {
-
-
     return (
       <FlatList 
         horizontal={false}
