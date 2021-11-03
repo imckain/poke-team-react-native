@@ -8,7 +8,6 @@ import MoveType from '../components/moveDetailComponents/MoveType';
 import MoveMetaData from '../components/moveDetailComponents/MoveMetaData';
 import MovePokemon from '../components/moveDetailComponents/MovePokemon';
 import MoveEffect from '../components/moveDetailComponents/MoveEffect';
-import checkType from '../components/functions/checkType';
 
 const MoveDetailModal = (props) => {
   let results;
