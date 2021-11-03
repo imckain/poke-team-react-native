@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { View, StyleSheet, Pressable, Keyboard, TouchableWithoutFeedback, ScrollView } from 'react-native';
-import AdvancedSearchNavigator from '../components/navigatorCards/AdvancedSearchNavigator';
 
 import { Ionicons } from '@expo/vector-icons';
 
