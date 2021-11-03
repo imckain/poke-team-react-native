@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
 
-import useTypeResults from '../hooks/useTypeResults';
 import PokemonSearchScreen from '../components/advancedSearchScreens/PokemonSearchScreen';
 import TypeSearchScreen from '../components/advancedSearchScreens/TypeSearchScreen';
 import MoveSearchScreen from '../components/advancedSearchScreens/MoveSearchScreen';
