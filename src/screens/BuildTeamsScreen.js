@@ -4,8 +4,6 @@ import { TextInput } from 'react-native-gesture-handler';
 import { Context as TeamsContext } from '../context/TeamContext';
 import uuid from 'react-native-uuid'
 
-import * as SQLite from 'expo-sqlite';
-
 import BuildTeamSearchBar from '../components/buildTeamComponents/BuildTeamSearchBar';
 import useBuildResults from '../hooks/useBuildResults';
 import ShowAdvancedSearchResult from '../components/resultsCards/ShowAdvancedSearchResult';
@@ -88,12 +86,12 @@ const BuildTeamsScreen = (props) => {
       return el.map((item) => {
         const id = uuid.v4()
         return (
-          <View key={id} style={{ flexDirection: 'row', width: '90%', alignSelf: 'center' }}>
-            <Pressable onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
+          <View key={id} style={styles.wrapper}>
+            <Pressable style={{ width: '80%' }} onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
               <PokemonSlotCard results={item} />
             </Pressable>
-            <Pressable style={{ position: 'absolute', alignSelf: 'center', right: 5, zIndex: 1 }} onPress={() => deleteTeamMember(item)}>
-              <Ionicons name="ios-remove-circle-outline" size={16} color="#ff0000" />
+            <Pressable style={styles.rightAction} onPress={() => deleteTeamMember(item)}>
+              <Ionicons name="ios-trash-sharp" size={16} color="#fff" />
             </Pressable>
           </View>
         )
@@ -161,6 +159,17 @@ const BuildTeamsScreen = (props) => {
 };
 
 const styles = StyleSheet.create({
+  wrapper: { 
+    borderRadius: 10, 
+    overflow: 'hidden',
+    marginBottom: 24,
+    backgroundColor: '#464450',
+    justifyContent: 'space-between',
+    width: '90%',
+    height: 'auto',
+    alignSelf: 'center',
+    flexDirection: 'row'
+  },
   container: {
     backgroundColor: '#353340',
     flexDirection: 'column',
@@ -210,11 +219,18 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-between',
     paddingBottom: 60,
+    flex: 1
   },
   nullMessage: {
     fontSize: 32,
     fontWeight: '600',
     color: '#fff'
+  },
+  rightAction: {
+    justifyContent: 'center',
+    backgroundColor: '#ff0000',
+    width: 50,
+    alignItems: 'center',
   },
 });
 
