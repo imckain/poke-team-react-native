@@ -4,7 +4,7 @@ import { createNativeStackNavigator, } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Provider } from './src/context/TeamContext';
 
-import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons, Entypo } from '@expo/vector-icons';
 
 import HomeScreen from './src/screens/HomeScreen';
 import TeamsScreen from './src/screens/TeamsScreen';
@@ -20,6 +20,7 @@ import SecondaryDetailModal from './src/screens/SecondaryDetailModal';
 import LocationDetailModal from './src/screens/LocationDetailModal';
 import TeamDetailScreen from './src/screens/TeamDetailScreen';
 import EditTeamsScreen from './src/screens/EditTeamsScreen';
+import { Button, Pressable } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -27,14 +28,18 @@ const Tab = createBottomTabNavigator();
 function BottomTabNavigator() {
   return (
     <Tab.Navigator
-      screenOptions={{
+      screenOptions={({ navigation, route }) => ({
         tabBarActiveTintColor: '#ff0000',
         tabBarInactiveTintColor: '#CFCFCF',
-      }}
+      })}
       initialRouteName='Home'
-    >
+      >
       <Tab.Group
         screenOptions={{
+          headerStyle: {
+            height: 'auto',
+            justifyContent: 'center'
+          },
           headerTitleStyle: {
             color: '#ffffff',
             fontWeight: '600',
@@ -44,13 +49,21 @@ function BottomTabNavigator() {
             height: 82,
             alignItems: 'baseline'
           },
-          tabBarShowLabel: false
+          tabBarShowLabel: false,
+          headerTitle: props => <Logo {...props} />,
         }}
         >
         <Tab.Screen 
           name='Teams Tab Nav' 
           component={TeamsScreen} 
-          options={{
+          options={({ navigation, route }) => ({
+            headerRight: () => {
+              return (
+                <Pressable style={{ paddingHorizontal: 18 }} onPress={() => navigation.navigate('Build Team')}>
+                  <Entypo name="plus" size={26} color="#fff" />
+                </Pressable>
+              )
+            },
             title: 'Teams',
             tabBarIcon: ({ focused, color }) => {
               let materialIconName;
@@ -58,14 +71,16 @@ function BottomTabNavigator() {
               return <MaterialCommunityIcons name={materialIconName} size={34} color={color} />
             },
             headerStyle: {
-              backgroundColor: '#ff0000',
-              height: 50
+              backgroundColor: '#272537',
+              // height: 'auto'
             },
             headerTitleStyle: {
               color: '#000000'
             },
-            headerShown: false,
-          }}
+            // headerTitle: props => <Logo {...props} />,
+            // headerShown: false,
+          })}
+          initialParams={'Teams'}
         />
         <Tab.Screen 
           name='Home' 
@@ -78,13 +93,14 @@ function BottomTabNavigator() {
               return <Ionicons name={ioniconName} size={38} color={color} />
             },
             headerStyle: {
-              backgroundColor: '#ffc554',
-              height: 50
+              backgroundColor: '#272537',
+              // height: 'auto'
             },
             headerTitleStyle: {
               color: '#000000'
             },
-            headerShown: false
+            // headerTitle: props => <Logo {...props} />,
+            // headerShown: false
           }}
         />
         <Tab.Screen 
@@ -98,13 +114,14 @@ function BottomTabNavigator() {
               return <Ionicons name={ioniconName} size={40} color={color} />
             },
             headerStyle: {
-              backgroundColor: '#ffc554',
-              height: 50
+              backgroundColor: '#272537',
+              // height: 'auto'
             },
             headerTitleStyle: {
               color: '#000000'
             },
-            headerShown: false,
+            // headerTitle: props => <Logo {...props} />,
+            // headerShown: false,
             tabBarIconStyle: {
               marginTop: 1
             }
@@ -120,13 +137,22 @@ function App() {
     <NavigationContainer screenOptions={{ headerStyle: { height: 250 }}}>
       <Stack.Navigator
         initialRouteName='Tab Navigator' 
-        screenOptions={{
+        screenOptions={({ navigation, route }) => ({
+          // headerRight: () => {
+          //   console.log(route);
+          //   return (
+          //     <Pressable onPress={() => navigation.navigate('Build Team')}>
+          //       <Entypo name="squared-plus" size={24} color="#fff" />
+          //     </Pressable>
+          //   )
+          // },
           headerStyle: {
             backgroundColor: '#272537',
           },
           headerTitle: props => <Logo {...props} />,
           headerBackTitle: ' ',
-        }}
+          headerShown: false
+        })}
       >
         <Stack.Group>
           <Stack.Screen 
@@ -136,22 +162,42 @@ function App() {
           <Stack.Screen 
             name="Teams" 
             component={TeamsScreen} 
-            />
+            // options={({ navigation }) => ({
+            //   // headerRight: () => <Button title='button' />
+            //   headerRight: () => (
+            //     <Pressable onPress={() => navigation.navigate('Build Team')}>
+            //       <Entypo name="squared-plus" size={24} color="#fff" />
+            //     </Pressable>
+            //   )
+            // })}
+          />
           <Stack.Screen 
             name="Build Team" 
             component={BuildTeamsScreen} 
-          />
+            options={{
+              headerShown: true
+            }}
+            />
           <Stack.Screen 
             name="Edit Team" 
             component={EditTeamsScreen} 
-          />
+            options={{
+              headerShown: true
+            }}
+            />
           <Stack.Screen 
             name="Team Detail" 
             component={TeamDetailScreen} 
-          />
+            options={{
+              headerShown: true
+            }}
+            />
           <Stack.Screen 
             name="Profile" 
             component={ProfileScreen} 
+            options={{
+              headerShown: true
+            }}
           />
         </Stack.Group>
         <Stack.Group>
