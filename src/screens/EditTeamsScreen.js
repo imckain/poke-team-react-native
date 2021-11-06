@@ -91,19 +91,19 @@ const EditTeamsScreen = (props) => {
       return el.map((item) => {
         const id = uuid.v4()
         return (
-          <View key={id} style={{ flexDirection: 'row', width: '90%', alignSelf: 'center' }}>
-            <Pressable onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
+          <View key={id} style={styles.wrapper}>
+            <Pressable style={{ width: '80%' }} onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
               <PokemonSlotCard results={item} />
             </Pressable>
-            <Pressable style={{ position: 'absolute', alignSelf: 'center', right: 0, padding: 5 }} onPress={() => deleteTeamMember(item)}>
-              <Ionicons name="ios-remove-circle-outline" size={16} color="#ff0000" />
+            <Pressable style={styles.rightAction} onPress={() => deleteTeamMember(item)}>
+              <Ionicons name="ios-trash-sharp" size={16} color="#fff" />
             </Pressable>
           </View>
         )
       })
     } else return (
-      <View>
-        <Text>Search for a Pokemon to add it to your team</Text>
+      <View style={{ width: '90%', alignSelf: 'center', marginTop: 12 }}>
+        <Text adjustsFontSizeToFit={true} numberOfLines={1} style={styles.nullMessage}>Search for a Pokemon to add it to your team</Text>
       </View>
     )
   }
@@ -164,6 +164,17 @@ const EditTeamsScreen = (props) => {
 };
 
 const styles = StyleSheet.create({
+  wrapper: { 
+    borderRadius: 10, 
+    overflow: 'hidden',
+    marginBottom: 24,
+    backgroundColor: '#464450',
+    justifyContent: 'space-between',
+    width: '90%',
+    height: 'auto',
+    alignSelf: 'center',
+    flexDirection: 'row'
+  },
   container: {
     backgroundColor: '#353340',
     flexDirection: 'column',
@@ -213,6 +224,17 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-between',
     paddingBottom: 60,
+  },
+  nullMessage: {
+    fontSize: 32,
+    fontWeight: '600',
+    color: '#fff'
+  },
+  rightAction: {
+    justifyContent: 'center',
+    backgroundColor: '#ff0000',
+    width: 50,
+    alignItems: 'center',
   },
 });
 
