@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { View, StyleSheet, Pressable, Keyboard, TouchableWithoutFeedback, ScrollView } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Keyboard, TouchableWithoutFeedback, ScrollView } from 'react-native';
 
 import { Ionicons } from '@expo/vector-icons';
 
@@ -26,14 +26,14 @@ const HomeScreen = (props) => {
   const showClear = (term) => {
     if(term !== '') {
       return (
-        <Pressable 
+        <TouchableOpacity 
           onPress={() => {
             setSearchTerm('')
           }} 
           style={styles.clear}
         >
           <Ionicons name="ios-close-circle" size={18} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } else return null
   }
@@ -41,9 +41,9 @@ const HomeScreen = (props) => {
   const showResultCard = (el) => {
     if (el !== null) {
       return (
-        <Pressable onPress={() => props.navigation.navigate('Detail Modal', { results: el })}>
+        <TouchableOpacity onPress={() => props.navigation.navigate('Detail Modal', { results: el })}>
           <ShowSearchResult results={el} />
-        </Pressable>
+        </TouchableOpacity>
       )
     } else return null
   }
@@ -63,15 +63,15 @@ const HomeScreen = (props) => {
         </View>
         {showResultCard(results)}
         <View style={styles.largeNavContainer}>
-          <Pressable style={styles.largeButtonStyle} onPress={() => props.navigation.navigate('Teams Tab Nav')} >
+          <TouchableOpacity style={styles.largeButtonStyle} onPress={() => props.navigation.navigate('Teams Tab Nav')} >
             <TeamsNavigator />
-          </Pressable>
-          <Pressable style={styles.largeButtonStyle} onPress={() => props.navigation.navigate('Build Team')}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.largeButtonStyle} onPress={() => props.navigation.navigate('Build Team')}>
             <BuildTeamsNavigator />
-          </Pressable>
-          <Pressable style={styles.largeButtonStyle} onPress={() => props.navigation.navigate('Profile')} >
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.largeButtonStyle} onPress={() => props.navigation.navigate('Profile')} >
             <AboutNavigator />
-          </Pressable>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </HideKeyboard>

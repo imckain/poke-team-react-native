@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import DropDownPicker from 'react-native-dropdown-picker';
 
@@ -53,12 +53,12 @@ const MoveSearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable onPress={async() => {
+            <TouchableOpacity onPress={async() => {
               await setSearchTerm(item.identifier);
               return moveSearchApi(item.identifier)
               }}>
               <PokedexCard results={item} searchParam={searchParam} />
-            </Pressable>
+            </TouchableOpacity>
           )
         }}
       />
@@ -74,12 +74,12 @@ const MoveSearchScreen = (props) => {
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => {
             return(
-              <Pressable key={item.id} onPress={async() => {
+              <TouchableOpacity key={item.id} onPress={async() => {
                 await setSearchTerm(item.identifier); 
                 return moveSearchApi(item.identifier)
                 }}>
                 <PokedexCard results={item} searchParam={param} />
-              </Pressable>
+              </TouchableOpacity>
             )
           }}
         />
@@ -117,9 +117,9 @@ const MoveSearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable onPress={() => props.navigation.navigate('Move Detail Modal', { results: item })}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Move Detail Modal', { results: item })}>
               <ShowMoveSearchResult results={item} />
-            </Pressable>
+            </TouchableOpacity>
           )
         }}
       />
@@ -131,7 +131,7 @@ const MoveSearchScreen = (props) => {
   const showClear = (el, term) => {
     if(el !== null || term !== '') {
       return (
-        <Pressable 
+        <TouchableOpacity 
           onPress={async() => {
             await moveSearchApi()
             setSearchTerm('')
@@ -139,7 +139,7 @@ const MoveSearchScreen = (props) => {
           style={styles.clear}
         >
           <Ionicons name="ios-close-circle" size={18} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } else return null
   }

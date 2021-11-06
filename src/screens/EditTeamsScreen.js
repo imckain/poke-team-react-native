@@ -1,5 +1,5 @@
 import React, { useState, useContext, useCallback } from 'react';
-import { Text, View, StyleSheet, FlatList, ScrollView, TouchableWithoutFeedback, Pressable, Keyboard } from 'react-native';
+import { Text, View, StyleSheet, FlatList, ScrollView, TouchableWithoutFeedback, TouchableOpacity, Keyboard } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import { Context as TeamsContext } from '../context/TeamContext';
 import uuid from 'react-native-uuid'
@@ -43,18 +43,18 @@ const EditTeamsScreen = (props) => {
         const showAddButton = (el) => {
           return (
             teamMembers.length < 6 ?
-              <Pressable onPress={() => setTeamMembers([...teamMembers].concat(el))}>
+              <TouchableOpacity onPress={() => setTeamMembers([...teamMembers].concat(el))}>
                 <AddPokemonButton name={el.name.replaceAll('-', ' ')} width={'90%'} height={40} />
-              </Pressable>
+              </TouchableOpacity>
             :
               null
           )
         }
         return(
           <View style={styles.addMonCard}>
-            <Pressable style={{flex: 1}} onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
+            <TouchableOpacity style={{flex: 1}} onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
               <ShowAdvancedSearchResult results={item} />
-            </Pressable>
+            </TouchableOpacity>
             {showAddButton(item)}
           </View>
         )
@@ -73,7 +73,7 @@ const EditTeamsScreen = (props) => {
   const showClear = (el, term) => {
     if(el !== null || term !== '') {
       return (
-        <Pressable 
+        <TouchableOpacity 
           onPress={async() => {
             await buildSearchApi()
             setSearchTerm('')
@@ -81,7 +81,7 @@ const EditTeamsScreen = (props) => {
           style={styles.clear}
         >
           <Ionicons name="ios-close-circle" size={18} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } else return null
   }
@@ -92,12 +92,12 @@ const EditTeamsScreen = (props) => {
         const id = uuid.v4()
         return (
           <View key={id} style={styles.wrapper}>
-            <Pressable style={{ width: '80%' }} onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
+            <TouchableOpacity style={{ width: '80%' }} onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
               <PokemonSlotCard results={item} />
-            </Pressable>
-            <Pressable style={styles.rightAction} onPress={() => deleteTeamMember(item)}>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.rightAction} onPress={() => deleteTeamMember(item)}>
               <Ionicons name="ios-trash-sharp" size={16} color="#fff" />
-            </Pressable>
+            </TouchableOpacity>
           </View>
         )
       })
@@ -154,9 +154,9 @@ const EditTeamsScreen = (props) => {
           <View style={styles.teamSlotContainer}>
             {createTeamMember(teamMembers)}
           </View>
-          <Pressable onPress={() => saveTeamAndGoBack(id, teamName, teamMembers)} >
+          <TouchableOpacity onPress={() => saveTeamAndGoBack(id, teamName, teamMembers)} >
             <SaveTeamButton height={54} width={'90%'} />
-          </Pressable>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </HideKeyboard>

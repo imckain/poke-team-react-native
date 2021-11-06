@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
 import { Entypo } from '@expo/vector-icons';
@@ -10,17 +10,17 @@ const VersionDetail = ({ results, margin }) => {
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <Pressable style={styles.headerWrapper} onPressIn={() => setCollapsed(false)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setCollapsed(false)}>
           <Text allowFontScaling={false} style={[styles.headerText]}>Game Appearances</Text>  
           <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } if (el === false) {
       return(
-        <Pressable style={styles.headerWrapper} onPressIn={() => setCollapsed(true)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setCollapsed(true)}>
           <Text allowFontScaling={false} style={[styles.headerText]}>Game Appearances</Text>  
           <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     }
   }, []);

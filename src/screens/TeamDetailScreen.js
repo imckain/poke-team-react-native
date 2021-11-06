@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Text, View, StyleSheet, ScrollView, TouchableWithoutFeedback, Pressable, Keyboard } from 'react-native';
+import { Text, View, StyleSheet, ScrollView, TouchableWithoutFeedback, TouchableOpacity, Keyboard } from 'react-native';
 import { Context as TeamsContext } from '../context/TeamContext';
 import uuid from 'react-native-uuid'
 
@@ -26,9 +26,9 @@ const TeamDetailScreen = (props) => {
         const id = uuid.v4()
         return (
           <View key={id} style={{ flexDirection: 'row', width: '90%', alignSelf: 'center' }}>
-            <Pressable onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
               <PokemonSlotCard results={item} />
-            </Pressable>
+            </TouchableOpacity>
           </View>
         )
       })
@@ -45,9 +45,9 @@ const TeamDetailScreen = (props) => {
           <View style={styles.teamSlotContainer}>
             {createTeamMember(team.content)}
           </View>
-          <Pressable onPress={() => props.navigation.navigate('Edit Team', { id: id })} >
+          <TouchableOpacity onPress={() => props.navigation.navigate('Edit Team', { id: id })} >
             <EditTeamButton height={54} width={'90%'} />
-          </Pressable>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </HideKeyboard>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, View, Pressable } from 'react-native';
+import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
 
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
 import checkType from '../functions/checkType';
@@ -24,14 +24,14 @@ const MoveType = ({ results, navigation, detailFontSize, margin, flexDirection }
 
     return (
       <View key={el.type.name} style={[styles.typeBox, { backgroundColor: checkType(el.type.name)}]}>
-        <Pressable 
+        <TouchableOpacity 
           onPressIn={async() => {
             await getResultsFromUrl(el.type.url)
           }}
           onPressOut={() => navigate(el.type.url, el.type.name)}
         >
           <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize }]}>{isValid(el)}</Text>
-        </Pressable>
+        </TouchableOpacity>
       </View>
     )
   }

@@ -1,5 +1,5 @@
 import React, { useCallback, useState, useEffect } from 'react';
-import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import useGetResultsFromUrl from '../hooks/useGetResultsFromUrl';
@@ -27,12 +27,12 @@ const DetailModal = (props) => {
     if (el === true) {
       return (
         <View style={{width: '100%'}}>
-          <Pressable style={{zIndex: 1}} onPress={() => setIsShiny(false)}>
+          <TouchableOpacity style={{zIndex: 1}} onPress={() => setIsShiny(false)}>
             <View style={ styles.changeButton} >
               <MaterialIcons name="360" size={24} color="rgb(223, 223, 223)" />
               <Text allowFontScaling={false} style={styles.changeLabel}>Shiny</Text>
             </View>
-          </Pressable>
+          </TouchableOpacity>
           <View style={styles.spriteContainer}>
             <ShinyFrontSprite width={160} height={160} results={results} />
             <ShinyBackSprite width={160} height={160} results={results} />
@@ -43,12 +43,12 @@ const DetailModal = (props) => {
     if (el === false) {
       return (
         <View style={{width: '100%'}}>
-          <Pressable style={{zIndex: 1}} onPress={() => setIsShiny(true)}>
+          <TouchableOpacity style={{zIndex: 1}} onPress={() => setIsShiny(true)}>
             <View style={ styles.changeButton} >
               <MaterialIcons name="360" size={24} color="rgb(223, 223, 223)" />
               <Text allowFontScaling={false} style={styles.changeLabel}>Normal</Text>
             </View>
-          </Pressable>
+          </TouchableOpacity>
           <View style={styles.spriteContainer}>
             <FrontSprite width={160} height={160} results={results} />
             <BackSprite width={160} height={160} results={results} />
@@ -113,7 +113,7 @@ const DetailModal = (props) => {
   const showPrevious = () => {
     if (results.id > 1 && results.id < 899) {
       return(
-        <Pressable 
+        <TouchableOpacity 
           onPressIn={async() => {
             await advancedSearchAPI((results.id - 1))
             if (advancedResults[0].id !== null) {
@@ -128,12 +128,12 @@ const DetailModal = (props) => {
           }}
         >
           <Ionicons name="chevron-back" size={32} color="rgba(255, 255, 255, 0.5)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     }
     if (results.id > 10001) {
       return(
-        <Pressable 
+        <TouchableOpacity 
           onPressIn={async() => {
             await advancedSearchAPI((results.id - 1))
             if (advancedResults[0].id !== null) {
@@ -148,7 +148,7 @@ const DetailModal = (props) => {
           }}
         >
           <Ionicons name="chevron-back" size={32} color="rgba(255, 255, 255, 0.5)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } else return <View style={{width: 37}} />
   }
@@ -156,7 +156,7 @@ const DetailModal = (props) => {
   const showNext = () => {
     if (results.id < 898) {
       return (
-        <Pressable 
+        <TouchableOpacity 
           onPressIn={async() => {
             await advancedSearchAPI((results.id + 1))
             if (advancedResults[0].id !== null) {
@@ -171,12 +171,12 @@ const DetailModal = (props) => {
           }}
         >
           <Ionicons name="chevron-forward" size={32} color="rgba(255, 255, 255, 0.5)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     }
     if (results.id > 898 && results.id < 10200) {
       return (
-        <Pressable 
+        <TouchableOpacity 
           onPressIn={async() => {
             await advancedSearchAPI((results.id + 1))
             if (advancedResults[0].id !== null) {
@@ -191,7 +191,7 @@ const DetailModal = (props) => {
           }}
         >
           <Ionicons name="chevron-forward" size={32} color="rgba(255, 255, 255, 0.5)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } else return <View style={{width: 37}} />
   }
@@ -215,7 +215,7 @@ const DetailModal = (props) => {
           <ModalBaseStats headerFontSize={28} detailFontSize={22} margin={13} results={results} />
           <MovesDetail navigation={props.navigation} margin={13} results={results} />
           <VersionDetail results={results} margin={13} />
-          <Pressable 
+          <TouchableOpacity 
             onPressIn={async() => {
               await getResultsFromUrl(results.location_area_encounters)
               return urlResults
@@ -226,7 +226,7 @@ const DetailModal = (props) => {
             style={styles.encounterContainer}
           >
             {isLocationAvailable()}
-          </Pressable>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </View>

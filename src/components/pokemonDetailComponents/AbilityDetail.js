@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
@@ -13,17 +13,17 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <Pressable style={styles.headerWrapper} onPressIn={() => setCollapsed(false)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setCollapsed(false)}>
           <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities</Text>  
           <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } if (el === false) {
       return(
-        <Pressable style={styles.headerWrapper} onPressIn={() => setCollapsed(true)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setCollapsed(true)}>
           <Text allowFontScaling={false} style={[styles.headerText, { fontSize: headerFontSize }]}>Abilities</Text>  
           <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     }
   }, []);
@@ -39,7 +39,7 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
     const abilityBox = el.abilities.map(item => {      
       return (
         <View key={item.ability.name} style={styles.abilityBox}>
-          <Pressable 
+          <TouchableOpacity 
             onPressIn={async() => {
               await getResultsFromUrl(item.ability.url)
             }}
@@ -48,7 +48,7 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
             }}
           >
             <Text allowFontScaling={false} style={[styles.abilityText, { fontSize: detailFontSize }]}>{item.ability.name.replaceAll('-', ' ')}</Text>
-          </Pressable>
+          </TouchableOpacity>
         </View>
       )
     })

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import DropDownPicker from 'react-native-dropdown-picker';
 
@@ -46,12 +46,12 @@ const PokemonSearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable key={item.id} onPress={async() => {
+            <TouchableOpacity key={item.id} onPress={async() => {
               await setSearchTerm(item.identifier); 
               return advancedSearchAPI(item.identifier)
               }}>
               <PokedexCard results={item} searchParam={param} />
-            </Pressable>
+            </TouchableOpacity>
           )
         }}
       />
@@ -67,12 +67,12 @@ const PokemonSearchScreen = (props) => {
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => {
             return(
-              <Pressable key={item.id} onPress={async() => {
+              <TouchableOpacity key={item.id} onPress={async() => {
                 await setSearchTerm(item.identifier); 
                 return advancedSearchAPI(item.identifier)
                 }}>
                 <PokedexCard results={item} searchParam={param} />
-              </Pressable>
+              </TouchableOpacity>
             )
           }}
         />
@@ -111,9 +111,9 @@ const PokemonSearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable style={{}} onPress={() => props.navigation.navigate('Detail Modal', { results: [item], navigation: props.navigation })}>
+            <TouchableOpacity style={{}} onPress={() => props.navigation.navigate('Detail Modal', { results: [item], navigation: props.navigation })}>
               <ShowAdvancedSearchResult results={item} />
-            </Pressable>
+            </TouchableOpacity>
           )
         }}
       />
@@ -123,7 +123,7 @@ const PokemonSearchScreen = (props) => {
   const showClear = (el, term) => {
     if(el !== null || term !== '') {
       return (
-        <Pressable 
+        <TouchableOpacity 
           onPress={async() => {
             await advancedSearchAPI()
             setSearchTerm('')
@@ -131,7 +131,7 @@ const PokemonSearchScreen = (props) => {
           style={styles.clear}
         >
           <Ionicons name="ios-close-circle" size={18} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } else return null
   }

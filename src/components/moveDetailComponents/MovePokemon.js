@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
@@ -13,17 +13,17 @@ const MovePokemon = ({ results, navigation }) => {
   const checkForPokemonCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <Pressable style={styles.headerWrapper} onPressIn={() => setPokemonCollapsed(false)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setPokemonCollapsed(false)}>
           <Text allowFontScaling={false} style={[styles.headerText]}>Learned By:</Text>  
           <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } if (el === false) {
       return(
-        <Pressable style={styles.headerWrapper} onPressIn={() => setPokemonCollapsed(true)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setPokemonCollapsed(true)}>
           <Text allowFontScaling={false} style={[styles.headerText]}>Learned By:</Text>  
           <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     }
   }, []);
@@ -41,14 +41,14 @@ const MovePokemon = ({ results, navigation }) => {
       const pokemonBox = el.learned_by_pokemon.map(item => {
         return(
           <View key={item.name} style={styles.textBox}>
-            <Pressable
+            <TouchableOpacity
               onPressIn={async() => {
                 await getResultsFromUrl(item.url)
               }}
               onPressOut={() => navigate(item.url, item.name)}
             >
               <Text allowFontScaling={false} style={[styles.text]}>{item.name.replaceAll('-', ' ')}</Text>
-            </Pressable>
+            </TouchableOpacity>
           </View>
         )
       }) 

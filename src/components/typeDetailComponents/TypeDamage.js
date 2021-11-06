@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
@@ -20,17 +20,17 @@ const TypeDamage = ({ results, navigation }) => {
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <Pressable style={styles.headerWrapper} onPressIn={() => setCollapsed(false)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setCollapsed(false)}>
           <Text allowFontScaling={false} style={[styles.headerText]}>Damage Multipliers</Text>  
           <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } if (el === false) {
       return(
-        <Pressable style={styles.headerWrapper} onPressIn={() => setCollapsed(true)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setCollapsed(true)}>
           <Text allowFontScaling={false} style={[styles.headerText]}>Damage Multipliers</Text>  
           <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     }
   }, []);
@@ -38,17 +38,17 @@ const TypeDamage = ({ results, navigation }) => {
   const checkForCollapseOnMultipliers = useCallback((el, fn, dmg) => {
     if (el === true) {
       return (
-        <Pressable style={styles.headerWrapper} onPressIn={() => fn(false)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => fn(false)}>
           <Text allowFontScaling={false} style={styles.dmgCaseHeader}>{dmg}</Text> 
           <Entypo name="plus" size={24} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } if (el === false) {
       return(
-        <Pressable style={styles.headerWrapper} onPressIn={() => fn(true)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => fn(true)}>
           <Text allowFontScaling={false} style={styles.dmgCaseHeader}>{dmg}</Text> 
           <Entypo name="minus" size={24} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     }
   }, []);
@@ -65,14 +65,14 @@ const TypeDamage = ({ results, navigation }) => {
     const typeBox = el.map(item => {  
       return (
         <View key={item.name} style={[styles.typeBox, { backgroundColor: checkType(item.name) }]}>
-          <Pressable 
+          <TouchableOpacity 
             onPressIn={async() => {
               await getResultsFromUrl(item.url)
             }}
             onPressOut={() => navigate(item.url, item.name)}
           >
             <Text allowFontScaling={false} style={[styles.typeText]}>{item.name + ' '}</Text>
-          </Pressable>
+          </TouchableOpacity>
         </View>
       )
     })

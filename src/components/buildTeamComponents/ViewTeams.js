@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Animated, Text, View, StyleSheet, Image, Pressable, Alert } from 'react-native';
+import { Animated, Text, View, StyleSheet, Image, TouchableOpacity, Alert } from 'react-native';
 import { Context as TeamsContext} from '../../context/TeamContext';
 import uuid from 'react-native-uuid';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
@@ -44,7 +44,7 @@ const ViewTeams = (props) => {
       outputRange: [0, 0, 0, 0],
     });
     return (
-      <Pressable style={[styles.rightAction, { height: props.height }]} onPress={createTwoButtonAlert}>
+      <TouchableOpacity style={[styles.rightAction, { height: props.height }]} onPress={createTwoButtonAlert}>
         <Animated.Text
           style={[
             styles.delete,
@@ -54,7 +54,7 @@ const ViewTeams = (props) => {
           ]}>
           <Ionicons name="ios-trash-sharp" size={32} color="#fff" />
         </Animated.Text>
-      </Pressable>
+      </TouchableOpacity>
     );
   };
 

@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -11,17 +11,17 @@ const MoveMetaData = ({ results }) => {
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <Pressable style={styles.headerWrapper} onPressIn={() => setCollapsed(false)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setCollapsed(false)}>
           <Text allowFontScaling={false} style={[styles.metaDataHeaderText]}>Meta Data:</Text>  
           <Entypo name="plus" size={28} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } if (el === false) {
       return(
-        <Pressable style={styles.headerWrapper} onPressIn={() => setCollapsed(true)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setCollapsed(true)}>
           <Text allowFontScaling={false} style={[styles.metaDataHeaderText]}>Meta Data:</Text>  
           <Entypo name="minus" size={28} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     }
   }, []);

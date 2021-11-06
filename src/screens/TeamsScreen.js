@@ -1,5 +1,5 @@
 import React, { useCallback, useContext } from 'react';
-import { View, StyleSheet, Pressable, FlatList } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import { Context as TeamsContext} from '../context/TeamContext';
 
 import BuildTeamsButton from '../components/buildTeamComponents/BuildTeamsButton';
@@ -16,9 +16,9 @@ const TeamsScreen = (props) => {
       renderItem={({ item }) => {
         if (item.id !== 0) {
           return (
-            <Pressable onPress={() => props.navigation.navigate('Team Detail', { id: item.id, results: item.content, name: item.name })}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Team Detail', { id: item.id, results: item.content, name: item.name })}>
               <ViewTeams results={item} id={item.id} height={'auto'} width={'100%'} />
-            </Pressable>
+            </TouchableOpacity>
           )
         } else return null
       }}
@@ -32,9 +32,9 @@ const TeamsScreen = (props) => {
           {showTeams(state)}
         </View>
       </View>
-      {/* <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build Team')}>
+      {/* <TouchableOpacity style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build Team')}>
         <BuildTeamsButton height={60} width={'100%'} />
-      </Pressable> */}
+      </TouchableOpacity> */}
     </View>
   );
 };

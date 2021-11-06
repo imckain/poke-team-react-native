@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, Keyboard } from 'react-native';
 
 import PokemonSearchScreen from '../components/advancedSearchScreens/PokemonSearchScreen';
 import TypeSearchScreen from '../components/advancedSearchScreens/TypeSearchScreen';
@@ -34,26 +34,26 @@ const AdvancedSearchScreen = (props) => {
     <HideKeyboard>
       <View style={styles.container}>
         <View style={styles.searchParamsContainter}>
-          <Pressable onPress={() => setSearchParam('pokemon')}>
+          <TouchableOpacity onPress={() => setSearchParam('pokemon')}>
             <View style={[searchParam === 'pokemon' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>
               <Text allowFontScaling={false} style={[searchParam === 'pokemon' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>Pokemon</Text>
             </View>
-          </Pressable>
-          <Pressable onPress={() => setSearchParam('type')}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => setSearchParam('type')}>
             <View style={[searchParam === 'type' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>
               <Text allowFontScaling={false} style={[searchParam === 'type' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>Type</Text>
             </View>
-          </Pressable>
-          <Pressable onPress={() => setSearchParam('move')}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => setSearchParam('move')}>
             <View style={[searchParam === 'move' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>
               <Text allowFontScaling={false} style={[searchParam === 'move' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>Move</Text>
             </View>
-          </Pressable>
-          <Pressable onPress={() => setSearchParam('ability')}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => setSearchParam('ability')}>
             <View style={[searchParam === 'ability' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>
               <Text allowFontScaling={false} style={[searchParam === 'ability' ? styles.activeSearchParamText : styles.inactiveSearchParamText]}>Ability</Text>
             </View>
-          </Pressable>
+          </TouchableOpacity>
         </View>
         {searchSelection(searchParam)}
       </View>

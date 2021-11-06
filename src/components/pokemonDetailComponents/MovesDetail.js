@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
@@ -16,17 +16,17 @@ const MovesDetail = ({ results, navigation, margin }) => {
   const checkForCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <Pressable style={styles.headerWrapper} onPressIn={() => setCollapsed(false)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setCollapsed(false)}>
           <Text allowFontScaling={false} style={[styles.headerText]}>Moves</Text>  
           <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } if (el === false) {
       return(
-        <Pressable style={styles.headerWrapper} onPressIn={() => setCollapsed(true)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setCollapsed(true)}>
           <Text allowFontScaling={false} style={[styles.headerText]}>Moves</Text>  
           <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     }
   }, []);
@@ -45,7 +45,7 @@ const MovesDetail = ({ results, navigation, margin }) => {
       .map(item => {
       return (
         <View key={item.move.name} style={styles.moveTextBox}>
-          <Pressable 
+          <TouchableOpacity 
             onPressIn={async() => {
               await getResultsFromUrl(item.move.url)
             }}
@@ -54,7 +54,7 @@ const MovesDetail = ({ results, navigation, margin }) => {
             }}
           >
             <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.moveText]}>{item.move.name.replaceAll('-', ' ')}</Text>
-          </Pressable>
+          </TouchableOpacity>
           <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
           <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>
         </View>
@@ -76,7 +76,7 @@ const MovesDetail = ({ results, navigation, margin }) => {
         const moveBox = el.map(item => {
           return (
             <View key={item.move.name} style={styles.moveTextBox}>
-              <Pressable 
+              <TouchableOpacity 
                 onPressIn={async() => {
                   await getResultsFromUrl(item.move.url)
                 }}
@@ -85,7 +85,7 @@ const MovesDetail = ({ results, navigation, margin }) => {
                 }}
               >
                 <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.moveText]}>{item.move.name.replaceAll('-', ' ')}</Text>
-              </Pressable>
+              </TouchableOpacity>
               <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
               <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>
             </View>

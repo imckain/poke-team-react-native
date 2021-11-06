@@ -20,7 +20,7 @@ import SecondaryDetailModal from './src/screens/SecondaryDetailModal';
 import LocationDetailModal from './src/screens/LocationDetailModal';
 import TeamDetailScreen from './src/screens/TeamDetailScreen';
 import EditTeamsScreen from './src/screens/EditTeamsScreen';
-import { Button, Pressable } from 'react-native';
+import { Button, TouchableOpacity } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -59,9 +59,9 @@ function BottomTabNavigator() {
           options={({ navigation, route }) => ({
             headerRight: () => {
               return (
-                <Pressable style={{ paddingHorizontal: 18 }} onPress={() => navigation.navigate('Build Team')}>
+                <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => navigation.navigate('Build Team')}>
                   <Entypo name="plus" size={26} color="#fff" />
-                </Pressable>
+                </TouchableOpacity>
               )
             },
             title: 'Teams',
@@ -141,9 +141,9 @@ function App() {
           // headerRight: () => {
           //   console.log(route);
           //   return (
-          //     <Pressable onPress={() => navigation.navigate('Build Team')}>
+          //     <TouchableOpacity onPress={() => navigation.navigate('Build Team')}>
           //       <Entypo name="squared-plus" size={24} color="#fff" />
-          //     </Pressable>
+          //     </TouchableOpacity>
           //   )
           // },
           headerStyle: {
@@ -165,9 +165,9 @@ function App() {
             // options={({ navigation }) => ({
             //   // headerRight: () => <Button title='button' />
             //   headerRight: () => (
-            //     <Pressable onPress={() => navigation.navigate('Build Team')}>
+            //     <TouchableOpacity onPress={() => navigation.navigate('Build Team')}>
             //       <Entypo name="squared-plus" size={24} color="#fff" />
-            //     </Pressable>
+            //     </TouchableOpacity>
             //   )
             // })}
           />

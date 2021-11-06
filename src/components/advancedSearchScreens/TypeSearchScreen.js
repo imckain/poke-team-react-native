@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Pressable, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 
 import { Ionicons } from '@expo/vector-icons';
@@ -31,12 +31,12 @@ const TypeSearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable onPress={async() => {
+            <TouchableOpacity onPress={async() => {
                 await setSearchTerm(item.identifier); 
                 return typeSearchApi(item.identifier)
                 }}>
               <PokedexCard results={item} searchParam={searchParam} />
-            </Pressable>
+            </TouchableOpacity>
           )
         }}
       />
@@ -52,9 +52,9 @@ const TypeSearchScreen = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return(
-            <Pressable onPress={() => props.navigation.navigate('Type Detail Modal', { results: item })}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Type Detail Modal', { results: item })}>
               <ShowTypeSearchResult navigation={props.navigation} results={item} />
-            </Pressable>
+            </TouchableOpacity>
           )
         }}
       />
@@ -66,7 +66,7 @@ const TypeSearchScreen = (props) => {
   const showClear = (el, term) => {
     if(el !== null || term !== '') {
       return (
-        <Pressable 
+        <TouchableOpacity 
           onPress={async() => {
             await typeSearchApi()
             setSearchTerm('')
@@ -74,7 +74,7 @@ const TypeSearchScreen = (props) => {
           style={styles.clear}
         >
           <Ionicons name="ios-close-circle" size={18} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } else return null
   }

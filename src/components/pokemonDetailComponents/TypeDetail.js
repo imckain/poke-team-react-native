@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
 import checkType from '../functions/checkType';
@@ -19,7 +19,7 @@ const TypeDetail = ({ results, margin, detailFontSize, navigation, flexDirection
     const typeBox = el.types.map(item => {      
       return (
         <View key={item.type.name} style={[styles.typeBox, { backgroundColor: checkType(item.type.name) }]}>
-          <Pressable 
+          <TouchableOpacity 
             onPressIn={async() => {
               await getResultsFromUrl(item.type.url)
             }}
@@ -28,7 +28,7 @@ const TypeDetail = ({ results, margin, detailFontSize, navigation, flexDirection
             }}
           >
             <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize }]}>{item.type.name}</Text>
-          </Pressable>
+          </TouchableOpacity>
         </View>
       )
     })

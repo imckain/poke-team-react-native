@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 
 import useGetReultsFromUrl from '../../hooks/useGetResultsFromUrl';
@@ -13,17 +13,17 @@ const TypePokemon = ({ results, navigation }) => {
   const checkForPokemonCollapse = useCallback((el) => {
     if (el === true) {
       return (
-        <Pressable style={styles.headerWrapper} onPressIn={() => setPokemonCollapsed(false)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setPokemonCollapsed(false)}>
           <Text allowFontScaling={false} style={[styles.headerText]}>Pokemon</Text>  
           <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     } if (el === false) {
       return(
-        <Pressable style={styles.headerWrapper} onPressIn={() => setPokemonCollapsed(true)}>
+        <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setPokemonCollapsed(true)}>
           <Text allowFontScaling={false} style={[styles.headerText]}>Pokemon</Text>  
           <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
-        </Pressable>
+        </TouchableOpacity>
       )
     }
   }, []);
@@ -39,14 +39,14 @@ const TypePokemon = ({ results, navigation }) => {
     const pokemonBox = el.pokemon.map(item => {
       return (
         <View key={item.pokemon.name} style={styles.textBox}>
-          <Pressable 
+          <TouchableOpacity 
             onPressIn={async() => {
               await getResultsFromUrl(item.pokemon.url)
             }}
             onPressOut={() => navigate(item.pokemon.url, item.pokemon.name)}
           >
             <Text allowFontScaling={false} style={[styles.text]}>{item.pokemon.name.replaceAll('-', ' ')}</Text>
-          </Pressable>
+          </TouchableOpacity>
         </View>
       )})
     return pokemonBox
