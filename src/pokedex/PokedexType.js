@@ -19,8 +19,11 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'baseline',
-    width: '100%'
+    alignItems: 'center',
+    width: '100%',
+    borderBottomColor: '#ffffff18',
+    borderBottomWidth: 1,
+    paddingLeft: 12
   },
   typeBox: {
     paddingVertical: 3,
