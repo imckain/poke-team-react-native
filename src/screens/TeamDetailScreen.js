@@ -45,9 +45,6 @@ const TeamDetailScreen = (props) => {
           <View style={styles.teamSlotContainer}>
             {createTeamMember(team.content)}
           </View>
-          <TouchableOpacity onPress={() => props.navigation.navigate('Edit Team', { id: id })} >
-            <EditTeamButton height={54} width={'90%'} />
-          </TouchableOpacity>
         </View>
       </ScrollView>
     </HideKeyboard>
