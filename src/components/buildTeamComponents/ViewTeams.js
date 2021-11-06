@@ -62,7 +62,9 @@ const ViewTeams = (props) => {
     <View style={styles.wrapper}>
       <Swipeable renderRightActions={renderRightActions}>
         <View style={[styles.container, { height: props.height, width: props.width }]}>
-          <Text allowFontScaling={false} style={styles.label}>{results.name}</Text>
+          <View style={styles.labelContainer}>
+            <Text allowFontScaling={false} style={styles.label}>{results.name}</Text>
+          </View>
           <View style={styles.spriteContainer}>
             {showSprite(results.content)}
           </View>
@@ -91,9 +93,18 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#fff',
     textAlign: 'center',
+    paddingBottom: 6,
+    paddingRight: 36,
+    paddingLeft: 4,
+  },
+  labelContainer: {
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
+    borderBottomColor: '#ffffff18',
+    borderBottomWidth: 2,
     marginLeft: 12,
-    marginBottom: 12,
-    marginTop: 12, 
+    marginVertical: 12,
   },
   spriteContainer: {
     flexDirection: 'row',
@@ -106,7 +117,7 @@ const styles = StyleSheet.create({
   rightAction: {
     justifyContent: 'center',
     backgroundColor: '#ff0000',
-    width: 50,
+    width: 80,
     alignItems: 'center'
   }
 });
