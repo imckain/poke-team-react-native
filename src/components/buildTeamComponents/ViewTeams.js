@@ -52,7 +52,7 @@ const ViewTeams = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#464450',
+    backgroundColor: '#464450a6',
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'flex-start',
@@ -61,7 +61,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     margin: 6,
     marginBottom: 22,
-    paddingLeft: 6,
   },
   label: {
     fontSize: 26,
