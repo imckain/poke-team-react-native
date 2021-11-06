@@ -103,11 +103,14 @@ const styles = StyleSheet.create({
   },
   largeButtonStyle: {
     fontSize: 32,
-    width: '90%',
+    width: '100%',
     fontWeight: '600',
     textAlign: 'center',
     alignSelf: 'center',
-    marginVertical: 6
+    height: 'auto',
+    marginVertical: 4,
+    // borderBottomColor: '#fff',
+    // borderBottomWidth: 2
   },
   teamsNavContainer: {
     flexDirection: 'row',
@@ -124,7 +127,8 @@ const styles = StyleSheet.create({
     width: '90%',
     flexDirection: 'column',
     alignSelf: 'center',
-    paddingVertical: 6
+    overflow: 'hidden',
+    // paddingVertical: 6
   },
 });
 
