@@ -18,7 +18,7 @@ const TeamDetailScreen = (props) => {
   const { state, addTeam } = useContext(TeamsContext);
 
   const id = props.route.params.id
-  const team = state._W.find((team) => team.id === id)
+  const team = state.find((team) => team.id === id)
 
   const createTeamMember = (el) => {
     if (el[0] !== undefined) {
