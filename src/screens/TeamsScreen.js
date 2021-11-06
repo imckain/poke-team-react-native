@@ -1,22 +1,19 @@
 import React, { useCallback, useContext } from 'react';
 import { View, StyleSheet, Pressable, FlatList } from 'react-native';
 import { Context as TeamsContext} from '../context/TeamContext';
-import * as SQLite from 'expo-sqlite';
 
 import BuildTeamsButton from '../components/buildTeamComponents/BuildTeamsButton';
 import ViewTeams from '../components/buildTeamComponents/ViewTeams';
 
 const TeamsScreen = (props) => {
-  const { state, addTeam, deleteTeam } = useContext(TeamsContext);
+  const { state } = useContext(TeamsContext);
 
   const showTeams = useCallback((el) => {
-    console.log(el);
     return <FlatList 
       horizontal={false}
       data={el}
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => {
-        // console.log(item.name);
         if (item.id !== 0) {
           return (
             <Pressable onPress={() => props.navigation.navigate('Team Detail', { id: item.id, results: item.content, name: item.name })}>
@@ -35,9 +32,9 @@ const TeamsScreen = (props) => {
           {showTeams(state)}
         </View>
       </View>
-      <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build Team')}>
+      {/* <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build Team')}>
         <BuildTeamsButton height={60} width={'100%'} />
-      </Pressable>
+      </Pressable> */}
     </View>
   );
 };
