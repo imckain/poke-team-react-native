@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
   logoContainer: {
   },
   logoText: {
+    // paddingBottom: 48,
     fontSize: 32,
     fontWeight: '600',
     color: '#fff',
