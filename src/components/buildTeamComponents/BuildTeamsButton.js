@@ -24,6 +24,8 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     flexDirection: 'row',
     marginBottom: 20,
+    alignSelf: 'center',
+    marginHorizontal: 6
   },
   label: {
     fontSize: 30,
