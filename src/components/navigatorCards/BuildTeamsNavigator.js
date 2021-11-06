@@ -1,35 +1,44 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
+import { Entypo } from '@expo/vector-icons';
+
 const BuildTeamsNavigator = (props) => {
 
   return (
     <View style={[styles.container]}>
-      <Text allowFontScaling={false} style={styles.label}>Build Team</Text>
+      <Entypo name="squared-plus" size={26} color='#fff' />
+      <View style={styles.labelContainer}>
+        <Text allowFontScaling={false} style={styles.label}>Build Teams</Text>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    height: 70,
     width: '100%',
-    backgroundColor: '#FF0000',
-    borderRadius: 10,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
-    padding: 5,
-    marginTop: 5
+    flexDirection: 'row',
+    paddingLeft: 12,
+    // paddingVertical: 8
   },
   label: {
-    padding: 15,
-    fontSize: 18,
+    fontSize: 26,
     fontWeight: '600',
     color: '#fff',
     textShadowColor: '#535353d3',
     textShadowOffset: { width: 0, height: 0 },
-    textShadowRadius: 12
+    textShadowRadius: 12,
   },
+  labelContainer: {
+    paddingVertical: 8,
+    borderBottomColor: '#ffffff18',
+    borderBottomWidth: 1,
+    marginLeft: 12,
+    flex: 1,
+  }
 });
 
 export default BuildTeamsNavigator;

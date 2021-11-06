@@ -1,35 +1,44 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
+import { Ionicons } from '@expo/vector-icons';
+
 const AboutNavigator = () => {
 
   return (
     <View style={styles.container}>
-      <Text allowFontScaling={false} style={styles.label}>About</Text>
+      <Ionicons name="ios-information-circle-outline" size={26} color="#fff" />
+      <View style={styles.labelContainer}>
+        <Text allowFontScaling={false} style={styles.label}>About</Text>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    height: 70,
     width: '100%',
-    backgroundColor: '#FFDE00',
-    borderRadius: 10,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
-    padding: 5,
-    marginTop: 5
+    flexDirection: 'row',
+    paddingLeft: 12,
+    // paddingVertical: 8
   },
   label: {
-    padding: 15,
-    fontSize: 18,
+    fontSize: 26,
     fontWeight: '600',
     color: '#fff',
     textShadowColor: '#535353d3',
     textShadowOffset: { width: 0, height: 0 },
-    textShadowRadius: 12
+    textShadowRadius: 12,
   },
+  labelContainer: {
+    paddingVertical: 8,
+    borderBottomColor: '#ffffff18',
+    borderBottomWidth: 1,
+    marginLeft: 12,
+    flex: 1,
+  }
 });
 
 export default AboutNavigator;
