@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Provider } from './src/context/TeamContext';
 
-import { Ionicons, MaterialCommunityIcons, Entypo } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import HomeScreen from './src/screens/HomeScreen';
 import TeamsScreen from './src/screens/TeamsScreen';
@@ -20,7 +21,6 @@ import SecondaryDetailModal from './src/screens/SecondaryDetailModal';
 import LocationDetailModal from './src/screens/LocationDetailModal';
 import TeamDetailScreen from './src/screens/TeamDetailScreen';
 import EditTeamsScreen from './src/screens/EditTeamsScreen';
-import { Button, TouchableOpacity } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -28,10 +28,10 @@ const Tab = createBottomTabNavigator();
 function BottomTabNavigator() {
   return (
     <Tab.Navigator
-      screenOptions={({ navigation, route }) => ({
+      screenOptions={{
         tabBarActiveTintColor: '#ff0000',
         tabBarInactiveTintColor: '#CFCFCF',
-      })}
+      }}
       initialRouteName='Home'
       >
       <Tab.Group
@@ -56,7 +56,7 @@ function BottomTabNavigator() {
         <Tab.Screen 
           name='Teams Tab Nav' 
           component={TeamsScreen} 
-          options={({ navigation, route }) => ({
+          options={({ navigation }) => ({
             headerRight: () => {
               return (
                 <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => navigation.navigate('Build Team')}>
@@ -72,13 +72,10 @@ function BottomTabNavigator() {
             },
             headerStyle: {
               backgroundColor: '#272537',
-              // height: 'auto'
             },
             headerTitleStyle: {
               color: '#000000'
             },
-            // headerTitle: props => <Logo {...props} />,
-            // headerShown: false,
           })}
           initialParams={'Teams'}
         />
@@ -94,13 +91,10 @@ function BottomTabNavigator() {
             },
             headerStyle: {
               backgroundColor: '#272537',
-              // height: 'auto'
             },
             headerTitleStyle: {
               color: '#000000'
             },
-            // headerTitle: props => <Logo {...props} />,
-            // headerShown: false
           }}
         />
         <Tab.Screen 
@@ -115,13 +109,10 @@ function BottomTabNavigator() {
             },
             headerStyle: {
               backgroundColor: '#272537',
-              // height: 'auto'
             },
             headerTitleStyle: {
               color: '#000000'
             },
-            // headerTitle: props => <Logo {...props} />,
-            // headerShown: false,
             tabBarIconStyle: {
               marginTop: 1
             }
@@ -137,22 +128,14 @@ function App() {
     <NavigationContainer screenOptions={{ headerStyle: { height: 250 }}}>
       <Stack.Navigator
         initialRouteName='Tab Navigator' 
-        screenOptions={({ navigation, route }) => ({
-          // headerRight: () => {
-          //   console.log(route);
-          //   return (
-          //     <TouchableOpacity onPress={() => navigation.navigate('Build Team')}>
-          //       <Entypo name="squared-plus" size={24} color="#fff" />
-          //     </TouchableOpacity>
-          //   )
-          // },
+        screenOptions={{
           headerStyle: {
             backgroundColor: '#272537',
           },
           headerTitle: props => <Logo {...props} />,
           headerBackTitle: ' ',
           headerShown: false
-        })}
+        }}
       >
         <Stack.Group>
           <Stack.Screen 
@@ -162,14 +145,9 @@ function App() {
           <Stack.Screen 
             name="Teams" 
             component={TeamsScreen} 
-            // options={({ navigation }) => ({
-            //   // headerRight: () => <Button title='button' />
-            //   headerRight: () => (
-            //     <TouchableOpacity onPress={() => navigation.navigate('Build Team')}>
-            //       <Entypo name="squared-plus" size={24} color="#fff" />
-            //     </TouchableOpacity>
-            //   )
-            // })}
+            options={{
+              headerShown: true
+            }}
           />
           <Stack.Screen 
             name="Build Team" 
@@ -213,9 +191,6 @@ function App() {
             component={DetailModal}
             options={{
               presentation: 'modal',
-              headerStyle: {
-                backgroundColor: '#ff0000',
-              },
               headerShown: 'false'
             }}
           />
@@ -224,9 +199,6 @@ function App() {
             component={SecondaryDetailModal}
             options={{
               presentation: 'modal',
-              headerStyle: {
-                backgroundColor: '#ff0000',
-              },
               headerShown: 'false'
             }}
           />
@@ -235,9 +207,6 @@ function App() {
             component={LocationDetailModal}
             options={{
               presentation: 'modal',
-              headerStyle: {
-                backgroundColor: '#ff0000',
-              },
               headerShown: 'false'
             }}
           />
@@ -246,9 +215,6 @@ function App() {
             component={TypeDetailModal}
             options={{
               presentation: 'modal',
-              headerStyle: {
-                backgroundColor: '#ff0000',
-              },
               headerShown: 'false'
             }}
           />
@@ -257,9 +223,6 @@ function App() {
             component={MoveDetailModal}
             options={{
               presentation: 'modal',
-              headerStyle: {
-                backgroundColor: '#ff0000',
-              },
               headerShown: 'false'
             }}
           />
@@ -268,9 +231,6 @@ function App() {
             component={AbilityDetailModal}
             options={{
               presentation: 'modal',
-              headerStyle: {
-                backgroundColor: '#ff0000',
-              },
               headerShown: 'false'
             }}
           />
