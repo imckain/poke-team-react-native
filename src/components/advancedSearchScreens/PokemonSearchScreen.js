@@ -163,7 +163,7 @@ const PokemonSearchScreen = (props) => {
           setValue={setValue}
           setItems={setParams}
           placeholder='Generations'
-          style={styles.dropDown}
+          style={styles.dropDownHeader}
           textStyle={{
             color: '#fff',
             fontSize: 24,
@@ -202,8 +202,16 @@ const styles = StyleSheet.create({
     right: 34, 
     width: 'auto',
   },
-  dropDown: {
+  dropDownHeader: {
     backgroundColor: '#464450a6',
+    marginBottom: 22,
+    borderWidth: 0,
+    width: '90%',
+    alignSelf: 'center',
+    paddingHorizontal: 12
+  },
+  dropDown: {
+    backgroundColor: '#464450',
     marginBottom: 22,
     borderWidth: 0,
     width: '90%',
