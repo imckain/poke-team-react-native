@@ -4,7 +4,7 @@ import { Text, View, StyleSheet } from 'react-native';
 const BuildTeamsNavigator = (props) => {
 
   return (
-    <View style={[styles.container, { height: props.height, width: props.width }]}>
+    <View style={[styles.container]}>
       <Text allowFontScaling={false} style={styles.label}>Build Team</Text>
     </View>
   );
@@ -12,12 +12,14 @@ const BuildTeamsNavigator = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#ff0000',
+    height: 70,
+    width: '100%',
+    backgroundColor: '#FF0000',
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5,
-    marginVertical: 15
+    marginTop: 5
   },
   label: {
     padding: 15,

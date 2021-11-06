@@ -12,14 +12,14 @@ const TeamsNavigator = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 140,
+    height: 70,
     width: '100%',
-    backgroundColor: '#ffc654',
+    backgroundColor: '#FF0000',
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5,
-    marginVertical: 15
+    marginTop: 5
   },
   label: {
     padding: 15,
