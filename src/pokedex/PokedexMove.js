@@ -52,31 +52,49 @@ const PokedexMove = ({ results, fontSize, detailFontSize, lines, alignSelf }) =>
 
   return (
     <View style={styles.container}>
-      <View style={[styles.moveInfo]}>
-        <Text allowFontScaling={false} numberOfLines={lines} adjustsFontSizeToFit={true} style={[styles.name, {fontSize: fontSize }]}>{results.identifier.replaceAll('-', ' ')}</Text>
-        <View style={[styles.typeBox, { backgroundColor: checkType(results.type_id) }]}>
-          <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize, alignSelf: alignSelf }]}>{showTypeName(results.type_id)}</Text>
+      <View style={styles.infoContainer}>
+        <View style={[styles.moveInfo]}>
+          <View style={styles.subInfo}>
+            <Text allowFontScaling={false} numberOfLines={lines} adjustsFontSizeToFit={true} style={[styles.name, {fontSize: fontSize }]}>{results.identifier.replaceAll('-', ' ')}</Text>
+            <View style={[styles.typeBox, { backgroundColor: checkType(results.type_id) }]}>
+              <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize, alignSelf: alignSelf }]}>{showTypeName(results.type_id)}</Text>
+            </View>
+          </View>
+            <Text allowFontScaling={false} style={styles.attributes}>Power: {checkForNull(results.power)} | PP: {checkForNull(results.pp)} | Acc: {checkForNull(results.accuracy)}</Text>
         </View>
-        <Text allowFontScaling={false} style={styles.attributes}>Power: {checkForNull(results.power)} | PP: {checkForNull(results.pp)} | Acc: {checkForNull(results.accuracy)}</Text>
+        <Ionicons style={{ paddingHorizontal: 12 }} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
       </View>
-      <Ionicons style={{ paddingHorizontal: 12 }} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    width: '100%',
+    paddingLeft: 24
+  },
+  infoContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: '100%'
+    alignItems: 'center',
+    width: '100%',
+    borderBottomColor: '#ffffff18',
+    borderBottomWidth: 1,
+    // paddingLeft: 12
   },
   moveInfo: {
     flexDirection: 'column', 
-    paddingLeft: 12, 
+    // paddingLeft: 12, 
     paddingVertical: 4, 
     alignItems: 'flex-start',
-    width: '80%'
+    width: '80%',
+    justifyContent: 'flex-start'
+  },
+  subInfo: { 
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   name: {
     color: '#fff',
@@ -89,7 +107,8 @@ const styles = StyleSheet.create({
   attributes: {
     color: 'rgb(175, 175, 175)',
     fontSize: 18,
-    marginBottom: 3
+    marginBottom: 3,
+    paddingLeft: 12
   },
   typeBox: {
     borderRadius: 10,
@@ -98,8 +117,10 @@ const styles = StyleSheet.create({
     width: 'auto',
     height: 'auto',
     marginVertical: 6,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+    marginLeft: 12
+
   },
   typeText: {
     color: '#fff',
