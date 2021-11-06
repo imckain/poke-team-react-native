@@ -36,8 +36,6 @@ const PokedexCard = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    borderBottomWidth: 1,
-    borderColor: '#fff', 
     width: '90%',
     height: 'auto',
     alignSelf: 'center',
