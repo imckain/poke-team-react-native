@@ -13,7 +13,7 @@ const TeamsScreen = (props) => {
     console.log(el);
     return <FlatList 
       horizontal={false}
-      data={el._W}
+      data={el}
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => {
         // console.log(item.name);
@@ -54,8 +54,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center',
     alignSelf: 'center',
-    width: '100%',
-    paddingHorizontal: 12,
+    width: '90%',
     paddingTop: 16
   },
   teamsScrollView: {
