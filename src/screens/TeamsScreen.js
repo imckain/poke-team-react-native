@@ -2,7 +2,6 @@ import React, { useCallback, useContext } from 'react';
 import { View, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import { Context as TeamsContext} from '../context/TeamContext';
 
-import BuildTeamsButton from '../components/buildTeamComponents/BuildTeamsButton';
 import ViewTeams from '../components/buildTeamComponents/ViewTeams';
 
 const TeamsScreen = (props) => {
@@ -32,9 +31,6 @@ const TeamsScreen = (props) => {
           {showTeams(state)}
         </View>
       </View>
-      {/* <TouchableOpacity style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build Team')}>
-        <BuildTeamsButton height={60} width={'100%'} />
-      </TouchableOpacity> */}
     </View>
   );
 };
