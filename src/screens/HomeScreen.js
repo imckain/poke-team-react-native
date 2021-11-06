@@ -62,15 +62,13 @@ const HomeScreen = (props) => {
           {showClear(searchTerm)}
         </View>
         {showResultCard(results)}
-        <View style={styles.teamsNavContainer}>
-          <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Teams Tab Nav')} >
+        <View style={styles.largeNavContainer}>
+          <Pressable style={styles.largeButtonStyle} onPress={() => props.navigation.navigate('Teams Tab Nav')} >
             <TeamsNavigator />
           </Pressable>
-          <Pressable style={styles.buttonStyle} onPress={() => props.navigation.navigate('Build Team')}>
-            <BuildTeamsNavigator height={140} width={'100%'} />
+          <Pressable style={styles.largeButtonStyle} onPress={() => props.navigation.navigate('Build Team')}>
+            <BuildTeamsNavigator />
           </Pressable>
-        </View>
-        <View style={styles.largeNavContainer}>
           <Pressable style={styles.largeButtonStyle} onPress={() => props.navigation.navigate('Profile')} >
             <AboutNavigator />
           </Pressable>
@@ -105,29 +103,28 @@ const styles = StyleSheet.create({
   },
   largeButtonStyle: {
     fontSize: 32,
-    width: '100%',
+    width: '90%',
     fontWeight: '600',
     textAlign: 'center',
     alignSelf: 'center',
-    marginBottom: 1
+    marginVertical: 6
   },
   teamsNavContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     alignSelf: 'center',
-    marginTop: 12,
-    justifyContent: 'space-evenly',
-    backgroundColor: '#464450a6',
-    borderRadius: 10,
     width: '90%',
     height: 'auto'
   },
   largeNavContainer: {
+    justifyContent: 'space-evenly',
+    borderRadius: 10,
+    marginTop: 12,
+    backgroundColor: '#464450a6',
     width: '90%',
     flexDirection: 'column',
     alignSelf: 'center',
-    paddingBottom: 30,
-    paddingTop: 12
+    paddingVertical: 6
   },
 });
 
