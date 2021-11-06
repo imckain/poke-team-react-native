@@ -109,8 +109,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     height: 'auto',
     marginVertical: 4,
-    // borderBottomColor: '#fff',
-    // borderBottomWidth: 2
   },
   teamsNavContainer: {
     flexDirection: 'row',
@@ -122,13 +120,12 @@ const styles = StyleSheet.create({
   largeNavContainer: {
     justifyContent: 'space-evenly',
     borderRadius: 10,
-    marginTop: 12,
+    marginTop: 24,
     backgroundColor: '#464450a6',
     width: '90%',
     flexDirection: 'column',
     alignSelf: 'center',
     overflow: 'hidden',
-    // paddingVertical: 6
   },
 });
 
