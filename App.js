@@ -60,7 +60,7 @@ function BottomTabNavigator() {
             headerRight: () => {
               return (
                 <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => navigation.navigate('Build Team')}>
-                  <Entypo name="plus" size={26} color="#fff" />
+                  <Ionicons name="ios-add" size={26} color="#fff" />
                 </TouchableOpacity>
               )
             },
@@ -188,9 +188,16 @@ function App() {
           <Stack.Screen 
             name="Team Detail" 
             component={TeamDetailScreen} 
-            options={{
+            options={({ navigation, route }) => ({
+              headerRight: () => {
+                return (
+                  <TouchableOpacity style={{ }} onPress={() => navigation.navigate('Edit Team', { id: route.params.id })}>
+                    <Ionicons name="ios-create-outline" size={26} color="#fff" />
+                  </TouchableOpacity>
+                )
+              },
               headerShown: true
-            }}
+            })}
             />
           <Stack.Screen 
             name="Profile" 
