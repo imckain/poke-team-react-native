@@ -24,6 +24,8 @@ const teamsReducer = (state, action) => {
           content: action.payload.content
         }
       ];
+    case 'hydrate':
+      return action.payload
     default:
       return state;
   }
@@ -47,8 +49,14 @@ const deleteTeam = dispatch => {
   };
 };
 
+const hydrate = dispatch => {
+  return (state) => {
+    dispatch({ type: 'hydrate', payload: state })
+  }
+}
+
 export const { Context, Provider } = createDataContext(
   teamsReducer, 
-  { addTeam, deleteTeam, editTeam },
+  { addTeam, deleteTeam, editTeam, hydrate },
   [{ id: 0, name: 'Build Your Team', content: {} }]
 );
