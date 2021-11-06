@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
-import { Text, View, StyleSheet, Image, Pressable, Alert } from 'react-native';
+import { Animated, Text, View, StyleSheet, Image, Pressable, Alert } from 'react-native';
 import { Context as TeamsContext} from '../../context/TeamContext';
-import uuid from 'react-native-uuid'
+import uuid from 'react-native-uuid';
+import Swipeable from 'react-native-gesture-handler/Swipeable';
 
 import { Ionicons } from '@expo/vector-icons';
 import FrontSprite from '../pokemonDetailComponents/FrontSprite';
 
 const ViewTeams = (props) => {
-  const { state, deleteTeam } = useContext(TeamsContext)
+  const { deleteTeam } = useContext(TeamsContext)
   
   const results = props.results
 
@@ -37,30 +38,53 @@ const ViewTeams = (props) => {
     })
   }
 
-  return (
-    <View style={[styles.container, { height: props.height, width: props.width }]}>
-      <Text allowFontScaling={false} style={styles.label}>{results.name}</Text>
-      <View style={styles.spriteContainer}>
-        {showSprite(results.content)}
-      </View>
-      <Pressable style={styles.delete} onPress={createTwoButtonAlert}>
-        <Ionicons name="ios-remove-circle-outline" size={16} color="#ff0000" />
+  renderRightActions = (progress, dragX) => {
+    const trans = dragX.interpolate({
+      inputRange: [0, 50, 100, 101],
+      outputRange: [0, 0, 0, 0],
+    });
+    return (
+      <Pressable style={[styles.rightAction, { height: props.height }]} onPress={createTwoButtonAlert}>
+        <Animated.Text
+          style={[
+            styles.delete,
+            {
+              transform: [{ translateX: trans }],
+            },
+          ]}>
+          <Ionicons name="ios-trash-sharp" size={32} color="#fff" />
+        </Animated.Text>
       </Pressable>
+    );
+  };
+
+  return (
+    <View style={styles.wrapper}>
+      <Swipeable renderRightActions={renderRightActions}>
+        <View style={[styles.container, { height: props.height, width: props.width }]}>
+          <Text allowFontScaling={false} style={styles.label}>{results.name}</Text>
+          <View style={styles.spriteContainer}>
+            {showSprite(results.content)}
+          </View>
+        </View>
+      </Swipeable>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  wrapper: { 
+    borderRadius: 10, 
+    overflow: 'hidden',
+    marginBottom: 24
+  },
   container: {
-    backgroundColor: '#464450a6',
-    borderRadius: 10,
+    backgroundColor: '#464450',
     justifyContent: 'center',
     alignItems: 'flex-start',
     width: '90%',
     height: 'auto',
     alignSelf: 'center',
-    margin: 6,
-    marginBottom: 22,
   },
   label: {
     fontSize: 26,
@@ -78,10 +102,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly'
   },
   delete: {
-    position: 'absolute', 
-    top: 0, 
-    right: 0, 
-    padding: 5
+  },
+  rightAction: {
+    justifyContent: 'center',
+    backgroundColor: '#ff0000',
+    width: 50,
+    alignItems: 'center'
   }
 });
 
