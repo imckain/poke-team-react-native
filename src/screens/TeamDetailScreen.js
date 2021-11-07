@@ -3,10 +3,7 @@ import { Text, View, StyleSheet, ScrollView, TouchableWithoutFeedback, Touchable
 import { Context as TeamsContext } from '../context/TeamContext';
 import uuid from 'react-native-uuid'
 
-import * as SQLite from 'expo-sqlite';
-
 import PokemonSlotCard from '../components/buildTeamComponents/PokemonSlotCard';
-import EditTeamButton from '../components/buildTeamComponents/EditTeamButton';
 
 const HideKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -15,7 +12,7 @@ const HideKeyboard = ({ children }) => (
 );
 
 const TeamDetailScreen = (props) => {
-  const { state, addTeam } = useContext(TeamsContext);
+  const { state } = useContext(TeamsContext);
 
   const id = props.route.params.id
   const team = state.find((team) => team.id === id)
