@@ -135,7 +135,9 @@ const BuildTeamsScreen = (props) => {
               keyboardAppearance='dark'
               returnKeyType={'done'}
               allowFontScaling={false}
-              maxLength={10}
+              maxLength={14}
+              adjustsFontSizeToFit={true}
+              numberOfLines={1}
             />
           </View>
           <View style={styles.searchBarContainer}>
