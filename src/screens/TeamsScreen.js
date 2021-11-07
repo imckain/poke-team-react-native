@@ -1,5 +1,5 @@
 import React, { useCallback, useContext } from 'react';
-import { View, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, FlatList, Alert } from 'react-native';
 import { Context as TeamsContext} from '../context/TeamContext';
 
 import { Ionicons } from '@expo/vector-icons';
@@ -21,12 +21,34 @@ const TeamsScreen = (props) => {
     />
   }, [state])
 
-  return (
-    <View style={styles.container}>
-      <View style={{alignSelf: 'flex-end'}}>
+  const createAlert = () => {
+    Alert.alert(
+      "Max number of Teams",
+      "Delete a team to proceed",
+      { cancelable: true }
+    );
+  }
+
+  const checkMaxTeams = () => {
+    if (state.length > 25) {
+      return (
+        <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={createAlert}>
+          <Ionicons name="ios-add" size={38} color="#747474" />
+        </TouchableOpacity>
+      )
+    } else {
+      return (
         <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => props.navigation.navigate('Build Team')}>
           <Ionicons name="ios-add" size={38} color="#fff" />
         </TouchableOpacity>
+      )
+    }
+  }
+
+  return (
+    <View style={styles.container}>
+      <View style={{alignSelf: 'flex-end'}}>
+        {checkMaxTeams()}
       </View>
       <View contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}} style={styles.teamsScrollView}>
         <View style={styles.teamsView}>
