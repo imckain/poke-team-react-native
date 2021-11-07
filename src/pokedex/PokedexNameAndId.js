@@ -11,7 +11,7 @@ const PokedexNameAndId = ({ results, fontSize, numFontSize }) => {
         <View style={styles.nameContainer}>
           <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.name, { fontSize: fontSize }]}>{results.identifier.replaceAll('-', ' ')}</Text> 
         </View>
-        <Ionicons style={{ paddingHorizontal: 12 }} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
+        <Ionicons style={{ }} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
       </View>
     </View>
   );
