@@ -114,46 +114,53 @@ const BuildTeamsScreen = (props) => {
 
   return (
     <HideKeyboard>
-      <ScrollView style={styles.container}>
-        <View style={styles.teamNameContainer}>
-          <TextInput 
-            placeholder={'Team Name'} 
-            showSoftInputOnFocus={false}
-            autoCapitalize='none'
-            autoCorrect={false}
-            style={styles.inputStyle} 
-            placeholderTextColor='rgb(175, 175, 175)'
-            value={teamName}
-            onChangeText={(text) => setTeamName(text)}
-            clearButtonMode='never'
-            keyboardAppearance='dark'
-            returnKeyType={'done'}
-            allowFontScaling={false}
-            maxLength={10}
-          />
-        </View>
-        <View style={styles.searchBarContainer}>
-          <BuildTeamSearchBar 
-            searchTerm={searchTerm} 
-            onSearchTermChange={setSearchTerm} 
-            onSearchTermSubmit={() => buildSearchApi(searchTerm.replaceAll(' ', '-').toLowerCase())}
-            style={styles.searchBar}
-          />
-          {showClear(buildResults, searchTerm)}
-        </View>
-        <View style={{height: 'auto'}}>
-          {showPokemonCard(searchTerm)}
-        </View>
-        <View style={{height: 5 }} />
-        <View style={styles.teamInfoContainer}>
-          <View style={styles.teamSlotContainer}>
-            {createTeamMember(teamMembers)}
-          </View>
-          <TouchableOpacity onPress={() => addTeamAndGoBack(teamName, teamMembers)} >
-            <SaveTeamButton height={54} width={'90%'} />
+      <View  style={styles.container}>
+        <View style={{ alignSelf: 'flex-start' }}>
+          <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => props.navigation.goBack(null)}>
+            <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" />
           </TouchableOpacity>
         </View>
-      </ScrollView>
+        <ScrollView>
+          <View style={styles.teamNameContainer}>
+            <TextInput 
+              placeholder={'Team Name'} 
+              showSoftInputOnFocus={false}
+              autoCapitalize='none'
+              autoCorrect={false}
+              style={styles.inputStyle} 
+              placeholderTextColor='rgb(175, 175, 175)'
+              value={teamName}
+              onChangeText={(text) => setTeamName(text)}
+              clearButtonMode='never'
+              keyboardAppearance='dark'
+              returnKeyType={'done'}
+              allowFontScaling={false}
+              maxLength={10}
+            />
+          </View>
+          <View style={styles.searchBarContainer}>
+            <BuildTeamSearchBar 
+              searchTerm={searchTerm} 
+              onSearchTermChange={setSearchTerm} 
+              onSearchTermSubmit={() => buildSearchApi(searchTerm.replaceAll(' ', '-').toLowerCase())}
+              style={styles.searchBar}
+            />
+            {showClear(buildResults, searchTerm)}
+          </View>
+          <View style={{height: 'auto'}}>
+            {showPokemonCard(searchTerm)}
+          </View>
+          <View style={{height: 5 }} />
+          <View style={styles.teamInfoContainer}>
+            <View style={styles.teamSlotContainer}>
+              {createTeamMember(teamMembers)}
+            </View>
+            <TouchableOpacity onPress={() => addTeamAndGoBack(teamName, teamMembers)} >
+              <SaveTeamButton height={54} width={'90%'} />
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+      </View>
     </HideKeyboard>
   );
 };
@@ -173,8 +180,9 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#353340',
     flexDirection: 'column',
-    paddingTop: 20,
+    paddingTop: 60,
     width: '100%',
+    flex: 1
   },
   teamSlotContainer: {
     marginBottom: 44,
