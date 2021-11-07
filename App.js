@@ -45,7 +45,7 @@ function BottomTabNavigator() {
         screenOptions={{
           headerStyle: {
             height: 'auto',
-            justifyContent: 'center'
+            justifyContent: 'center',
           },
           headerTitleStyle: {
             color: '#ffffff',
@@ -54,7 +54,8 @@ function BottomTabNavigator() {
           tabBarStyle: {
             backgroundColor: '#272537',
             height: 82,
-            alignItems: 'baseline'
+            alignItems: 'center',
+            borderTopWidth: 0
           },
           tabBarShowLabel: false,
           headerTitle: props => <Logo {...props} />,
@@ -67,7 +68,7 @@ function BottomTabNavigator() {
             headerRight: () => {
               return (
                 <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => navigation.navigate('Build Team')}>
-                  <Ionicons name="ios-add" size={26} color="#fff" />
+                  <Ionicons name="ios-add" size={38} color="#fff" />
                 </TouchableOpacity>
               )
             },
@@ -79,6 +80,8 @@ function BottomTabNavigator() {
             },
             headerStyle: {
               backgroundColor: '#272537',
+              borderBottomWidth: 0,
+              shadowOpacity: 0
             },
             headerTitleStyle: {
               color: '#000000'
@@ -98,6 +101,8 @@ function BottomTabNavigator() {
             },
             headerStyle: {
               backgroundColor: '#272537',
+              borderBottomWidth: 0,
+              shadowOpacity: 0
             },
             headerTitleStyle: {
               color: '#000000'
@@ -116,6 +121,8 @@ function BottomTabNavigator() {
             },
             headerStyle: {
               backgroundColor: '#272537',
+              borderBottomWidth: 0,
+              shadowOpacity: 0
             },
             headerTitleStyle: {
               color: '#000000'
@@ -132,7 +139,7 @@ function BottomTabNavigator() {
 
 function App() {
   return (
-    <NavigationContainer screenOptions={{ headerStyle: { height: 250 }}}>
+    <NavigationContainer>
       <Stack.Navigator
         initialRouteName='Tab Navigator' 
         screenOptions={{
@@ -177,7 +184,7 @@ function App() {
               headerRight: () => {
                 return (
                   <TouchableOpacity style={{ }} onPress={() => navigation.navigate('Edit Team', { id: route.params.id })}>
-                    <Ionicons name="ios-create-outline" size={26} color="#fff" />
+                    <Ionicons name="ios-create-outline" size={32} color="#fff" />
                   </TouchableOpacity>
                 )
               },
