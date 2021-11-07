@@ -3,6 +3,8 @@ import { Text, View, StyleSheet, ScrollView, TouchableWithoutFeedback, Touchable
 import { Context as TeamsContext } from '../context/TeamContext';
 import uuid from 'react-native-uuid'
 
+import { Ionicons } from '@expo/vector-icons';
+
 import PokemonSlotCard from '../components/buildTeamComponents/PokemonSlotCard';
 
 const HideKeyboard = ({ children }) => (
@@ -34,26 +36,43 @@ const TeamDetailScreen = (props) => {
 
   return (
     <HideKeyboard>
-      <ScrollView style={styles.container}>
-        <View style={styles.teamNameContainer}>
-          <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={styles.teamName} >{team.name}</Text>
+      <View style={styles.container}>
+        <View style={styles.navButtons}>
+          <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => props.navigation.goBack(null)}>
+            <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" />
+          </TouchableOpacity>
+          <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => props.navigation.navigate('Edit Team', { id: id })}>
+            <Ionicons name="ios-create-outline" size={32} color="#fff" />
+          </TouchableOpacity>
         </View>
-        <View style={styles.teamInfoContainer}>
-          <View style={styles.teamSlotContainer}>
-            {createTeamMember(team.content)}
+        <ScrollView >
+          <View style={styles.teamNameContainer}>
+            <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={styles.teamName} >{team.name}</Text>
           </View>
-        </View>
-      </ScrollView>
+          <View style={styles.teamInfoContainer}>
+            <View style={styles.teamSlotContainer}>
+              {createTeamMember(team.content)}
+            </View>
+          </View>
+        </ScrollView>
+      </View>
     </HideKeyboard>
   );
 };
 
 const styles = StyleSheet.create({
+  navButtons: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
   container: {
     backgroundColor: '#353340',
     flexDirection: 'column',
-    paddingTop: 20,
+    paddingTop: 60,
     width: '100%',
+    flex: 1
   },
   teamSlotContainer: {
     marginBottom: 44,
@@ -69,7 +88,7 @@ const styles = StyleSheet.create({
   },
   teamName: {
     height: '100%',
-    fontSize: 48,
+    fontSize: 50,
     textAlign: 'center',
     fontWeight: '500',
     color: '#fff',
