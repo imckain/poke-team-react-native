@@ -1,15 +1,16 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 
 const TeamsNavigator = () => {
 
   return (
     <View style={styles.container}>
-      <MaterialCommunityIcons name='pokeball' size={26} color='#fff' />
+      <MaterialCommunityIcons name='pokeball' size={32} color='#fff' />
       <View style={styles.labelContainer}>
         <Text allowFontScaling={false} style={styles.label}>View Teams</Text>
+        <Ionicons style={styles.icon} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
       </View>
     </View>
   );
@@ -22,10 +23,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     paddingLeft: 12,
-    // paddingVertical: 8
+    marginBottom: 6,
   },
   label: {
-    fontSize: 26,
+    fontSize: 22,
     fontWeight: '600',
     color: '#fff',
     textShadowColor: '#535353d3',
@@ -33,11 +34,14 @@ const styles = StyleSheet.create({
     textShadowRadius: 12,
   },
   labelContainer: {
-    paddingVertical: 8,
+    paddingVertical: 1,
     borderBottomColor: '#ffffff18',
     borderBottomWidth: 1,
     marginLeft: 12,
     flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   }
 });
 
