@@ -69,7 +69,7 @@ const HomeScreen = (props) => {
           <TouchableOpacity style={styles.largeButtonStyle} onPress={() => props.navigation.navigate('Build Team')}>
             <BuildTeamsNavigator />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.largeButtonStyle} onPress={() => props.navigation.navigate('Profile')} >
+          <TouchableOpacity style={styles.largeButtonStyle} onPress={() => props.navigation.navigate('About')} >
             <AboutNavigator />
           </TouchableOpacity>
         </View>
