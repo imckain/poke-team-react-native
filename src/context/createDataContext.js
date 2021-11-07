@@ -37,6 +37,7 @@ export default (reducer, actions, initialState) => {
       storeData(state);
     }, [state])
 
+
     const boundActions = {};
     for (let key in actions) {
       boundActions[key] = actions[key](dispatch)

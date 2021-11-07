@@ -16,14 +16,24 @@ const teamsReducer = (state, action) => {
     case 'delete_team':
       return state.filter(team => team.id !== action.payload)
     case 'add_team':
-      return [
-        ...state, 
-        { 
-          id: uuid.v4(), 
-          name: action.payload.name,
-          content: action.payload.content
-        }
-      ];
+      if(state !== null) {
+        return [
+          ...state, 
+          { 
+            id: uuid.v4(), 
+            name: action.payload.name,
+            content: action.payload.content
+          }
+        ];
+      } else {
+        return [
+          { 
+            id: uuid.v4(), 
+            name: action.payload.name,
+            content: action.payload.content
+          }
+        ];
+      }
     case 'hydrate':
       return action.payload
     default:
