@@ -10,7 +10,7 @@ import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import HomeScreen from './src/screens/HomeScreen';
 import TeamsScreen from './src/screens/TeamsScreen';
-import ProfileScreen from './src/screens/ProfileScreen';
+import AboutScreen from './src/screens/AboutScreen';
 import DetailModal from './src/screens/DetailModal';
 import Logo from './src/components/header/Logo';
 import AdvancedSearchScreen from './src/screens/AdvancedSearchScreen';
@@ -86,6 +86,7 @@ function BottomTabNavigator() {
             headerTitleStyle: {
               color: '#000000'
             },
+            headerShown: false
           })}
           initialParams={'Teams'}
         />
@@ -129,7 +130,8 @@ function BottomTabNavigator() {
             },
             tabBarIconStyle: {
               marginTop: 1
-            }
+            },
+            headerShown: false
           }}
         />
       </Tab.Group>
@@ -160,21 +162,21 @@ function App() {
             name="Teams" 
             component={TeamsScreen} 
             options={{
-              headerShown: true
+              headerShown: false
             }}
           />
           <Stack.Screen 
             name="Build Team" 
             component={BuildTeamsScreen} 
             options={{
-              headerShown: true
+              headerShown: false
             }}
             />
           <Stack.Screen 
             name="Edit Team" 
             component={EditTeamsScreen} 
             options={{
-              headerShown: true
+              headerShown: false
             }}
             />
           <Stack.Screen 
@@ -188,14 +190,14 @@ function App() {
                   </TouchableOpacity>
                 )
               },
-              headerShown: true
+              headerShown: false
             })}
             />
           <Stack.Screen 
             name="Profile" 
-            component={ProfileScreen} 
+            component={AboutScreen} 
             options={{
-              headerShown: true
+              headerShown: false
             }}
           />
         </Stack.Group>
