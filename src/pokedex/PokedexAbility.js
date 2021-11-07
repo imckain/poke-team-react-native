@@ -9,7 +9,7 @@ const PokedexAbility = ({ results, fontSize }) => {
       <View style={{flexDirection: 'row', alignItems: 'baseline'}}>
         <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.name, {fontSize: fontSize}]}>{results.identifier.replaceAll('-', ' ')}</Text>
       </View>
-      <Ionicons style={{ paddingHorizontal: 12 }} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
+      <Ionicons style={{}} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
     </View>
   );
 };
@@ -22,10 +22,8 @@ const styles = StyleSheet.create({
     width: '100%',
     borderBottomColor: '#ffffff18',
     borderBottomWidth: 1,
-    paddingLeft: 12
   },
   name: {
-    marginHorizontal: 12,
     marginVertical: 6,
     textAlign: 'center',
     color: '#fff',
