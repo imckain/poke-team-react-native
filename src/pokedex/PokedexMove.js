@@ -51,30 +51,22 @@ const PokedexMove = ({ results, fontSize, detailFontSize, lines, alignSelf }) =>
   }
 
   return (
-    <View style={styles.container}>
-      <View style={styles.infoContainer}>
-        <View style={[styles.moveInfo]}>
-          <View style={styles.subInfo}>
-            <Text allowFontScaling={false} numberOfLines={lines} adjustsFontSizeToFit={true} style={[styles.name, {fontSize: fontSize }]}>{results.identifier.replaceAll('-', ' ')}</Text>
-            <View style={[styles.typeBox, { backgroundColor: checkType(results.type_id) }]}>
-              <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize, alignSelf: alignSelf }]}>{showTypeName(results.type_id)}</Text>
-            </View>
+    <View style={styles.infoContainer}>
+      <View style={[styles.moveInfo]}>
+        <View style={styles.subInfo}>
+          <Text allowFontScaling={false} numberOfLines={lines} adjustsFontSizeToFit={true} style={[styles.name, {fontSize: fontSize }]}>{results.identifier.replaceAll('-', ' ')}</Text>
+          <View style={[styles.typeBox, { backgroundColor: checkType(results.type_id) }]}>
+            <Text allowFontScaling={false} numberOfLines={lines} adjustsFontSizeToFit={true} style={[styles.typeText, { fontSize: detailFontSize }]}>{showTypeName(results.type_id)}</Text>
           </View>
-            <Text allowFontScaling={false} style={styles.attributes}>Power: {checkForNull(results.power)} | PP: {checkForNull(results.pp)} | Acc: {checkForNull(results.accuracy)}</Text>
         </View>
-        <Ionicons style={{ paddingHorizontal: 12 }} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
+        <Text allowFontScaling={false} style={styles.attributes}>Power: {checkForNull(results.power)} | PP: {checkForNull(results.pp)} | Acc: {checkForNull(results.accuracy)}</Text>
       </View>
+      <Ionicons style={{  }} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    width: '100%',
-    paddingLeft: 24
-  },
   infoContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -82,11 +74,9 @@ const styles = StyleSheet.create({
     width: '100%',
     borderBottomColor: '#ffffff18',
     borderBottomWidth: 1,
-    // paddingLeft: 12
   },
   moveInfo: {
     flexDirection: 'column', 
-    // paddingLeft: 12, 
     paddingVertical: 4, 
     alignItems: 'flex-start',
     width: '80%',
@@ -94,14 +84,15 @@ const styles = StyleSheet.create({
   },
   subInfo: { 
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    width: '70%',
   },
   name: {
     color: '#fff',
     fontWeight: '600',
     textShadowColor: 'rgb(34, 34, 34)',
     textShadowOffset: { width: 0, height: 0},
-    textShadowRadius: 3,
+    textShadowRadius: 6,
     textTransform: 'capitalize',
   },
   attributes: {
@@ -114,12 +105,12 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: '#464450',
     justifyContent: 'center',
-    width: 'auto',
+    width: 110,
     height: 'auto',
     marginVertical: 6,
     paddingHorizontal: 10,
     paddingVertical: 3,
-    marginLeft: 12
+    marginLeft: 12,
 
   },
   typeText: {
@@ -130,7 +121,8 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 0, height: 0},
     textShadowRadius: 4,
     textTransform: 'capitalize',
-    alignItems: 'center'
+    alignItems: 'center',
+    alignSelf: 'center'
   },
 });
 
