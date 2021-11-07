@@ -6,7 +6,7 @@ import PokedexType from './PokedexType';
 import PokedexMove from './PokedexMove';
 import PokedexAbility from './PokedexAbility';
 
-const PokedexCard = (props) => {
+const PokedexCard = (props, { backgroundColor }) => {
   const results = props.results
   const param = props.searchParam
 
@@ -18,7 +18,7 @@ const PokedexCard = (props) => {
       return <PokedexType fontSize={24} results={results} />
     }
     if (el === 'move') {
-      return <PokedexMove fontSize={24} alignSelf='flex-start' lines={1} detailFontSize={20} results={results} />
+      return <PokedexMove fontSize={24} lines={1} detailFontSize={20} results={results} />
     }
     if (el === 'ability') {
       return <PokedexAbility fontSize={24} results={results} />
@@ -26,7 +26,7 @@ const PokedexCard = (props) => {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: backgroundColor }]}>
       <View style={styles.mainInfo}>
         {checkDex(param)}
       </View>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     width: '90%',
     height: 'auto',
     alignSelf: 'center',
-    backgroundColor: '#464450a6',
+    
   },
   mainInfo: {
     justifyContent: 'flex-start',
