@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Provider } from './src/context/TeamContext';
+import * as ScreenOrientation from 'expo-screen-orientation';
 
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -24,6 +25,12 @@ import EditTeamsScreen from './src/screens/EditTeamsScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
+
+async function changeScreenOrientation() {
+  await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
+}
+
+changeScreenOrientation()
 
 function BottomTabNavigator() {
   return (
