@@ -6,11 +6,11 @@ import { Ionicons } from '@expo/vector-icons';
 
 const PokedexType = ({ results, fontSize }) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: checkType(results.identifier) }]}>
       <View style={[styles.typeBox, { backgroundColor: checkType(results.identifier) }]}>
         <Text allowFontScaling={false} style={[styles.typeText, {fontSize: fontSize}]}>{results.identifier}</Text>
       </View>
-      <Ionicons style={{ paddingHorizontal: 12 }} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
+      <Ionicons style={styles.icon} name="ios-chevron-forward-sharp" size={18} color="#fff" />  
     </View>
   );
 };
@@ -21,9 +21,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '100%',
-    borderBottomColor: '#ffffff18',
-    borderBottomWidth: 1,
-    paddingLeft: 12
+    paddingLeft: 12,
+    marginBottom: 4,
+    borderRadius: 10
   },
   typeBox: {
     paddingVertical: 3,
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    width: 'auto'
+    flex: 1
   },
   typeText: {
     color: 'rgb(223, 223, 223)',
@@ -46,6 +46,12 @@ const styles = StyleSheet.create({
     textShadowRadius: 3,
     textTransform: 'capitalize',
   },
+  icon: {
+    paddingHorizontal: 12,
+    textShadowColor: 'rgb(0, 0, 0)',
+    textShadowOffset: { width: 0, height: 0},
+    textShadowRadius: 3,
+  }
 });
 
 export default React.memo(PokedexType);
