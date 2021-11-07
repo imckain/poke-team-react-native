@@ -64,7 +64,7 @@ const ViewTeams = (props) => {
         <TouchableOpacity onPress={() => props.navigation.navigate('Team Detail', { id: results.id, results: results.content, name: results.name })}>
           <View style={[styles.container, { height: props.height, width: props.width }]}>
             <View style={styles.labelContainer}>
-              <Text allowFontScaling={false} style={styles.label}>{results.name}</Text>
+              <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={styles.label}>{results.name}</Text>
             </View>
             <View style={styles.spriteContainer}>
               {showSprite(results.content)}
