@@ -27,7 +27,7 @@ const ViewTeams = (props) => {
           onPress: () => deleteTeam(props.id)
         }
       ],
-      { cancelable: false }
+      { cancelable: true }
     );
   }
 
