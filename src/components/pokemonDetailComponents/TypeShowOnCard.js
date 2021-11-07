@@ -8,7 +8,7 @@ const TypeShowOnCard = ({ results, margin, detailFontSize }) => {
     const typeBox = el.types.map(item => {      
       return (
         <View key={item.type.name} style={[styles.typeBox, { backgroundColor: checkType(item.type.name) }]}>
-          <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize }]}>{item.type.name}</Text>
+          <Text adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.typeText, { fontSize: detailFontSize }]}>{item.type.name}</Text>
         </View>
       )
     })
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    width: 'auto'
+    width: 70
   },
   typeText: {
     color: 'rgb(223, 223, 223)',
