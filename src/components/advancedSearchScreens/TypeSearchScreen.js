@@ -94,8 +94,9 @@ const TypeSearchScreen = (props) => {
         <View style={{height: 'auto'}}>
           {showTypeCard(searchTerm)}
         </View>
-        <View style={{height: 5 }} />
-        {showPokeDex(searchParam)}
+        <View style={styles.pokedexCardContainer}>
+          {showPokeDex(searchParam)}
+        </View>
       </View>
     </HideKeyboard>
   );
@@ -136,6 +137,9 @@ const styles = StyleSheet.create({
     color: 'rgb(175, 175, 175)',
     fontSize: 22,
     fontWeight: '400',
+  },
+  pokedexCardContainer: {
+    flex: 1
   }
 });
 
