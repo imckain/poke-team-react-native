@@ -139,7 +139,8 @@ const styles = StyleSheet.create({
     fontWeight: '400',
   },
   pokedexCardContainer: {
-    flex: 1
+    flex: 1,
+    marginTop: 12
   }
 });
 
