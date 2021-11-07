@@ -13,7 +13,7 @@ const AboutScreen = (props) => {
           <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" />
         </TouchableOpacity>
       </View>
-      <ScrollView>
+      <ScrollView style={{ paddingHorizontal: 12 }}>
         <View style={styles.headerContainer}>
           <Text style={styles.header}>About</Text>
         </View>
@@ -25,14 +25,15 @@ const AboutScreen = (props) => {
             I did my best to create a clean project, free from bugs, but things do happen. 
           </Text>
           <View style={{ height: 8 }} />
-          <Text style={styles.text}>So, if you discover a bug or even have an idea for a aditional feature:</Text>
+          <Text style={[styles.text, { fontWeight: '600' }]}>So, if you discover a bug or even have an idea for a aditional feature:</Text>
+          <View style={{ height: 8 }} />
           <Text style={styles.text}>
             Please! Let me know by emailing me at: 
           </Text>
-          <Button style={styles.email} onPress={() => Linking.openURL('mailto:support@example.com?subject=SendMail&body=Description') } title="support@example.com" />
+          <Button style={styles.email} onPress={() => Linking.openURL('mailto:support@example.com?subject=SendMail&body=Description') } title="pokebook.support@gmail.com" />
         </View>
         <View style={styles.headerContainer}>
-          <Text style={styles.header}>To Any Developers</Text>
+          <Text style={styles.header}>Developers</Text>
         </View>
         <View style={styles.aboutMessage}>
           <Text style={[styles.text, { fontSize: 22, fontWeight: '600' }]} adjustsFontSizeToFit={true} numberOfLines={1}>Interested in helping?</Text>
@@ -41,14 +42,22 @@ const AboutScreen = (props) => {
             I enjoyed building this app and will continue to update and maintain Poke-Book, but I am only one person after all.
           </Text>
           <View style={{ height: 8 }} />
-          <Text style={styles.text}>If you're a developer and would like to contribute.</Text>
+          <Text style={[styles.text, { fontWeight: '600' }]}>If you're a developer and would like to contribute:</Text>
+          <View style={{ height: 8 }} />
           <Text style={styles.text}>
-            Shoot me an email, or connect with me on LinkedIn: 
+            Shoot me an email, or connect with me on LinkedIn or GitHub: 
           </Text>
-          <Button style={styles.email} onPress={() => Linking.openURL('mailto:support@example.com?subject=SendMail&body=Description') } title="support@example.com" />
-          <TouchableOpacity style={{ alignSelf: 'center' }} onPress={() => Linking.openURL('https://www.linkedin.com/in/ianmckain/') }>
-            <Ionicons name="ios-logo-linkedin" size={48} color="#0B66C2" />
-          </TouchableOpacity>
+          <View style={{ paddingBottom: 60 }}>
+            <Button style={styles.email} onPress={() => Linking.openURL('mailto:support@example.com?subject=SendMail&body=Description') } title="pokebook.dev@gmail.com" />
+            <View style={styles.iconContainer}>
+              <TouchableOpacity style={{ alignSelf: 'center' }} onPress={() => Linking.openURL('https://www.linkedin.com/in/ianmckain/') }>
+                <Ionicons name="ios-logo-linkedin" size={48} color="#0B66C2" />
+              </TouchableOpacity>
+              <TouchableOpacity style={{ alignSelf: 'center' }} onPress={() => Linking.openURL('https://github.com/imckain') }>
+                <Ionicons name="ios-logo-github" size={48} color="#fff" />
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
       </ScrollView>
     </View>
@@ -59,7 +68,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#353340',
     flex: 1,
-    paddingTop: 60
+    paddingTop: 60,
   },
   headerContainer: {
     paddingHorizontal: 12,
@@ -82,6 +91,13 @@ const styles = StyleSheet.create({
   text: {
     color: '#fff',
     fontSize: 18
+  },
+  iconContainer: { 
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    paddingTop: 20,
+    paddingBottom: 10
   }
 });
 
