@@ -185,7 +185,9 @@ const MoveSearchScreen = (props) => {
           closeAfterSelecting={true}
           theme='DARK'
         />
-        {displayFilteredResults(showType(filteredResults, value), searchParam)}
+        <View style={{ alignSelf: 'center' }}>
+          {displayFilteredResults(showType(filteredResults, value), searchParam)}
+        </View>
       </View>
     </HideKeyboard>
   );
