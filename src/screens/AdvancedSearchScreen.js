@@ -65,7 +65,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#353340',
     flexDirection: 'column',
-    flex: 1
+    flex: 1,
+    paddingTop: 50
   },
   searchBarContainer: {
     flexDirection: 'column',
