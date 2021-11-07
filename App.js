@@ -194,7 +194,7 @@ function App() {
             })}
             />
           <Stack.Screen 
-            name="Profile" 
+            name="About" 
             component={AboutScreen} 
             options={{
               headerShown: false
