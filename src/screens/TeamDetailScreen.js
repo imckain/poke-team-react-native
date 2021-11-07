@@ -36,7 +36,7 @@ const TeamDetailScreen = (props) => {
     <HideKeyboard>
       <ScrollView style={styles.container}>
         <View style={styles.teamNameContainer}>
-          <Text adjustsFontSizeToFit={true} numberOfLines={1} style={styles.teamName} >{team.name}</Text>
+          <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={styles.teamName} >{team.name}</Text>
         </View>
         <View style={styles.teamInfoContainer}>
           <View style={styles.teamSlotContainer}>
