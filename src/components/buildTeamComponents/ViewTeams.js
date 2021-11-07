@@ -61,14 +61,16 @@ const ViewTeams = (props) => {
   return (
     <View style={styles.wrapper}>
       <Swipeable renderRightActions={renderRightActions}>
-        <View style={[styles.container, { height: props.height, width: props.width }]}>
-          <View style={styles.labelContainer}>
-            <Text allowFontScaling={false} style={styles.label}>{results.name}</Text>
+        <TouchableOpacity onPress={() => props.navigation.navigate('Team Detail', { id: results.id, results: results.content, name: results.name })}>
+          <View style={[styles.container, { height: props.height, width: props.width }]}>
+            <View style={styles.labelContainer}>
+              <Text allowFontScaling={false} style={styles.label}>{results.name}</Text>
+            </View>
+            <View style={styles.spriteContainer}>
+              {showSprite(results.content)}
+            </View>
           </View>
-          <View style={styles.spriteContainer}>
-            {showSprite(results.content)}
-          </View>
-        </View>
+        </TouchableOpacity>
       </Swipeable>
     </View>
   );
@@ -89,13 +91,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   label: {
-    fontSize: 26,
+    fontSize: 32,
     fontWeight: '600',
     color: '#fff',
     textAlign: 'center',
     paddingBottom: 6,
     paddingRight: 36,
-    paddingLeft: 4,
   },
   labelContainer: {
     justifyContent: 'space-between',
