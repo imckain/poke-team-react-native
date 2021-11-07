@@ -27,7 +27,7 @@ const TypeDetail = ({ results, margin, detailFontSize, navigation, flexDirection
               return navigate(item.type.url, item.type.name)
             }}
           >
-            <Text allowFontScaling={false} style={[styles.typeText, { fontSize: detailFontSize }]}>{item.type.name}</Text>
+            <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.typeText, { fontSize: detailFontSize }]}>{item.type.name}</Text>
           </TouchableOpacity>
         </View>
       )
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    width: 'auto'
+    width: 140
   },
   typeText: {
     color: 'rgb(223, 223, 223)',
