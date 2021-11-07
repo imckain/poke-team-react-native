@@ -2,6 +2,8 @@ import React, { useCallback, useContext } from 'react';
 import { View, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import { Context as TeamsContext} from '../context/TeamContext';
 
+import { Ionicons } from '@expo/vector-icons';
+
 import ViewTeams from '../components/buildTeamComponents/ViewTeams';
 
 const TeamsScreen = (props) => {
@@ -21,6 +23,11 @@ const TeamsScreen = (props) => {
 
   return (
     <View style={styles.container}>
+      <View style={{alignSelf: 'flex-end'}}>
+        <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => props.navigation.navigate('Build Team')}>
+          <Ionicons name="ios-add" size={38} color="#fff" />
+        </TouchableOpacity>
+      </View>
       <View contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}} style={styles.teamsScrollView}>
         <View style={styles.teamsView}>
           {showTeams(state)}
@@ -35,7 +42,8 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: '#353340',
     flex: 1,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    paddingTop: 50
   },
   buttonStyle: {
     fontSize: 32,
