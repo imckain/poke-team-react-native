@@ -102,7 +102,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center'
   },
   largeButtonStyle: {
-    fontSize: 32,
     width: '100%',
     fontWeight: '600',
     textAlign: 'center',
@@ -119,9 +118,7 @@ const styles = StyleSheet.create({
   },
   largeNavContainer: {
     justifyContent: 'space-evenly',
-    borderRadius: 10,
-    marginTop: 24,
-    backgroundColor: '#464450a6',
+    marginTop: 48,
     width: '90%',
     flexDirection: 'column',
     alignSelf: 'center',
