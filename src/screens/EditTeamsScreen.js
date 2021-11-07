@@ -140,7 +140,9 @@ const EditTeamsScreen = (props) => {
               keyboardAppearance='dark'
               returnKeyType={'done'}
               allowFontScaling={false}
-              maxLength={10}
+              maxLength={18}
+              adjustsFontSizeToFit={true}
+              numberOfLines={1}
             />
           </View>
           <View style={styles.searchBarContainer}>
