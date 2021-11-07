@@ -13,13 +13,8 @@ const TeamsScreen = (props) => {
       data={el}
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => {
-        if (item.id !== 0) {
-          return (
-            <TouchableOpacity onPress={() => props.navigation.navigate('Team Detail', { id: item.id, results: item.content, name: item.name })}>
-              <ViewTeams results={item} id={item.id} height={'auto'} width={'100%'} />
-            </TouchableOpacity>
-          )
-        } else return null
+        if (item.id !== 0) return <ViewTeams results={item} id={item.id} height={'auto'} width={'100%'} navigation={props.navigation} />
+        else return null
       }}
     />
   }, [state])
