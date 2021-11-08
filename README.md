@@ -1,7 +1,21 @@
 # Poke-Pal
 ### Pokemon Team Builder & PokeDex
+- A huge amount of data at your fingertips
+  - Search by Pokemon name or ID
+  - Search by Type
+  - Search by Move
+  - Search by Ability
+- See detailed data for searches
+- Easy linking navigation
+- Build Teams and view Pokemon data quickly
 
+Technologies used:
+- React Native
+- Expo
+- pokeapi.com
+- AsyncStorage
 
+If You're a developer and would like to help, please feel free to contribute.
 
 # Privacy Policy
 <p>Last updated: November 08, 2021</p>
