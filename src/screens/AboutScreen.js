@@ -47,19 +47,19 @@ const AboutScreen = (props) => {
           <Text allowFontScaling={false} style={[styles.text, { fontWeight: '600' }]}>If you're a developer and would like to contribute:</Text>
           <View style={{ height: 8 }} />
           <Text allowFontScaling={false} style={styles.subText}>
-            Shoot me an email, or connect with me on LinkedIn or GitHub: 
+            Shoot me an email at: 
           </Text>
           <View style={{ paddingBottom: 60 }}>
             <Button style={styles.email} onPress={() => Linking.openURL('mailto:pokepal.dev@gmail.com') } title="pokepal.dev@gmail.com" />
-            <View style={styles.iconContainer}>
+            {/* <View style={styles.iconContainer}>
               <TouchableOpacity style={{ alignSelf: 'center' }} onPress={() => Linking.openURL('https://www.linkedin.com/in/ianmckain/') }>
                 <Ionicons name="ios-logo-linkedin" size={48} color="#0B66C2" />
               </TouchableOpacity>
               <TouchableOpacity style={{ alignSelf: 'center' }} onPress={() => Linking.openURL('https://github.com/imckain') }>
                 <Ionicons name="ios-logo-github" size={48} color="#fff" />
               </TouchableOpacity>
-            </View>
-            <View style={{ paddingTop: 60 }}>
+            </View> */}
+            <View style={{ paddingTop: 80 }}>
               <Button onPress={() => Linking.openURL('https://www.termsfeed.com/live/dfc6f396-3e6a-47a0-b08e-3d90c10613e1') } title="Privacy Policy" />
             </View>
           </View>
