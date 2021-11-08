@@ -20,14 +20,18 @@ const AboutScreen = (props) => {
           <Text allowFontScaling={false} style={styles.header}>About</Text>
         </View>
         <View style={styles.aboutMessage}>
-          <Text allowFontScaling={false} style={[styles.text, { fontSize: 22, fontWeight: '600' }]} adjustsFontSizeToFit={true} numberOfLines={1}>Thanks for downloading Poke-Pal!</Text>
+          <Text allowFontScaling={false} style={[styles.text, { fontSize: 22, fontWeight: '600' }]} adjustsFontSizeToFit={true} numberOfLines={1}>
+            Thanks for downloading Poke-Pal!
+          </Text>
           <View style={{ height: 8 }} />
           <Text allowFontScaling={false} style={styles.subText}>
             This app is a project I built for fun and with the hopes that some may find it useful. 
             I did my best to create a clean project, free from bugs, but things do happen. 
           </Text>
           <View style={{ height: 8 }} />
-          <Text allowFontScaling={false} style={[styles.text, { fontWeight: '600' }]}>So, if you discover a bug or even have an idea for a aditional feature:</Text>
+          <Text allowFontScaling={false} style={[styles.text, { fontWeight: '600' }]}>
+            So, if you discover a bug or even have an idea for a aditional feature:
+          </Text>
           <View style={{ height: 8 }} />
           <Text allowFontScaling={false} style={styles.subText}>
             Please! Let me know by emailing me at: 
@@ -38,13 +42,17 @@ const AboutScreen = (props) => {
           <Text allowFontScaling={false} style={styles.header}>Developers</Text>
         </View>
         <View style={styles.aboutMessage}>
-          <Text allowFontScaling={false} style={[styles.text, { fontSize: 22, fontWeight: '600' }]} adjustsFontSizeToFit={true} numberOfLines={1}>Interested in helping?</Text>
+          <Text allowFontScaling={false} style={[styles.text, { fontSize: 22, fontWeight: '600' }]} adjustsFontSizeToFit={true} numberOfLines={1}>
+            Interested in helping?
+          </Text>
           <View style={{ height: 8 }} />
           <Text allowFontScaling={false} style={styles.subText}>
             I enjoyed building this app and will continue to update and maintain Poke-Pal, but I am only one person after all.
           </Text>
           <View style={{ height: 8 }} />
-          <Text allowFontScaling={false} style={[styles.text, { fontWeight: '600' }]}>If you're a developer and would like to contribute:</Text>
+          <Text allowFontScaling={false} style={[styles.text, { fontWeight: '600' }]}>
+            If you're a developer and would like to contribute:
+          </Text>
           <View style={{ height: 8 }} />
           <Text allowFontScaling={false} style={styles.subText}>
             Shoot me an email at: 
