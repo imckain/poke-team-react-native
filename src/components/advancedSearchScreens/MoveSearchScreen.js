@@ -185,7 +185,7 @@ const MoveSearchScreen = (props) => {
           closeAfterSelecting={true}
           theme='DARK'
         />
-        <View style={{ alignSelf: 'center' }}>
+        <View style={styles.dexContainer}>
           {displayFilteredResults(showType(filteredResults, value), searchParam)}
         </View>
       </View>
@@ -249,6 +249,10 @@ const styles = StyleSheet.create({
     color: 'rgb(175, 175, 175)',
     fontSize: 22,
     fontWeight: '400',
+  },
+  dexContainer: { 
+    alignSelf: 'center',
+    flex: 1
   }
 });
 
