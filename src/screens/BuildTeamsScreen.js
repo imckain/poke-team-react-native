@@ -117,7 +117,7 @@ const BuildTeamsScreen = (props) => {
       <View  style={styles.container}>
         <View style={{ alignSelf: 'flex-start' }}>
           <TouchableOpacity style={styles.back} onPress={() => props.navigation.goBack(null)}>
-            <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" /><Text style={styles.backText}>Back</Text>
+            <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" /><Text allowFontScaling={false} style={styles.backText}>Back</Text>
           </TouchableOpacity>
         </View>
         <ScrollView>
