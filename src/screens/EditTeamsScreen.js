@@ -121,8 +121,8 @@ const EditTeamsScreen = (props) => {
     <HideKeyboard>
       <View style={styles.container}>
         <View style={{ alignSelf: 'flex-start' }}>
-          <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => props.navigation.goBack(null)}>
-            <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" />
+          <TouchableOpacity style={styles.back} onPress={() => props.navigation.goBack(null)}>
+            <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" /><Text style={styles.backText}>Back</Text>
           </TouchableOpacity>
         </View>
         <ScrollView>
@@ -246,6 +246,14 @@ const styles = StyleSheet.create({
     width: 50,
     alignItems: 'center',
   },
+  back: { 
+    paddingHorizontal: 18, 
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  backText: {
+    color: '#fff'
+  }
 });
 
 export default React.memo(EditTeamsScreen);
