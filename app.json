@@ -25,10 +25,10 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF",
-        "versionCode": "1.0.0",
-        "package": "com.pokepal.app"
-      }
+        "backgroundColor": "#FFFFFF"
+      },
+      "versionCode": 1,
+      "package": "com.pokepal.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
