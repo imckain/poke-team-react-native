@@ -134,8 +134,9 @@ const AbilitySearchScreen = (props) => {
         <View style={{height: 'auto'}}>
           {showAbilityCard(abilityResults, searchTerm)}
         </View>
-        <View style={{height: 5 }} />
-        {displayFilteredResults(filteredResults, searchParam)}
+        <View style={styles.dexContainer}>
+          {displayFilteredResults(filteredResults, searchParam)}
+        </View>
       </View>
     </HideKeyboard>
   );
@@ -176,6 +177,10 @@ const styles = StyleSheet.create({
     color: 'rgb(175, 175, 175)',
     fontSize: 22,
     fontWeight: '400',
+  },
+  dexContainer: { 
+    alignSelf: 'center',
+    flex: 1
   }
 });
 
