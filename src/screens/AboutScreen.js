@@ -1,16 +1,18 @@
 import React from 'react';
 import { Text, View, StyleSheet, Button, Linking, TouchableOpacity } from 'react-native';
+import uuid from 'react-native-uuid'
 
 import { Ionicons } from '@expo/vector-icons';
 import { ScrollView } from 'react-native-gesture-handler';
 
 const AboutScreen = (props) => {
+  const id = uuid.v4()
 
   return (
     <View style={styles.container}>
       <View style={{ alignSelf: 'flex-start' }}>
-        <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => props.navigation.goBack(null)}>
-          <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" />
+        <TouchableOpacity style={styles.back} onPress={() => props.navigation.goBack(null)}>
+          <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" /><Text style={styles.backText}>Back</Text>
         </TouchableOpacity>
       </View>
       <ScrollView style={{ paddingHorizontal: 12 }}>
@@ -18,7 +20,7 @@ const AboutScreen = (props) => {
           <Text style={styles.header}>About</Text>
         </View>
         <View style={styles.aboutMessage}>
-          <Text style={[styles.text, { fontSize: 22, fontWeight: '600' }]} adjustsFontSizeToFit={true} numberOfLines={1}>Thanks for downloading Poke-Book!</Text>
+          <Text style={[styles.text, { fontSize: 22, fontWeight: '600' }]} adjustsFontSizeToFit={true} numberOfLines={1}>Thanks for downloading Poke-Pal!</Text>
           <View style={{ height: 8 }} />
           <Text style={styles.subText}>
             This app is a project I built for fun and with the hopes that some may find it useful. 
@@ -30,7 +32,7 @@ const AboutScreen = (props) => {
           <Text style={styles.subText}>
             Please! Let me know by emailing me at: 
           </Text>
-          <Button style={styles.email} onPress={() => Linking.openURL('mailto:support@example.com?subject=SendMail&body=Description') } title="pokebook.support@gmail.com" />
+          <Button style={styles.email} onPress={() => Linking.openURL(`mailto:pokepal.feedback@gmail.com?subject=Ticket: #${id}&body=Description or Feedback:`) } title="pokepal.feedback@gmail.com" />
         </View>
         <View style={styles.headerContainer}>
           <Text style={styles.header}>Developers</Text>
@@ -48,7 +50,7 @@ const AboutScreen = (props) => {
             Shoot me an email, or connect with me on LinkedIn or GitHub: 
           </Text>
           <View style={{ paddingBottom: 60 }}>
-            <Button style={styles.email} onPress={() => Linking.openURL('mailto:support@example.com?subject=SendMail&body=Description') } title="pokebook.dev@gmail.com" />
+            <Button style={styles.email} onPress={() => Linking.openURL('mailto:pokepal.dev@gmail.com') } title="pokepal.dev@gmail.com" />
             <View style={styles.iconContainer}>
               <TouchableOpacity style={{ alignSelf: 'center' }} onPress={() => Linking.openURL('https://www.linkedin.com/in/ianmckain/') }>
                 <Ionicons name="ios-logo-linkedin" size={48} color="#0B66C2" />
@@ -56,6 +58,9 @@ const AboutScreen = (props) => {
               <TouchableOpacity style={{ alignSelf: 'center' }} onPress={() => Linking.openURL('https://github.com/imckain') }>
                 <Ionicons name="ios-logo-github" size={48} color="#fff" />
               </TouchableOpacity>
+            </View>
+            <View style={{ paddingTop: 60 }}>
+              <Button onPress={() => Linking.openURL('https://www.termsfeed.com/live/dfc6f396-3e6a-47a0-b08e-3d90c10613e1') } title="Privacy Policy" />
             </View>
           </View>
         </View>
@@ -94,7 +99,8 @@ const styles = StyleSheet.create({
   },
   subText: {
     color: 'rgb(225, 225, 225)',
-    fontSize: 18
+    fontSize: 18,
+    paddingLeft: 6
   },
   iconContainer: { 
     flexDirection: 'row',
@@ -102,6 +108,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     paddingTop: 20,
     paddingBottom: 10
+  },
+  back: { 
+    paddingHorizontal: 18, 
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  backText: {
+    color: '#fff'
   }
 });
 
