@@ -38,8 +38,8 @@ const TeamDetailScreen = (props) => {
     <HideKeyboard>
       <View style={styles.container}>
         <View style={styles.navButtons}>
-          <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => props.navigation.goBack(null)}>
-            <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" />
+          <TouchableOpacity style={styles.back} onPress={() => props.navigation.goBack(null)}>
+            <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" /><Text style={styles.backText}>Back</Text>
           </TouchableOpacity>
           <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => props.navigation.navigate('Edit Team', { id: id })}>
             <Ionicons name="ios-create-outline" size={32} color="#fff" />
@@ -99,6 +99,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingBottom: 60,
   },
+  back: { 
+    paddingHorizontal: 18, 
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  backText: {
+    color: '#fff'
+  }
 });
 
 export default React.memo(TeamDetailScreen);
