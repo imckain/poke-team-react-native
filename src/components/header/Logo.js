@@ -5,7 +5,7 @@ const Logo = () => {
 
   return (
     <View style={styles.logoContainer}>
-      <Text allowFontScaling={false} style={styles.logoText}>Poke Team</Text>
+      <Text allowFontScaling={false} style={styles.logoText}>Poke-Pal</Text>
     </View>
   );
 };
