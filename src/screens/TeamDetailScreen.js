@@ -39,7 +39,7 @@ const TeamDetailScreen = (props) => {
       <View style={styles.container}>
         <View style={styles.navButtons}>
           <TouchableOpacity style={styles.back} onPress={() => props.navigation.goBack(null)}>
-            <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" /><Text style={styles.backText}>Back</Text>
+            <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" /><Text allowFontScaling={false} style={styles.backText}>Back</Text>
           </TouchableOpacity>
           <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => props.navigation.navigate('Edit Team', { id: id })}>
             <Ionicons name="ios-create-outline" size={32} color="#fff" />
