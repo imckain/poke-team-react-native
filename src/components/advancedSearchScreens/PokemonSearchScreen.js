@@ -178,7 +178,9 @@ const PokemonSearchScreen = (props) => {
           theme='DARK'
           listMode='FLATLIST'
         />
-        {displayFilteredResults(showGeneration(filteredResults, value), searchParam)}
+        <View style={styles.dexContainer}>
+          {displayFilteredResults(showGeneration(filteredResults, value), searchParam)}
+        </View>
       </View>
     </HideKeyboard>
   );
@@ -236,6 +238,10 @@ const styles = StyleSheet.create({
     color: 'rgb(175, 175, 175)',
     fontSize: 22,
     fontWeight: '400',
+  },
+  dexContainer: { 
+    alignSelf: 'center',
+    flex: 1
   }
 });
 
