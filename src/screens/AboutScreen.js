@@ -10,43 +10,43 @@ const AboutScreen = (props) => {
 
   return (
     <View style={styles.container}>
-      <View style={{ alignSelf: 'flex-start' }}>
+      <View style={{ alignSelf: 'flex-start', paddingBottom: 12 }}>
         <TouchableOpacity style={styles.back} onPress={() => props.navigation.goBack(null)}>
-          <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" /><Text style={styles.backText}>Back</Text>
+          <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" /><Text allowFontScaling={false} style={styles.backText}>Back</Text>
         </TouchableOpacity>
       </View>
       <ScrollView style={{ paddingHorizontal: 12 }}>
         <View style={styles.headerContainer}>
-          <Text style={styles.header}>About</Text>
+          <Text allowFontScaling={false} style={styles.header}>About</Text>
         </View>
         <View style={styles.aboutMessage}>
-          <Text style={[styles.text, { fontSize: 22, fontWeight: '600' }]} adjustsFontSizeToFit={true} numberOfLines={1}>Thanks for downloading Poke-Pal!</Text>
+          <Text allowFontScaling={false} style={[styles.text, { fontSize: 22, fontWeight: '600' }]} adjustsFontSizeToFit={true} numberOfLines={1}>Thanks for downloading Poke-Pal!</Text>
           <View style={{ height: 8 }} />
-          <Text style={styles.subText}>
+          <Text allowFontScaling={false} style={styles.subText}>
             This app is a project I built for fun and with the hopes that some may find it useful. 
             I did my best to create a clean project, free from bugs, but things do happen. 
           </Text>
           <View style={{ height: 8 }} />
-          <Text style={[styles.text, { fontWeight: '600' }]}>So, if you discover a bug or even have an idea for a aditional feature:</Text>
+          <Text allowFontScaling={false} style={[styles.text, { fontWeight: '600' }]}>So, if you discover a bug or even have an idea for a aditional feature:</Text>
           <View style={{ height: 8 }} />
-          <Text style={styles.subText}>
+          <Text allowFontScaling={false} style={styles.subText}>
             Please! Let me know by emailing me at: 
           </Text>
           <Button style={styles.email} onPress={() => Linking.openURL(`mailto:pokepal.feedback@gmail.com?subject=Ticket: #${id}&body=Description or Feedback:`) } title="pokepal.feedback@gmail.com" />
         </View>
         <View style={styles.headerContainer}>
-          <Text style={styles.header}>Developers</Text>
+          <Text allowFontScaling={false} style={styles.header}>Developers</Text>
         </View>
         <View style={styles.aboutMessage}>
-          <Text style={[styles.text, { fontSize: 22, fontWeight: '600' }]} adjustsFontSizeToFit={true} numberOfLines={1}>Interested in helping?</Text>
+          <Text allowFontScaling={false} style={[styles.text, { fontSize: 22, fontWeight: '600' }]} adjustsFontSizeToFit={true} numberOfLines={1}>Interested in helping?</Text>
           <View style={{ height: 8 }} />
-          <Text style={styles.subText}>
-            I enjoyed building this app and will continue to update and maintain Poke-Book, but I am only one person after all.
+          <Text allowFontScaling={false} style={styles.subText}>
+            I enjoyed building this app and will continue to update and maintain Poke-Pal, but I am only one person after all.
           </Text>
           <View style={{ height: 8 }} />
-          <Text style={[styles.text, { fontWeight: '600' }]}>If you're a developer and would like to contribute:</Text>
+          <Text allowFontScaling={false} style={[styles.text, { fontWeight: '600' }]}>If you're a developer and would like to contribute:</Text>
           <View style={{ height: 8 }} />
-          <Text style={styles.subText}>
+          <Text allowFontScaling={false} style={styles.subText}>
             Shoot me an email, or connect with me on LinkedIn or GitHub: 
           </Text>
           <View style={{ paddingBottom: 60 }}>
@@ -77,7 +77,6 @@ const styles = StyleSheet.create({
   },
   headerContainer: {
     paddingHorizontal: 12,
-    paddingTop: 12,
     paddingBottom: 6,
   },
   break: {
