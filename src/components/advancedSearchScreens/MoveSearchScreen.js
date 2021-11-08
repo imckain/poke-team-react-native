@@ -212,12 +212,14 @@ const styles = StyleSheet.create({
     width: 'auto',
   },
   dropDownHeader: {
-    backgroundColor: '#464450a6',
+    backgroundColor: '#353340',
     marginBottom: 22,
     borderWidth: 0,
     width: '90%',
     alignSelf: 'center',
-    paddingHorizontal: 12
+    paddingHorizontal: 12,
+    borderWidth: 1,
+    borderColor: '#ffffff18'
   },
   dropDown: {
     backgroundColor: '#464450',

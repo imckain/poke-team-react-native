@@ -203,7 +203,6 @@ const styles = StyleSheet.create({
     width: 'auto',
   },
   dropDownHeader: {
-    // backgroundColor: '#464450a6',
     backgroundColor: '#353340',
     marginBottom: 22,
     width: '90%',
