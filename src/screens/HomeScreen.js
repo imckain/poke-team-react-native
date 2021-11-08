@@ -39,7 +39,7 @@ const HomeScreen = (props) => {
   }
 
   const showResultCard = (el) => {
-    if (el !== null) {
+    if (el.length !== 0) {
       return (
         <TouchableOpacity onPress={() => props.navigation.navigate('Detail Modal', { results: el })}>
           <ShowSearchResult results={el} />
