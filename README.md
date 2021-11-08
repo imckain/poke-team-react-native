@@ -1,7 +1,7 @@
 # Poke-Pal
 ### Pokemon Team Builder & PokeDex
-- A huge amount of data at your fingertips
-  - Search by Pokemon name or ID
+- A *HUGE* amount of data at your fingertips
+  - Search by Pokemon Name or ID
   - Search by Type
   - Search by Move
   - Search by Ability
