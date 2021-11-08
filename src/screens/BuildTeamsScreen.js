@@ -115,9 +115,12 @@ const BuildTeamsScreen = (props) => {
   return (
     <HideKeyboard>
       <View  style={styles.container}>
-        <View style={{ alignSelf: 'flex-start' }}>
+        <View style={styles.iconContainer}>
           <TouchableOpacity style={styles.back} onPress={() => props.navigation.goBack(null)}>
             <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" /><Text allowFontScaling={false} style={styles.backText}>Back</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.back} onPress={() => addTeamAndGoBack(teamName, teamMembers)} >
+            <Ionicons name="ios-checkbox" size={24} color="#fff" />
           </TouchableOpacity>
         </View>
         <ScrollView>
@@ -157,9 +160,6 @@ const BuildTeamsScreen = (props) => {
             <View style={styles.teamSlotContainer}>
               {createTeamMember(teamMembers)}
             </View>
-            <TouchableOpacity onPress={() => addTeamAndGoBack(teamName, teamMembers)} >
-              <SaveTeamButton height={54} width={'90%'} />
-            </TouchableOpacity>
           </View>
         </ScrollView>
       </View>
@@ -249,6 +249,11 @@ const styles = StyleSheet.create({
   },
   backText: {
     color: '#fff'
+  },
+  iconContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   }
 });
 
