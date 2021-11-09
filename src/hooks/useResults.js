@@ -10,7 +10,7 @@ export default () => {
     try {
       const response = await pokeApi.get(`https://pokeapi.co/api/v2/pokemon/${defaultTerm}`);
       const jsonToSting = JSON.stringify(response.data)
-      const jsonValue = JSON.parse(jsonToSting.replaceAll('-', ' ').replaceAll('generation ', 'generation-').replaceAll('black ', 'black-'))
+      const jsonValue = JSON.parse(jsonToSting.replaceAll('-', ' ').replaceAll('special', 'Sp').replaceAll('generation ', 'generation-').replaceAll('black ', 'black-'))
       setResults([jsonValue])
     } catch (error) {
       setApiErrorMessage('Something Went Wrong')
