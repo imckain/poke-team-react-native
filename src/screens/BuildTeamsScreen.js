@@ -33,7 +33,7 @@ const BuildTeamsScreen = (props) => {
       scrollEnabled={false}
       data={buildResults}
       style={{height: 'auto'}}
-      keyExtractor={(item) => item.id}
+      keyExtractor={(item) => item.name}
       renderItem={({ item }) => {
         const showAddButton = (el) => {
             return (
