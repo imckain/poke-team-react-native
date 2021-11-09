@@ -23,8 +23,6 @@ const SecondaryDetailModal = (props) => {
   const [advancedSearchAPI, advancedResults] = useAdvancedResults([]);
   const [results, setResults] = useState(props.route.params.results)
 
-  console.log(props.route.params.results.name);
-  console.log(results.name);
   useEffect(() => {
     setResults(props.route.params.results)
   }, [props.route.params.results])
