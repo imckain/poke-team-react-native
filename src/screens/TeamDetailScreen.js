@@ -37,11 +37,11 @@ const TeamDetailScreen = (props) => {
   return (
     <HideKeyboard>
       <View style={styles.container}>
-        <View style={styles.navButtons}>
+        <View style={styles.iconContainer}>
           <TouchableOpacity style={styles.back} onPress={() => props.navigation.goBack(null)}>
             <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" /><Text allowFontScaling={false} style={styles.backText}>Back</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => props.navigation.navigate('Edit Team', { id: id })}>
+          <TouchableOpacity style={styles.edit} onPress={() => props.navigation.navigate('Edit Team', { id: id })}>
             <Ionicons name="ios-create-outline" size={32} color="#fff" />
           </TouchableOpacity>
         </View>
@@ -61,12 +61,6 @@ const TeamDetailScreen = (props) => {
 };
 
 const styles = StyleSheet.create({
-  navButtons: {
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
   container: {
     backgroundColor: '#353340',
     flexDirection: 'column',
@@ -104,8 +98,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  edit: { 
+    paddingHorizontal: 18, 
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   backText: {
     color: '#fff'
+  },
+  iconContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   }
 });
 
