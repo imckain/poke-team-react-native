@@ -31,6 +31,8 @@ const TypePokemon = ({ results, navigation }) => {
   const createPokemonBox = (el) => {
 
     const navigate = async(url, param) => {
+      console.log(param);
+      console.log(urlResults.name);
       if (urlResults.name === param) {
         return navigation.navigate('Secondary Detail Modal', { results: urlResults })
       } else await getResultsFromUrl(url)

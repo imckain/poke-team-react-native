@@ -8,7 +8,7 @@ const PokedexType = ({ results, fontSize }) => {
   return (
     <View style={[styles.container, { backgroundColor: checkType(results.identifier) }]}>
       <View style={[styles.typeBox, { backgroundColor: checkType(results.identifier) }]}>
-        <Text allowFontScaling={false} style={[styles.typeText, {fontSize: fontSize}]}>{results.identifier}</Text>
+        <Text allowFontScaling={false} style={[styles.typeText, {fontSize: fontSize}]}>{results.identifier.replaceAll('-', ' ')}</Text>
       </View>
       <Ionicons style={styles.icon} name="ios-chevron-forward-sharp" size={18} color="#fff" />  
     </View>

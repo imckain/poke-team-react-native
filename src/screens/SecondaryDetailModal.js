@@ -23,6 +23,8 @@ const SecondaryDetailModal = (props) => {
   const [advancedSearchAPI, advancedResults] = useAdvancedResults([]);
   const [results, setResults] = useState(props.route.params.results)
 
+  console.log(results);
+
   const changeSprites = useCallback((el) => {
     if (el === true) {
       return (

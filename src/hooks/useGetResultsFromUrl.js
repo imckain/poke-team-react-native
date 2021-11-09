@@ -6,10 +6,13 @@ export default () => {
   const [advancedApiErrorMessage, setAdvancedApiErrorMessage] = useState('');
   
   const getResultsFromUrl = useCallback(async (defaultTerm) => {
+    console.log(defaultTerm);
     if (defaultTerm === '') { return null }
     try {
       const response = await pokeApi.get(defaultTerm);
-      setResults(response.data)
+      const jsonToSting = JSON.stringify(response.data)
+      const jsonValue = JSON.parse(jsonToSting.replaceAll('-', ' ').replaceAll('generation ', 'generation-').replaceAll('black ', 'black-'))
+      setResults(jsonValue)
     } catch (error) {
       setAdvancedApiErrorMessage('Something Went Wrong')
     }

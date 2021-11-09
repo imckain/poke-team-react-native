@@ -30,7 +30,7 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
   
   const showAbilities = (el) => {
     const navigate = async(url, param) => {
-      if (urlResults.name === param) {
+      if (urlResults.name === param.replaceAll(' ', '-')) {
         await getResultsFromUrl(url)
         return navigation.navigate('Ability Detail Modal', { results: urlResults })
       } else await getResultsFromUrl(url)
