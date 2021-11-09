@@ -125,7 +125,7 @@ const EditTeamsScreen = (props) => {
             <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" /><Text allowFontScaling={false} style={styles.backText}>Back</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.save} onPress={() => saveTeamAndGoBack(id, teamName, teamMembers)} >
-            <Ionicons name="ios-checkbox" size={24} color="#fff" />
+            <Ionicons name="ios-checkbox" size={32} color="green" />
           </TouchableOpacity>
         </View>
         <ScrollView>
