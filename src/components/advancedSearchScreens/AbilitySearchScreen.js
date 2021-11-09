@@ -27,7 +27,7 @@ const AbilitySearchScreen = (props) => {
       return <FlatList 
         horizontal={false}
         data={abilityData}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.identifier}
         renderItem={({ item }) => {
           return(
             <TouchableOpacity onPress={async() => {
@@ -48,10 +48,10 @@ const AbilitySearchScreen = (props) => {
         return <FlatList 
           horizontal={false}
           data={el}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => item.identifier}
           renderItem={({ item }) => {
             return(
-              <TouchableOpacity key={item.id} onPress={async() => {
+              <TouchableOpacity onPress={async() => {
                 await setSearchTerm(item.identifier); 
                 return abilitySearchApi(item.identifier)
                 }}>
@@ -86,7 +86,7 @@ const AbilitySearchScreen = (props) => {
         horizontal={false}
         scrollEnabled={false}
         data={abilityResults}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.name}
         renderItem={({ item }) => {
           return(
             <TouchableOpacity onPress={() => props.navigation.navigate('Ability Detail Modal', { results: item })}>
