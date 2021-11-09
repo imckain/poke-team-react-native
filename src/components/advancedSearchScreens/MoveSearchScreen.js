@@ -50,7 +50,7 @@ const MoveSearchScreen = (props) => {
       return <FlatList 
         horizontal={false}
         data={el}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.identifier}
         renderItem={({ item }) => {
           return(
             <TouchableOpacity onPress={async() => {
@@ -71,7 +71,7 @@ const MoveSearchScreen = (props) => {
         return <FlatList 
           horizontal={false}
           data={el}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => item.identifier}
           renderItem={({ item }) => {
             return(
               <TouchableOpacity key={item.id} onPress={async() => {
@@ -114,7 +114,7 @@ const MoveSearchScreen = (props) => {
         horizontal={false}
         scrollEnabled={false}
         data={moveResults}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.name}
         renderItem={({ item }) => {
           return(
             <TouchableOpacity onPress={() => props.navigation.navigate('Move Detail Modal', { results: item })}>
