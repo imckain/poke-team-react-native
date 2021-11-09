@@ -34,7 +34,7 @@ const MovesDetail = ({ results, navigation, margin }) => {
   const createMoveTextBox = (el) => {
 
     const navigate = async(url, param) => {
-      if (urlResults.name === param.replaceAll(' ', '-')) {
+      if (urlResults.name === param) {
         await getResultsFromUrl(url)
         return navigation.navigate('Move Detail Modal', { results: urlResults })
       } else await getResultsFromUrl(url)
@@ -67,7 +67,7 @@ const MovesDetail = ({ results, navigation, margin }) => {
     if (searchTerm !== '') {
       try {
         const navigate = async(url, param) => {
-          if (urlResults.name === param.replaceAll(' ', '-')) {
+          if (urlResults.name === param) {
             await getResultsFromUrl(url)
             return navigation.navigate('Move Detail Modal', { results: urlResults })
           } else await getResultsFromUrl(url)
