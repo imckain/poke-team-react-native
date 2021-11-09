@@ -45,7 +45,7 @@ const AbilityPokemon = ({ results, navigation }) => {
             }}
             onPressOut={() => navigate(item.pokemon.url, item.pokemon.name)}
           >
-            <Text allowFontScaling={false} style={[styles.text]}>{item.pokemon.name.replaceAll('-', ' ')}</Text>
+            <Text allowFontScaling={false} style={[styles.text]}>{item.pokemon.name}</Text>
           </TouchableOpacity>
         </View>
       )

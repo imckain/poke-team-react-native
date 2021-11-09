@@ -39,7 +39,7 @@ const BuildTeamsScreen = (props) => {
             return (
               teamMembers.length < 6 ?
                 <TouchableOpacity onPress={() => setTeamMembers([...teamMembers].concat(item))}>
-                  <AddPokemonButton name={item.name.replaceAll('-', ' ')} width={'90%'} height={40} />
+                  <AddPokemonButton name={item.name} width={'90%'} height={40} />
                 </TouchableOpacity>
               :
                 null

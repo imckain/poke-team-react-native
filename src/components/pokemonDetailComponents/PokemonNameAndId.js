@@ -4,7 +4,7 @@ import { Text, StyleSheet, View } from 'react-native';
 const PokemonNameAndId = ({ results, fontSize, lines }) => {
   return (
     <View style={styles.nameContainer}>
-      <Text adjustsFontSizeToFit={true} allowFontScaling={false} numberOfLines={lines} style={[styles.name, {fontSize: fontSize}]}>{results.name.replaceAll('-', ' ')}</Text>
+      <Text adjustsFontSizeToFit={true} allowFontScaling={false} numberOfLines={lines} style={[styles.name, {fontSize: fontSize}]}>{results.name}</Text>
       <Text style={[styles.id]}>{results.id}</Text>
     </View>
   );

@@ -9,7 +9,9 @@ export default () => {
     if (defaultTerm === '' || defaultTerm === undefined) { return setTypeResults(null) }
     try {
       const response = await pokeApi.get(`https://pokeapi.co/api/v2/type/${defaultTerm}`);
-      setTypeResults([response.data])
+      const jsonToSting = JSON.stringify(response.data)
+      const jsonValue = JSON.parse(jsonToSting.replaceAll('-', ' '))
+      setTypeResults([jsonValue])
     } catch (error) {
       setAdvancedApiErrorMessage('Something Went Wrong')
     }

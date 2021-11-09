@@ -47,7 +47,7 @@ const AbilityDetail = ({ results, margin, headerFontSize, detailFontSize, naviga
               return navigate(item.ability.url, item.ability.name)
             }}
           >
-            <Text allowFontScaling={false} style={[styles.abilityText, { fontSize: detailFontSize }]}>{item.ability.name.replaceAll('-', ' ')}</Text>
+            <Text allowFontScaling={false} style={[styles.abilityText, { fontSize: detailFontSize }]}>{item.ability.name}</Text>
           </TouchableOpacity>
         </View>
       )

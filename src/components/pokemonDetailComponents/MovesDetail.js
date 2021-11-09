@@ -53,7 +53,7 @@ const MovesDetail = ({ results, navigation, margin }) => {
               return navigate(item.move.url, item.move.name)
             }}
           >
-            <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.moveText]}>{item.move.name.replaceAll('-', ' ')}</Text>
+            <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.moveText]}>{item.move.name}</Text>
           </TouchableOpacity>
           <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
           <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>
@@ -84,7 +84,7 @@ const MovesDetail = ({ results, navigation, margin }) => {
                   return navigate(item.move.url, item.move.name)
                 }}
               >
-                <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.moveText]}>{item.move.name.replaceAll('-', ' ')}</Text>
+                <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.moveText]}>{item.move.name}</Text>
               </TouchableOpacity>
               <Text style={styles.moveDetailText}>Level Learned: {item.version_group_details[0].level_learned_at}</Text>
               <Text style={styles.moveDetailText}>Method: {item.version_group_details[0].move_learn_method.name}</Text>

@@ -20,7 +20,7 @@ const MoveNameAndClass = ({ results, fontSize, alignSelf, param, lines, typeFont
   return (
     <View style={[styles.dmgClassView, { alignSelf: alignSelf }]}>
       <View style={[styles.nameContainer, { alignSelf: alignSelf }]}>
-        <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={lines} style={[styles.name, { fontSize: fontSize, alignSelf: alignSelf, textAlign: textAlign }]}>{results.name.replaceAll('-', ' ')}</Text>
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={lines} style={[styles.name, { fontSize: fontSize, alignSelf: alignSelf, textAlign: textAlign }]}>{results.name}</Text>
         {showType(param)}
       </View>
       {showAttribute(param)}

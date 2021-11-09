@@ -54,7 +54,7 @@ const PokedexMove = ({ results, fontSize, detailFontSize, lines, alignSelf }) =>
     <View style={styles.infoContainer}>
       <View style={[styles.moveInfo]}>
         <View style={styles.subInfo}>
-          <Text allowFontScaling={false} numberOfLines={lines} adjustsFontSizeToFit={true} style={[styles.name, {fontSize: fontSize }]}>{results.identifier.replaceAll('-', ' ')}</Text>
+          <Text allowFontScaling={false} numberOfLines={lines} adjustsFontSizeToFit={true} style={[styles.name, {fontSize: fontSize }]}>{results.identifier}</Text>
           <View style={[styles.typeBox, { backgroundColor: checkType(results.type_id) }]}>
             <Text allowFontScaling={false} numberOfLines={lines} adjustsFontSizeToFit={true} style={[styles.typeText, { fontSize: detailFontSize }]}>{showTypeName(results.type_id)}</Text>
           </View>

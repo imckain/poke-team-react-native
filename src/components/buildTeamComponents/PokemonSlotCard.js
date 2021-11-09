@@ -11,7 +11,7 @@ const PokemonSlotCard = (props) => {
       return (
         <View style={styles.infoContainer}>
           <FrontSprite width={70} height={70} results={el} />
-          <Text adjustsFontSizeToFit={true} numberOfLines={1} allowFontScaling={false} style={[styles.name]}>{el.name.replaceAll('-', ' ')}</Text>
+          <Text adjustsFontSizeToFit={true} numberOfLines={1} allowFontScaling={false} style={[styles.name]}>{el.name}</Text>
           <TypeShow flexDirection={'column'} results={results} />
         </View>
       )

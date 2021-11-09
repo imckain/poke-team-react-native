@@ -48,7 +48,7 @@ const TypeMoves = ({ results, navigation }) => {
             }}
             onPressOut={() => navigate(item.url, item.name)}
           >
-            <Text allowFontScaling={false} style={[styles.moveText]}>{item.name.replaceAll('-', ' ')}</Text>
+            <Text allowFontScaling={false} style={[styles.moveText]}>{item.name}</Text>
           </TouchableOpacity>
         </View>
       )
