@@ -28,7 +28,7 @@ const TypeSearchScreen = (props) => {
       return <FlatList 
         horizontal={false}
         data={typeData}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.identifier}
         renderItem={({ item }) => {
           return(
             <TouchableOpacity onPress={async() => {
@@ -49,7 +49,7 @@ const TypeSearchScreen = (props) => {
         horizontal={false}
         scrollEnabled={false}
         data={typeResults}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.name}
         renderItem={({ item }) => {
           return(
             <TouchableOpacity onPress={() => props.navigation.navigate('Type Detail Modal', { results: item })}>
