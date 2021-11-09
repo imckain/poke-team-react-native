@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import AbilityEffect from '../components/abilityDetailComponents/AbilityEffect';
 
@@ -15,6 +15,7 @@ const AbilityDetailModal = (props) => {
 
   return (
     <View style={styles.container}>
+      <Text allowFontScaling={false} style={styles.closeMessage}>Pull down to close</Text>
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
           <AbilityName alignSelf={'center'} fontSize={48} results={results} />
@@ -36,6 +37,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: '#353340',
     paddingHorizontal: 10,
+  },
+  closeMessage: {
+    alignSelf: 'center',
+    color: 'rgba(255, 255, 255, 0.5)',
+    paddingVertical: 7,
+    fontStyle: 'italic'
   },
   spriteContainer: {
     flexDirection: 'row'
