@@ -202,6 +202,7 @@ const SecondaryDetailModal = (props) => {
 
   return (
     <View style={styles.container}>
+      <Text allowFontScaling={false} style={styles.closeMessage}>Pull down to close</Text>
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
           <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 22}}>
@@ -245,6 +246,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: '#353340',
     paddingHorizontal: 10,
+  },
+  closeMessage: {
+    alignSelf: 'center',
+    color: 'rgba(255, 255, 255, 0.5)',
+    paddingVertical: 7,
+    fontStyle: 'italic'
   },
   scrollViewContainer: {
     width: '100%'
