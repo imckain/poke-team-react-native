@@ -10,7 +10,7 @@ export default () => {
     try {
       const response = await pokeApi.get(defaultTerm);
       const jsonToSting = JSON.stringify(response.data)
-      const jsonValue = JSON.parse(jsonToSting.replaceAll('-', ' ').replaceAll('generation ', 'generation-').replaceAll('black ', 'black-'))
+      const jsonValue = JSON.parse(jsonToSting.replaceAll('special-', 'Sp').replaceAll('-', ' ').replaceAll('generation ', 'generation-').replaceAll('black ', 'black-'))
       setResults(jsonValue)
     } catch (error) {
       setAdvancedApiErrorMessage('Something Went Wrong')
