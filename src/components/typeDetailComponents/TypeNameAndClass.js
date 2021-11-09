@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.712)',
     textShadowOffset: { width: 0, height: 0},
     textShadowRadius: 3,
+    paddingBottom: 12,
   },
   damageClassSub: {
     color: 'rgb(223, 223, 223)',
@@ -42,10 +43,9 @@ const styles = StyleSheet.create({
     textTransform: 'capitalize',
   },
   typeBox: {
-    paddingVertical: 3,
-    paddingHorizontal: 6,
+    // paddingHorizontal: 6,
     borderRadius: 10,
-    marginBottom: 6,
+    marginBottom: 18,
     width: '100%'
   },
   typeText: {
