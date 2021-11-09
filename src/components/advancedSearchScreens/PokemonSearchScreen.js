@@ -43,10 +43,10 @@ const PokemonSearchScreen = (props) => {
       return <FlatList 
         horizontal={false}
         data={el}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.identifier}
         renderItem={({ item }) => {
           return(
-            <TouchableOpacity key={item.id} onPress={async() => {
+            <TouchableOpacity onPress={async() => {
               await setSearchTerm(item.identifier); 
               return advancedSearchAPI(item.identifier)
               }}>
@@ -64,10 +64,10 @@ const PokemonSearchScreen = (props) => {
         return <FlatList 
           horizontal={false}
           data={el}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => item.identifier}
           renderItem={({ item }) => {
             return(
-              <TouchableOpacity key={item.id} onPress={async() => {
+              <TouchableOpacity onPress={async() => {
                 await setSearchTerm(item.identifier); 
                 return advancedSearchAPI(item.identifier)
                 }}>
@@ -108,7 +108,7 @@ const PokemonSearchScreen = (props) => {
         scrollEnabled={false}
         data={advancedResults}
         style={{height: 'auto'}}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.name}
         renderItem={({ item }) => {
           return(
             <TouchableOpacity style={{}} onPress={() => props.navigation.navigate('Detail Modal', { results: [item], navigation: props.navigation })}>
