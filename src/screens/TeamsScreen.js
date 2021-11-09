@@ -13,7 +13,7 @@ const TeamsScreen = (props) => {
     return <FlatList 
       horizontal={false}
       data={el}
-      keyExtractor={(item) => item.id}
+      keyExtractor={(item) => item.name}
       renderItem={({ item }) => {
         if (item.id !== 0) return <ViewTeams results={item} id={item.id} height={'auto'} width={'100%'} navigation={props.navigation} />
         else return null
