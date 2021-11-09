@@ -80,6 +80,7 @@ const LocationDetailModal = (props) => {
 
   return (
     <View style={styles.container}>
+      <Text allowFontScaling={false} style={styles.closeMessage}>Pull down to close</Text>
       <DropDownPicker 
         open={open}
         value={value}
@@ -122,13 +123,19 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: '#353340',
     paddingHorizontal: 12,
-    paddingTop: 32,
     paddingBottom: 120,
+  },
+  closeMessage: {
+    alignSelf: 'center',
+    color: 'rgba(255, 255, 255, 0.5)',
+    paddingVertical: 7,
+    fontStyle: 'italic'
   },
   dropDown: {
     backgroundColor: '#464450a6',
     marginBottom: 22,
     borderWidth: 0,
+    marginTop: 12
   },
   encounterContainer: { 
     borderColor: '#464450a6', 
