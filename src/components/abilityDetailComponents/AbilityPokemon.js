@@ -30,6 +30,8 @@ const AbilityPokemon = ({ results, navigation }) => {
   
   const createPokemonBox = (el) => {
     const navigate = async(url, param) => {
+      console.log(param);
+      console.log(urlResults.name);
       if (urlResults.name === param) {
         await getResultsFromUrl(url)
         return navigation.navigate('Secondary Detail Modal', { results: urlResults })
