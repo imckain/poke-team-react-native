@@ -6,7 +6,6 @@ export default () => {
   const [advancedApiErrorMessage, setAdvancedApiErrorMessage] = useState('');
   
   const getResultsFromUrl = useCallback(async (defaultTerm) => {
-    console.log(defaultTerm);
     if (defaultTerm === '') { return null }
     try {
       const response = await pokeApi.get(defaultTerm);
