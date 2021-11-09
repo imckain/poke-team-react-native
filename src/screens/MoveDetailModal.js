@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
 import { ScrollView } from 'react-native-gesture-handler';
 import MoveNameAndClass from '../components/moveDetailComponents/MoveNameAndClass';
@@ -17,7 +17,8 @@ const MoveDetailModal = (props) => {
   } else results = props.route.params.results[0]
 
   return (
-    <View style={[styles.container, { }]}>
+    <View style={styles.container}>
+      <Text allowFontScaling={false} style={styles.closeMessage}>Pull down to close</Text>
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
           <MoveNameAndClass attributeFontSize={26} param={'modal'} alignSelf={'center'} textAlign={'center'} fontSize={48} results={results} />
@@ -42,6 +43,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: '#353340',
     paddingHorizontal: 10,
+  },
+  closeMessage: {
+    alignSelf: 'center',
+    color: 'rgba(255, 255, 255, 0.5)',
+    paddingVertical: 7,
+    fontStyle: 'italic'
   },
   spriteContainer: {
     flexDirection: 'row'
