@@ -33,7 +33,7 @@ const TypeMoves = ({ results, navigation }) => {
   const createMoveTextBox = (el) => {
 
     const navigate = async(url, param) => {
-      if (urlResults.name === param.replaceAll(' ', '-')) {
+      if (urlResults.name === param) {
         await getResultsFromUrl(url)
         return navigation.navigate('Move Detail Modal', { results: urlResults })
       } else await getResultsFromUrl(url)
