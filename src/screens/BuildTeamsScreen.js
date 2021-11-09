@@ -119,7 +119,7 @@ const BuildTeamsScreen = (props) => {
           <TouchableOpacity style={styles.back} onPress={() => props.navigation.goBack(null)}>
             <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" /><Text allowFontScaling={false} style={styles.backText}>Back</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.back} onPress={() => addTeamAndGoBack(teamName, teamMembers)} >
+          <TouchableOpacity style={styles.save} onPress={() => addTeamAndGoBack(teamName, teamMembers)} >
             <Ionicons name="ios-checkbox" size={24} color="#fff" />
           </TouchableOpacity>
         </View>
@@ -243,6 +243,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   back: { 
+    paddingHorizontal: 18, 
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  save: { 
     paddingHorizontal: 18, 
     flexDirection: 'row',
     alignItems: 'center',
