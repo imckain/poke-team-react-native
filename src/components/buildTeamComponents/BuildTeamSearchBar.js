@@ -38,9 +38,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingHorizontal: 12,
-    backgroundColor: '#464450a6',
+    backgroundColor: '#000000',
     borderRadius: 10,
-    marginHorizontal: 20
+    marginHorizontal: 20,
+    borderColor: 'rgb(175, 175, 175)',
+    borderWidth: 1
   },
   inputStyle: {
     paddingLeft: 12,
