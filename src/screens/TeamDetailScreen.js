@@ -62,7 +62,7 @@ const TeamDetailScreen = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     flexDirection: 'column',
     paddingTop: 60,
     width: '100%',

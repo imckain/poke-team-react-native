@@ -101,7 +101,7 @@ const LocationDetailModal = (props) => {
           paddingLeft: 2,
           fontWeight: '500',
         }}
-        dropDownContainerStyle={[styles.dropDown, { backgroundColor: '#464450', paddingHorizontal: 32 }]}
+        dropDownContainerStyle={[styles.dropDown, { backgroundColor: '#000000', paddingHorizontal: 32 }]}
         itemSeparator={true}
         listItemLabelStyle={{ fontWeight: '400', fontSize: 22 }}
         selectedItemLabelStyle={{ fontWeight: '600' }}
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     alignSelf: 'center',
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     paddingHorizontal: 12,
     paddingBottom: 120,
   },
@@ -132,27 +132,33 @@ const styles = StyleSheet.create({
     fontStyle: 'italic'
   },
   dropDown: {
-    backgroundColor: '#464450a6',
+    backgroundColor: '#000000',
     marginBottom: 22,
-    borderWidth: 0,
-    marginTop: 12
+    marginTop: 12,
+    borderColor: 'rgb(175, 175, 175)',
+    borderWidth: 1,
+    borderRadius: 10
   },
   encounterContainer: { 
-    borderColor: '#464450a6', 
-    borderWidth: 2, 
+    borderColor: '#000000', 
+    borderWidth: 1, 
     borderRadius: 10, 
     height: 'auto', 
     marginVertical: 16, 
+    borderColor: 'rgb(175, 175, 175)',
+    borderWidth: 1,
+    overflow: 'hidden'
   },
   versionHeader: {
     flexDirection: 'row',
     paddingLeft: 12,
     flexWrap: 'wrap',
     paddingTop: 12,
-    paddingBottom: 6
+    paddingBottom: 6,
+    backgroundColor: 'rgb(175, 175, 175)',
   },
   versionText: {
-    color: '#fff',
+    color: '#000000',
     fontWeight: '600',
     paddingRight: 10,
     fontSize: 26,
@@ -160,7 +166,7 @@ const styles = StyleSheet.create({
   },
   locationBox: {
     paddingVertical: 6,
-    backgroundColor: '#464450a6',
+    backgroundColor: '#000000',
     alignContent: 'center',
     justifyContent: 'center',
     flexDirection: 'column',

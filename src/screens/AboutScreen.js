@@ -79,7 +79,7 @@ const AboutScreen = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     flex: 1,
     paddingTop: 60,
   },

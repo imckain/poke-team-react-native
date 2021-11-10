@@ -244,7 +244,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     alignSelf: 'center',
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     paddingHorizontal: 10,
   },
   closeMessage: {
@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
     width: '100%',
     borderRadius: 10,
-    backgroundColor: '#464450a6',
+    backgroundColor: '#000000',
     paddingVertical: 5,
     height: 'auto',
     marginBottom: 13

@@ -63,7 +63,7 @@ const AdvancedSearchScreen = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     flexDirection: 'column',
     flex: 1,
     paddingTop: 50

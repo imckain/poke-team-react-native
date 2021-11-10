@@ -15,7 +15,7 @@ const TeamsScreen = (props) => {
       data={el}
       keyExtractor={(item) => item.name}
       renderItem={({ item }) => {
-        if (item.id !== 0) return <ViewTeams results={item} id={item.id} height={'auto'} width={'100%'} navigation={props.navigation} />
+        if (item.id !== 0) return <View style={styles.teamContainer}><ViewTeams results={item} id={item.id} height={'auto'} width={'100%'} navigation={props.navigation} /></View>
         else return null
       }}
     />
@@ -62,7 +62,7 @@ const TeamsScreen = (props) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     flex: 1,
     justifyContent: 'space-between',
     paddingTop: 50
@@ -88,6 +88,10 @@ const styles = StyleSheet.create({
     marginTop: 24,
     flex: 1
   },
+  teamContainer: {
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgb(175, 175, 175)',
+  }
 });
 
 export default React.memo(TeamsScreen);

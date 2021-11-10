@@ -32,14 +32,14 @@ const HomeScreen = (props) => {
           }} 
           style={styles.clear}
         >
-          <Ionicons name="ios-close-circle" size={18} color="rgba(32, 32, 32, 0.637)" />
+          <Ionicons name="ios-close-circle" size={18} color="rgb(175, 175, 175)" />
         </TouchableOpacity>
       )
     } else return null
   }
 
   const showResultCard = (el) => {
-    if (el.length !== 0) {
+    if (el.length !== 0 && el.length !== null) {
       return (
         <TouchableOpacity onPress={() => props.navigation.navigate('Detail Modal', { results: el })}>
           <ShowSearchResult results={el} />
@@ -80,7 +80,7 @@ const HomeScreen = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     flex: 1
   },
   searchBarContainer: {

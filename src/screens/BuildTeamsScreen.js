@@ -1,5 +1,5 @@
 import React, { useState, useContext, useCallback } from 'react';
-import { Text, View, StyleSheet, FlatList, ScrollView, TouchableWithoutFeedback, TouchableOpacity, Keyboard } from 'react-native';
+import { Text, View, StyleSheet, FlatList, ScrollView, TouchableWithoutFeedback, TouchableOpacity, Keyboard, Alert } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import { Context as TeamsContext } from '../context/TeamContext';
 import uuid from 'react-native-uuid'
@@ -75,7 +75,7 @@ const BuildTeamsScreen = (props) => {
           }} 
           style={styles.clear}
         >
-          <Ionicons name="ios-close-circle" size={18} color="rgba(32, 32, 32, 0.637)" />
+          <Ionicons name="ios-close-circle" size={18} color="rgb(175, 175, 175)" />
         </TouchableOpacity>
       )
     } else return null
@@ -112,6 +112,29 @@ const BuildTeamsScreen = (props) => {
     }
   }
 
+  const createAlert = () => {
+    Alert.alert(
+      "Team Name Required",
+      { cancelable: true }
+    );
+  }
+
+  const showSave = (name, items) => {
+    if(name.length !== 0 && items.length !== 0) {
+      return (
+        <TouchableOpacity style={styles.save} onPress={() => addTeamAndGoBack(teamName, teamMembers)} >
+          <Ionicons name="ios-checkbox" size={32} color="green" />
+        </TouchableOpacity>
+      )
+    } else {
+      return (
+        <TouchableOpacity style={styles.save} >
+          <Ionicons name="ios-checkbox" size={32} color="rgb(175, 175, 175)" />
+        </TouchableOpacity>
+      )
+    }
+  }
+
   return (
     <HideKeyboard>
       <View  style={styles.container}>
@@ -119,9 +142,7 @@ const BuildTeamsScreen = (props) => {
           <TouchableOpacity style={styles.back} onPress={() => props.navigation.goBack(null)}>
             <Ionicons name="ios-chevron-back-outline" size={32} color="#fff" /><Text allowFontScaling={false} style={styles.backText}>Back</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.save} onPress={() => addTeamAndGoBack(teamName, teamMembers)} >
-            <Ionicons name="ios-checkbox" size={32} color="green" />
-          </TouchableOpacity>
+          {showSave(teamName, teamMembers)}
         </View>
         <ScrollView>
           <View style={styles.teamNameContainer}>
@@ -172,15 +193,17 @@ const styles = StyleSheet.create({
     borderRadius: 10, 
     overflow: 'hidden',
     marginBottom: 24,
-    backgroundColor: '#464450',
+    backgroundColor: '#000000',
     justifyContent: 'space-between',
     width: '90%',
     height: 'auto',
     alignSelf: 'center',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    borderColor: 'rgb(175, 175, 175)',
+    borderWidth: 1
   },
   container: {
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     flexDirection: 'column',
     paddingTop: 60,
     width: '100%',

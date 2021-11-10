@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     alignSelf: 'center',
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     paddingHorizontal: 10,
   },
   closeMessage: {
