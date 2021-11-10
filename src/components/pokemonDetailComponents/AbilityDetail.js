@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
     width: '100%',
     borderRadius: 10,
-    backgroundColor: '#464450a6',
+    backgroundColor: '#000000',
     paddingVertical: 5,
   },
   collapsibleContainer: {
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   abilityBox: {
     paddingVertical: 5,
     borderRadius: 10,
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     margin: 7,
     alignContent: 'center',
     justifyContent: 'center',
