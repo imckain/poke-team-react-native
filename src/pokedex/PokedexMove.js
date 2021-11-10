@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '100%',
-    borderBottomColor: '#ffffff18',
+    borderBottomColor: 'rgb(175, 175, 175)',
     borderBottomWidth: 1,
   },
   moveInfo: {
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
   },
   typeBox: {
     borderRadius: 10,
-    backgroundColor: '#464450',
+    backgroundColor: '#000000',
     justifyContent: 'center',
     width: 110,
     height: 'auto',
