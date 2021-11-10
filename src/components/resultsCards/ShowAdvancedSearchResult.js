@@ -33,8 +33,10 @@ const styles = StyleSheet.create({
     width: '90%',
     height: 'auto',
     alignSelf: 'center',
-    backgroundColor: '#464450a6',
+    backgroundColor: '#000000',
     borderRadius: 10,
+    borderColor: 'rgb(175, 175, 175)',
+    borderWidth: 1
   },
   mainCardContainer: {
     flexDirection: 'row',

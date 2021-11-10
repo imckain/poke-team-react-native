@@ -11,7 +11,7 @@ const ShowAdvancedTypeResult = (props) => {
       <View style={styles.container}>
         <View style={styles.mainCardContainer}>
           <View style={styles.mainInfo}>
-            <TypeNameAndClass alignSelf={'flex-start'} fontSize={26} results={results} />
+            <TypeNameAndClass alignSelf={'center'} fontSize={36} results={results} />
           </View>
         </View>
         <Text allowFontScaling={false} style={styles.infoNotice}>Tap for more info</Text>
@@ -30,10 +30,13 @@ const styles = StyleSheet.create({
     width: '90%',
     height: 'auto',
     alignSelf: 'center',
-    backgroundColor: '#464450a6',
+    backgroundColor: '#000000',
+    borderColor: 'rgb(175, 175, 175)',
+    borderWidth: 1,
+    justifyContent: 'center'
   },
   mainInfo: {
-    justifyContent: 'flex-start',
+    // justifyContent: 'flex-start',
     maxWidth: '100%',
     paddingHorizontal: 12
   },
