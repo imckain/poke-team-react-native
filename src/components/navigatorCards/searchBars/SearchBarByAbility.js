@@ -37,14 +37,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingHorizontal: 12,
-    backgroundColor: '#464450a6',
+    backgroundColor: 'rgba(105, 105, 105, 0.6)',
     borderRadius: 10,
     marginHorizontal: 20,
-    marginBottom: 12
+    marginBottom: 12,
   },
   inputStyle: {
     paddingLeft: 12,
-    height: '100%',
     flex: 1,
     fontSize: 16,
     fontWeight: '500',
