@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
     width: '100%',
     borderRadius: 10,
-    backgroundColor: '#464450a6',
+    backgroundColor: '#000000',
     paddingVertical: 5,
     marginBottom: 13,
     paddingHorizontal: 12,
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
   },
   metaDataContainer: {
-    backgroundColor: '#353340a6',
+    backgroundColor: '#000000',
     borderRadius: 10,
     paddingVertical: 6,
     marginTop: 6,
