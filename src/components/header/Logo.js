@@ -1,11 +1,11 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 
 const Logo = () => {
 
   return (
     <View style={styles.logoContainer}>
-      <Text allowFontScaling={false} style={styles.logoText}>Poke-Pal</Text>
+      <Image style={styles.image} resizeMode={'contain'} source={require('../../../assets/pokepal1.png')} />
     </View>
   );
 };
@@ -13,12 +13,8 @@ const Logo = () => {
 const styles = StyleSheet.create({
   logoContainer: {
   },
-  logoText: {
-    // paddingBottom: 48,
-    fontSize: 32,
-    fontWeight: '600',
-    color: '#fff',
-    alignSelf: 'flex-start',
+  image: {
+    width: 160
   }
 });
 
