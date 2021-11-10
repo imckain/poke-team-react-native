@@ -75,7 +75,7 @@ const BuildTeamsScreen = (props) => {
           }} 
           style={styles.clear}
         >
-          <Ionicons name="ios-close-circle" size={18} color="rgb(175, 175, 175)" />
+          <Ionicons name="ios-close-circle" size={18} color="rgb(42, 42, 42)" />
         </TouchableOpacity>
       )
     } else return null
