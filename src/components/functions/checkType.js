@@ -36,6 +36,6 @@ export default checkType = (el) => {
       '#594735'
     : el === 'fairy' || el === 18 ? 
       '#DC91DD'
-    : '#353340'
+    : '#000000'
   )
 }
