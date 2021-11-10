@@ -73,7 +73,7 @@ const TypeSearchScreen = (props) => {
           }} 
           style={styles.clear}
         >
-          <Ionicons name="ios-close-circle" size={18} color="rgba(32, 32, 32, 0.637)" />
+          <Ionicons name="ios-close-circle" size={18} color="rgb(42, 42, 42)" />
         </TouchableOpacity>
       )
     } else return null
@@ -104,7 +104,7 @@ const TypeSearchScreen = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     flexDirection: 'column',
     flex: 1,
   },
