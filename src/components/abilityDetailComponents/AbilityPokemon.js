@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
     width: '100%',
     borderRadius: 10,
-    backgroundColor: '#464450a6',
+    backgroundColor: '#000000',
     paddingVertical: 5,
   },
   headerText: {
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
   textBox: {
     paddingVertical: 5,
     borderRadius: 10,
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     marginBottom: 12,
     marginRight: 12,
     alignContent: 'center',
