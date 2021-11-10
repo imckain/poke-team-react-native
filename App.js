@@ -52,10 +52,10 @@ function BottomTabNavigator() {
             fontWeight: '600',
           },
           tabBarStyle: {
-            backgroundColor: '#272537',
+            backgroundColor: '#000000',
             height: 82,
             alignItems: 'center',
-            borderTopWidth: 0
+            // borderTopWidth: 0
           },
           tabBarShowLabel: false,
           headerTitle: props => <Logo {...props} />,
@@ -79,7 +79,7 @@ function BottomTabNavigator() {
               return <MaterialCommunityIcons name={materialIconName} size={34} color={color} />
             },
             headerStyle: {
-              backgroundColor: '#272537',
+              backgroundColor: '#000000',
               borderBottomWidth: 0,
               shadowOpacity: 0
             },
@@ -101,7 +101,7 @@ function BottomTabNavigator() {
               return <Ionicons name={ioniconName} size={38} color={color} />
             },
             headerStyle: {
-              backgroundColor: '#272537',
+              backgroundColor: '#000000',
               borderBottomWidth: 0,
               shadowOpacity: 0
             },
@@ -121,7 +121,7 @@ function BottomTabNavigator() {
               return <Ionicons name={ioniconName} size={40} color={color} />
             },
             headerStyle: {
-              backgroundColor: '#272537',
+              backgroundColor: '#000000',
               borderBottomWidth: 0,
               shadowOpacity: 0
             },
@@ -146,7 +146,7 @@ function App() {
         initialRouteName='Tab Navigator' 
         screenOptions={{
           headerStyle: {
-            backgroundColor: '#272537',
+            backgroundColor: '#000000',
           },
           headerTitle: props => <Logo {...props} />,
           headerBackTitle: ' ',
