@@ -130,7 +130,7 @@ const PokemonSearchScreen = (props) => {
           }} 
           style={styles.clear}
         >
-          <Ionicons name="ios-close-circle" size={18} color="rgba(32, 32, 32, 0.637)" />
+          <Ionicons name="ios-close-circle" size={18} color="rgb(42, 42, 42)" />
         </TouchableOpacity>
       )
     } else return null
@@ -188,7 +188,7 @@ const PokemonSearchScreen = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     flexDirection: 'column',
     flex: 1
   },
@@ -205,16 +205,16 @@ const styles = StyleSheet.create({
     width: 'auto',
   },
   dropDownHeader: {
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     marginBottom: 22,
     width: '90%',
     alignSelf: 'center',
     paddingHorizontal: 12,
     borderWidth: 1,
-    borderColor: '#ffffff18'
+    borderColor: 'rgb(175, 175, 175)'
   },
   dropDown: {
-    backgroundColor: '#464450',
+    backgroundColor: '#000000',
     marginBottom: 22,
     borderWidth: 0,
     width: '90%',
