@@ -17,6 +17,9 @@ Technologies used:
 
 If You're a developer and would like to help, please feel free to contribute.
 
+This app is an unofficial app and is NOT affiliated, endorsed or supported by Nintendo, GAME FREAK or The Pokémon company in any way. Some images used in this app are copyrighted and are supported under fair use.
+Some images used in this app are copyrighted and belong to Nintendo, GAME FREAK or The Pokémon Company. They are used in this app in accordance with the laws of Fair Use, for the United States of America, or of the intellectual property code, for France. Pokémon and Pokémon character names are trademarks of Nintendo. No copyright infringement intended. Pokémon © 2002-2018 Pokémon. © 1995-2018 Nintendo/Creatures Inc./GAME FREAK inc.
+
 # Privacy Policy
 <p>Last updated: November 08, 2021</p>
 <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
