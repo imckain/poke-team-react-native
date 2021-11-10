@@ -62,7 +62,7 @@ const ModalBaseStats = ({ results, headerFontSize, detailFontSize, margin }) => 
 const styles = StyleSheet.create({
   container: {
     borderRadius: 10,
-    backgroundColor: '#464450a6',
+    backgroundColor: '#000000',
     paddingVertical: 5,
   },
   infoContainer: {
