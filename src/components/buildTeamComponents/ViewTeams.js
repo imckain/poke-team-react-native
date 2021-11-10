@@ -78,12 +78,12 @@ const ViewTeams = (props) => {
 
 const styles = StyleSheet.create({
   wrapper: { 
-    borderRadius: 10, 
     overflow: 'hidden',
-    marginBottom: 24
+    borderRadius: 10,
+    marginVertical: 12,
   },
   container: {
-    backgroundColor: '#464450',
+    backgroundColor: '#000000',
     justifyContent: 'center',
     alignItems: 'flex-start',
     width: '90%',
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
-    borderBottomColor: '#ffffff18',
+    borderBottomColor: 'rgb(175, 175, 175)',
     borderBottomWidth: 2,
     marginLeft: 12,
     marginVertical: 12,
