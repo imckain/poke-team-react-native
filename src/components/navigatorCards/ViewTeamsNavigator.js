@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
   labelContainer: {
     paddingVertical: 1,
-    borderBottomColor: '#ffffff18',
+    borderBottomColor: 'rgb(175, 175, 175)',
     borderBottomWidth: 1,
     marginLeft: 12,
     flex: 1,
