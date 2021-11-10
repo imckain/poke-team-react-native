@@ -29,15 +29,16 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#464450a6',
+    backgroundColor: '#000000',
     width: '100%',
     borderRadius: 10,
-    marginVertical: 6
+    marginVertical: 6,
   },
   infoContainer: { 
     width: '100%', 
     flexDirection: 'row', 
     alignItems: 'center', 
+    justifyContent: 'space-between',
     padding: 12 
   },
   name: {
@@ -53,12 +54,6 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: '600',
     fontStyle: 'italic',
-  },
-  id: {
-    color: 'rgba(255, 255, 255, 0.5)',
-    fontSize: 18,
-    fontWeight: '600',
-    paddingLeft: 12
   },
 });
 
