@@ -12,7 +12,7 @@ const AddPokemonButton = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#346d29',
+    backgroundColor: 'green',
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 22,
     fontWeight: '600',
-    color: '#fff',
+    color: '#000000',
     textAlign: 'center',
     textTransform: 'capitalize'
   },
