@@ -80,7 +80,7 @@ const EditTeamsScreen = (props) => {
           }} 
           style={styles.clear}
         >
-          <Ionicons name="ios-close-circle" size={18} color="rgb(175, 175, 175)" />
+          <Ionicons name="ios-close-circle" size={18} color="rgb(42, 42, 42)" />
         </TouchableOpacity>
       )
     } else return null
@@ -120,7 +120,7 @@ const EditTeamsScreen = (props) => {
   const showSave = (name, items) => {
     if(name.length !== 0 && items.length !== 0) {
       return (
-        <TouchableOpacity style={styles.save} onPress={() => addTeamAndGoBack(teamName, teamMembers)} >
+        <TouchableOpacity style={styles.save} onPress={() => saveTeamAndGoBack(id, teamName, teamMembers)} >
           <Ionicons name="ios-checkbox" size={32} color="green" />
         </TouchableOpacity>
       )
