@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
     width: '100%',
     marginBottom: 10,
     borderRadius: 10,
-    backgroundColor: '#464450a6',
+    backgroundColor: '#000000',
     paddingVertical: 5,
   },
   headerText: {
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
   dmgCaseView: {
     alignItems: 'flex-start',
     borderRadius: 10,
-    backgroundColor: '#353340a6',
+    backgroundColor: '#000000',
     marginVertical: 4,
     paddingVertical: 4,
   },
