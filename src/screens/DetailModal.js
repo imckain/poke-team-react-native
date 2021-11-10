@@ -78,7 +78,7 @@ const DetailModal = (props) => {
     if (urlResults[0] === undefined) return <View style={[styles.headerWrapper, { width: '90%' }]}><Text adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.locationNavigation, {fontStyle: 'italic', color: 'rgb(175, 175, 175)'}]}>Encounter Details Not Available</Text></View>
     else return (
       <View style={[styles.headerWrapper, {flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignItems: 'center'}]}>
-        <Text adjustsFontSizeToFit={true} numberOfLines={1} style={styles.locationNavigation}>Encounter Details</Text>  
+        <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={styles.locationNavigation}>Encounter Details</Text>  
         <Entypo name="triangle-right" size={32} color="rgb(175, 175, 175)" />
       </View>
     )
