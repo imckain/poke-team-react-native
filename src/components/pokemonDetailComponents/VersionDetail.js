@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     width: '100%',
     borderRadius: 10,
-    backgroundColor: '#464450a6',
+    backgroundColor: '#000000',
     paddingVertical: 5,
   },
   headerText: {
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   versionTextBox: {
     paddingVertical: 8,
     borderRadius: 10,
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     alignContent: 'center',
     justifyContent: 'center',
     flexDirection: 'column',

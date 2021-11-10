@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   typeBox: {
     paddingVertical: 5,
     borderRadius: 10,
-    backgroundColor: '#464450',
+    backgroundColor: '#000000',
     marginLeft: 7,
     alignContent: 'center',
     justifyContent: 'center',

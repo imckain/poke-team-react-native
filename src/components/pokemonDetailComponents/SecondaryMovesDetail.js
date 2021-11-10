@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     width: '100%',
     borderRadius: 10,
-    backgroundColor: '#464450a6',
+    backgroundColor: '#000000',
     paddingVertical: 5,
   },
   searchBarContainer: {
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
   moveTextBox: {
     paddingVertical: 5,
     borderRadius: 10,
-    backgroundColor: '#353340',
+    backgroundColor: '#000000',
     margin: 7,
     alignContent: 'center',
     justifyContent: 'center',
