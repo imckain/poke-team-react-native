@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
-    borderBottomColor: 'rgb(175, 175, 175)',
+    borderBottomColor: 'rgba(105, 105, 105, 0.6)',
     borderBottomWidth: 2,
     marginLeft: 12,
     marginVertical: 12,

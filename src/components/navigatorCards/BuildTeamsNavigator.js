@@ -10,7 +10,7 @@ const BuildTeamsNavigator = (props) => {
       <Entypo name="squared-plus" size={32} color='#fff' />
       <View style={styles.labelContainer}>
         <Text allowFontScaling={false} style={styles.label}>Build Teams</Text>
-        <Ionicons style={styles.icon} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
+        <Ionicons style={styles.icon} name="ios-chevron-forward-sharp" size={18} color="rgba(105, 105, 105, 0.6)" />  
       </View>
     </View>
   );
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
   labelContainer: {
     paddingVertical: 1,
-    borderBottomColor: 'rgb(175, 175, 175)',
+    borderBottomColor: 'rgba(105, 105, 105, 0.6)',
     borderBottomWidth: 1,
     marginLeft: 12,
     flex: 1,

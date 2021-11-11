@@ -61,7 +61,7 @@ const PokedexMove = ({ results, fontSize, detailFontSize, lines, alignSelf }) =>
         </View>
         <Text allowFontScaling={false} style={styles.attributes}>Power: {checkForNull(results.power)} | PP: {checkForNull(results.pp)} | Acc: {checkForNull(results.accuracy)}</Text>
       </View>
-      <Ionicons style={{  }} name="ios-chevron-forward-sharp" size={18} color="rgb(175, 175, 175)" />  
+      <Ionicons style={{  }} name="ios-chevron-forward-sharp" size={18} color="rgba(105, 105, 105, 0.6)" />  
     </View>
   );
 };
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '100%',
-    borderBottomColor: 'rgb(175, 175, 175)',
+    borderBottomColor: 'rgba(105, 105, 105, 0.6)',
     borderBottomWidth: 1,
   },
   moveInfo: {

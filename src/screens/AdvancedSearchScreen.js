@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     paddingBottom: 1,
   },
   inactiveSearchParamText: {
-    color: 'rgb(175, 175, 175)',
+    color: 'rgba(105, 105, 105, 0.6)',
     fontSize: 18,
     fontWeight: '400',
   }

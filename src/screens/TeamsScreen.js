@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   },
   teamContainer: {
     borderBottomWidth: 1,
-    borderBottomColor: 'rgb(175, 175, 175)',
+    borderBottomColor: 'rgba(105, 105, 105, 0.6)',
   }
 });
 

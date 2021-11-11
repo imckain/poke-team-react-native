@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     paddingHorizontal: 12,
     borderWidth: 1,
-    borderColor: 'rgb(175, 175, 175)'
+    borderColor: 'rgba(105, 105, 105, 0.6)'
   },
   dropDown: {
     backgroundColor: '#000000',
@@ -235,7 +235,7 @@ const styles = StyleSheet.create({
     paddingBottom: 1,
   },
   inactiveSearchParamText: {
-    color: 'rgb(175, 175, 175)',
+    color: 'rgba(105, 105, 105, 0.6)',
     fontSize: 22,
     fontWeight: '400',
   },

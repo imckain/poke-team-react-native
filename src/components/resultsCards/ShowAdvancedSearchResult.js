@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: '#000000',
     borderRadius: 10,
-    borderColor: 'rgb(175, 175, 175)',
+    borderColor: 'rgba(105, 105, 105, 0.6)',
     borderWidth: 1
   },
   mainCardContainer: {

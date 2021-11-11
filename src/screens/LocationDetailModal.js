@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#000000',
     marginBottom: 22,
     marginTop: 12,
-    borderColor: 'rgb(175, 175, 175)',
+    borderColor: 'rgba(105, 105, 105, 0.6)',
     borderWidth: 1,
     borderRadius: 10
   },
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     borderRadius: 10, 
     height: 'auto', 
     marginVertical: 16, 
-    borderColor: 'rgb(175, 175, 175)',
+    borderColor: 'rgba(105, 105, 105, 0.6)',
     borderWidth: 1,
     overflow: 'hidden'
   },
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     paddingTop: 12,
     paddingBottom: 6,
-    backgroundColor: 'rgb(175, 175, 175)',
+    backgroundColor: 'rgba(105, 105, 105, 0.6)',
   },
   versionText: {
     color: '#000000',

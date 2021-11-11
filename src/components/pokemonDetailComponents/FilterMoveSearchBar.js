@@ -7,14 +7,14 @@ const FilterMoveSearchBar = ({ searchTerm, onSearchTermChange, onSearchTermSubmi
     
   return (
     <View style={styles.searchWrapperStyle}>
-      <Ionicons name="ios-search" size={18} color="rgb(175, 175, 175)" />
+      <Ionicons name="ios-search" size={18} color="rgba(105, 105, 105, 0.6)" />
       <TextInput 
         showSoftInputOnFocus={false}
         autoCapitalize='none'
         autoCorrect={false}
         style={styles.inputStyle} 
         placeholder='Search Moves' 
-        placeholderTextColor='rgb(175, 175, 175)'
+        placeholderTextColor='rgba(105, 105, 105, 0.6)'
         value={searchTerm}
         onChangeText={onSearchTermChange}
         onEndEditing={onSearchTermSubmit}

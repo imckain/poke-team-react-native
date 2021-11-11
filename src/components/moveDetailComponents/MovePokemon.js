@@ -15,14 +15,14 @@ const MovePokemon = ({ results, navigation }) => {
       return (
         <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setPokemonCollapsed(false)}>
           <Text allowFontScaling={false} style={[styles.headerText]}>Learned By:</Text>  
-          <Entypo name="plus" size={32} color="rgb(175, 175, 175)" />
+          <Entypo name="plus" size={32} color="rgba(105, 105, 105, 0.6)" />
         </TouchableOpacity>
       )
     } if (el === false) {
       return(
         <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setPokemonCollapsed(true)}>
           <Text allowFontScaling={false} style={[styles.headerText]}>Learned By:</Text>  
-          <Entypo name="minus" size={32} color="rgb(175, 175, 175)" />
+          <Entypo name="minus" size={32} color="rgba(105, 105, 105, 0.6)" />
         </TouchableOpacity>
       )
     }

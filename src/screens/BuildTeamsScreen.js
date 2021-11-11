@@ -129,7 +129,7 @@ const BuildTeamsScreen = (props) => {
     } else {
       return (
         <TouchableOpacity style={styles.save} >
-          <Ionicons name="ios-checkbox" size={32} color="rgb(175, 175, 175)" />
+          <Ionicons name="ios-checkbox" size={32} color="rgba(105, 105, 105, 0.6)" />
         </TouchableOpacity>
       )
     }
@@ -152,7 +152,7 @@ const BuildTeamsScreen = (props) => {
               autoCapitalize='none'
               autoCorrect={false}
               style={styles.inputStyle} 
-              placeholderTextColor='rgb(175, 175, 175)'
+              placeholderTextColor='rgba(105, 105, 105, 0.6)'
               value={teamName}
               onChangeText={(text) => setTeamName(text)}
               clearButtonMode='never'
@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
     height: 'auto',
     alignSelf: 'center',
     flexDirection: 'row',
-    borderColor: 'rgb(175, 175, 175)',
+    borderColor: 'rgba(105, 105, 105, 0.6)',
     borderWidth: 1
   },
   container: {

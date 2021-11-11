@@ -75,11 +75,11 @@ const DetailModal = (props) => {
   };
   
   const isLocationAvailable = () => {
-    if (urlResults[0] === undefined) return <View style={[styles.headerWrapper, { width: '90%' }]}><Text adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.locationNavigation, {fontStyle: 'italic', color: 'rgb(175, 175, 175)'}]}>Encounter Details Not Available</Text></View>
+    if (urlResults[0] === undefined) return <View style={[styles.headerWrapper, { width: '90%' }]}><Text adjustsFontSizeToFit={true} numberOfLines={1} style={[styles.locationNavigation, {fontStyle: 'italic', color: 'rgba(105, 105, 105, 0.6)'}]}>Encounter Details Not Available</Text></View>
     else return (
       <View style={[styles.headerWrapper, {flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignItems: 'center'}]}>
         <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={styles.locationNavigation}>Encounter Details</Text>  
-        <Entypo name="triangle-right" size={32} color="rgb(175, 175, 175)" />
+        <Entypo name="triangle-right" size={32} color="rgba(105, 105, 105, 0.6)" />
       </View>
     )
   }
@@ -300,7 +300,7 @@ const styles = StyleSheet.create({
   changeLabel: {
     paddingVertical: 2,
     paddingLeft: 6,
-    color: 'rgb(175, 175, 175)',
+    color: 'rgba(105, 105, 105, 0.6)',
     fontSize: 12,
   },
   locationNavigation: {
