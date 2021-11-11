@@ -37,6 +37,7 @@ const AboutScreen = (props) => {
             Please! Let me know by emailing me at: 
           </Text>
           <Button style={styles.email} onPress={() => Linking.openURL(`mailto:pokepal.feedback@gmail.com?subject=Ticket: #${id}&body=Description or Feedback:`) } title="pokepal.feedback@gmail.com" />
+          <View style={{ height: 8 }} />
         </View>
         <View style={styles.headerContainer}>
           <Text allowFontScaling={false} style={styles.header}>Developers</Text>
@@ -57,20 +58,43 @@ const AboutScreen = (props) => {
           <Text allowFontScaling={false} style={styles.subText}>
             Shoot me an email at: 
           </Text>
-          <View style={{ paddingBottom: 60 }}>
-            <Button style={styles.email} onPress={() => Linking.openURL('mailto:pokepal.dev@gmail.com') } title="pokepal.dev@gmail.com" />
-            {/* <View style={styles.iconContainer}>
-              <TouchableOpacity style={{ alignSelf: 'center' }} onPress={() => Linking.openURL('https://www.linkedin.com/in/ianmckain/') }>
-                <Ionicons name="ios-logo-linkedin" size={48} color="#0B66C2" />
-              </TouchableOpacity>
-              <TouchableOpacity style={{ alignSelf: 'center' }} onPress={() => Linking.openURL('https://github.com/imckain') }>
-                <Ionicons name="ios-logo-github" size={48} color="#fff" />
-              </TouchableOpacity>
-            </View> */}
-            <View style={{ paddingTop: 80 }}>
-              <Button onPress={() => Linking.openURL('https://www.termsfeed.com/live/dfc6f396-3e6a-47a0-b08e-3d90c10613e1') } title="Privacy Policy" />
-            </View>
+          <Button style={styles.email} onPress={() => Linking.openURL('mailto:pokepal.dev@gmail.com') } title="pokepal.dev@gmail.com" />
+          <View style={{ height: 8 }} />
+        </View>
+        <View style={styles.headerContainer}>
+          <Text allowFontScaling={false} style={styles.header}>Special Thanks</Text>
+        </View>
+        <View style={styles.aboutMessage}>
+          <Text allowFontScaling={false} style={[styles.text, { fontSize: 22, fontWeight: '600' }]} adjustsFontSizeToFit={true} numberOfLines={1}>
+            Alex D
+          </Text>
+          <View style={{ height: 8 }} />
+          <Text allowFontScaling={false} style={styles.subText}>
+            Logo, Splash Screen, & App Icon Design
+          </Text>
+          <Text allowFontScaling={false} style={styles.subText}>
+            Alex is a 3D artist and a close friend. Thanks for the awesome art my man.
+          </Text>
+          <View style={{ height: 8 }} />
+          <Text allowFontScaling={false} style={[styles.text, { fontSize: 22, fontWeight: '600' }]} adjustsFontSizeToFit={true} numberOfLines={1}>
+            To my friends
+          </Text>
+          <View style={{ height: 8 }} />
+          <Text allowFontScaling={false} style={styles.subText}>
+            Thank you to all my friends, who gave me great feedback and were bombarded by countless screenshots.
+          </Text>
+          <Text allowFontScaling={false} style={styles.subText}>
+            You all were basically my focus group and helped me become a better developer.
+          </Text>
+          <Text allowFontScaling={false} style={[styles.subText, {  textAlign: 'center', fontWeight: '600', paddingTop: 16, fontSize: 28}]}>
+            Cheers 🍻
+          </Text>
+          <View style={{ paddingVertical: 80 }}>
+            <Button onPress={() => Linking.openURL('https://www.termsfeed.com/live/dfc6f396-3e6a-47a0-b08e-3d90c10613e1') } title="Privacy Policy" />
           </View>
+          <Text allowFontScaling={false} style={styles.fairUse}>
+            This app is an unofficial app and is NOT affiliated, endorsed or supported by Nintendo, GAME FREAK or The Pokémon company in any way. Some images used in this app are copyrighted and are supported under fair use. Some images used in this app are copyrighted and belong to Nintendo, GAME FREAK or The Pokémon Company. They are used in this app in accordance with the laws of Fair Use, for the United States of America. Pokémon and Pokémon character names are trademarks of Nintendo. No copyright infringement intended. Pokémon © 2002-2018 Pokémon. © 1995-2018 Nintendo/Creatures Inc./GAME FREAK inc.
+          </Text>
         </View>
       </ScrollView>
     </View>
@@ -123,6 +147,11 @@ const styles = StyleSheet.create({
   },
   backText: {
     color: '#fff'
+  },
+  fairUse: {
+    fontSize: 12,
+    color: '#ffffff73',
+    paddingBottom: 60
   }
 });
 
