@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, TouchableOpacity, Keyboard, TouchableWithoutFeedback, ScrollView } from 'react-native';
 
 import { Ionicons } from '@expo/vector-icons';
@@ -21,7 +21,7 @@ const HideKeyboard = ({ children }) => (
 
 const HomeScreen = (props) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [searchAPI, results] = useResults([]);
+  const [searchAPI, results, randomMon] = useResults([]);
 
   const showClear = (term) => {
     if(term !== '') {
@@ -32,20 +32,18 @@ const HomeScreen = (props) => {
           }} 
           style={styles.clear}
         >
-          <Ionicons name="ios-close-circle" size={18} color="rgb(42, 42, 42)" />
+          <Ionicons name="ios-close-circle" size={18} color="rgb(75, 75, 75)" />
         </TouchableOpacity>
       )
     } else return null
   }
 
   const showResultCard = (el) => {
-    if (el.length !== 0 && el.length !== null) {
-      return (
-        <TouchableOpacity onPress={() => props.navigation.navigate('Detail Modal', { results: el })}>
-          <ShowSearchResult results={el} />
-        </TouchableOpacity>
-      )
-    } else return null
+    return (
+      <TouchableOpacity onPress={() => props.navigation.navigate('Detail Modal', { results: el })}>
+        <ShowSearchResult results={el} />
+      </TouchableOpacity>
+    )
   }
 
   return (
@@ -56,7 +54,11 @@ const HomeScreen = (props) => {
           <SearchBarByName 
             searchTerm={searchTerm} 
             onSearchTermChange={setSearchTerm} 
-            onSearchTermSubmit={() => searchAPI(searchTerm.replaceAll(' ', '-').toLowerCase())}
+            onSearchTermSubmit={() => {
+              if (searchTerm.length !== 0) {
+                searchAPI(searchTerm.replaceAll(' ', '-').toLowerCase())
+              } else return
+            }}
             style={{zIndex: 0}}
           />
           {showClear(searchTerm)}
