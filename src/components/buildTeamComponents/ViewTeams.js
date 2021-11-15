@@ -62,14 +62,15 @@ const ViewTeams = (props) => {
     <View style={styles.wrapper}>
       <Swipeable renderRightActions={renderRightActions}>
           <View style={[styles.container, { height: props.height, width: props.width }]}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Team Detail', { id: results.id, results: results.content, name: results.name })}>
               <View style={styles.labelContainer}>
-                <TouchableOpacity onPress={() => props.navigation.navigate('Team Detail', { id: results.id, results: results.content, name: results.name })}>
-                  <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={styles.label}>{results.name}</Text>
-                </TouchableOpacity>
+                <Text allowFontScaling={false} adjustsFontSizeToFit={true} numberOfLines={1} style={styles.label}>{results.name}</Text>
+                <Ionicons style={styles.icon} name="ios-chevron-forward-sharp" size={18} color="rgba(105, 105, 105, 0.6)" />  
               </View>
-              <View style={styles.spriteContainer}>
-                {showSprite(results.content)}
-              </View>
+            </TouchableOpacity>
+            <View style={styles.spriteContainer}>
+              {showSprite(results.content)}
+            </View>
           </View>
       </Swipeable>
     </View>
