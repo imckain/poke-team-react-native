@@ -110,7 +110,7 @@ const AbilitySearchScreen = (props) => {
           }} 
           style={styles.clear}
         >
-          <Ionicons name="ios-close-circle" size={18} color="rgb(42, 42, 42)" />
+          <Ionicons name="ios-close-circle" size={18} color="rgb(75, 75, 75)" />
         </TouchableOpacity>
       )
     } else return null
