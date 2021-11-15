@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 
-const PokemonNameAndId = ({ results, fontSize, lines }) => {
+const PokemonNameAndId = ({ results, fontSize, lines, width }) => {
   return (
-    <View style={styles.nameContainer}>
+    <View style={[styles.nameContainer, { width: width }]}>
       <Text adjustsFontSizeToFit={true} allowFontScaling={false} numberOfLines={lines} style={[styles.name, {fontSize: fontSize}]}>{results.name}</Text>
       <Text style={[styles.id]}>{results.id}</Text>
     </View>
