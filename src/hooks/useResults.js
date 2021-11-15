@@ -27,5 +27,5 @@ export default () => {
     searchAPI(randomMon);
   }, []);
   
-  return [searchAPI, results ]
+  return [searchAPI, results]
 };
