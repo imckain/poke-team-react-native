@@ -1,4 +1,4 @@
-import React, { useState, useContext, useCallback } from 'react';
+import React, { useState, useContext, useCallback, useEffect } from 'react';
 import { Text, View, StyleSheet, FlatList, ScrollView, TouchableWithoutFeedback, TouchableOpacity, Keyboard } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import { Context as TeamsContext } from '../context/TeamContext';
@@ -12,8 +12,12 @@ import ShowAdvancedSearchResult from '../components/resultsCards/ShowAdvancedSea
 import AddPokemonButton from '../components/buildTeamComponents/AddPokemon';
 import PokemonSlotCard from '../components/buildTeamComponents/PokemonSlotCard';
 import SaveTeamButton from '../components/buildTeamComponents/SaveTeamButton';
+import pokemonData from '../data/pokemon.json';
+import PokedexCard from '../pokedex/PokedexCard';
 
 import { Ionicons } from '@expo/vector-icons';
+import PokemonBuildCard from '../components/buildTeamComponents/PokemonBuildCard';
+import ShowBuildResult from '../components/resultsCards/ShowBuildResult';
 
 const HideKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -30,7 +34,67 @@ const EditTeamsScreen = (props) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [teamName, setTeamName] = useState(team.name);
   const [buildSearchApi, buildResults] = useBuildResults();
-  const [teamMembers, setTeamMembers] = useState(team.content)
+  const [teamMembers, setTeamMembers] = useState(team.content);
+  const [filteredResults, setFilteredResults] = useState();
+  const [searchParam, setSearchParam] = useState('pokemon');
+
+  const showPokeDex = (el, param) => {
+    if (param === 'pokemon') {
+      return <FlatList 
+        horizontal={false}
+        data={el}
+        keyExtractor={(item) => item.identifier}
+        renderItem={({ item }) => {
+          return(
+            <TouchableOpacity onPress={async() => {
+              await setSearchTerm(item.identifier); 
+              return buildSearchApi(item.identifier)
+              }}>
+              <PokedexCard results={item} searchParam={param} />
+            </TouchableOpacity>
+          )
+        }}
+      />
+    }
+  }
+  
+  const displayFilteredResults = (el, param) => {
+    if (searchTerm !== '') {
+      try {      
+        return <FlatList 
+          horizontal={false}
+          data={el}
+          keyExtractor={(item) => item.identifier}
+          renderItem={({ item }) => {
+            return(
+              <TouchableOpacity onPress={async() => {
+                await setSearchTerm(item.identifier); 
+                return buildSearchApi(item.identifier)
+                }}>
+                <PokedexCard results={item} searchParam={param} />
+              </TouchableOpacity>
+            )
+          }}
+        />
+      } catch (error) {
+        console.log(error);
+      }
+    } else return showPokeDex(el, param)
+  }
+  
+  const searchPokemon = (el, param) => {
+    if (param === '') return setFilteredResults(el)
+    try {
+      const res = el.filter(item => item.identifier.includes(param.replaceAll(' ', '-').toLowerCase()))
+      return setFilteredResults(res)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    searchPokemon(pokemonData, searchTerm)
+  }, [searchTerm])
 
   const showPokemonCard = (param) => {
     if (param !== '') {
@@ -53,7 +117,7 @@ const EditTeamsScreen = (props) => {
         return(
           <View style={styles.addMonCard}>
             <TouchableOpacity style={{flex: 1}} onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
-              <ShowAdvancedSearchResult results={item} />
+              <ShowBuildResult results={item} />
             </TouchableOpacity>
             {showAddButton(item)}
           </View>
@@ -80,32 +144,26 @@ const EditTeamsScreen = (props) => {
           }} 
           style={styles.clear}
         >
-          <Ionicons name="ios-close-circle" size={18} color="rgb(42, 42, 42)" />
+          <Ionicons name="ios-close-circle" size={18} color="rgb(75, 75, 75)" />
         </TouchableOpacity>
       )
     } else return null
   }
 
   const createTeamMember = (el) => {
-    if (el[0] !== undefined) {
-      return el.map((item) => {
-        const id = uuid.v4()
-        return (
-          <View key={id} style={styles.wrapper}>
-            <TouchableOpacity style={{ width: '80%' }} onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
-              <PokemonSlotCard results={item} />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.rightAction} onPress={() => deleteTeamMember(item)}>
-              <Ionicons name="ios-trash-sharp" size={16} color="#fff" />
-            </TouchableOpacity>
-          </View>
-        )
-      })
-    } else return (
-      <View style={{ width: '90%', alignSelf: 'center', marginTop: 12 }}>
-        <Text adjustsFontSizeToFit={true} numberOfLines={1} style={styles.nullMessage}>Search for a Pokemon to add it to your team</Text>
-      </View>
-    )
+    return el.map((item) => {
+      const id = uuid.v4()
+      return (
+        <View key={id} style={styles.wrapper}>
+          <TouchableOpacity style={{ width: '80%' }} onPress={() => props.navigation.navigate('Detail Modal', { results: [item] })}>
+            <PokemonBuildCard results={item} />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.rightAction} onPress={() => deleteTeamMember(item)}>
+            <Ionicons name="ios-remove-circle" size={16} color="#ff0000" />
+          </TouchableOpacity>
+        </View>
+      )
+    })
   }
 
   const deleteTeamMember = (el) => {
@@ -121,13 +179,15 @@ const EditTeamsScreen = (props) => {
     if(name.length !== 0 && items.length !== 0) {
       return (
         <TouchableOpacity style={styles.save} onPress={() => saveTeamAndGoBack(id, teamName, teamMembers)} >
-          <Ionicons name="ios-checkbox" size={32} color="green" />
+          <Text style={{ color: 'green', fontSize: 22, paddingHorizontal: 12 }}>Save</Text>
+          {/* <Ionicons name="ios-checkbox" size={32} color="green" /> */}
         </TouchableOpacity>
       )
     } else {
       return (
         <TouchableOpacity style={styles.save} >
-          <Ionicons name="ios-checkbox" size={32} color="rgba(105, 105, 105, 0.6)" />
+          <Text style={{ color: 'rgba(105, 105, 105, 0.6)', fontSize: 22, paddingHorizontal: 12 }}>Save</Text>
+          {/* <Ionicons name="ios-checkbox" size={32} color="rgba(105, 105, 105, 0.6)" /> */}
         </TouchableOpacity>
       )
     }
@@ -142,45 +202,45 @@ const EditTeamsScreen = (props) => {
           </TouchableOpacity>
           {showSave(teamName, teamMembers)}
         </View>
-        <ScrollView>
-          <View style={styles.teamNameContainer}>
-            <TextInput 
-              placeholder={'Team Name'} 
-              showSoftInputOnFocus={false}
-              autoCapitalize='none'
-              autoCorrect={false}
-              style={styles.inputStyle} 
-              placeholderTextColor='rgba(105, 105, 105, 0.6)'
-              value={teamName}
-              onChangeText={(text) => setTeamName(text)}
-              clearButtonMode='never'
-              keyboardAppearance='dark'
-              returnKeyType={'done'}
-              allowFontScaling={false}
-              maxLength={18}
-              adjustsFontSizeToFit={true}
-              numberOfLines={1}
-            />
+        <View style={styles.teamNameContainer}>
+          <TextInput 
+            placeholder={'Team Name'} 
+            showSoftInputOnFocus={false}
+            autoCapitalize='none'
+            autoCorrect={false}
+            style={styles.inputStyle} 
+            placeholderTextColor='rgba(105, 105, 105, 0.6)'
+            value={teamName}
+            onChangeText={(text) => setTeamName(text)}
+            clearButtonMode='never'
+            keyboardAppearance='dark'
+            returnKeyType={'done'}
+            allowFontScaling={false}
+            maxLength={18}
+            adjustsFontSizeToFit={true}
+            numberOfLines={1}
+          />
+        </View>
+        <View style={styles.searchBarContainer}>
+          <BuildTeamSearchBar 
+            searchTerm={searchTerm} 
+            onSearchTermChange={setSearchTerm} 
+            onSearchTermSubmit={() => buildSearchApi(searchTerm.replaceAll(' ', '-').toLowerCase())}
+            style={styles.searchBar}
+          />
+          {showClear(buildResults, searchTerm)}
+        </View>
+        <View style={{height: 'auto'}}>
+          {showPokemonCard(searchTerm)}
+        </View>
+        <View style={styles.teamInfoContainer}>
+          <View style={styles.teamSlotContainer}>
+            {createTeamMember(teamMembers)}
           </View>
-          <View style={styles.searchBarContainer}>
-            <BuildTeamSearchBar 
-              searchTerm={searchTerm} 
-              onSearchTermChange={setSearchTerm} 
-              onSearchTermSubmit={() => buildSearchApi(searchTerm.replaceAll(' ', '-').toLowerCase())}
-              style={styles.searchBar}
-            />
-            {showClear(buildResults, searchTerm)}
+          <View style={styles.dexContainer}>
+            {displayFilteredResults(filteredResults, searchParam)}
           </View>
-          <View style={{height: 'auto'}}>
-            {showPokemonCard(searchTerm)}
-          </View>
-          <View style={{height: 5 }} />
-          <View style={styles.teamInfoContainer}>
-            <View style={styles.teamSlotContainer}>
-              {createTeamMember(teamMembers)}
-            </View>
-          </View>
-        </ScrollView>
+        </View>
       </View>
     </HideKeyboard>
   );
@@ -188,17 +248,13 @@ const EditTeamsScreen = (props) => {
 
 const styles = StyleSheet.create({
   wrapper: { 
-    borderRadius: 10, 
-    overflow: 'hidden',
-    marginBottom: 24,
     backgroundColor: '#000000',
-    justifyContent: 'space-between',
-    width: '90%',
+    justifyContent: 'center',
     height: 'auto',
-    alignSelf: 'center',
-    flexDirection: 'row',
-    borderColor: 'rgba(105, 105, 105, 0.6)',
-    borderWidth: 1
+    flexDirection: 'column',
+    width: 'auto',
+    alignItems: 'center',
+    paddingHorizontal: 12,
   },
   container: {
     backgroundColor: '#000000',
@@ -208,7 +264,9 @@ const styles = StyleSheet.create({
     flex: 1
   },
   teamSlotContainer: {
-    marginBottom: 44,
+    flexDirection: 'column',
+    height: '100%',
+    justifyContent: 'space-evenly'
   },
   addMonCard: {
     flexDirection: 'column',
@@ -247,9 +305,9 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   teamInfoContainer: {
-    flexDirection: 'column',
-    justifyContent: 'space-between',
+    flexDirection: 'row',
     paddingBottom: 60,
+    flex: 1
   },
   nullMessage: {
     fontSize: 32,
@@ -257,10 +315,9 @@ const styles = StyleSheet.create({
     color: '#fff'
   },
   rightAction: {
-    justifyContent: 'center',
-    backgroundColor: '#ff0000',
-    width: 50,
-    alignItems: 'center',
+    position: 'absolute',
+    top: 0,
+    right: 0
   },
   back: { 
     paddingHorizontal: 18, 
@@ -279,6 +336,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center'
+  },
+  dexContainer: { 
+    alignSelf: 'center',
+    flex: 1,
   }
 });
 
