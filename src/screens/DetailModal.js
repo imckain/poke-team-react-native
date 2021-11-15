@@ -300,7 +300,7 @@ const styles = StyleSheet.create({
   changeLabel: {
     paddingVertical: 2,
     paddingLeft: 6,
-    color: 'rgba(105, 105, 105, 0.6)',
+    color: 'rgb(223, 223, 223)',
     fontSize: 12,
   },
   locationNavigation: {
