@@ -205,7 +205,7 @@ const SecondaryDetailModal = (props) => {
       <Text allowFontScaling={false} style={styles.closeMessage}>Pull down to close</Text>
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.mainInfo}>
-          <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 22}}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 22, width: '100%' }}>
             {showPrevious()}
             <PokemonNameAndId lines={1} fontSize={48} results={results} />
             {showNext()}
