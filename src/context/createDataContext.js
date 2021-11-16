@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const storeData = async (value) => {

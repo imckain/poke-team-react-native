@@ -1,5 +1,5 @@
 import React, { useState, useContext, useCallback, useEffect } from 'react';
-import { Text, View, StyleSheet, FlatList, ScrollView, TouchableWithoutFeedback, TouchableOpacity, Keyboard } from 'react-native';
+import { Text, View, StyleSheet, FlatList, TouchableWithoutFeedback, TouchableOpacity, Keyboard } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import { Context as TeamsContext } from '../context/TeamContext';
 import uuid from 'react-native-uuid'

@@ -1,5 +1,5 @@
 import React, { useState, useContext, useCallback, useEffect } from 'react';
-import { Text, View, StyleSheet, FlatList, ScrollView, TouchableWithoutFeedback, TouchableOpacity, Keyboard, Alert } from 'react-native';
+import { Text, View, StyleSheet, FlatList, TouchableWithoutFeedback, TouchableOpacity, Keyboard } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import { Context as TeamsContext } from '../context/TeamContext';
 import uuid from 'react-native-uuid'
@@ -168,13 +168,6 @@ const BuildTeamsScreen = (props) => {
       arr.splice(idx, 1)
       setTeamMembers(arr)
     }
-  }
-
-  const createAlert = () => {
-    Alert.alert(
-      "Team Name Required",
-      { cancelable: true }
-    );
   }
 
   const showSave = (name, items) => {

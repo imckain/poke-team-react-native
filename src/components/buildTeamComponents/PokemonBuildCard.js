@@ -1,7 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import FrontSprite from '../pokemonDetailComponents/FrontSprite';
-import TypeShow from './TypeShow';
 
 const PokemonSlotCard = (props) => {
   const results = props.results
@@ -11,8 +10,6 @@ const PokemonSlotCard = (props) => {
       return (
         <View style={styles.infoContainer}>
           <FrontSprite width={60} height={60} results={el} />
-          {/* <Text adjustsFontSizeToFit={true} numberOfLines={1} allowFontScaling={false} style={[styles.name]}>{el.name}</Text> */}
-          {/* <TypeShow flexDirection={'column'} results={results} /> */}
         </View>
       )
     } else return <Text allowFontScaling={false} style={[styles.emptyName]}>Empty Slot</Text>

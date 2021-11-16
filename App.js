@@ -55,7 +55,6 @@ function BottomTabNavigator() {
             backgroundColor: '#000000',
             height: 82,
             alignItems: 'center',
-            // borderTopWidth: 0
           },
           tabBarShowLabel: false,
           headerTitle: props => <Logo {...props} />,

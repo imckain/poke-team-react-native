@@ -1,6 +1,4 @@
 import uuid from 'react-native-uuid'
-import AsyncStorage from '@react-native-async-storage/async-storage';
-
 import createDataContext from './createDataContext';
 
 const teamsReducer = (state, action) => {

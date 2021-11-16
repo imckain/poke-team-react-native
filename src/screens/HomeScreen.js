@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, TouchableOpacity, Keyboard, TouchableWithoutFeedback, ScrollView } from 'react-native';
 
 import { Ionicons } from '@expo/vector-icons';
@@ -21,7 +21,7 @@ const HideKeyboard = ({ children }) => (
 
 const HomeScreen = (props) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [searchAPI, results, randomMon] = useResults([]);
+  const [searchAPI, results] = useResults([]);
 
   const showClear = (term) => {
     if(term !== '') {

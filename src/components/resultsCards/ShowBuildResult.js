@@ -1,8 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
-import BaseStats from '../pokemonDetailComponents/BaseStats';
-import TypeShowOnCard from '../pokemonDetailComponents/TypeShowOnCard';
 import PokemonNameAndId from '../pokemonDetailComponents/PokemonNameAndId';
 import FrontSprite from '../pokemonDetailComponents/FrontSprite';
 
