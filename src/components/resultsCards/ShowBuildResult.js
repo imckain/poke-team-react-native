@@ -6,14 +6,14 @@ import TypeShowOnCard from '../pokemonDetailComponents/TypeShowOnCard';
 import PokemonNameAndId from '../pokemonDetailComponents/PokemonNameAndId';
 import FrontSprite from '../pokemonDetailComponents/FrontSprite';
 
-const ShowAdvancedSearchResult = (props) => {
+const ShowBuildResult = (props) => {
   const results = props.results
 
   return (
     <View style={styles.container}>
       <View style={styles.info}>
         <FrontSprite width={80} height={80} results={results} />
-        <PokemonNameAndId lines={1} fontSize={38} width={'auto'} results={results} />
+        <PokemonNameAndId lines={1} fontSize={38} width={'70%'} results={results} />
       </View>
       <Text allowFontScaling={false} style={styles.infoNotice}>Tap for more info</Text>
     </View>
@@ -47,4 +47,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default React.memo(ShowAdvancedSearchResult);
+export default React.memo(ShowBuildResult);
