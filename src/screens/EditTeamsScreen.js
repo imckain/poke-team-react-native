@@ -179,15 +179,13 @@ const EditTeamsScreen = (props) => {
     if(name.length !== 0 && items.length !== 0) {
       return (
         <TouchableOpacity style={styles.save} onPress={() => saveTeamAndGoBack(id, teamName, teamMembers)} >
-          <Text style={{ color: 'green', fontSize: 22, paddingHorizontal: 12 }}>Save</Text>
-          {/* <Ionicons name="ios-checkbox" size={32} color="green" /> */}
+          <Text style={styles.saveText}>Save</Text>
         </TouchableOpacity>
       )
     } else {
       return (
-        <TouchableOpacity style={styles.save} >
-          <Text style={{ color: 'rgba(105, 105, 105, 0.6)', fontSize: 22, paddingHorizontal: 12 }}>Save</Text>
-          {/* <Ionicons name="ios-checkbox" size={32} color="rgba(105, 105, 105, 0.6)" /> */}
+        <TouchableOpacity style={[styles.save, { backgroundColor: 'rgba(105, 105, 105, 0.6)' }]} >
+          <Text style={styles.saveText}>Save</Text>
         </TouchableOpacity>
       )
     }
@@ -325,9 +323,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   save: { 
-    paddingHorizontal: 18, 
+    paddingHorizontal: 12, 
     flexDirection: 'row',
     alignItems: 'center',
+    borderRadius: 4,
+    backgroundColor: 'green',
+    paddingVertical: 4,
+    marginHorizontal: 12
+  },
+  saveText: { 
+    color: '#000000', 
+    fontSize: 16, 
   },
   backText: {
     color: '#fff'
