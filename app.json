@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "poke-team-react-native",
-    "slug": "poke-team-react-native",
+    "name": "poke-pal",
+    "slug": "poke-pal",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

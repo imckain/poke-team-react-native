@@ -30,7 +30,7 @@ const TeamsScreen = (props) => {
   }
 
   const checkMaxTeams = () => {
-    if (state.length > 15) {
+    if (state !== null && state.length > 15) {
       return (
         <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={createAlert}>
           <Ionicons name="ios-add" size={38} color="#747474" />
