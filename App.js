@@ -53,9 +53,11 @@ function BottomTabNavigator() {
           },
           tabBarStyle: {
             backgroundColor: '#000000',
-            height: 82,
-            alignItems: 'center',
+            height: 90,
+            // alignItems: 'center',
+            // justifyContent: 'center'
           },
+          tabBarLabelPosition: 'below-icon',
           tabBarShowLabel: false,
           headerTitle: props => <Logo {...props} />,
         }}
@@ -75,7 +77,7 @@ function BottomTabNavigator() {
             tabBarIcon: ({ focused, color }) => {
               let materialIconName;
               materialIconName = focused ? 'pokeball' : 'pokeball'
-              return <MaterialCommunityIcons name={materialIconName} size={34} color={color} />
+              return <MaterialCommunityIcons name={materialIconName} size={34} style={{  }} color={color} />
             },
             headerStyle: {
               backgroundColor: '#000000',
@@ -128,7 +130,7 @@ function BottomTabNavigator() {
               color: '#000000'
             },
             tabBarIconStyle: {
-              marginTop: 1
+              marginTop: 1,
             },
             headerShown: false
           }}
