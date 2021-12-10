@@ -1,4 +1,4 @@
-![Poke-Pal](https://i.imgur.com/PysuPFl.png)
+![Poke-Pal](https://i.imgur.com/XRThLLP.png)
 ### Pokemon Team Builder & PokeDex
 - A *HUGE* amount of data at your fingertips
   - Search by Pokemon Name or ID
