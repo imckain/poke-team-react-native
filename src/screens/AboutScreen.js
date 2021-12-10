@@ -21,7 +21,7 @@ const AboutScreen = (props) => {
         </View>
         <View style={styles.aboutMessage}>
           <Text allowFontScaling={false} style={[styles.text, { fontSize: 22, fontWeight: '600' }]} adjustsFontSizeToFit={true} numberOfLines={1}>
-            Thanks for downloading Poke-Pal!
+            Thanks for downloading Dex Mate!
           </Text>
           <View style={{ height: 8 }} />
           <Text allowFontScaling={false} style={styles.subText}>
@@ -36,7 +36,7 @@ const AboutScreen = (props) => {
           <Text allowFontScaling={false} style={styles.subText}>
             Please! Let me know by emailing me at: 
           </Text>
-          <Button style={styles.email} onPress={() => Linking.openURL(`mailto:pokepal.feedback@gmail.com?subject=Ticket: #${id}&body=Description or Feedback:`) } title="pokepal.feedback@gmail.com" />
+          <Button style={styles.email} onPress={() => Linking.openURL(`mailto:dexmate.feedback@gmail.com?subject=Ticket: #${id}&body=Description or Feedback:`) } title="dexmate.feedback@gmail.com" />
           <View style={{ height: 8 }} />
         </View>
         <View style={styles.headerContainer}>
@@ -48,7 +48,7 @@ const AboutScreen = (props) => {
           </Text>
           <View style={{ height: 8 }} />
           <Text allowFontScaling={false} style={styles.subText}>
-            I enjoyed building this app and will continue to update and maintain Poke-Pal, but I am only one person after all.
+            I enjoyed building this app and will continue to update and maintain Dex Mate, but I am only one person after all.
           </Text>
           <View style={{ height: 8 }} />
           <Text allowFontScaling={false} style={[styles.text, { fontWeight: '600' }]}>
@@ -58,7 +58,7 @@ const AboutScreen = (props) => {
           <Text allowFontScaling={false} style={styles.subText}>
             Shoot me an email at: 
           </Text>
-          <Button style={styles.email} onPress={() => Linking.openURL('mailto:pokepal.dev@gmail.com') } title="pokepal.dev@gmail.com" />
+          <Button style={styles.email} onPress={() => Linking.openURL('mailto:dexmate.dev@gmail.com') } title="dexmate.dev@gmail.com" />
           <View style={{ height: 8 }} />
         </View>
         <View style={styles.headerContainer}>
