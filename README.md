@@ -1,13 +1,13 @@
 ![Poke-Pal](https://i.imgur.com/XRThLLP.png)
 ### Pokemon Team Builder & PokeDex
 - A *HUGE* amount of data at your fingertips
-  - Search by Pokemon Name or ID
+  - Search by Name or ID
   - Search by Type
   - Search by Move
   - Search by Ability
 - See detailed data for searches
 - Easy linking navigation
-- Build Teams and view Pokemon data quickly
+- Build Teams and view data quickly
 
 Technologies used:
 - React Native
