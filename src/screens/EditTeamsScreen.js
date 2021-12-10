@@ -4,14 +4,9 @@ import { TextInput } from 'react-native-gesture-handler';
 import { Context as TeamsContext } from '../context/TeamContext';
 import uuid from 'react-native-uuid'
 
-import * as SQLite from 'expo-sqlite';
-
 import BuildTeamSearchBar from '../components/buildTeamComponents/BuildTeamSearchBar';
 import useBuildResults from '../hooks/useBuildResults';
-import ShowAdvancedSearchResult from '../components/resultsCards/ShowAdvancedSearchResult';
 import AddPokemonButton from '../components/buildTeamComponents/AddPokemon';
-import PokemonSlotCard from '../components/buildTeamComponents/PokemonSlotCard';
-import SaveTeamButton from '../components/buildTeamComponents/SaveTeamButton';
 import pokemonData from '../data/pokemon.json';
 import PokedexCard from '../pokedex/PokedexCard';
 
