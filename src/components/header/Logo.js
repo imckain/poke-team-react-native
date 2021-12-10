@@ -5,7 +5,7 @@ const Logo = () => {
 
   return (
     <View style={styles.logoContainer}>
-      <Image style={styles.image} resizeMode={'contain'} source={require('../../../assets/pokepal1.png')} />
+      <Image style={styles.image} resizeMode={'contain'} source={require('../../../assets/dexmateFlat.png')} />
     </View>
   );
 };
