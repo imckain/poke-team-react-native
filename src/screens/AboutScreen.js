@@ -30,7 +30,7 @@ const AboutScreen = (props) => {
           </Text>
           <View style={{ height: 8 }} />
           <Text allowFontScaling={false} style={[styles.text, { fontWeight: '600' }]}>
-            So, if you discover a bug or even have an idea for a aditional feature:
+            So, if you discover a bug or even have an idea for a additional feature:
           </Text>
           <View style={{ height: 8 }} />
           <Text allowFontScaling={false} style={styles.subText}>
