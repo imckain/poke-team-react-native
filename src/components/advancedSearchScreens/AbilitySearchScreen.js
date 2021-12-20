@@ -31,29 +31,33 @@ const AbilitySearchScreen = (props) => {
         renderItem={({ item }) => {
           return(
             <TouchableOpacity onPress={async() => {
-              await setSearchTerm(item.identifier);
-              return abilitySearchApi(item.identifier);
-              }}>
+              // await setSearchTerm(item.identifier);
+              // return abilitySearchApi(item.identifier);
+              await abilitySearchApi(item.identifier);
+              return props.navigation.navigate('Ability Detail Modal', { results: abilityResults[0] })
+            }}>
               <PokedexCard results={item} searchParam={searchParam} />
             </TouchableOpacity>
           )
         }}
-      />
+        />
+      }
     }
-  }
-
-  const displayFilteredResults = (el, param) => {
-    if (searchTerm !== '') {
-      try {      
-        return <FlatList 
+    
+    const displayFilteredResults = (el, param) => {
+      if (searchTerm !== '') {
+        try {      
+          return <FlatList 
           horizontal={false}
           data={el}
           keyExtractor={(item) => item.identifier}
           renderItem={({ item }) => {
             return(
               <TouchableOpacity onPress={async() => {
-                await setSearchTerm(item.identifier); 
-                return abilitySearchApi(item.identifier)
+                // await setSearchTerm(item.identifier); 
+                // return abilitySearchApi(item.identifier)
+                await abilitySearchApi(item.identifier);
+                return props.navigation.navigate('Ability Detail Modal', { results: abilityResults[0] })
                 }}>
                 <PokedexCard results={item} searchParam={param} />
               </TouchableOpacity>
@@ -125,15 +129,15 @@ const AbilitySearchScreen = (props) => {
           onSearchTermChange={setSearchTerm} 
           onSearchTermSubmit={() => {
             searchAbilities(abilityData, searchTerm.replaceAll(' ', '-').toLowerCase())
-            return abilitySearchApi(searchTerm.replaceAll(' ', '-').toLowerCase())
+            // return abilitySearchApi(searchTerm.replaceAll(' ', '-').toLowerCase())
           }}
           style={{zIndex: 0}}
           />
           {showClear(abilityResults, searchTerm)}
         </View>
-        <View style={{height: 'auto'}}>
+        {/* <View style={{height: 'auto'}}>
           {showAbilityCard(abilityResults, searchTerm)}
-        </View>
+        </View> */}
         <View style={styles.dexContainer}>
           {displayFilteredResults(filteredResults, searchParam)}
         </View>
