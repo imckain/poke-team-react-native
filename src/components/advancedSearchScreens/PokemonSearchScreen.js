@@ -47,8 +47,10 @@ const PokemonSearchScreen = (props) => {
         renderItem={({ item }) => {
           return(
             <TouchableOpacity onPress={async() => {
-              await setSearchTerm(item.identifier); 
-              return advancedSearchAPI(item.identifier)
+              // await setSearchTerm(item.identifier); 
+              // return advancedSearchAPI(item.identifier)
+              await advancedSearchAPI(item.identifier)
+              return props.navigation.navigate('Detail Modal', { results: [advancedResults], navigation: props.navigation })
               }}>
               <PokedexCard results={item} searchParam={param} />
             </TouchableOpacity>
@@ -68,8 +70,10 @@ const PokemonSearchScreen = (props) => {
           renderItem={({ item }) => {
             return(
               <TouchableOpacity onPress={async() => {
-                await setSearchTerm(item.identifier); 
-                return advancedSearchAPI(item.identifier)
+                // await setSearchTerm(item.identifier); 
+                // return advancedSearchAPI(item.identifier)
+                await advancedSearchAPI(item.identifier)
+                return props.navigation.navigate('Detail Modal', { results: [advancedResults], navigation: props.navigation })
                 }}>
                 <PokedexCard results={item} searchParam={param} />
               </TouchableOpacity>
@@ -145,15 +149,15 @@ const PokemonSearchScreen = (props) => {
             onSearchTermChange={setSearchTerm} 
             onSearchTermSubmit={() => {
               searchPokemon(pokemonData, searchTerm.replaceAll(' ', '-').toLowerCase())
-              return advancedSearchAPI(searchTerm.replaceAll(' ', '-').toLowerCase())
+              // return advancedSearchAPI(searchTerm.replaceAll(' ', '-').toLowerCase())
             }}
             style={{zIndex: 0}}
           />
           {showClear(advancedResults, searchTerm)}
         </View>
-        <View>
+        {/* <View>
           {showPokemonCard(searchTerm)}
-        </View>
+        </View> */}
         <View style={{height: 5 }} />
         <DropDownPicker 
           open={open}
