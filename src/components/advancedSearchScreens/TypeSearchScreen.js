@@ -32,8 +32,10 @@ const TypeSearchScreen = (props) => {
         renderItem={({ item }) => {
           return(
             <TouchableOpacity onPress={async() => {
-                await setSearchTerm(item.identifier); 
-                return typeSearchApi(item.identifier)
+                // await setSearchTerm(item.identifier); 
+                // return typeSearchApi(item.identifier)
+                await typeSearchApi(item.identifier);
+                return props.navigation.navigate('Type Detail Modal', { results: typeResults[0] })
                 }}>
               <PokedexCard results={item} searchParam={searchParam} />
             </TouchableOpacity>
@@ -82,7 +84,7 @@ const TypeSearchScreen = (props) => {
   return (
     <HideKeyboard>
       <View style={styles.container}>
-        <View style={styles.searchBarContainer}>
+        {/* <View style={styles.searchBarContainer}>
           <SearchBarByType 
           searchTerm={searchTerm} 
           onSearchTermChange={setSearchTerm} 
@@ -90,10 +92,10 @@ const TypeSearchScreen = (props) => {
           style={{zIndex: 0}}
           />
           {showClear(typeResults, searchTerm)}
-        </View>
-        <View style={{height: 'auto'}}>
+        </View> */}
+        {/* <View style={{height: 'auto'}}>
           {showTypeCard(searchTerm)}
-        </View>
+        </View> */}
         <View style={styles.pokedexCardContainer}>
           {showPokeDex(searchParam)}
         </View>
