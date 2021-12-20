@@ -54,29 +54,33 @@ const MoveSearchScreen = (props) => {
         renderItem={({ item }) => {
           return(
             <TouchableOpacity onPress={async() => {
-              await setSearchTerm(item.identifier);
-              return moveSearchApi(item.identifier)
-              }}>
+              // await setSearchTerm(item.identifier);
+              // return moveSearchApi(item.identifier)
+              await moveSearchApi(item.identifier)
+              return props.navigation.navigate('Move Detail Modal', { results: moveResults[0] })
+            }}>
               <PokedexCard results={item} searchParam={searchParam} />
             </TouchableOpacity>
           )
         }}
-      />
+        />
+      }
     }
-  }
-
-  const displayFilteredResults = (el, param) => {
-    if (searchTerm !== '') {
-      try {      
-        return <FlatList 
+    
+    const displayFilteredResults = (el, param) => {
+      if (searchTerm !== '') {
+        try {      
+          return <FlatList 
           horizontal={false}
           data={el}
           keyExtractor={(item) => item.identifier}
           renderItem={({ item }) => {
             return(
               <TouchableOpacity key={item.id} onPress={async() => {
-                await setSearchTerm(item.identifier); 
-                return moveSearchApi(item.identifier)
+                // await setSearchTerm(item.identifier); 
+                // return moveSearchApi(item.identifier)
+                await moveSearchApi(item.identifier)
+                return props.navigation.navigate('Move Detail Modal', { results: moveResults[0] })
                 }}>
                 <PokedexCard results={item} searchParam={param} />
               </TouchableOpacity>
@@ -153,15 +157,15 @@ const MoveSearchScreen = (props) => {
           onSearchTermChange={setSearchTerm} 
           onSearchTermSubmit={() => {
             searchMoves(moveData, searchTerm.replaceAll(' ', '-').toLowerCase())
-            return moveSearchApi(searchTerm.replaceAll(' ', '-').toLowerCase())
+            // return moveSearchApi(searchTerm.replaceAll(' ', '-').toLowerCase())
           }}
           style={{zIndex: 0}}
           />
           {showClear(moveResults, searchTerm)}
         </View>
-        <View style={{height: 'auto'}}>
+        {/* <View style={{height: 'auto'}}>
           {showMoveCard(moveResults, searchTerm)}
-        </View>
+        </View> */}
         <View style={{height: 5 }} />
         <DropDownPicker 
           open={open}
