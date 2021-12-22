@@ -46,12 +46,19 @@ const PokemonSearchScreen = (props) => {
         keyExtractor={(item) => item.identifier}
         renderItem={({ item }) => {
           return(
-            <TouchableOpacity onPress={async() => {
-              // await setSearchTerm(item.identifier); 
-              // return advancedSearchAPI(item.identifier)
-              await advancedSearchAPI(item.identifier)
-              return props.navigation.navigate('Detail Modal', { results: [advancedResults], navigation: props.navigation })
-              }}>
+            <TouchableOpacity 
+              delayPressIn={50}
+              onPressIn={async() => {
+                await advancedSearchAPI(item.identifier)
+              }}
+              onPressOut={async() => {
+                await advancedSearchAPI(item.identifier)
+                if (advancedResults !== null && advancedResults[0].name === item.identifier) {
+                  await advancedSearchAPI(item.identifier)
+                  return props.navigation.navigate('Detail Modal', { results: advancedResults, navigation: props.navigation })
+                }
+              }}
+            >
               <PokedexCard results={item} searchParam={param} />
             </TouchableOpacity>
           )
@@ -69,12 +76,18 @@ const PokemonSearchScreen = (props) => {
           keyExtractor={(item) => item.identifier}
           renderItem={({ item }) => {
             return(
-              <TouchableOpacity onPress={async() => {
-                // await setSearchTerm(item.identifier); 
-                // return advancedSearchAPI(item.identifier)
-                await advancedSearchAPI(item.identifier)
-                return props.navigation.navigate('Detail Modal', { results: [advancedResults], navigation: props.navigation })
-                }}>
+              <TouchableOpacity 
+                onPressIn={async() => {
+                  await advancedSearchAPI(item.identifier)
+                }}
+                onPressOut={async() => {
+                  await advancedSearchAPI(item.identifier)
+                  if (advancedResults !== null && advancedResults[0].name === item.identifier) {
+                    await advancedSearchAPI(item.identifier)
+                    return props.navigation.navigate('Detail Modal', { results: advancedResults, navigation: props.navigation })
+                  }
+                }}
+              >
                 <PokedexCard results={item} searchParam={param} />
               </TouchableOpacity>
             )
@@ -105,24 +118,24 @@ const PokemonSearchScreen = (props) => {
     searchPokemon(pokemonData, searchTerm)
   }, [searchTerm])
 
-  const showPokemonCard = (term) => {
-    if (term !== '') {
-      return <FlatList 
-        horizontal={false}
-        scrollEnabled={false}
-        data={advancedResults}
-        style={{height: 'auto'}}
-        keyExtractor={(item) => item.name}
-        renderItem={({ item }) => {
-          return(
-            <TouchableOpacity style={{}} onPress={() => props.navigation.navigate('Detail Modal', { results: [item], navigation: props.navigation })}>
-              <ShowAdvancedSearchResult results={item} />
-            </TouchableOpacity>
-          )
-        }}
-      />
-    } else return null;
-  }
+  // const showPokemonCard = (term) => {
+  //   if (term !== '') {
+  //     return <FlatList 
+  //       horizontal={false}
+  //       scrollEnabled={false}
+  //       data={advancedResults}
+  //       style={{height: 'auto'}}
+  //       keyExtractor={(item) => item.name}
+  //       renderItem={({ item }) => {
+  //         return(
+  //           <TouchableOpacity style={{}} onPress={() => props.navigation.navigate('Detail Modal', { results: [item], navigation: props.navigation })}>
+  //             <ShowAdvancedSearchResult results={item} />
+  //           </TouchableOpacity>
+  //         )
+  //       }}
+  //     />
+  //   } else return null;
+  // }
 
   const showClear = (el, term) => {
     if(el !== null || term !== '') {
@@ -149,15 +162,10 @@ const PokemonSearchScreen = (props) => {
             onSearchTermChange={setSearchTerm} 
             onSearchTermSubmit={() => {
               searchPokemon(pokemonData, searchTerm.replaceAll(' ', '-').toLowerCase())
-              // return advancedSearchAPI(searchTerm.replaceAll(' ', '-').toLowerCase())
             }}
             style={{zIndex: 0}}
           />
-          {showClear(advancedResults, searchTerm)}
         </View>
-        {/* <View>
-          {showPokemonCard(searchTerm)}
-        </View> */}
         <View style={{height: 5 }} />
         <DropDownPicker 
           open={open}
