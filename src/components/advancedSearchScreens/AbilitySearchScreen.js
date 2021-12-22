@@ -30,12 +30,19 @@ const AbilitySearchScreen = (props) => {
         keyExtractor={(item) => item.identifier}
         renderItem={({ item }) => {
           return(
-            <TouchableOpacity onPress={async() => {
-              // await setSearchTerm(item.identifier);
-              // return abilitySearchApi(item.identifier);
-              await abilitySearchApi(item.identifier);
-              return props.navigation.navigate('Ability Detail Modal', { results: abilityResults[0] })
-            }}>
+            <TouchableOpacity 
+              delayPressIn={50}
+              onPressIn={async() => {
+                await abilitySearchApi(item.identifier);
+              }}
+              onPressOut={async() => {
+                await abilitySearchApi(item.identifier);
+                if (abilityResults !== null && abilityResults[0].name.replaceAll(' ', '-') === item.identifier) {
+                  await abilitySearchApi(item.identifier);
+                  return props.navigation.navigate('Ability Detail Modal', { results: abilityResults[0] })
+                }
+              }}
+            >
               <PokedexCard results={item} searchParam={searchParam} />
             </TouchableOpacity>
           )
@@ -53,13 +60,20 @@ const AbilitySearchScreen = (props) => {
           keyExtractor={(item) => item.identifier}
           renderItem={({ item }) => {
             return(
-              <TouchableOpacity onPress={async() => {
-                // await setSearchTerm(item.identifier); 
-                // return abilitySearchApi(item.identifier)
-                await abilitySearchApi(item.identifier);
-                return props.navigation.navigate('Ability Detail Modal', { results: abilityResults[0] })
-                }}>
-                <PokedexCard results={item} searchParam={param} />
+              <TouchableOpacity 
+                delayPressIn={50}
+                onPressIn={async() => {
+                  await abilitySearchApi(item.identifier);
+                }}
+                onPressOut={async() => {
+                  await abilitySearchApi(item.identifier);
+                  if (abilityResults !== null && abilityResults[0].name.replaceAll(' ', '-') === item.identifier) {
+                    await abilitySearchApi(item.identifier);
+                    return props.navigation.navigate('Ability Detail Modal', { results: abilityResults[0] })
+                  }
+                }}
+              >
+                <PokedexCard results={item} searchParam={searchParam} />
               </TouchableOpacity>
             )
           }}
@@ -84,41 +98,41 @@ const AbilitySearchScreen = (props) => {
     searchAbilities(abilityData, searchTerm)
   }, [searchTerm])
 
-  const showAbilityCard = (el, term) => {
-    if (term !== '') {
-      return <FlatList 
-        horizontal={false}
-        scrollEnabled={false}
-        data={abilityResults}
-        keyExtractor={(item) => item.name}
-        renderItem={({ item }) => {
-          return(
-            <TouchableOpacity onPress={() => props.navigation.navigate('Ability Detail Modal', { results: item })}>
-              <ShowAbilitySearchResult results={item} />
-            </TouchableOpacity>
-          )
-        }}
-      />
-    } else {
-      return null;
-    }
-  }
+  // const showAbilityCard = (el, term) => {
+  //   if (term !== '') {
+  //     return <FlatList 
+  //       horizontal={false}
+  //       scrollEnabled={false}
+  //       data={abilityResults}
+  //       keyExtractor={(item) => item.name}
+  //       renderItem={({ item }) => {
+  //         return(
+  //           <TouchableOpacity onPress={() => props.navigation.navigate('Ability Detail Modal', { results: item })}>
+  //             <ShowAbilitySearchResult results={item} />
+  //           </TouchableOpacity>
+  //         )
+  //       }}
+  //     />
+  //   } else {
+  //     return null;
+  //   }
+  // }
 
-  const showClear = (el, term) => {
-    if(el !== null || term !== '') {
-      return (
-        <TouchableOpacity 
-          onPress={async() => {
-            await abilitySearchApi()
-            setSearchTerm('')
-          }} 
-          style={styles.clear}
-        >
-          <Ionicons name="ios-close-circle" size={18} color="rgb(75, 75, 75)" />
-        </TouchableOpacity>
-      )
-    } else return null
-  }
+  // const showClear = (el, term) => {
+  //   if(el !== null || term !== '') {
+  //     return (
+  //       <TouchableOpacity 
+  //         onPress={async() => {
+  //           await abilitySearchApi()
+  //           setSearchTerm('')
+  //         }} 
+  //         style={styles.clear}
+  //       >
+  //         <Ionicons name="ios-close-circle" size={18} color="rgb(75, 75, 75)" />
+  //       </TouchableOpacity>
+  //     )
+  //   } else return null
+  // }
 
   return (
     <HideKeyboard>
@@ -129,15 +143,10 @@ const AbilitySearchScreen = (props) => {
           onSearchTermChange={setSearchTerm} 
           onSearchTermSubmit={() => {
             searchAbilities(abilityData, searchTerm.replaceAll(' ', '-').toLowerCase())
-            // return abilitySearchApi(searchTerm.replaceAll(' ', '-').toLowerCase())
           }}
           style={{zIndex: 0}}
           />
-          {showClear(abilityResults, searchTerm)}
         </View>
-        {/* <View style={{height: 'auto'}}>
-          {showAbilityCard(abilityResults, searchTerm)}
-        </View> */}
         <View style={styles.dexContainer}>
           {displayFilteredResults(filteredResults, searchParam)}
         </View>
