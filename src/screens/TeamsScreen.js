@@ -5,6 +5,7 @@ import { Context as TeamsContext} from '../context/TeamContext';
 import { Ionicons } from '@expo/vector-icons';
 
 import ViewTeams from '../components/buildTeamComponents/ViewTeams';
+import StartMessage from '../components/buildTeamComponents/StartMessage';
 
 const TeamsScreen = (props) => {
   const { state } = useContext(TeamsContext);
@@ -45,6 +46,10 @@ const TeamsScreen = (props) => {
     }
   }
 
+  const showStartMessage = useCallback(() => {
+    return state === null || state.length === 0 ? <StartMessage /> : null
+  }, [state])
+
   return (
     <View style={styles.container}>
       <View style={{alignSelf: 'flex-end'}}>
@@ -52,6 +57,7 @@ const TeamsScreen = (props) => {
       </View>
       <View contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}} style={styles.teamsScrollView}>
         <View style={styles.teamsView}>
+          {showStartMessage()}
           {showTeams(state)}
         </View>
       </View>
