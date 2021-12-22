@@ -18,7 +18,7 @@ const SearchBar = ({ searchTerm, onSearchTermChange, onSearchTermSubmit }) => {
         value={searchTerm}
         onChangeText={onSearchTermChange}
         onEndEditing={onSearchTermSubmit}
-        clearButtonMode='never'
+        clearButtonMode='always'
         keyboardAppearance='dark'
         returnKeyType={'search'}
         allowFontScaling={false}
