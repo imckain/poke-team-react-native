@@ -31,12 +31,20 @@ const TypeSearchScreen = (props) => {
         keyExtractor={(item) => item.identifier}
         renderItem={({ item }) => {
           return(
-            <TouchableOpacity onPress={async() => {
-                // await setSearchTerm(item.identifier); 
-                // return typeSearchApi(item.identifier)
+            <TouchableOpacity 
+              delayPressIn={50}
+              delayPressOut={50}
+              onPressIn={async() => {
                 await typeSearchApi(item.identifier);
-                return props.navigation.navigate('Type Detail Modal', { results: typeResults[0] })
-                }}>
+              }}
+              onPressOut={async() => {
+                await typeSearchApi(item.identifier);
+                if (typeResults !== null && typeResults[0].name === item.identifier) {
+                  await typeSearchApi(item.identifier);
+                  return props.navigation.navigate('Type Detail Modal', { results: typeResults })
+                }
+              }}
+            >
               <PokedexCard results={item} searchParam={searchParam} />
             </TouchableOpacity>
           )
@@ -45,41 +53,41 @@ const TypeSearchScreen = (props) => {
     }
   }
 
-  const showTypeCard = (param) => {
-    if (param !== '') {
-      return <FlatList 
-        horizontal={false}
-        scrollEnabled={false}
-        data={typeResults}
-        keyExtractor={(item) => item.name}
-        renderItem={({ item }) => {
-          return(
-            <TouchableOpacity onPress={() => props.navigation.navigate('Type Detail Modal', { results: item })}>
-              <ShowTypeSearchResult navigation={props.navigation} results={item} />
-            </TouchableOpacity>
-          )
-        }}
-      />
-    } else {
-      return null;
-    }
-  }
+  // const showTypeCard = (param) => {
+  //   if (param !== '') {
+  //     return <FlatList 
+  //       horizontal={false}
+  //       scrollEnabled={false}
+  //       data={typeResults}
+  //       keyExtractor={(item) => item.name}
+  //       renderItem={({ item }) => {
+  //         return(
+  //           <TouchableOpacity onPress={() => props.navigation.navigate('Type Detail Modal', { results: item })}>
+  //             <ShowTypeSearchResult navigation={props.navigation} results={item} />
+  //           </TouchableOpacity>
+  //         )
+  //       }}
+  //     />
+  //   } else {
+  //     return null;
+  //   }
+  // }
 
-  const showClear = (el, term) => {
-    if(el !== null || term !== '') {
-      return (
-        <TouchableOpacity 
-          onPress={async() => {
-            await typeSearchApi()
-            setSearchTerm('')
-          }} 
-          style={styles.clear}
-        >
-          <Ionicons name="ios-close-circle" size={18} color="rgb(75, 75, 75)" />
-        </TouchableOpacity>
-      )
-    } else return null
-  }
+  // const showClear = (el, term) => {
+  //   if(el !== null || term !== '') {
+  //     return (
+  //       <TouchableOpacity 
+  //         onPress={async() => {
+  //           await typeSearchApi()
+  //           setSearchTerm('')
+  //         }} 
+  //         style={styles.clear}
+  //       >
+  //         <Ionicons name="ios-close-circle" size={18} color="rgb(75, 75, 75)" />
+  //       </TouchableOpacity>
+  //     )
+  //   } else return null
+  // }
 
   return (
     <HideKeyboard>
@@ -142,7 +150,7 @@ const styles = StyleSheet.create({
   },
   pokedexCardContainer: {
     flex: 1,
-    marginTop: 12
+    paddingVertical: 24
   }
 });
 
