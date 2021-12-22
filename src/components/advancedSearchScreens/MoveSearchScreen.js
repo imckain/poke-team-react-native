@@ -52,13 +52,24 @@ const MoveSearchScreen = (props) => {
         data={el}
         keyExtractor={(item) => item.identifier}
         renderItem={({ item }) => {
+          let resName
+          if (moveResults !== null) {
+            resName = moveResults[0].name.replaceAll(' ', '-')
+          }
           return(
-            <TouchableOpacity onPress={async() => {
-              // await setSearchTerm(item.identifier);
-              // return moveSearchApi(item.identifier)
-              await moveSearchApi(item.identifier)
-              return props.navigation.navigate('Move Detail Modal', { results: moveResults[0] })
-            }}>
+            <TouchableOpacity 
+              delayPressIn={50}
+              onPressIn={async() => {
+                await moveSearchApi(item.identifier)
+              }}
+              onPressOut={async() => {
+                await moveSearchApi(item.identifier)
+                if (moveResults !== null && resName === item.identifier) {
+                  await moveSearchApi(item.identifier)
+                  return props.navigation.navigate('Move Detail Modal', { results: moveResults[0] })
+                }
+              }}
+            >
               <PokedexCard results={item} searchParam={searchParam} />
             </TouchableOpacity>
           )
@@ -75,14 +86,25 @@ const MoveSearchScreen = (props) => {
           data={el}
           keyExtractor={(item) => item.identifier}
           renderItem={({ item }) => {
+            let resName
+            if (moveResults !== null) {
+              resName = moveResults[0].name.replaceAll(' ', '-')
+            }
             return(
-              <TouchableOpacity key={item.id} onPress={async() => {
-                // await setSearchTerm(item.identifier); 
-                // return moveSearchApi(item.identifier)
-                await moveSearchApi(item.identifier)
-                return props.navigation.navigate('Move Detail Modal', { results: moveResults[0] })
-                }}>
-                <PokedexCard results={item} searchParam={param} />
+              <TouchableOpacity 
+                delayPressIn={50}
+                onPressIn={async() => {
+                  await moveSearchApi(item.identifier)
+                }}
+                onPressOut={async() => {
+                  await moveSearchApi(item.identifier)
+                  if (moveResults !== null && resName === item.identifier) {
+                    await moveSearchApi(item.identifier)
+                    return props.navigation.navigate('Move Detail Modal', { results: moveResults[0] })
+                  }
+                }}
+              >
+                <PokedexCard results={item} searchParam={searchParam} />
               </TouchableOpacity>
             )
           }}
@@ -112,41 +134,41 @@ const MoveSearchScreen = (props) => {
     searchMoves(moveData, searchTerm)
   }, [searchTerm])
 
-  const showMoveCard = (el, term) => {
-    if (term !== '') {
-      return <FlatList 
-        horizontal={false}
-        scrollEnabled={false}
-        data={moveResults}
-        keyExtractor={(item) => item.name}
-        renderItem={({ item }) => {
-          return(
-            <TouchableOpacity onPress={() => props.navigation.navigate('Move Detail Modal', { results: item })}>
-              <ShowMoveSearchResult results={item} />
-            </TouchableOpacity>
-          )
-        }}
-      />
-    } else {
-      return null;
-    }
-  }
+  // const showMoveCard = (el, term) => {
+  //   if (term !== '') {
+  //     return <FlatList 
+  //       horizontal={false}
+  //       scrollEnabled={false}
+  //       data={moveResults}
+  //       keyExtractor={(item) => item.name}
+  //       renderItem={({ item }) => {
+  //         return(
+  //           <TouchableOpacity onPress={() => props.navigation.navigate('Move Detail Modal', { results: item })}>
+  //             <ShowMoveSearchResult results={item} />
+  //           </TouchableOpacity>
+  //         )
+  //       }}
+  //     />
+  //   } else {
+  //     return null;
+  //   }
+  // }
 
-  const showClear = (el, term) => {
-    if(el !== null || term !== '') {
-      return (
-        <TouchableOpacity 
-          onPress={async() => {
-            await moveSearchApi()
-            setSearchTerm('')
-          }} 
-          style={styles.clear}
-        >
-          <Ionicons name="ios-close-circle" size={18} color="rgb(75, 75, 75)" />
-        </TouchableOpacity>
-      )
-    } else return null
-  }
+  // const showClear = (el, term) => {
+  //   if(el !== null || term !== '') {
+  //     return (
+  //       <TouchableOpacity 
+  //         onPress={async() => {
+  //           await moveSearchApi()
+  //           setSearchTerm('')
+  //         }} 
+  //         style={styles.clear}
+  //       >
+  //         <Ionicons name="ios-close-circle" size={18} color="rgb(75, 75, 75)" />
+  //       </TouchableOpacity>
+  //     )
+  //   } else return null
+  // }
 
   return (
     <HideKeyboard>
@@ -161,7 +183,6 @@ const MoveSearchScreen = (props) => {
           }}
           style={{zIndex: 0}}
           />
-          {showClear(moveResults, searchTerm)}
         </View>
         {/* <View style={{height: 'auto'}}>
           {showMoveCard(moveResults, searchTerm)}
