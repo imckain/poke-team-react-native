@@ -59,9 +59,8 @@ const HomeScreen = (props) => {
                 searchAPI(searchTerm.replaceAll(' ', '-').toLowerCase())
               } else return
             }}
-            style={{zIndex: 0}}
+            // style={{zIndex: 1}}
           />
-          {showClear(searchTerm)}
         </View>
         {showResultCard(results)}
         <View style={styles.largeNavContainer}>

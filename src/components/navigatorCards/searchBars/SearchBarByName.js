@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginHorizontal: 20,
     marginBottom: 12,
+    zIndex: 1
   },
   inputStyle: {
     paddingLeft: 12,
