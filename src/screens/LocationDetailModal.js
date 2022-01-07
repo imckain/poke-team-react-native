@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(105, 105, 105, 0.6)',
   },
   versionText: {
-    color: '#000000',
+    color: '#ffffff',
     fontWeight: '600',
     paddingRight: 10,
     fontSize: 26,
