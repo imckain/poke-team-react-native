@@ -12,14 +12,14 @@ const VersionDetail = ({ results, margin }) => {
       return (
         <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setCollapsed(false)}>
           <Text allowFontScaling={false} style={[styles.headerText]}>Game Appearances</Text>  
-          <Entypo name="plus" size={32} color="rgba(105, 105, 105, 0.6)" />
+          <Entypo name="plus" size={32} color="rgba(255, 255, 255, 0.5)" />
         </TouchableOpacity>
       )
     } if (el === false) {
       return(
         <TouchableOpacity style={styles.headerWrapper} onPressIn={() => setCollapsed(true)}>
           <Text allowFontScaling={false} style={[styles.headerText]}>Game Appearances</Text>  
-          <Entypo name="minus" size={32} color="rgba(105, 105, 105, 0.6)" />
+          <Entypo name="minus" size={32} color="rgba(255, 255, 255, 0.5)" />
         </TouchableOpacity>
       )
     }
