@@ -59,7 +59,8 @@ const TeamsScreen = (props) => {
 
   return (
     <View style={styles.container}>
-      <View style={{alignSelf: 'flex-end'}}>
+      <View style={{alignSelf: 'flex-end', flexDirection: 'row', width: '100%', justifyContent: 'space-between', alignItems: 'center'}}>
+        <Text style={{ color: '#fff', paddingLeft: 24, fontWeight: '600', fontSize: 32 }}>Teams</Text>
         <Tooltip
           isVisible={showTip}
           content={
