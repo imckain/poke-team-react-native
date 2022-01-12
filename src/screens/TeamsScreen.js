@@ -1,14 +1,16 @@
-import React, { useCallback, useContext } from 'react';
-import { View, StyleSheet, TouchableOpacity, FlatList, Alert } from 'react-native';
+import React, { useCallback, useContext, useState } from 'react';
+import { Text, View, StyleSheet, TouchableOpacity, FlatList, Alert } from 'react-native';
 import { Context as TeamsContext} from '../context/TeamContext';
+import Tooltip from 'react-native-walkthrough-tooltip';
 
 import { Ionicons } from '@expo/vector-icons';
 
 import ViewTeams from '../components/buildTeamComponents/ViewTeams';
-import StartMessage from '../components/buildTeamComponents/StartMessage';
+import { useEffect } from 'react';
 
 const TeamsScreen = (props) => {
   const { state } = useContext(TeamsContext);
+  const [showTip, setTip] = useState(true)
 
   const showTeams = useCallback((el) => {
     return <FlatList 
@@ -39,25 +41,41 @@ const TeamsScreen = (props) => {
       )
     } else {
       return (
-        <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => props.navigation.navigate('Build Team')}>
+        <TouchableOpacity style={{ paddingHorizontal: 18 }} onPress={() => {
+          setTip(false)
+          return props.navigation.navigate('Build Team')
+        }}>
           <Ionicons name="ios-add" size={38} color="#fff" />
         </TouchableOpacity>
       )
     }
   }
 
-  const showStartMessage = useCallback(() => {
-    return state === null || state.length === 0 ? <StartMessage /> : null
+  const showStartMessage = useEffect(() => {
+    if (state === null || state.length === 0) {
+      return setTip(true)
+    } else return setTip(false)
   }, [state])
 
   return (
     <View style={styles.container}>
       <View style={{alignSelf: 'flex-end'}}>
-        {checkMaxTeams()}
+        <Tooltip
+          isVisible={showTip}
+          content={
+            <View>
+              <Text style={styles.label}>Tap to begin</Text>
+            </View>
+          }
+          placement='left'
+          onClose={() => setTip(false)}
+        >
+          {showStartMessage}
+          {checkMaxTeams()}
+        </Tooltip>
       </View>
       <View contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}} style={styles.teamsScrollView}>
         <View style={styles.teamsView}>
-          {showStartMessage()}
           {showTeams(state)}
         </View>
       </View>
@@ -97,7 +115,13 @@ const styles = StyleSheet.create({
   teamContainer: {
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(105, 105, 105, 0.6)',
-  }
+  },
+  label: {
+    fontSize: 12,
+    fontWeight: '500',
+    color: '#000000',
+    textAlign: 'center',
+  },
 });
 
 export default React.memo(TeamsScreen);
