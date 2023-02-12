@@ -1,0 +1,62 @@
+import { StyleSheet } from "react-native";
+
+export const styles = StyleSheet.create({
+  dmgClassView: {
+    paddingTop: 8,
+    paddingBottom: 6,
+    width: "auto",
+    height: "auto",
+  },
+  nameContainer: {
+    flexDirection: "column",
+    alignItems: "flex-start",
+  },
+  name: {
+    color: "#fff",
+    fontWeight: "600",
+    textShadowColor: "rgba(0, 0, 0, 0.712)",
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 3,
+    alignSelf: "center",
+    textTransform: "capitalize",
+    paddingBottom: 6,
+  },
+  damageClass: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "600",
+    textShadowColor: "rgba(0, 0, 0, 0.712)",
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 3,
+    paddingBottom: 6,
+  },
+  damageClassSub: {
+    color: "rgb(223, 223, 223)",
+    fontSize: 16,
+    fontWeight: "400",
+    textShadowColor: "rgba(0, 0, 0, 0.712)",
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 3,
+    textTransform: "capitalize",
+  },
+  typeBox: {
+    borderRadius: 10,
+    backgroundColor: "#000000",
+    justifyContent: "center",
+    width: "auto",
+    height: "auto",
+    marginBottom: 6,
+    paddingVertical: 3,
+  },
+  typeText: {
+    color: "#fff",
+    fontWeight: "600",
+    textAlign: "center",
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    textShadowColor: "rgb(0, 0, 0)",
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 4,
+    textTransform: "capitalize",
+  },
+});
