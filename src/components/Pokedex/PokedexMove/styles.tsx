@@ -1,0 +1,60 @@
+import { StyleSheet } from "react-native";
+
+export const styles = StyleSheet.create({
+  infoContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+    borderBottomColor: "rgba(105, 105, 105, 0.6)",
+    borderBottomWidth: 1,
+  },
+  moveInfo: {
+    flexDirection: "column",
+    paddingVertical: 4,
+    alignItems: "flex-start",
+    width: "80%",
+    justifyContent: "flex-start",
+  },
+  subInfo: {
+    flexDirection: "row",
+    alignItems: "center",
+    width: "70%",
+  },
+  name: {
+    color: "#fff",
+    fontWeight: "600",
+    textShadowColor: "rgb(34, 34, 34)",
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 6,
+    textTransform: "capitalize",
+  },
+  attributes: {
+    color: "rgb(175, 175, 175)",
+    fontSize: 18,
+    marginBottom: 3,
+    paddingLeft: 12,
+  },
+  typeBox: {
+    borderRadius: 10,
+    backgroundColor: "#000000",
+    justifyContent: "center",
+    width: 110,
+    height: "auto",
+    marginVertical: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+    marginLeft: 12,
+  },
+  typeText: {
+    color: "#fff",
+    fontWeight: "600",
+    textAlign: "center",
+    textShadowColor: "rgb(0, 0, 0)",
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 4,
+    textTransform: "capitalize",
+    alignItems: "center",
+    alignSelf: "center",
+  },
+});
